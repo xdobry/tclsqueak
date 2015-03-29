@@ -10,6 +10,7 @@ http://www.xdobry.de/tclsqueak
 TclSquak was programmed by Artur Trzewik (mail@xdobry.de)
 
 ##History
+
 TclSqueak is former redesigned and relaunched *XOTclIDE* project. The renaming was needed because the IDE is not limited to XOTcl
 but supports also the new object oriented extension TclOO introduced Tcl 8.6 as core.
 The new name also point more to origin of project and the main idea for it.
@@ -37,7 +38,7 @@ There is old XOTclIDE Documentation http://www.xdobry.de/xotclIDE/docs/index.htm
 
 * Interactive smalltalk way of programming
 * code repository (every code change is persistent)
-* advanced static code analyze and edit support for code (code completion, ...)
+* advanced static code analyze and edit support
 
 ###Smalltalk way
 
