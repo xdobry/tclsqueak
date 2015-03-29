@@ -10,6 +10,7 @@ http://www.xdobry.de/tclsqueak
 TclSquak was programmed by Artur Trzewik (mail@xdobry.de)
 
 ##History
+
 TclSqueak is former redesigned and relaunched *XOTclIDE* project. The renaming was needed because the IDE is not limited to XOTcl
 but supports also the new object oriented extension TclOO introduced Tcl 8.6 as core.
 The new name also point more to origin of project and the main idea for it.
@@ -23,7 +24,7 @@ I also wanted to make the project easier to install and begin with coding.
 
 ##How to start
 
-There is read to install zip file with included TCL interpreter.
+Install Tcl and run start.tcl
 
 But you may also check out the sources and lunch the start.bat, start.tcl or start.sh.
 The prerequist are Tcl interpreter http://tcl.tk and installed XOTcl extension http://www.xotcl.org (or http://www.next-scripting.org)
@@ -33,11 +34,11 @@ The binary XOTcl extension for windows can be taken from zip.
 
 There is old XOTcl Documentation http://www.xdobry.de/xotclIDE/docs/index.html
 
-##Want makes TclSquak different
+##What makes TclSquak different?
 
 * Interactive smalltalk way of programming
 * code repository (every code change is persistent)
-* advanced static code analyze and edit support tgat
+* advanced static code analyze and edit support
 
 ###Smalltalk way
 
