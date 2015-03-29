@@ -1,0 +1,83 @@
+registerProc ::thread::create {{threadid {? {option -joinable -preserved} ?options} {? script ?script?}}}
+registerProc ::thread::preserve {{void {? threadid threadid}}}
+registerProc ::thread::release {{void {? {option -wait} ?option} {? threadid threadid}}}
+registerProc ::thread::id threadid
+registerProc ::thread::errorproc {{string {? unknown ?procname?}}}
+registerProc ::thread::unwind void
+registerProc ::thread::exit void
+registerProc ::thread::names list
+registerProc ::thread::exists {{boolean {threadid id}}}
+registerProc ::thread::send {{unknown {? {option -async -head} ?option} {threadid id} {script script} {? setref ?varname?}}}
+registerProc ::thread::broadcast {{void {threadid id} {script script}}}
+registerProc ::thread::wait void
+registerProc ::thread::eval {{unknown {? {option -lock unknown} ?option} {unknown arg} {? unknown ?arg} {unknown ...?}}}
+registerProc ::thread::join {{void {threadid id}}}
+registerProc ::thread::configure {{unknown {threadid id} {? {option -eventmark unknown -unwindonerror int} ?option}}}
+registerProc ::thread::transfer {{void {threadid id} {channelid channelid}}}
+registerProc ::thread::detach {{void {channelid channelid}}}
+registerProc ::thread::attach {{void {channelid channelid}}}
+registerProc ::thread::mutex {
+  {mutex {{const create}} {? {option -recursive} ?option}}
+  {void {{const destroy}} {unknown mutex}}
+  {void {{const lock}} {unknown mutex}}
+  {void {{const unlock}} {unknown mutex}}
+}
+registerProc ::thread::rwmutex {
+  {mutex {{const create}}}
+  {void {{const destroy}} {unknown mutex}}
+  {void {{const rlock}} {unknown mutex}}
+  {void {{const wlock}} {unknown mutex}}
+  {void {{const unlock}} {unknown mutex}}
+}
+registerProc ::thread::cond {
+  {cond {{const create}}}
+  {void {{const destroy}} {unknown cond}}
+  {void {{const notify}} {unknown cond}}
+  {void {{const wait}} {unknown cond} {unknown mutex} {? unknown ?ms?}}
+}
+registerProc ::tpool::create {{tpool {? {option -minworkers int -maxworkers int -idletime int -initcmd script -exitcmd script} ?options?}}}
+registerProc ::tpool::names list
+registerProc ::tpool::post {{jobid {? {option -detached -nowait} ?options} {unknown tpool} {script script}}}
+registerProc ::tpool::wait {{void {tpool tpool} {list joblist} {? setref ?varname?}}}
+registerProc ::tpool::cancel {{void {tpool tpool} {list joblist} {? setref ?varname?}}}
+registerProc ::tpool::get {{unknown {tpool tpool} {jobid jobid}}}
+registerProc ::tpool::preserve {{void {tpool tpool}}}
+registerProc ::tpool::release {{void {tpool tpool}}}
+registerProc ::tpool::suspend {{void {tpool tpool}}}
+registerProc ::tpool::resume {{void {tpool tpool}}}
+registerProc ::tsv::names {{list {? unknown ?pattern?}}}
+registerProc ::tsv::object {{unknown {setref varname} {unknown element}}}
+registerProc ::tsv::set {{unknown {setref varname} {unknown element} {? unknown ?value?}}}
+registerProc ::tsv::get {{unknown {setref varname} {unknown element} {? unknown ?namedvar?}}}
+registerProc ::tsv::unset {{void {setref varname} {? unknown ?element?}}}
+registerProc ::tsv::exists {{boolean {setref varname} {unknown element}}}
+registerProc ::tsv::pop {{unknown {setref varname} {unknown element}}}
+registerProc ::tsv::move {{unknown {setref varname} {unknown oldname} {unknown newname}}}
+registerProc ::tsv::incr {{unknown {setref varname} {unknown element} {? unknown ?count?}}}
+registerProc ::tsv::append {{unknown {setref varname} {unknown element} {unknown value} {? unknown ?value} {unknown ...?}}}
+registerProc ::tsv::lock {{unknown {setref varname} {unknown arg} {? unknown ?arg} {unknown ...?}}}
+registerProc ::tsv::lappend {{unknown {setref varname} {unknown element} {unknown value} {? unknown ?value} {unknown ...?}}}
+registerProc ::tsv::linsert {{unknown {setref varname} {unknown element} {index index} {unknown value} {? unknown ?value} {unknown ...?}}}
+registerProc ::tsv::lreplace {{unknown {setref varname} {unknown element} {unknown first} {unknown last} {? unknown ?value} {unknown ...?}}}
+registerProc ::tsv::llength {{unknown {setref varname} {unknown element}}}
+registerProc ::tsv::lindex {{unknown {setref varname} {unknown element} {? index ?index?}}}
+registerProc ::tsv::lrange {{unknown {setref varname} {unknown element} {unknown from} {unknown to}}}
+registerProc ::tsv::lsearch {{unknown {setref varname} {unknown element} {? unknown ?options?} {unknown pattern}}}
+registerProc ::tsv::lset {{unknown {setref varname} {unknown element} {index index} {? index ?index} {unknown ...?} {unknown value}}}
+registerProc ::tsv::lpop {{unknown {setref varname} {unknown element} {? index ?index?}}}
+registerProc ::tsv::lpush {{unknown {setref varname} {unknown element} {? index ?index?}}}
+registerProc ::tsv::array {
+  {unknown {{const set}} {setref varname} {unknown list}}
+  {unknown {{const get}} {setref varname} {? unknown ?pattern?}}
+  {unknown {{const names}} {setref varname} {? unknown ?pattern?}}
+  {unknown {{const size}} {setref varname}}
+  {unknown {{const reset}} {setref varname} {unknown list}}
+  {unknown {{const bind}} {setref varname} {unknown handle}}
+  {unknown {{const unbind}} {setref varname}}
+  {unknown {{const isbound}} {setref varname}}
+}
+registerProc ::tsv::keyldel {{unknown {setref varname} {unknown keylist} {unknown key}}}
+registerProc ::tsv::keylget {{unknown {setref varname} {unknown keylist} {unknown key} {? unknown ?retvar?}}}
+registerProc ::tsv::keylkeys {{unknown {setref varname} {unknown keylist} {? unknown ?key?}}}
+registerProc ::tsv::keylset {{unknown {setref varname} {unknown keylist} {unknown key} {unknown value} {? unknown ?key} {unknown value..?}}}
+

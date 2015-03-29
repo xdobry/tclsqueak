@@ -1,0 +1,15 @@
+registerProc ::http::config {{list {? {option -accept unknown -proxyhost string -proxyport int -proxyfilter unknown -urlencoding string -useragent string} ?options?}}}
+registerProc ::http::geturl {{token {unknown url} {? {option -binary boolean -blocksize int -channel string -command unknown -handler unknown -headers unknown -keepalive boolean -method unknown -myaddr unknown -progress unknown -protocol string -query unknown -queryblocksize int -querychannel unknown -queryprogress unknown -strict boolean -timeout int -type unknown -validate boolean} ?options?}}}
+registerProc ::http::formatQuery {{string {unknown key} {unknown value} {? unknown ?key} {unknown value} {unknown ...?}}}
+registerProc ::http::reset {{void {unknown token} {? unknown ?why?}}}
+registerProc ::http::wait {{void {unknown token}}}
+registerProc ::http::status {{string {unknown token}}}
+registerProc ::http::size {{int {unknown token}}}
+registerProc ::http::code {{string {unknown token}}}
+registerProc ::http::ncode {{string {unknown token}}}
+registerProc ::http::meta {{string {unknown token}}}
+registerProc ::http::data {{string {unknown token}}}
+registerProc ::http::error {{string {unknown token}}}
+registerProc ::http::cleanup {{void {unknown token}}}
+registerProc ::http::register {{void {unknown proto} {int port} {unknown command}}}
+registerProc ::http::unregister {{void {unknown proto}}}

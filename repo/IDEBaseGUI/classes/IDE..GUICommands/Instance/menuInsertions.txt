@@ -1,0 +1,4 @@
+This method let you specify the additional menus entry point 
+for overwritting or mixins objects/classes
+it can be in the middle of menu structure
+call this from fillMenuStruct

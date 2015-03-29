@@ -1,0 +1,2 @@
+basicCreate prevent to import group in VC
+(no function addProcGroup)

@@ -1,0 +1,3 @@
+(comment for IDEBaseGUI)
+
+This component contains the base GUI Elements needed in IDEXotclIDE

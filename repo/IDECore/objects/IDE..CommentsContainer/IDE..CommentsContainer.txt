@@ -1,0 +1,4 @@
+Core no GUI Elements.
+
+IDE::Component structure XOTcl Classes and Objects in sets.
+It is a container for XOTcl Classes and Objects

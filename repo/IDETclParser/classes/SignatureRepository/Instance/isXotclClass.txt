@@ -1,0 +1,2 @@
+Despite the name. All OO system classes are XotclClass
+(also ITcl and TclOO)

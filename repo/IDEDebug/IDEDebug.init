@@ -1,0 +1,3 @@
+catch {IDE::BreakpointFasade initializeAfterLoad}
+catch {IDE::Debugger initializeAfterLoad}
+catch {IDE::MethodTracker initializeAfterLoad}

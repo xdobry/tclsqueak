@@ -1,0 +1,8 @@
+XOTcl Text Editing
+
+Find and Replace Object
+
+In the future place for such things as
+    1. syntax hightlighting
+    1. indenting
+    1. delegation to syntax checker in IDETclParser component

@@ -1,0 +1,2 @@
+PrsFileContext instproc handleGlobalComment comment {
+}

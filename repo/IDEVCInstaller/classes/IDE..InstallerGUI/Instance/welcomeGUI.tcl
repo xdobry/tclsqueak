@@ -1,0 +1,2 @@
+IDE::InstallerGUI instproc welcomeGUI {} {
+}

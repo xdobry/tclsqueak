@@ -1,0 +1,4 @@
+This a tool can produce an XML file from a Tcl error message.
+It is independent from other XOTclIDE Components.
+
+So it can be used separatly in all XOTcl programms

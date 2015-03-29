@@ -1,0 +1,4 @@
+IDE::TestBrowser
+IDE::TestCase
+IDE::TestRunner
+IDE::UTestCase

@@ -1,0 +1,2 @@
+confort api to sql command
+<source>INSERT INTO table (col1,col2,..) VALUES (val1,val2,..)</source>

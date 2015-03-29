@@ -1,0 +1,2 @@
+This Method parse a text and build a parse tree
+It return 1 on success

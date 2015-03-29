@@ -1,0 +1,2 @@
+This is the base command for creating Tcl Procs Groups.
+if you want use procs with Namespace please set the coresponding parameter

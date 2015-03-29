@@ -1,0 +1,119 @@
+registerProc ::dom {
+  {{class ::tdom::Doc} {{const parse}} {? {option -simple -html -keepEmpties -channel unknown -baseurl string -feedbackAfter int -externalentitycommand script -useForeignDTD boolean -paramentityparsing {enum always never notstandalone}} ?options?} {? string data?}}
+  {{class ::tdom::Doc} {{const createDocument}} {unknown docElemName} {? {setref class ::tdom::Doc} objVar}}
+  {{class ::tdom::Doc} {{const createDocumentNS}} {unknown uri} {unknown docElemName} {? {setref class ::tdom::Doc} objVar}}
+  {void {{const createDocumentNode}} {? {setref class ::tdom::Doc} objVar}}
+  {boolean {{const setStoreLineColumn}} {? boolean ?boolean?}}
+  {boolean {{const setNameCheck}} {? boolean ?boolean?}}
+  {boolean {{const setTextCheck}} {? boolean ?boolean?}}
+  {string {{const setObjectCommands}} {? {enum automatic token command} type}}
+  {string {{const createNodeCmd}} {? {option -returnNodeCmd {}}} {{enum elementNode commentNode textNode cdataNode piNode} node} {string commandName}}
+  {boolean {{const isName}} {string name}}
+  {boolean {{const isPIName}} {string name}}
+  {boolean {{const isNCName}} {string name}}
+  {boolean {{const isQName}} {string name}}
+  {boolean {{const isCharData}} {string string}}
+  {boolean {{const isComment}} {string string}}
+  {boolean {{const isCDATA}} {string string}}
+  {boolean {{const isPIValue}} {string string}}
+}
+registerObject ::tdom::Doc Class {} {}
+registerObject ::tdcom::Node Class {} {}
+
+registerMethod $::tdom::Doc instproc documentElement {{::tdom::Doc {? unknown ?objVar?}}}
+registerMethod $::tdom::Doc instproc getElementsByTagName {{list {string name}}}
+registerMethod $::tdom::Doc instproc getElementsByTagNameNS {{list {unknown uri} {unknown localname}}}
+registerMethod $::tdom::Doc instproc createElement {{{class ::tdom::Node} {unknown tagName} {? {setref class ::tdom::Node} objVar}}}
+registerMethod $::tdom::Doc instproc createElementNS {{{class ::tdom::Node} {unknown url} {unknown tagName} {? {setref class ::tdom::Node} objVar}}}
+registerMethod $::tdom::Doc instproc createTextNode {{{class ::tdom::Node} {string text} {? {setref class ::tdom::Node} objVar}}}
+registerMethod $::tdom::Doc instproc createComment {{{class ::tdom::Node} {string text} {? {setref class ::tdom::Node} objVar}}}
+registerMethod $::tdom::Doc instproc createCDATASection {{{class ::tdom::Node} {unknown data} {? {setref class ::tdom::Node} objVar}}}
+registerMethod $::tdom::Doc instproc createProcessingInstruction {{{class ::tdom::Node} {unknown target} {unknown data} {? {setref class ::tdom::Node} objVar}}}
+registerMethod $::tdom::Doc instproc getDefaultOutputMethod string
+registerMethod $::tdom::Doc instproc asText string
+registerMethod $::tdom::Doc instproc publicId {{string {? unknown ?publicId?}}}
+registerMethod $::tdom::Doc instproc systemId {{string {? unknown ?systemId?}}}
+registerMethod $::tdom::Doc instproc internalSubset {{unknown {? unknown ?internalSubset?}}}
+registerMethod $::tdom::Doc instproc cdataSectionElements {{unknown {? unknown ?URIlocalname} {? boolean ?boolean?}}}
+registerMethod $::tdom::Doc instproc selectNodesNamespaces {{unknown {? unknown ?prefixUriList?}}}
+registerMethod $::tdom::Doc instproc xslt {{unknown {? {option -parameters unknown -ignoreUndeclaredParameters -xsltmessagecmd script} ?option} {unknown stylesheet} {? {setref string} outputVar}}}
+registerMethod $::tdom::Doc instproc toXSLTcmd {{unknown {? unknown ?objVar?}}}
+registerMethod $::tdom::Doc instproc xsltCmd {{unknown {unknown method} {? unknown ?arg} {unknown ...?}}}
+registerMethod $::tdom::Doc instproc normalize {{void {? {option -forXPath} ?option}}}
+registerMethod $::tdom::Doc instproc nodeType string
+registerMethod $::tdom::Doc instproc getElementById {{{class ::tdom::Node} {unknown id}}}
+registerMethod $::tdom::Doc instproc firstChild {{{class ::tdom::Node} {? {setref class ::tdom::Node} objVar}}}
+registerMethod $::tdom::Doc instproc lastChild {{{class ::tdom::Node} {? {setref class ::tdom::Node} objVar}}}
+registerMethod $::tdom::Doc instproc appendChild {{void {{class ::tdom::Node} newChild}}}
+registerMethod $::tdom::Doc instproc removeChild {{void {{class ::tdom::Node} child}}}
+registerMethod $::tdom::Doc instproc hasChildNodes boolean
+registerMethod $::tdom::Doc instproc childNodes list
+registerMethod $::tdom::Doc instproc ownerDocument {{{class ::tdom::Doc} {? {setref class ::tdom::Doc} objVar}}}
+registerMethod $::tdom::Doc instproc insertBefore {{void {{class ::tdom::Node} newChild} {{class ::tdom::Node} refChild}}}
+registerMethod $::tdom::Doc instproc replaceChild {{void {{class ::tdom::Node} newChild} {{class ::tdom::Node} oldChild}}}
+registerMethod $::tdom::Doc instproc appendFromList {{void {unknown list}}}
+registerMethod $::tdom::Doc instproc appendXML {{void {string XMLstring}}}
+registerMethod $::tdom::Doc instproc selectNodes {{list {? {option -namespaces unknown -cache boolean} ?option} {unknown xpathQuery} {? {setref list} typeVar}}}
+registerMethod $::tdom::Doc instproc baseURI {{string {? unknown ?URI?}}}
+registerMethod $::tdom::Doc instproc appendFromScript {{void {unknown tclScript}}}
+registerMethod $::tdom::Doc instproc deleteXPathCache {{void {? unknown ?xpathQuery?}}}
+registerMethod $::tdom::Node instproc nodeType string
+registerMethod $::tdom::Node instproc nodeName string
+registerMethod $::tdom::Node instproc nodeValue {{string {? {setref string} outputVar}}}
+registerMethod $::tdom::Node instproc hasChildNodes boolean
+registerMethod $::tdom::Node instproc parentNode {{{class ::tdom::Node} {? {setref class ::tdom::Node} objVar}}}
+registerMethod $::tdom::Node instproc childNodes list
+registerMethod $::tdom::Node instproc childNodesLive list
+registerMethod $::tdom::Node instproc firstChild {{{class ::tdom::Node} {? {setref class ::tdom::Node} objVar}}}
+registerMethod $::tdom::Node instproc lastChild {{{class ::tdom::Node} {? {setref class ::tdom::Node} objVar}}}
+registerMethod $::tdom::Node instproc nextSibling {{{class ::tdom::Node} {? {setref class ::tdom::Node} objVar}}}
+registerMethod $::tdom::Node instproc previousSibling {{{class ::tdom::Node} {? {setref class ::tdom::Node} objVar}}}
+registerMethod $::tdom::Node instproc getElementsByTagName {{list {string name}}}
+registerMethod $::tdom::Node instproc getElementsByTagNameNS {{list {unknown uri} {unknown localname}}}
+registerMethod $::tdom::Node instproc getElementById {{{class ::tdom::Node} {unknown id}}}
+registerMethod $::tdom::Node instproc hasAttribute {{boolean {unknown attributeName}}}
+registerMethod $::tdom::Node instproc getAttribute {{string {unknown attributeName} {? string defaultValue?}}}
+registerMethod $::tdom::Node instproc setAttribute {{void {unknown attributeName} {unknown newValue} {? unknown ?attributeName} {unknown newValue} {unknown ...?}}}
+registerMethod $::tdom::Node instproc removeAttribute {{void {unknown attributeName}}}
+registerMethod $::tdom::Node instproc hasAttributeNS {{boolean {unknown uri} {unknown localName}}}
+registerMethod $::tdom::Node instproc getAttributeNS {{string {unknown uri} {unknown localName} {? string defaultValue?}}}
+registerMethod $::tdom::Node instproc setAttributeNS {{void {unknown uri} {unknown qualifiedName} {unknown newValue} {? unknown ?uri} {unknown qualifiedName} {unknown newValue} {unknown ...?}}}
+registerMethod $::tdom::Node instproc removeAttributeNS {{void {unknown uri} {unknown localName}}}
+registerMethod $::tdom::Node instproc attributes {{list {? unknown ?attributeNamePattern?}}}
+registerMethod $::tdom::Node instproc appendChild {{void {{class ::tdom::Node} newChild}}}
+registerMethod $::tdom::Node instproc insertBefore {{void {{class ::tdom::Node} newChild} {{class ::tdom::Node} refChild}}}
+registerMethod $::tdom::Node instproc replaceChild {{void {{class ::tdom::Node} newChild} {{class ::tdom::Node} oldChild}}}
+registerMethod $::tdom::Node instproc removeChild {{void {{class ::tdom::Node} child}}}
+registerMethod $::tdom::Node instproc delete void
+registerMethod $::tdom::Node instproc cloneNode {{{class ::tdom::Node} {? unknown ?-deep?}}}
+registerMethod $::tdom::Node instproc ownerDocument {{::tdom::Doc {? {setref class ::tdom::Doc} objVar}}}
+registerMethod $::tdom::Node instproc find {{{class ::tdom::Node} {unknown attrName} {unknown attrVal} {? {setref class ::tdom::Node} objVar}}}
+registerMethod $::tdom::Node instproc child {{unknown {unknown number|all} {unknown type} {unknown attrName} {unknown attrValue}}}
+registerMethod $::tdom::Node instproc descendant {{{class ::tdom::Node} {unknown number|all} {unknown type} {unknown attrName} {unknown attrValue}}}
+registerMethod $::tdom::Node instproc ancestor {{::tdom::Node {unknown number|all} {unknown type} {unknown attrName} {unknown attrValue}}}
+registerMethod $::tdom::Node instproc fsibling {{::tdom::Node {unknown number|all} {unknown type} {unknown attrName} {unknown attrValue}}}
+registerMethod $::tdom::Node instproc psibling {{::tdom::Node {unknown number|all} {unknown type} {unknown attrName} {unknown attrValue}}}
+registerMethod $::tdom::Node instproc root {{{class ::tdom::Node} {unknown objVar}}}
+registerMethod $::tdom::Node instproc text string
+registerMethod $::tdom::Node instproc prefix string
+registerMethod $::tdom::Node instproc namespaceURI string
+registerMethod $::tdom::Node instproc localName string
+registerMethod $::tdom::Node instproc selectNodes {{list {? {option -namespaces unknown -cache boolean} ?option} {unknown xpathQuery} {? unknown ?typeVar?}}}
+registerMethod $::tdom::Node instproc getLine int
+registerMethod $::tdom::Node instproc getColumn int
+registerMethod $::tdom::Node instproc asList list
+registerMethod $::tdom::Node instproc asXML {{string {? {option -indent int -channel unknown -escapeNonASCII -escapeAllQuot} ?option}}}
+registerMethod $::tdom::Node instproc asHTML {{string {? {option -channel unknown -escapeNonASCII -htmlEntities} ?option}}}
+registerMethod $::tdom::Node instproc asText string
+registerMethod $::tdom::Node instproc appendFromList {{void {unknown list}}}
+registerMethod $::tdom::Node instproc appendFromScript {{void {unknown tclScript}}}
+registerMethod $::tdom::Node instproc insertBeforeFromScript {{void {unknown tclScript} {unknown refChild}}}
+registerMethod $::tdom::Node instproc appendXML {{void {unknown XMLstring}}}
+registerMethod $::tdom::Node instproc simpleTranslate {{void {unknown outputVar} {unknown specifications}}}
+registerMethod $::tdom::Node instproc toXPath string
+registerMethod $::tdom::Node instproc getBaseURI string
+registerMethod $::tdom::Node instproc baseURI {{string {? unknown ?URI?}}}
+registerMethod $::tdom::Node instproc disableOutputEscaping {{boolean {? boolean ?boolean?}}}
+registerMethod $::tdom::Node instproc precedes {{int {{class ::tdom::Node} refnode}}}
+registerMethod $::tdom::Node instproc normalize {{void {? {option -forXPath} ?option}}}
+registerMethod $::tdom::Node instproc xslt {{string {? {option -parameters unknown -ignoreUndeclaredParameters -xsltmessagecmd} ?option} {unknown stylesheet} {? {setref string} output}}}

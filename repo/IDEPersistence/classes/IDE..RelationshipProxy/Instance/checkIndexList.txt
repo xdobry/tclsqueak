@@ -1,0 +1,3 @@
+This procedure check if the objectList is consistent with DB.
+(if indexList varibale exist)
+If no the datebase is queried and all relationship objects are build.

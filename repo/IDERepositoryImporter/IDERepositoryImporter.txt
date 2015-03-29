@@ -1,0 +1,5 @@
+This tool can import Configmaps from foreign Repositories into
+own repository
+
+eval line below to start browser
+IDE::RepositoryImporter newBrowser

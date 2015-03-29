@@ -1,0 +1,4 @@
+Used as mixin for persistence objects (derived from IDE::DBPersistence).
+This mixin give functionality for caching objects and also recognizing
+their destroying. The caching is needed to garant object identity
+among XOTcl object and object stored in database

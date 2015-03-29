@@ -1,0 +1,15 @@
+IDE
+IDE::CommentHandler
+IDE::Component
+IDE::Component::Tracker
+IDE::NSIntroProxy
+IDE::NSIntroProxyInterp
+IDE::ObjectCommentsContainer
+IDE::ObjectDescriptionsRepo
+IDE::ProcsGroup
+IDE::XOIntroProxy
+IDE::TclOOIntroProxy
+IDE::TclProcsDescription
+IDE::CommentsContainer
+IDE::IntroProxy
+IDE::SystemConfigMap

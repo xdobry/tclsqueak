@@ -1,0 +1,33 @@
+registerProc ::itk::usual {{void {? string tag} {? unknown definition}}}
+registerProc ::itk::itk_option {{void {{const define}} {string switchName} {string resourceName} {string resourceClass} {string init} {? unknown ?config?}}}
+registerVariable ::itk::Archetype instproc itk_component {} def
+registerVariable ::itk::Archetype instproc itk_interior {} string
+registerVariable ::itk::Archetype instproc itk_option {} def
+registerVariable ::itk::Archetype instproc this {} {class ::itk::Archetype}
+registerVariable ::itk::Toplevel instproc itk_hull {} string
+registerVariable ::itk::Toplevel instproc this {} {class ::itk::Toplevel}
+registerVariable ::itk::Widget instproc itk_hull {} string
+registerVariable ::itk::Widget instproc this {} {class ::itk::Widget}
+registerMethod ::itk::Archetype instproc _deleteOptionInfo unknown {}
+registerMethod ::itk::Archetype instproc _initOptionInfo unknown {}
+registerMethod ::itk::Archetype instproc cget {{unknown enum}} {}
+registerMethod ::itk::Archetype instproc component {{unknown {? unknown name} {* unknown args}}} {}
+registerMethod ::itk::Archetype instproc config {{unknown {? unknown option} {* unknown args}}} {}
+registerMethod ::itk::Archetype instproc configure {{unknown {? unknown option} {* unknown args}}} {}
+registerMethod ::itk::Archetype instproc init {{unknown {* unknown args}}} {}
+registerMethod ::itk::Archetype instproc itk_component {{unknown {unknown option} {* unknown args}}} {}
+registerMethod ::itk::Archetype instproc itk_initialize {{unknown {* unknown args}}} {}
+registerMethod ::itk::Archetype instproc itk_option {{unknown {unknown option} {* unknown args}}} {}
+registerMethod ::itk::Archetype proc create {{{{class ::itk::Archetype} {create instance of itcl ::itk::Archetype}} {string {instance name}} {? option} {* unknown args}}} {}
+registerMethod ::itk::Toplevel instproc cget {{unknown enum}} {}
+registerMethod ::itk::Toplevel instproc configure {list {unknown option} {list enum}} {}
+registerMethod ::itk::Toplevel instproc init {{unknown {* unknown args}}} {}
+registerMethod ::itk::Toplevel proc create {{{{class ::itk::Toplevel} {create instance of itcl ::itk::Toplevel}} {string {instance name}} {? option} {* unknown args}}} {}
+registerMethod ::itk::Widget instproc cget {{unknown enum}} {}
+registerMethod ::itk::Widget instproc configure {list {unknown option} {list enum}} {}
+registerMethod ::itk::Widget instproc init {{unknown {* unknown args}}} {}
+registerMethod ::itk::Widget proc create {{{{class ::itk::Widget} {create instance of itcl ::itk::Widget}} {string {instance name}} {? option} {* unknown args}}} {}
+registerObject ::itk::Archetype ::itcl::class ::itcl::object {}
+registerObject ::itk::Toplevel ::itcl::class {::itk::Archetype} {}
+registerObject ::itk::Widget ::itcl::class {::itk::Archetype} {}
+addNamespaceExport ::itk {usual itk_option}

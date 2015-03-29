@@ -1,0 +1,2 @@
+registerProc ::starkit::startup boolean
+registerVariable {} global ::starkit::topdir {} string

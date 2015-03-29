@@ -1,0 +1,1 @@
+Try to get configuration map list from actual loaded foreign components

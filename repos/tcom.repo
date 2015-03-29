@@ -1,0 +1,13 @@
+registerProc ::tcom::ref {
+  {class {{const createobject}} {? {option -inproc -local -remote} ?option} {string progID} {? string hostName?}}
+  {class {{const getactiveobject}} {? {option -clsid} ?option} {unknown progID}}
+  {class {{const getobject}} {tk pathName}}
+  {boolean {{const equal}} {unknown handle1} {unknown handle2}}
+}
+registerProc ::tcom::foreach {{void {unknown varname} {unknown collectionHandle} {body body}}}
+registerProc ::tcom::bind {{void {unknown handle} {unknown command} {? unknown ?eventIID?}}}
+registerProc ::tcom::unbind {{void {unknown handle}}}
+registerProc ::tcom::na unknown
+registerProc ::tcom::info {{unknown {unknown interface} {unknown handle}}}
+registerProc ::tcom::configure {{unknown {string name} {? unknown ?value?}}}
+registerProc ::tcom::import {{void {unknown typeLibrary} {? unknown ?namespace?}}}

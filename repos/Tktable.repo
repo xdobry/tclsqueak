@@ -1,0 +1,86 @@
+registerProc table {{{{tk ::Table}} {{new tk ::Table}} {? {option -anchor -background -cursor -exportselection -font -foreground -highlightbackground -highlightcolor -highlightthickness -insertbackground -insertborderwidth -insertofftime -insertontime -insertwidth -invertselected -relief -takefocus -xscrollcommand -yscrollcommand -autoclear boolean -bordercursor unknown -borderwidth unknown -bd unknown -browsecommand unknown -browsecmd unknown -cache boolean -colorigin -cols int -colseparator string -colstretchmode {enum all fill} -coltagcommand unknown -colwidth unknown -command -drawmode {enum slow compatible fast} -ellipsis string -flashmode boolean -flashtime int -height unknown -invertselected boolean -ipadx unknown -ipady unknown -justify {enum left right center} -maxheight unknown -maxwidth unknown -multiline boolean -padx unknown -pady unknown -resizeborders {enum row col both} -rowheight unknown -roworigin int -rows int -rowseparator string -rowstretchmode {enum all fill} -rowtagcommand unknown -coltagcommand unknown -selectmode {enum single browse multiple extended} -selecttitle boolean -selecttype {enum row col cel both} -sparsearray boolean -state {enum normal disabled} -titlecols int -titlerows int -usecommand boolean -validate boolean -validatecommand unknown -vcmd unknown -variable unknown -width unknown -wrap boolean -holddimensions -holdselection -holdtags -holdwindows -keeptitles -- -holddimensions -holdselection -holdtags -holdwindows -keeptitles -- -holddimensions -holdselection -holdtags -holdwindows -keeptitles -- -holddimensions -holdselection -holdtags -holdwindows -keeptitles --}}}}
+registerObject ::Table Class ::widget {}
+registerMethod ::Table instproc activate {{void {index index}}}
+registerMethod ::Table instproc bbox {{list {unknown first} {? unknown ?last?}}}
+registerMethod ::Table instproc border {
+  {void {{const mark}} {int x} {int y} {? unknown ?row|col?}}
+  {void {{const dragto}} {unknown x} {unknown y}}
+}
+registerMethod ::Table instproc clear {
+  {unknown {{const cache}} {? unknown ?first?} {? unknown ?last?}}
+  {unknown {{const sizes}} {? unknown ?first?} {? unknown ?last?}}
+  {unknown {{const tags}} {? unknown ?first?} {? unknown ?last?}}
+  {unknown {{const all}} {? unknown ?first?} {? unknown ?last?}}
+}
+registerMethod ::Table instproc curselection {{list {? unknown ?value?}}}
+registerMethod ::Table instproc curvalue {{string {? unknown ?value?}}}
+registerMethod ::Table instproc delete {
+  {void {{const active}} {index index} {? index ?index?}}
+  {void {{const cols}} {? unknown ?option} {index index} {? unknown ?count?}}
+  {void {{const rows}} {? unknown ?option} {index index} {? unknown ?count?}}
+}
+registerMethod ::Table instproc get {{string {unknown first} {? unknown ?last?}}}
+registerMethod ::Table instproc height {{list {? unknown ?row?} {? unknown ?value} {unknown row} {unknown value} {* unknown ...?}}}
+registerMethod ::Table instproc hidden {{list {? index ?index?} {* index ?index...?}}}
+registerMethod ::Table instproc icursor {{void {? unknown ?arg?}}}
+registerMethod ::Table instproc index {{unknown {index index} {? unknown ?row|col?}}}
+registerMethod ::Table instproc insert {
+  {void {{const active}} {index index} {unknown value}}
+  {void {{const cols}} {? unknown ?option} {index index} {? unknown ?count?}}
+  {void {{const rows}} {? unknown ?option} {index index} {? unknown ?count?}}
+}
+registerMethod ::Table instproc reread void
+registerMethod ::Table instproc scan {
+  {void {{const mark}} {unknown x} {unknown y}}
+  {void {{const dragto}} {unknown x} {unknown y.}}
+}
+registerMethod ::Table instproc see {{void {index index}}}
+registerMethod ::Table instproc selection {
+  {unknown {{const anchor}} {index index}}
+  {unknown {{const clear}} {unknown first} {? unknown ?last?}}
+  {unknown {{const includes}} {index index} {unknown Returns} {unknown 1} {unknown if} {unknown the} {unknown cell} {unknown indicated} {unknown by} {index index} {unknown is} {unknown currently} {unknown selected,} {unknown 0} {unknown if} {unknown it} {unknown isn't.}}
+  {unknown {{const set}} {unknown first} {? unknown ?last?}}
+}
+registerMethod ::Table instproc set {{unknown {? unknown ?row|col?} {index index} {? unknown ?value?} {? index ?index} {unknown value} {* unknown ...?}}}
+registerMethod ::Table instproc spans {{unknown {? index ?index?} {? unknown ?rows,cols} {index index} {unknown rows,cols} {* unknown ...?}}}
+registerMethod ::Table instproc tag {
+  {unknown {{const cell}} {unknown tagName} {? index ?index} {* unknown ...?}}
+  {unknown {{const cget}} {unknown tagName} {unknown option}}
+  {unknown {{const col}} {unknown tagName} {? unknown ?col} {* unknown ...?}}
+  {unknown {{const configure}} {unknown tagName} {? unknown ?option?} {? unknown ?value?} {? unknown ?option} {unknown value} {* unknown ...?}}
+  {void {{const delete}} {unknown tagName}}
+  {boolean {{const exists}} {unknown tagName}}
+  {boolean {{const includes}} {unknown tagName} {index index}}
+  {void {{const lower}} {unknown tagName} {? unknown ?belowThis?}}
+  {lowerlist {{const names}} {? unknown ?pattern?}}
+  {unknown {{const raise}} {unknown tagName} {? unknown ?aboveThis?}}
+  {unknown {{const row}} {unknown tagName} {? unknown ?row} {* unknown ...?}}
+}
+registerMethod ::Table instproc validate {{unknown {index index}}}
+registerMethod ::Table instproc width {{unknown {? unknown ?col?} {? unknown ?value} {unknown col} {unknown value} {* unknown ...?}}}
+registerMethod ::Table instproc window {
+  {unknown {{const cget}} {index index} {unknown option}}
+  {unknown {{const configure}} {index index} {? unknown ?option?} {? unknown ?value?} {? unknown ?option} {unknown value} {* unknown ...?}}
+  {unknown {{const delete}} {index index} {? index ?index} {* unknown ...?}}
+  {unknown {{const move}} {unknown indexFrom} {unknown indexTo}}
+  {list {{const names}} {? unknown ?pattern?}}
+}
+registerMethod ::Table instproc xview {
+  {list {{const {}}}}
+  {unknown {{const index}}}
+  {void {{const moveto}} {unknown fraction}}
+  {void {{const scroll}} {int number}}
+}
+registerMethod ::Table instproc yview {
+  {list {{const {}}}}
+  {unknown {{const index}}}
+  {void {{const moveto}} {unknown fraction}}
+}
+registerMethod ::Table instproc xview {{void {unknown scroll} {int number}}}
+registerMethod ::Table instproc cget {{unknown {{enum -anchor -background -cursor -exportselection -font -foreground -highlightbackground -highlightcolor -highlightthickness -insertbackground -insertborderwidth -insertofftime -insertontime -insertwidth -invertselected -relief -takefocus -xscrollcommand -yscrollcommand -autoclear -bordercursor -borderwidth -bd -browsecommand -browsecmd -cache -colorigin -cols -colseparator -colstretchmode -coltagcommand -colwidth -command -drawmode -ellipsis -flashmode -flashtime -height -invertselected -ipadx -ipady -justify -maxheight -maxwidth -multiline -padx -pady -resizeborders -rowheight -roworigin -rows -rowseparator -rowstretchmode -rowtagcommand -coltagcommand -selectmode -selecttitle -selecttype -sparsearray -state -titlecols -titlerows -usecommand -validate -validatecommand -vcmd -variable -width -wrap -holddimensions -holdselection -holdtags -holdwindows -keeptitles -- -holddimensions -holdselection -holdtags -holdwindows -keeptitles -- -holddimensions -holdselection -holdtags -holdwindows -keeptitles -- -holddimensions -holdselection -holdtags -holdwindows -keeptitles --}}}}
+registerMethod ::Table instproc confiure {
+  {list}
+  {void {{option -anchor -background -cursor -exportselection -font -foreground -highlightbackground -highlightcolor -highlightthickness -insertbackground -insertborderwidth -insertofftime -insertontime -insertwidth -invertselected -relief -takefocus -xscrollcommand -yscrollcommand -autoclear boolean -bordercursor unknown -borderwidth unknown -bd unknown -browsecommand unknown -browsecmd unknown -cache boolean -colorigin -cols int -colseparator string -colstretchmode {enum all fill} -coltagcommand unknown -colwidth unknown -command -drawmode {enum slow compatible fast} -ellipsis string -flashmode boolean -flashtime int -height unknown -invertselected boolean -ipadx unknown -ipady unknown -justify {enum left right center} -maxheight unknown -maxwidth unknown -multiline boolean -padx unknown -pady unknown -resizeborders {enum row col both} -rowheight unknown -roworigin int -rows int -rowseparator string -rowstretchmode {enum all fill} -rowtagcommand unknown -coltagcommand unknown -selectmode {enum single browse multiple extended} -selecttitle boolean -selecttype {enum row col cel both} -sparsearray boolean -state {enum normal disabled} -titlecols int -titlerows int -usecommand boolean -validate boolean -validatecommand unknown -vcmd unknown -variable unknown -width unknown -wrap boolean -holddimensions -holdselection -holdtags -holdwindows -keeptitles -- -holddimensions -holdselection -holdtags -holdwindows -keeptitles -- -holddimensions -holdselection -holdtags -holdwindows -keeptitles -- -holddimensions -holdselection -holdtags -holdwindows -keeptitles --}}}
+  {list {{enum -anchor -background -cursor -exportselection -font -foreground -highlightbackground -highlightcolor -highlightthickness -insertbackground -insertborderwidth -insertofftime -insertontime -insertwidth -invertselected -relief -takefocus -xscrollcommand -yscrollcommand -autoclear -bordercursor -borderwidth -bd -browsecommand -browsecmd -cache -colorigin -cols -colseparator -colstretchmode -coltagcommand -colwidth -command -drawmode -ellipsis -flashmode -flashtime -height -invertselected -ipadx -ipady -justify -maxheight -maxwidth -multiline -padx -pady -resizeborders -rowheight -roworigin -rows -rowseparator -rowstretchmode -rowtagcommand -coltagcommand -selectmode -selecttitle -selecttype -sparsearray -state -titlecols -titlerows -usecommand -validate -validatecommand -vcmd -variable -width -wrap -holddimensions -holdselection -holdtags -holdwindows -keeptitles -- -holddimensions -holdselection -holdtags -holdwindows -keeptitles -- -holddimensions -holdselection -holdtags -holdwindows -keeptitles -- -holddimensions -holdselection -holdtags -holdwindows -keeptitles --}}}
+}
+

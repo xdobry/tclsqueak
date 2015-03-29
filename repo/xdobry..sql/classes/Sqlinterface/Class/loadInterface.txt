@@ -1,0 +1,4 @@
+Load interface with name (same as specified returned from
+getInterfacesNames) and return the interface class.
+
+It is factory method for sql interfaces

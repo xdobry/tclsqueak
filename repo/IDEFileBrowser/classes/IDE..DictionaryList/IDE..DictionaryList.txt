@@ -1,0 +1,5 @@
+Just short implementation of Filebrowser.
+It was only developed to have good access to VFS
+(zip and tclkit)
+
+IDE::FileBrowser newBrowser

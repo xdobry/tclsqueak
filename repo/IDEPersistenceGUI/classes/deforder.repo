@@ -1,0 +1,11 @@
+IDE::AvailableView
+IDE::ClassViewDB
+IDE::CompRequiredView
+IDE::CompViewDB
+IDE::MethodDB
+IDE::MethodListViewDB
+IDE::MethodViewDB
+IDE::VersionBrowser
+IDE::VersionChooser
+IDE::VersionInfoView
+IDE::VersionView

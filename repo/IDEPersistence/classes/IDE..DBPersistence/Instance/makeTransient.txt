@@ -1,0 +1,5 @@
+The method remove the corresponding representation of object
+from database.
+It do not remove another relationship rows.
+
+The command is opposite to makePersistent

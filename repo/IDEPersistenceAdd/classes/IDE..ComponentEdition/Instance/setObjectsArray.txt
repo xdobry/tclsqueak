@@ -1,0 +1,2 @@
+This method are also impelented by IDE::ComponentPersistence
+It is used to fill in informations about classes and objects

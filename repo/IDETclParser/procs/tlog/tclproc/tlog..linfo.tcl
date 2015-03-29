@@ -1,0 +1,3 @@
+proc tlog::linfo message {
+
+}

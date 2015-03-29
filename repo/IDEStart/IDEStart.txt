@@ -1,0 +1,11 @@
+This application is able to load all XotclIDE from DB
+therefore is is not depend on another XotclIDE components.
+
+You can load IDE form Database only with this applikation
+
+Here are also some redundant code the same as in IDEBaseGUI
+
+Using:
+
+ package require IDEStart
+ IDEStarter startIDEFromDB

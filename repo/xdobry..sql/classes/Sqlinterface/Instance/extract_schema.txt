@@ -1,0 +1,2 @@
+The schema-api works after visitor pattern.
+The visitor must implement to methods newtable {name} and newattribute {attr_list}

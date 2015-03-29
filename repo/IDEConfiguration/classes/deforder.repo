@@ -1,0 +1,10 @@
+IDE::CMapsChangesBrowser
+IDE::ComponentConfWrapper
+IDE::ComponentGroup
+IDE::ConfigmapBrowser
+IDE::ConfigurationMap
+IDE::ConfigurationMapGroup
+IDE::EditionChooser
+IDE::EditionsMultiChooser
+IDE::ListViewEvent
+IDE::ConfigmapControler

@@ -1,0 +1,2 @@
+This method is more to ask if the object
+is persistentable (also has Persistent interface)

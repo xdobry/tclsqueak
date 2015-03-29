@@ -1,0 +1,3 @@
+proc tlog::trace message {
+
+}

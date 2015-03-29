@@ -1,0 +1,5 @@
+SQL Browser is GUI Tool that offer SQL shell to chooses Datebase.
+Additional it shows the tables and columnsnames
+The result can be shown as in tktable widget
+
+IDE::SqlBrowser newBrowser

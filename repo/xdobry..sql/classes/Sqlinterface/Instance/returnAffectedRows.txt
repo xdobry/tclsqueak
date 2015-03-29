@@ -1,0 +1,2 @@
+inform with 1 or 0 if method execute
+returns the number of affected rows by DELETE, UPDATE or INSERT statements

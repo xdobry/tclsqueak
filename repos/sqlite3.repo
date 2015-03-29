@@ -1,0 +1,24 @@
+registerProc ::sqlite3 {{{{class ::_Sqlite}} {{new class ::_Sqlite}} {string databaseFile}}}
+registerObject ::_Sqlite Class {} {}
+registerMethod ::_Sqlite instproc close void
+registerMethod ::_Sqlite instproc eval {{list {string sql} {? {setref array} array-name} {? body ?body?}}}
+registerMethod ::_Sqlite instproc transaction {{void {? {enum deferred exclusive} transation-type} {body body}}}
+registerMethod ::_Sqlite instproc complete {{boolean {string sql}}}
+registerMethod ::_Sqlite instproc copy {{void {unknown conflict-algorithm} {unknown table-name} {unknown file-name} {? unknown ?column-separator?} {? unknown ?null-indicator?}}}
+registerMethod ::_Sqlite instproc timeout {{void {int delay}}}
+registerMethod ::_Sqlite instproc busy {{void {script script}}}
+registerMethod ::_Sqlite instproc last_insert_rowid int
+registerMethod ::_Sqlite instproc function {{void {string fun-name} {unknown cmdprefix}}}
+registerMethod ::_Sqlite instproc nullvalue {{void {string nullrep}}}
+registerMethod ::_Sqlite instproc onecolumn {{list {string sql}}}
+registerMethod ::_Sqlite instproc changes int
+registerMethod ::_Sqlite instproc total_changes int
+registerMethod ::_Sqlite instproc authorizer {{void {? unknown ?cmd?}}}
+registerMethod ::_Sqlite instproc progress {{void {int n} {unknown cmd}}}
+registerMethod ::_Sqlite instproc collate {{void {unknown seq-name} {unknown cmd}}}
+registerMethod ::_Sqlite instproc collation_needed {{void {unknown cmd}}}
+registerMethod ::_Sqlite instproc commit_hook {{void {unknown cmd}}}
+registerMethod ::_Sqlite instproc errorcode int
+registerMethod ::_Sqlite instproc trace {{void {unknown cmdprefix}}}
+registerMethod ::_Sqlite instproc backup {{void {? unknown ?source-database?} {unknown backup-filename}}}
+registerMethod ::_Sqlite instproc restore {{void {? unknown ?target-database?} {unknown source-filename}}}

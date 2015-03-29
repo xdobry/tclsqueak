@@ -1,0 +1,1 @@
+check if the interface or query object support function with name

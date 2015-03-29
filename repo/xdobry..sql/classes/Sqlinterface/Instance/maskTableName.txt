@@ -1,0 +1,3 @@
+Some database allow to have space in table name (access, ms-sql)
+and need masking with [example table]
+by another the name would be converted to exmaple_table

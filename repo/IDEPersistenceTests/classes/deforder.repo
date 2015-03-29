@@ -1,0 +1,3 @@
+IDE::BasePersistenceTest
+IDE::ConfigMapTestNoGUI
+IDE::SimplePersistenceClass

@@ -1,0 +1,3 @@
+mask all sql string by replacing string delmiter with \
+for example
+sder"ewr  - adef\"eer

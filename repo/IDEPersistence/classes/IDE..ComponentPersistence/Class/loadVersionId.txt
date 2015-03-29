@@ -1,0 +1,2 @@
+Use loadNameVersionId to reload another version of component.
+Use it if you have only componentid 

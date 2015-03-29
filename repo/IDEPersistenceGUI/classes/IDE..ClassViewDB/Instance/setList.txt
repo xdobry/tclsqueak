@@ -1,0 +1,1 @@
+This method is responsed to color the items dependend from version control status

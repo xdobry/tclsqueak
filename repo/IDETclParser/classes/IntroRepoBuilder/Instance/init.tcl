@@ -1,0 +1,51 @@
+IntroRepoBuilder instproc init {} {
+    my instvar optTypes
+    array set optTypes {
+        -command script
+        -text string
+        -underline int
+        -activebackground color
+        -activeborderwidth pixel
+        -anchor {enum n ne e se s sw w nw center}
+        -background color
+        -bg color
+        -bitmap unknown
+        -borderwidth pixel
+        -bd pixel
+        -cursor unknown
+        -compound {enum none bottom top left right center}
+        -disabledforeground color
+        -exportselection boolean
+        -font string
+        -foreground color
+        -fg color
+        -highlightbackground color
+        -highlightcolor color
+        -highlightthickness pixel
+        -image unknown
+        -insertbackground color
+        -insertborderwidth pixel
+        -insertofftime int
+        -insertontime int
+        -insertwidth pixel
+        -jump boolean
+        -justify {enum left center right}
+        -orient {enum horizontal vertical}
+        -padx pixel
+        -pady pixel
+        -relief {enum raised sunken flat ridge solid groove}
+        -repeatdelay int
+        -repeatinterval int
+        -selectbackground color
+        -selectborderwidth pixel
+        -selectforeground color
+        -setgrid boolean
+        -takefocus boolean
+        -text string
+        -textvariable {setgref string}
+        -troughcolor color
+        -wraplength int
+        -xscrollcommand script
+        -yscrollcommand script
+    }
+}

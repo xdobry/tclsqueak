@@ -1,0 +1,56 @@
+registerProc ::mysql::connect {{handle {? {option -host unknown -user string -password string -db string -port int -socket string -encoding string -compress boolean -odbc boolean -noschema boolean -multistatement boolean -multiresult boolean -localfiles boolean -foundrows boolean -interactive boolean -ssl boolean -sslkey string -sslcert string -sslca string -sslcapath string -sslcipher string} ?option?}}}
+registerProc ::mysql::use {{void {handle handle} {unknown database}}}
+registerProc ::mysql::sel {{list {handle handle} {unknown sql-statement} {? {option -list {} -flatlist {}} ?option?}}}
+registerProc ::mysql::fetch {{list {handle handle}}}
+registerProc ::mysql::exec {{int {handle handle} {unknown sql-statement}}}
+registerProc ::mysql::query {{list {handle handle} {unknown sql-select-statement}}}
+registerProc ::mysql::endquery {{void {query-handle handle}}}
+registerProc ::mysql::map {{void {handle handle} {unknown binding-list} {script script}}}
+registerProc ::mysql::receive {{void {handle handle} {unknown sql-statment} {unknown binding-list} {script script}}}
+registerProc ::mysql::seek {{int {handle handle} {int row-index}}}
+registerProc ::mysql::col {{list {handle handle} {? string table-name} {* {enum name type length table non_null prim_key numeric decimals} option...}}}
+registerProc ::mysql::info {{string {handle handle} {{enum info databases dbname dbname? host host tables serverversion serverversionid sqlstate state} option}}}
+registerProc ::mysql::baseinfo {{string {{enum connectparameters clientversion} option}}}
+registerProc ::mysql::ping {{void {handle handle}}}
+registerProc ::mysql::changeuser {{void {string user} {string password} {? unknown ?database?}}}
+registerProc ::mysql::result {{int {handle handle} {{enum cols cols? current current? rows rows?} option}}}
+registerProc ::mysql::state {{string {handle handle} {? unknown ?-numeric?}}}
+registerProc ::mysql::close {{void {? handle handle?}}}
+registerProc ::mysql::insertid {{int {handle handle}}}
+registerProc ::mysql::escape {{string {? handle handle?} {string string}}}
+registerProc ::mysql::autocommit {{void {handle handle} {boolean boolean}}}
+registerProc ::mysql::commit {{void {handle handle}}}
+registerProc ::mysql::rollback {{void {handle handle}}}
+registerProc ::mysql::nextresult {{int {handle handle}}}
+registerProc ::mysql::moreresult {{boolean {handle handle}}}
+registerProc ::mysql::warningcount {{int {handle handle}}}
+registerProc ::mysql::isnull {{boolean {unknown value}}}
+registerProc ::mysql::newnull string
+registerProc ::mysqlconnect {{handle {? {option -host unknown -user string -password string -db string -port int -socket string -encoding string -compress boolean -odbc boolean -noschema boolean -multistatement boolean -multiresult boolean -localfiles boolean -foundrows boolean -interactive boolean -ssl boolean -sslkey string -sslcert string -sslca string -sslcapath string -sslcipher string} ?option?}}}
+registerProc ::mysqluse {{void {handle handle} {unknown database}}}
+registerProc ::mysqlsel {{list {handle handle} {unknown sql-statement} {? {option -list {} -flatlist {}} ?option?}}}
+registerProc ::mysqlnext {{list {handle handle}}}
+registerProc ::mysqlexec {{int {handle handle} {unknown sql-statement}}}
+registerProc ::mysqlquery {{list {handle handle} {unknown sql-select-statement}}}
+registerProc ::mysqlendquery {{void {query-handle handle}}}
+registerProc ::mysqlmap {{void {handle handle} {unknown binding-list} {script script}}}
+registerProc ::mysqlreceive {{void {handle handle} {unknown sql-statment} {unknown binding-list} {script script}}}
+registerProc ::mysqlseek {{int {handle handle} {int row-index}}}
+registerProc ::mysqlcol {{list {handle handle} {? string table-name} {* {enum name type length table non_null prim_key numeric decimals} option...}}}
+registerProc ::mysqlinfo {{string {handle handle} {{enum info databases dbname dbname? host host tables serverversion serverversionid sqlstate state} option}}}
+registerProc ::mysqlbaseinfo {{string {{enum connectparameters clientversion} option}}}
+registerProc ::mysqlping {{void {handle handle}}}
+registerProc ::mysqlchangeuser {{void {string user} {string password} {? unknown ?database?}}}
+registerProc ::mysqlresult {{int {handle handle} {{enum cols cols? current current? rows rows?} option}}}
+registerProc ::mysqlstate {{string {handle handle} {? unknown ?-numeric?}}}
+registerProc ::mysqlclose {{void {? handle handle?}}}
+registerProc ::mysqlinsertid {{int {handle handle}}}
+registerProc ::mysqlescape {{string {? handle handle?} {string string}}}
+registerProc ::mysqlautocommit {{void {handle handle} {boolean boolean}}}
+registerProc ::mysqlcommit {{void {handle handle}}}
+registerProc ::mysqlrollback {{void {handle handle}}}
+registerProc ::mysqlnextresult {{int {handle handle}}}
+registerProc ::mysqlmoreresult {{boolean {handle handle}}}
+registerProc ::mysqlwarningcount {{int {handle handle}}}
+registerProc ::mysqlisnull {{boolean {unknown value}}}
+registerProc ::mysqlnewnull string

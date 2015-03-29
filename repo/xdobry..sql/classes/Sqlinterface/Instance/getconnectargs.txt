@@ -1,0 +1,7 @@
+return information about connection parameters
+list of list with elements
+<ul>
+<li>name of argument
+<li>type of argument (text integer password)
+<li>default of argument
+</ul>

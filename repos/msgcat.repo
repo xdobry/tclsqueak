@@ -1,0 +1,8 @@
+registerProc ::msgcat::mc {{string string {* string arg}}}
+registerProc ::msgcat::mcload {{void {string dirname}}}
+registerProc ::msgcat::mclocale {{string {? string newLocale}}}
+registerProc ::msgcat::mcmax {{int {* string}}}
+registerProc ::msgcat::mcmset {{int {string locale} {list src-trans-list}}}
+registerProc ::msgcat::mcpreferences {{list}}
+registerProc ::msgcat::mcset {{string {string locale} {string src-string} {? string translate-string}}}
+addNamespaceExport ::msgcat {mc mcload mclocale mcmax mcmset mcpreferences mcset mcunknown}

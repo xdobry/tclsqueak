@@ -1,0 +1,6 @@
+IDE::DBMappingSchemaChange
+IDE::LabeledEntry
+IDE::FileNameEntry
+IDE::InstallerGUI
+IDE::WorkStatus
+IDE::StandardInstallation

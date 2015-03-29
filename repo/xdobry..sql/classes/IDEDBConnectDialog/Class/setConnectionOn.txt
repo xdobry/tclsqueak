@@ -1,0 +1,12 @@
+Offer Tk GUI dialog to establish sql connection
+if interface object are specified this interface will be used 
+Example: For connect mysql
+
+IDEDBConnectDialog setConnectionOn MySql
+If object is empty the user can choose the interface
+
+IDEDBConnectDialog setConnectionOn {}
+
+You can also pass some default values (as returned from getconnectionargs)
+IDEDBConnectDialog setConnectionOn MySql {user root host 127.0.0.1}
+

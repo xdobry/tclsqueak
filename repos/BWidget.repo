@@ -1,0 +1,390 @@
+registerProc ::ArrowButton {{{{tk ::BW::ArrowButton}} {{new tk ::BW::ArrowButton} ArrowButton} {? {option -activebackground color -activeforeground unknown -armcommand unknown -arrowbd unknown -arrowrelief unknown -background color -bd pixel -bg color -borderwidth pixel -clean unknown -command script -dir unknown -disabledforeground color -disarmcommand unknown -fg color -foreground color -height unknown -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -ipadx unknown -ipady unknown -relief {enum raised sunken flat ridge solid groove} -repeatdelay int -repeatinterval int -state unknown -takefocus boolean -troughcolor color -type unknown -width unknown}}}}
+registerProc ::Button {{{{tk ::BW::Button}} {{new tk ::BW::Button} Button} {? {option -activebackground color -activeforeground unknown -anchor {enum n ne e se s sw w nw center} -armcommand unknown -background color -bd pixel -bg color -bitmap unknown -borderwidth pixel -command script -compound {enum none bottom top left right center} -cursor unknown -default unknown -disabledforeground color -disarmcommand unknown -fg color -font string -foreground color -height unknown -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -image unknown -justify {enum left center right} -name unknown -overrelief unknown -padx pixel -pady pixel -relief {enum raised sunken flat ridge solid groove} -repeatdelay int -repeatinterval int -state unknown -takefocus boolean -text string -textvariable {gref string} -underline int -width unknown -wraplength int}}}}
+registerProc ::ButtonBox {{{{tk ::BW::ButtonBox}} {{new tk ::BW::ButtonBox} ButtonBox} {? {option -background color -bg color -default unknown -homogeneous unknown -orient {enum horizontal vertical} -padx pixel -pady pixel -spacing unknown -state unknown}}}}
+registerProc ::ComboBox {{{{tk ::BW::ComboBox}} {{new tk ::BW::ComboBox} ComboBox} {? {option -autocomplete unknown -autopost unknown -background color -bd pixel -borderwidth pixel -bwlistbox unknown -command script -cursor unknown -disabledbackground unknown -disabledforeground color -dragenabled unknown -dragendcmd unknown -dragevent unknown -draginitcmd unknown -dragtype unknown -dropcmd unknown -dropenabled unknown -dropovercmd unknown -droptypes unknown -editable unknown -entrybg unknown -expand unknown -exportselection boolean -fg color -font string -foreground color -height unknown -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -hottrack unknown -images unknown -indents unknown -insertbackground color -insertborderwidth pixel -insertofftime int -insertontime int -insertwidth pixel -invalidcommand unknown -invcmd unknown -justify {enum left center right} -listboxwidth unknown -modifycmd unknown -postcommand unknown -readonlybackground unknown -relief {enum raised sunken flat ridge solid groove} -selectbackground color -selectborderwidth pixel -selectforeground color -show unknown -state unknown -takefocus boolean -text string -textvariable {gref string} -validate unknown -validatecommand unknown -values unknown -vcmd unknown -width unknown -xscrollcommand script}}}}
+registerProc ::Dialog {{{{tk ::BW::Dialog}} {{new tk ::BW::Dialog} Dialog} {? {option -anchor {enum n ne e se s sw w nw center} -geometry unknown -place unknown -spacing unknown -modal unknown -bitmap unknown -class unknown -cancel unknown -transient unknown -background color -separator unknown -bg color -homogeneous unknown -state unknown -parent unknown -image unknown -side unknown -default unknown -padx pixel -pady pixel -title unknown}}}}
+registerProc ::Entry {{{{tk ::BW::Entry}} {{new tk ::BW::Entry} Entry} {? {option -background color -bd pixel -bg color -borderwidth pixel -command script -cursor unknown -disabledbackground unknown -disabledforeground color -dragenabled unknown -dragendcmd unknown -dragevent unknown -draginitcmd unknown -dragtype unknown -dropcmd unknown -dropenabled unknown -dropovercmd unknown -droptypes unknown -editable unknown -exportselection boolean -fg color -font string -foreground color -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -insertbackground color -insertborderwidth pixel -insertofftime int -insertontime int -insertwidth pixel -invalidcommand unknown -invcmd unknown -justify {enum left center right} -readonlybackground unknown -relief {enum raised sunken flat ridge solid groove} -selectbackground color -selectborderwidth pixel -selectforeground color -show unknown -state unknown -takefocus boolean -text string -textvariable {gref string} -validate unknown -validatecommand unknown -vcmd unknown -width unknown -xscrollcommand script}}}}
+registerProc ::Label {{{{tk ::BW::Label}} {{new tk ::BW::Label} Label} {? {option -activebackground color -activeforeground unknown -anchor {enum n ne e se s sw w nw center} -background color -bd pixel -bg color -bitmap unknown -borderwidth pixel -compound {enum none bottom top left right center} -cursor unknown -disabledforeground color -dragenabled unknown -dragendcmd unknown -dragevent unknown -draginitcmd unknown -dragtype unknown -dropcmd unknown -dropenabled unknown -dropovercmd unknown -droptypes unknown -fg color -focus unknown -font string -foreground color -height unknown -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -image unknown -justify {enum left center right} -name unknown -padx pixel -pady pixel -relief {enum raised sunken flat ridge solid groove} -state unknown -takefocus boolean -text string -textvariable {gref string} -underline int -width unknown -wraplength int}}}}
+registerProc ::LabelEntry {{{{tk ::BW::LabelEntry}} {{new tk ::BW::LabelEntry} LabelEntry} {? {option -activebackground color -activeforeground unknown -background color -bd pixel -bg color -bitmap unknown -borderwidth pixel -command script -compound {enum none bottom top left right center} -cursor unknown -disabledbackground unknown -disabledforeground color -dragenabled unknown -dragendcmd unknown -dragevent unknown -draginitcmd unknown -dragtype unknown -dropcmd unknown -dropenabled unknown -dropovercmd unknown -droptypes unknown -editable unknown -entrybg unknown -entryfg unknown -exportselection boolean -fg color -font string -foreground color -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -image unknown -insertbackground color -insertborderwidth pixel -insertofftime int -insertontime int -insertwidth pixel -invalidcommand unknown -invcmd unknown -justify {enum left center right} -label unknown -labelanchor unknown -labelfont unknown -labelheight unknown -labeljustify unknown -labeltextvariable unknown -labelwidth unknown -name unknown -padx pixel -pady pixel -readonlybackground unknown -relief {enum raised sunken flat ridge solid groove} -selectbackground color -selectborderwidth pixel -selectforeground color -show unknown -side unknown -state unknown -takefocus boolean -text string -textvariable {gref string} -underline int -validate unknown -validatecommand unknown -vcmd unknown -width unknown -wraplength int -xscrollcommand script}}}}
+registerProc ::LabelFrame {{{{tk ::BW::LabelFrame}} {{new tk ::BW::LabelFrame} LabelFrame} {? {option -activebackground color -activeforeground unknown -anchor {enum n ne e se s sw w nw center} -background color -bd pixel -bg color -bitmap unknown -borderwidth pixel -compound {enum none bottom top left right center} -disabledforeground color -fg color -focus unknown -font string -foreground color -height unknown -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -image unknown -justify {enum left center right} -name unknown -padx pixel -pady pixel -relief {enum raised sunken flat ridge solid groove} -side unknown -state unknown -text string -textvariable {gref string} -underline int -width unknown -wraplength int}}}}
+registerProc ::ListBox {{{{tk ::BW::ListBox}} {{new tk ::BW::ListBox} ListBox} {? {option -autofocus unknown -background color -bd pixel -bg color -borderwidth pixel -cursor unknown -deltax unknown -deltay unknown -dragenabled unknown -dragendcmd unknown -dragevent unknown -draginitcmd unknown -dragtype unknown -dropcmd unknown -dropenabled unknown -dropovercmd unknown -dropovermode unknown -droptypes unknown -fg color -font string -foreground color -height unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -multicolumn unknown -offset unknown -padx pixel -redraw unknown -relief {enum raised sunken flat ridge solid groove} -selectbackground color -selectfill unknown -selectforeground color -selectmode unknown -state unknown -takefocus boolean -width unknown -xscrollcommand script -yscrollcommand script}}}}
+registerProc ::MainFrame {{{{tk ::BW::MainFrame}} {{new tk ::BW::MainFrame} MainFrame} {? {option -background color -bg color -height unknown -idle unknown -menu unknown -menubarfont unknown -menuentryfont unknown -progressfg unknown -progressmax unknown -progresstype unknown -progressvar unknown -separator unknown -sizegrip unknown -statusbarfont unknown -textvariable {gref string} -width unknown}}}}
+registerProc ::MessageDlg {{{{tk ::BW::MessageDlg}} {{new tk ::BW::MessageDlg} MessageDlg} {? {option -anchor {enum n ne e se s sw w nw center} -buttonwidth unknown -geometry unknown -place unknown -message unknown -cancel unknown -class unknown -font string -transient unknown -background color -icon unknown -state unknown -bg color -parent unknown -foreground color -default unknown -fg color -padx pixel -justify {enum left center right} -pady pixel -buttons unknown -aspect unknown -width unknown -type unknown -title unknown}}}}
+registerProc ::NoteBook {{{{tk ::BW::NoteBook}} {{new tk ::BW::NoteBook} NoteBook} {? {option -activebackground color -activeforeground unknown -arcradius unknown -background color -bd pixel -bg color -borderwidth pixel -disabledforeground color -fg color -font string -foreground color -height unknown -homogeneous unknown -ibd unknown -internalborderwidth unknown -repeatdelay int -repeatinterval int -side unknown -tabbevelsize unknown -tabpady unknown -width unknown}}}}
+registerProc ::PagesManager {{{{tk ::BW::PagesManager}} {{new tk ::BW::PagesManager} PagesManager} {? {option -background color -cursor unknown -height unknown -width unknown}}}}
+registerProc ::PanedWindow {{{{tk ::BW::PanedWindow}} {{new tk ::BW::PanedWindow} PanedWindow} {? {option -activator unknown -background color -bg color -pad unknown -side unknown -weights unknown -width unknown}}}}
+registerProc ::PanelFrame {{{{tk ::BW::PanelFrame}} {{new tk ::BW::PanelFrame} PanelFrame} {? {option -background color -bd pixel -bg color -borderwidth pixel -font string -height unknown -ipad unknown -panelbackground unknown -panelforeground unknown -relief {enum raised sunken flat ridge solid groove} -text string -textvariable {gref string} -width unknown}}}}
+registerProc ::PasswdDlg {{{{tk ::BW::PasswdDlg}} {{new tk ::BW::PasswdDlg} PasswdDlg} {? {option -logineditable unknown -anchor {enum n ne e se s sw w nw center} -disabledforeground color -place unknown -bitmap unknown -helpcmd unknown -highlightcolor color -state unknown -validate unknown -foreground color -wraplength int -insertbackground color -insertwidth pixel -title unknown -passwdeditable unknown -geometry unknown -highlightthickness pixel -modal unknown -borderwidth pixel -bd pixel -readonlybackground unknown -passwdtext unknown -entryfg unknown -labelwidth unknown -highlightbackground color -bg color -image unknown -helptype unknown -selectforeground color -loginunderline unknown -loginhelptext unknown -labelfont unknown -activeforeground unknown -relief {enum raised sunken flat ridge solid groove} -disabledbackground unknown -insertontime int -vcmd unknown -loginhelpvar unknown -insertborderwidth pixel -passwdtextvariable unknown -spacing unknown -logintext unknown -selectborderwidth pixel -labeljustify unknown -command script -background color -labelheight unknown -passwdstate unknown -labelanchor unknown -passwdhelpvar unknown -padx pixel -cursor unknown -invalidcommand unknown -pady pixel -passwdhelptext unknown -exportselection boolean -invcmd unknown -validatecommand unknown -entrybg unknown -logintextvariable unknown -class unknown -insertofftime int -font string -passwdunderline unknown -selectbackground color -transient unknown -homogeneous unknown -passwdlabel unknown -parent unknown -labeltextvariable unknown -activebackground color -fg color -compound {enum none bottom top left right center} -loginlabel unknown -type unknown}}}}
+registerProc ::ProgressBar {{{{tk ::BW::ProgressBar}} {{new tk ::BW::ProgressBar} ProgressBar} {? {option -background color -bd pixel -bg color -borderwidth pixel -fg color -foreground color -height unknown -idle unknown -maximum unknown -orient {enum horizontal vertical} -relief {enum raised sunken flat ridge solid groove} -troughcolor color -type unknown -variable unknown -width unknown}}}}
+registerProc ::ProgressDlg {{{{tk ::BW::ProgressDlg}} {{new tk ::BW::ProgressDlg} ProgressDlg} {? {option -textvariable {gref string} -geometry unknown -place unknown -stop unknown -idle unknown -class unknown -bd pixel -borderwidth pixel -command script -font string -troughcolor color -transient unknown -background color -separator unknown -bg color -state unknown -parent unknown -foreground color -fg color -variable unknown -maximum unknown -relief {enum raised sunken flat ridge solid groove} -width unknown -height unknown -type unknown -title unknown}}}}
+registerProc ::ScrollView {{{{tk ::BW::ScrollView}} {{new tk ::BW::ScrollView} ScrollView} {? {option -background color -bd pixel -bg color -borderwidth pixel -cursor unknown -fg color -fill unknown -foreground color -height unknown -relief {enum raised sunken flat ridge solid groove} -width unknown -window unknown}}}}
+registerProc ::ScrollableFrame {{{{tk ::BW::ScrollableFrame}} {{new tk ::BW::ScrollableFrame} ScrollableFrame} {? {option -areaheight unknown -areawidth unknown -background color -bg color -constrainedheight unknown -constrainedwidth unknown -height unknown -width unknown -xscrollcommand script -xscrollincrement unknown -yscrollcommand script -yscrollincrement unknown}}}}
+registerProc ::ScrolledWindow {{{{tk ::BW::ScrolledWindow}} {{new tk ::BW::ScrolledWindow} ScrolledWindow} {? {option -auto unknown -background color -bd pixel -bg color -borderwidth pixel -ipad unknown -managed unknown -relief {enum raised sunken flat ridge solid groove} -scrollbar unknown -sides unknown -size unknown}}}}
+registerProc ::SelectColor {{{{tk ::BW::SelectColor}} {{new tk ::BW::SelectColor} SelectColor} {? {option -color unknown -placement unknown -type unknown -parent unknown -title unknown}}}}
+registerProc ::SelectFont {{{{tk ::BW::SelectFont}} {{new tk ::BW::SelectFont} SelectFont} {? {option -querysystem unknown -font string -command script -sampletext unknown -background color -bg color -parent unknown -families unknown -nosizes unknown -styles unknown -initialcolor unknown -title unknown -type unknown}}}}
+registerProc ::Separator {{{{tk ::BW::Separator}} {{new tk ::BW::Separator} Separator} {? {option -background color -bg color -cursor unknown -orient {enum horizontal vertical} -relief {enum raised sunken flat ridge solid groove}}}}}
+registerProc ::SpinBox {{{{tk ::BW::SpinBox}} {{new tk ::BW::SpinBox} SpinBox} {? {option -background color -bd pixel -bg color -borderwidth pixel -command script -cursor unknown -disabledbackground unknown -disabledforeground color -dragenabled unknown -dragendcmd unknown -dragevent unknown -draginitcmd unknown -dragtype unknown -dropcmd unknown -dropenabled unknown -dropovercmd unknown -droptypes unknown -editable unknown -entrybg unknown -entryfg unknown -exportselection boolean -font string -foreground color -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -insertbackground color -insertborderwidth pixel -insertofftime int -insertontime int -insertwidth pixel -invalidcommand unknown -invcmd unknown -justify {enum left center right} -modifycmd unknown -range unknown -readonlybackground unknown -relief {enum raised sunken flat ridge solid groove} -repeatdelay int -repeatinterval int -selectbackground color -selectborderwidth pixel -selectforeground color -show unknown -state unknown -takefocus boolean -text string -textvariable {gref string} -validate unknown -validatecommand unknown -values unknown -vcmd unknown -width unknown -xscrollcommand script}}}}
+registerProc ::StatusBar {{{{tk ::BW::StatusBar}} {{new tk ::BW::StatusBar} StatusBar} {? {option -background color -bd pixel -bg color -borderwidth pixel -height unknown -ipad unknown -pad unknown -relief {enum raised sunken flat ridge solid groove} -showresize unknown -showresizesep unknown -showseparator unknown -width unknown}}}}
+registerProc ::TitleFrame {{{{tk ::BW::TitleFrame}} {{new tk ::BW::TitleFrame} TitleFrame} {? {option -background color -baseline unknown -bd pixel -bg color -borderwidth pixel -fg color -font string -foreground color -ipad unknown -relief {enum raised sunken flat ridge solid groove} -side unknown -state unknown -text string}}}}
+registerProc ::Tree {{{{tk ::BW::Tree}} {{new tk ::BW::Tree} Tree} {? {option -background color -bd pixel -bg color -borderwidth pixel -closecmd unknown -crossclosebitmap unknown -crosscloseimage unknown -crossfill unknown -crossopenbitmap unknown -crossopenimage unknown -cursor unknown -deltax unknown -deltay unknown -dragenabled unknown -dragendcmd unknown -dragevent unknown -draginitcmd unknown -dragtype unknown -dropcmd unknown -dropenabled unknown -dropovercmd unknown -dropovermode unknown -droptypes unknown -height unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -linesfill unknown -linestipple unknown -offset unknown -opencmd unknown -padx pixel -redraw unknown -relief {enum raised sunken flat ridge solid groove} -selectbackground color -selectcommand unknown -selectfill unknown -selectforeground color -showlines unknown -state unknown -takefocus boolean -width unknown -xscrollcommand script -yscrollcommand script}}}}
+registerMethod ::BW::ArrowButton instproc cget {{unknown {{enum -activebackground -activeforeground -armcommand -arrowbd -arrowrelief -background -bd -bg -borderwidth -clean -command -dir -disabledforeground -disarmcommand -fg -foreground -height -helpcmd -helptext -helptype -helpvar -highlightbackground -highlightcolor -highlightthickness -ipadx -ipady -relief -repeatdelay -repeatinterval -state -takefocus -troughcolor -type -width}}}} {}
+registerMethod ::BW::ArrowButton instproc configure {list {void {{option -activebackground color -activeforeground unknown -armcommand unknown -arrowbd unknown -arrowrelief unknown -background color -bd pixel -bg color -borderwidth pixel -clean unknown -command script -dir unknown -disabledforeground color -disarmcommand unknown -fg color -foreground color -height unknown -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -ipadx unknown -ipady unknown -relief {enum raised sunken flat ridge solid groove} -repeatdelay int -repeatinterval int -state unknown -takefocus boolean -troughcolor color -type unknown -width unknown}}} {list {{enum -activebackground -activeforeground -armcommand -arrowbd -arrowrelief -background -bd -bg -borderwidth -clean -command -dir -disabledforeground -disarmcommand -fg -foreground -height -helpcmd -helptext -helptype -helpvar -highlightbackground -highlightcolor -highlightthickness -ipadx -ipady -relief -repeatdelay -repeatinterval -state -takefocus -troughcolor -type -width}}}} {}
+registerMethod ::BW::ArrowButton instproc create {0 -1} {}
+registerMethod ::BW::ArrowButton instproc invoke {0 -1} {}
+registerMethod ::BW::ArrowButton instproc use {0 -1} {}
+registerMethod ::BW::Button instproc cget {{unknown {{enum -activebackground -activeforeground -anchor -armcommand -background -bd -bg -bitmap -borderwidth -command -compound -cursor -default -disabledforeground -disarmcommand -fg -font -foreground -height -helpcmd -helptext -helptype -helpvar -highlightbackground -highlightcolor -highlightthickness -image -justify -name -overrelief -padx -pady -relief -repeatdelay -repeatinterval -state -takefocus -text -textvariable -underline -width -wraplength}}}} {}
+registerMethod ::BW::Button instproc configure {list {void {{option -activebackground color -activeforeground unknown -anchor {enum n ne e se s sw w nw center} -armcommand unknown -background color -bd pixel -bg color -bitmap unknown -borderwidth pixel -command script -compound {enum none bottom top left right center} -cursor unknown -default unknown -disabledforeground color -disarmcommand unknown -fg color -font string -foreground color -height unknown -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -image unknown -justify {enum left center right} -name unknown -overrelief unknown -padx pixel -pady pixel -relief {enum raised sunken flat ridge solid groove} -repeatdelay int -repeatinterval int -state unknown -takefocus boolean -text string -textvariable {gref string} -underline int -width unknown -wraplength int}}} {list {{enum -activebackground -activeforeground -anchor -armcommand -background -bd -bg -bitmap -borderwidth -command -compound -cursor -default -disabledforeground -disarmcommand -fg -font -foreground -height -helpcmd -helptext -helptype -helpvar -highlightbackground -highlightcolor -highlightthickness -image -justify -name -overrelief -padx -pady -relief -repeatdelay -repeatinterval -state -takefocus -text -textvariable -underline -width -wraplength}}}} {}
+registerMethod ::BW::Button instproc create {0 -1} {}
+registerMethod ::BW::Button instproc identify {0 -1} {}
+registerMethod ::BW::Button instproc instate {0 -1} {}
+registerMethod ::BW::Button instproc invoke {0 -1} {}
+registerMethod ::BW::Button instproc state {0 -1} {}
+registerMethod ::BW::Button instproc use {0 -1} {}
+registerMethod ::BW::ButtonBox instproc add {0 -1} {}
+registerMethod ::BW::ButtonBox instproc cget {{unknown {{enum -background -bg -default -homogeneous -orient -padx -pady -spacing -state}}}} {}
+registerMethod ::BW::ButtonBox instproc configure {list {void {{option -background color -bg color -default unknown -homogeneous unknown -orient {enum horizontal vertical} -padx pixel -pady pixel -spacing unknown -state unknown}}} {list {{enum -background -bg -default -homogeneous -orient -padx -pady -spacing -state}}}} {}
+registerMethod ::BW::ButtonBox instproc create {0 -1} {}
+registerMethod ::BW::ButtonBox instproc delete {0 -1} {}
+registerMethod ::BW::ButtonBox instproc getbuttonstate {0 -1} {}
+registerMethod ::BW::ButtonBox instproc gettags {0 -1} {}
+registerMethod ::BW::ButtonBox instproc index {0 -1} {}
+registerMethod ::BW::ButtonBox instproc insert {0 -1} {}
+registerMethod ::BW::ButtonBox instproc invoke {0 -1} {}
+registerMethod ::BW::ButtonBox instproc itemcget {0 -1} {}
+registerMethod ::BW::ButtonBox instproc itemconfigure {0 -1} {}
+registerMethod ::BW::ButtonBox instproc setbuttonstate {0 -1} {}
+registerMethod ::BW::ButtonBox instproc setfocus {0 -1} {}
+registerMethod ::BW::ButtonBox instproc use {0 -1} {}
+registerMethod ::BW::ComboBox instproc bind {0 -1} {}
+registerMethod ::BW::ComboBox instproc cget {{unknown {{enum -autocomplete -autopost -background -bd -borderwidth -bwlistbox -command -cursor -disabledbackground -disabledforeground -dragenabled -dragendcmd -dragevent -draginitcmd -dragtype -dropcmd -dropenabled -dropovercmd -droptypes -editable -entrybg -expand -exportselection -fg -font -foreground -height -helpcmd -helptext -helptype -helpvar -highlightbackground -highlightcolor -highlightthickness -hottrack -images -indents -insertbackground -insertborderwidth -insertofftime -insertontime -insertwidth -invalidcommand -invcmd -justify -listboxwidth -modifycmd -postcommand -readonlybackground -relief -selectbackground -selectborderwidth -selectforeground -show -state -takefocus -text -textvariable -validate -validatecommand -values -vcmd -width -xscrollcommand}}}} {}
+registerMethod ::BW::ComboBox instproc clearvalue {0 -1} {}
+registerMethod ::BW::ComboBox instproc configure {list {void {{option -autocomplete unknown -autopost unknown -background color -bd pixel -borderwidth pixel -bwlistbox unknown -command script -cursor unknown -disabledbackground unknown -disabledforeground color -dragenabled unknown -dragendcmd unknown -dragevent unknown -draginitcmd unknown -dragtype unknown -dropcmd unknown -dropenabled unknown -dropovercmd unknown -droptypes unknown -editable unknown -entrybg unknown -expand unknown -exportselection boolean -fg color -font string -foreground color -height unknown -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -hottrack unknown -images unknown -indents unknown -insertbackground color -insertborderwidth pixel -insertofftime int -insertontime int -insertwidth pixel -invalidcommand unknown -invcmd unknown -justify {enum left center right} -listboxwidth unknown -modifycmd unknown -postcommand unknown -readonlybackground unknown -relief {enum raised sunken flat ridge solid groove} -selectbackground color -selectborderwidth pixel -selectforeground color -show unknown -state unknown -takefocus boolean -text string -textvariable {gref string} -validate unknown -validatecommand unknown -values unknown -vcmd unknown -width unknown -xscrollcommand script}}} {list {{enum -autocomplete -autopost -background -bd -borderwidth -bwlistbox -command -cursor -disabledbackground -disabledforeground -dragenabled -dragendcmd -dragevent -draginitcmd -dragtype -dropcmd -dropenabled -dropovercmd -droptypes -editable -entrybg -expand -exportselection -fg -font -foreground -height -helpcmd -helptext -helptype -helpvar -highlightbackground -highlightcolor -highlightthickness -hottrack -images -indents -insertbackground -insertborderwidth -insertofftime -insertontime -insertwidth -invalidcommand -invcmd -justify -listboxwidth -modifycmd -postcommand -readonlybackground -relief -selectbackground -selectborderwidth -selectforeground -show -state -takefocus -text -textvariable -validate -validatecommand -values -vcmd -width -xscrollcommand}}}} {}
+registerMethod ::BW::ComboBox instproc create {0 -1} {}
+registerMethod ::BW::ComboBox instproc get {0 -1} {}
+registerMethod ::BW::ComboBox instproc getlistbox {0 -1} {}
+registerMethod ::BW::ComboBox instproc getvalue {0 -1} {}
+registerMethod ::BW::ComboBox instproc icursor {0 -1} {}
+registerMethod ::BW::ComboBox instproc insert {0 -1} {}
+registerMethod ::BW::ComboBox instproc post {0 -1} {}
+registerMethod ::BW::ComboBox instproc setvalue {0 -1} {}
+registerMethod ::BW::ComboBox instproc unpost {0 -1} {}
+registerMethod ::BW::ComboBox instproc use {0 -1} {}
+registerMethod ::BW::Dialog instproc add {0 -1} {}
+registerMethod ::BW::Dialog instproc cget {{unknown {{enum -anchor -geometry -place -spacing -modal -bitmap -class -cancel -transient -background -separator -bg -homogeneous -state -parent -image -side -default -padx -pady -title}}}} {}
+registerMethod ::BW::Dialog instproc configure {list {void {{option -anchor {enum n ne e se s sw w nw center} -geometry unknown -place unknown -spacing unknown -modal unknown -bitmap unknown -class unknown -cancel unknown -transient unknown -background color -separator unknown -bg color -homogeneous unknown -state unknown -parent unknown -image unknown -side unknown -default unknown -padx pixel -pady pixel -title unknown}}} {list {{enum -anchor -geometry -place -spacing -modal -bitmap -class -cancel -transient -background -separator -bg -homogeneous -state -parent -image -side -default -padx -pady -title}}}} {}
+registerMethod ::BW::Dialog instproc create {0 -1} {}
+registerMethod ::BW::Dialog instproc draw {0 -1} {}
+registerMethod ::BW::Dialog instproc enddialog {0 -1} {}
+registerMethod ::BW::Dialog instproc getframe {0 -1} {}
+registerMethod ::BW::Dialog instproc invoke {0 -1} {}
+registerMethod ::BW::Dialog instproc itemcget {0 -1} {}
+registerMethod ::BW::Dialog instproc itemconfigure {0 -1} {}
+registerMethod ::BW::Dialog instproc setfocus {0 -1} {}
+registerMethod ::BW::Dialog instproc use {0 -1} {}
+registerMethod ::BW::Dialog instproc withdraw {0 -1} {}
+registerMethod ::BW::Entry instproc bbox {0 -1} {}
+registerMethod ::BW::Entry instproc cget {{unknown {{enum -background -bd -bg -borderwidth -command -cursor -disabledbackground -disabledforeground -dragenabled -dragendcmd -dragevent -draginitcmd -dragtype -dropcmd -dropenabled -dropovercmd -droptypes -editable -exportselection -fg -font -foreground -helpcmd -helptext -helptype -helpvar -highlightbackground -highlightcolor -highlightthickness -insertbackground -insertborderwidth -insertofftime -insertontime -insertwidth -invalidcommand -invcmd -justify -readonlybackground -relief -selectbackground -selectborderwidth -selectforeground -show -state -takefocus -text -textvariable -validate -validatecommand -vcmd -width -xscrollcommand}}}} {}
+registerMethod ::BW::Entry instproc configure {list {void {{option -background color -bd pixel -bg color -borderwidth pixel -command script -cursor unknown -disabledbackground unknown -disabledforeground color -dragenabled unknown -dragendcmd unknown -dragevent unknown -draginitcmd unknown -dragtype unknown -dropcmd unknown -dropenabled unknown -dropovercmd unknown -droptypes unknown -editable unknown -exportselection boolean -fg color -font string -foreground color -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -insertbackground color -insertborderwidth pixel -insertofftime int -insertontime int -insertwidth pixel -invalidcommand unknown -invcmd unknown -justify {enum left center right} -readonlybackground unknown -relief {enum raised sunken flat ridge solid groove} -selectbackground color -selectborderwidth pixel -selectforeground color -show unknown -state unknown -takefocus boolean -text string -textvariable {gref string} -validate unknown -validatecommand unknown -vcmd unknown -width unknown -xscrollcommand script}}} {list {{enum -background -bd -bg -borderwidth -command -cursor -disabledbackground -disabledforeground -dragenabled -dragendcmd -dragevent -draginitcmd -dragtype -dropcmd -dropenabled -dropovercmd -droptypes -editable -exportselection -fg -font -foreground -helpcmd -helptext -helptype -helpvar -highlightbackground -highlightcolor -highlightthickness -insertbackground -insertborderwidth -insertofftime -insertontime -insertwidth -invalidcommand -invcmd -justify -readonlybackground -relief -selectbackground -selectborderwidth -selectforeground -show -state -takefocus -text -textvariable -validate -validatecommand -vcmd -width -xscrollcommand}}}} {}
+registerMethod ::BW::Entry instproc create {0 -1} {}
+registerMethod ::BW::Entry instproc delete {0 -1} {}
+registerMethod ::BW::Entry instproc get {0 -1} {}
+registerMethod ::BW::Entry instproc icursor {0 -1} {}
+registerMethod ::BW::Entry instproc index {0 -1} {}
+registerMethod ::BW::Entry instproc insert {0 -1} {}
+registerMethod ::BW::Entry instproc invoke {0 -1} {}
+registerMethod ::BW::Entry instproc scan {0 -1} {}
+registerMethod ::BW::Entry instproc selection {0 -1} {}
+registerMethod ::BW::Entry instproc use {0 -1} {}
+registerMethod ::BW::Entry instproc validate {0 -1} {}
+registerMethod ::BW::Entry instproc xview {0 -1} {}
+registerMethod ::BW::Label instproc cget {{unknown {{enum -activebackground -activeforeground -anchor -background -bd -bg -bitmap -borderwidth -compound -cursor -disabledforeground -dragenabled -dragendcmd -dragevent -draginitcmd -dragtype -dropcmd -dropenabled -dropovercmd -droptypes -fg -focus -font -foreground -height -helpcmd -helptext -helptype -helpvar -highlightbackground -highlightcolor -highlightthickness -image -justify -name -padx -pady -relief -state -takefocus -text -textvariable -underline -width -wraplength}}}} {}
+registerMethod ::BW::Label instproc configure {list {void {{option -activebackground color -activeforeground unknown -anchor {enum n ne e se s sw w nw center} -background color -bd pixel -bg color -bitmap unknown -borderwidth pixel -compound {enum none bottom top left right center} -cursor unknown -disabledforeground color -dragenabled unknown -dragendcmd unknown -dragevent unknown -draginitcmd unknown -dragtype unknown -dropcmd unknown -dropenabled unknown -dropovercmd unknown -droptypes unknown -fg color -focus unknown -font string -foreground color -height unknown -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -image unknown -justify {enum left center right} -name unknown -padx pixel -pady pixel -relief {enum raised sunken flat ridge solid groove} -state unknown -takefocus boolean -text string -textvariable {gref string} -underline int -width unknown -wraplength int}}} {list {{enum -activebackground -activeforeground -anchor -background -bd -bg -bitmap -borderwidth -compound -cursor -disabledforeground -dragenabled -dragendcmd -dragevent -draginitcmd -dragtype -dropcmd -dropenabled -dropovercmd -droptypes -fg -focus -font -foreground -height -helpcmd -helptext -helptype -helpvar -highlightbackground -highlightcolor -highlightthickness -image -justify -name -padx -pady -relief -state -takefocus -text -textvariable -underline -width -wraplength}}}} {}
+registerMethod ::BW::Label instproc create {0 -1} {}
+registerMethod ::BW::Label instproc identify {0 -1} {}
+registerMethod ::BW::Label instproc instate {0 -1} {}
+registerMethod ::BW::Label instproc setfocus {0 -1} {}
+registerMethod ::BW::Label instproc state {0 -1} {}
+registerMethod ::BW::Label instproc use {0 -1} {}
+registerMethod ::BW::LabelEntry instproc bind {0 -1} {}
+registerMethod ::BW::LabelEntry instproc cget {{unknown {{enum -activebackground -activeforeground -background -bd -bg -bitmap -borderwidth -command -compound -cursor -disabledbackground -disabledforeground -dragenabled -dragendcmd -dragevent -draginitcmd -dragtype -dropcmd -dropenabled -dropovercmd -droptypes -editable -entrybg -entryfg -exportselection -fg -font -foreground -helpcmd -helptext -helptype -helpvar -highlightbackground -highlightcolor -highlightthickness -image -insertbackground -insertborderwidth -insertofftime -insertontime -insertwidth -invalidcommand -invcmd -justify -label -labelanchor -labelfont -labelheight -labeljustify -labeltextvariable -labelwidth -name -padx -pady -readonlybackground -relief -selectbackground -selectborderwidth -selectforeground -show -side -state -takefocus -text -textvariable -underline -validate -validatecommand -vcmd -width -wraplength -xscrollcommand}}}} {}
+registerMethod ::BW::LabelEntry instproc configure {list {void {{option -activebackground color -activeforeground unknown -background color -bd pixel -bg color -bitmap unknown -borderwidth pixel -command script -compound {enum none bottom top left right center} -cursor unknown -disabledbackground unknown -disabledforeground color -dragenabled unknown -dragendcmd unknown -dragevent unknown -draginitcmd unknown -dragtype unknown -dropcmd unknown -dropenabled unknown -dropovercmd unknown -droptypes unknown -editable unknown -entrybg unknown -entryfg unknown -exportselection boolean -fg color -font string -foreground color -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -image unknown -insertbackground color -insertborderwidth pixel -insertofftime int -insertontime int -insertwidth pixel -invalidcommand unknown -invcmd unknown -justify {enum left center right} -label unknown -labelanchor unknown -labelfont unknown -labelheight unknown -labeljustify unknown -labeltextvariable unknown -labelwidth unknown -name unknown -padx pixel -pady pixel -readonlybackground unknown -relief {enum raised sunken flat ridge solid groove} -selectbackground color -selectborderwidth pixel -selectforeground color -show unknown -side unknown -state unknown -takefocus boolean -text string -textvariable {gref string} -underline int -validate unknown -validatecommand unknown -vcmd unknown -width unknown -wraplength int -xscrollcommand script}}} {list {{enum -activebackground -activeforeground -background -bd -bg -bitmap -borderwidth -command -compound -cursor -disabledbackground -disabledforeground -dragenabled -dragendcmd -dragevent -draginitcmd -dragtype -dropcmd -dropenabled -dropovercmd -droptypes -editable -entrybg -entryfg -exportselection -fg -font -foreground -helpcmd -helptext -helptype -helpvar -highlightbackground -highlightcolor -highlightthickness -image -insertbackground -insertborderwidth -insertofftime -insertontime -insertwidth -invalidcommand -invcmd -justify -label -labelanchor -labelfont -labelheight -labeljustify -labeltextvariable -labelwidth -name -padx -pady -readonlybackground -relief -selectbackground -selectborderwidth -selectforeground -show -side -state -takefocus -text -textvariable -underline -validate -validatecommand -vcmd -width -wraplength -xscrollcommand}}}} {}
+registerMethod ::BW::LabelEntry instproc create {0 -1} {}
+registerMethod ::BW::LabelEntry instproc use {0 -1} {}
+registerMethod ::BW::LabelFrame instproc align {0 -1} {}
+registerMethod ::BW::LabelFrame instproc cget {{unknown {{enum -activebackground -activeforeground -anchor -background -bd -bg -bitmap -borderwidth -compound -disabledforeground -fg -focus -font -foreground -height -helpcmd -helptext -helptype -helpvar -image -justify -name -padx -pady -relief -side -state -text -textvariable -underline -width -wraplength}}}} {}
+registerMethod ::BW::LabelFrame instproc configure {list {void {{option -activebackground color -activeforeground unknown -anchor {enum n ne e se s sw w nw center} -background color -bd pixel -bg color -bitmap unknown -borderwidth pixel -compound {enum none bottom top left right center} -disabledforeground color -fg color -focus unknown -font string -foreground color -height unknown -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -image unknown -justify {enum left center right} -name unknown -padx pixel -pady pixel -relief {enum raised sunken flat ridge solid groove} -side unknown -state unknown -text string -textvariable {gref string} -underline int -width unknown -wraplength int}}} {list {{enum -activebackground -activeforeground -anchor -background -bd -bg -bitmap -borderwidth -compound -disabledforeground -fg -focus -font -foreground -height -helpcmd -helptext -helptype -helpvar -image -justify -name -padx -pady -relief -side -state -text -textvariable -underline -width -wraplength}}}} {}
+registerMethod ::BW::LabelFrame instproc create {0 -1} {}
+registerMethod ::BW::LabelFrame instproc getframe {0 -1} {}
+registerMethod ::BW::LabelFrame instproc use {0 -1} {}
+registerMethod ::BW::ListBox instproc bindImage {0 -1} {}
+registerMethod ::BW::ListBox instproc bindText {0 -1} {}
+registerMethod ::BW::ListBox instproc cget {{unknown {{enum -autofocus -background -bd -bg -borderwidth -cursor -deltax -deltay -dragenabled -dragendcmd -dragevent -draginitcmd -dragtype -dropcmd -dropenabled -dropovercmd -dropovermode -droptypes -fg -font -foreground -height -highlightbackground -highlightcolor -highlightthickness -multicolumn -offset -padx -redraw -relief -selectbackground -selectfill -selectforeground -selectmode -state -takefocus -width -xscrollcommand -yscrollcommand}}}} {}
+registerMethod ::BW::ListBox instproc configure {list {void {{option -autofocus unknown -background color -bd pixel -bg color -borderwidth pixel -cursor unknown -deltax unknown -deltay unknown -dragenabled unknown -dragendcmd unknown -dragevent unknown -draginitcmd unknown -dragtype unknown -dropcmd unknown -dropenabled unknown -dropovercmd unknown -dropovermode unknown -droptypes unknown -fg color -font string -foreground color -height unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -multicolumn unknown -offset unknown -padx pixel -redraw unknown -relief {enum raised sunken flat ridge solid groove} -selectbackground color -selectfill unknown -selectforeground color -selectmode unknown -state unknown -takefocus boolean -width unknown -xscrollcommand script -yscrollcommand script}}} {list {{enum -autofocus -background -bd -bg -borderwidth -cursor -deltax -deltay -dragenabled -dragendcmd -dragevent -draginitcmd -dragtype -dropcmd -dropenabled -dropovercmd -dropovermode -droptypes -fg -font -foreground -height -highlightbackground -highlightcolor -highlightthickness -multicolumn -offset -padx -redraw -relief -selectbackground -selectfill -selectforeground -selectmode -state -takefocus -width -xscrollcommand -yscrollcommand}}}} {}
+registerMethod ::BW::ListBox instproc create {0 -1} {}
+registerMethod ::BW::ListBox instproc curselection {0 -1} {}
+registerMethod ::BW::ListBox instproc delete {0 -1} {}
+registerMethod ::BW::ListBox instproc edit {0 -1} {}
+registerMethod ::BW::ListBox instproc exists {0 -1} {}
+registerMethod ::BW::ListBox instproc find {0 -1} {}
+registerMethod ::BW::ListBox instproc getcanvas {0 -1} {}
+registerMethod ::BW::ListBox instproc index {0 -1} {}
+registerMethod ::BW::ListBox instproc insert {0 -1} {}
+registerMethod ::BW::ListBox instproc item {0 -1} {}
+registerMethod ::BW::ListBox instproc itemcget {0 -1} {}
+registerMethod ::BW::ListBox instproc itemconfigure {0 -1} {}
+registerMethod ::BW::ListBox instproc items {0 -1} {}
+registerMethod ::BW::ListBox instproc move {0 -1} {}
+registerMethod ::BW::ListBox instproc multipleinsert {0 -1} {}
+registerMethod ::BW::ListBox instproc reorder {0 -1} {}
+registerMethod ::BW::ListBox instproc see {0 -1} {}
+registerMethod ::BW::ListBox instproc selection {0 -1} {}
+registerMethod ::BW::ListBox instproc use {0 -1} {}
+registerMethod ::BW::ListBox instproc xview {0 -1} {}
+registerMethod ::BW::ListBox instproc yview {0 -1} {}
+registerMethod ::BW::MainFrame instproc addindicator {0 -1} {}
+registerMethod ::BW::MainFrame instproc addtoolbar {0 -1} {}
+registerMethod ::BW::MainFrame instproc cget {{unknown {{enum -background -bg -height -idle -menu -menubarfont -menuentryfont -progressfg -progressmax -progresstype -progressvar -separator -sizegrip -statusbarfont -textvariable -width}}}} {}
+registerMethod ::BW::MainFrame instproc configure {list {void {{option -background color -bg color -height unknown -idle unknown -menu unknown -menubarfont unknown -menuentryfont unknown -progressfg unknown -progressmax unknown -progresstype unknown -progressvar unknown -separator unknown -sizegrip unknown -statusbarfont unknown -textvariable {gref string} -width unknown}}} {list {{enum -background -bg -height -idle -menu -menubarfont -menuentryfont -progressfg -progressmax -progresstype -progressvar -separator -sizegrip -statusbarfont -textvariable -width}}}} {}
+registerMethod ::BW::MainFrame instproc create {0 -1} {}
+registerMethod ::BW::MainFrame instproc getframe {0 -1} {}
+registerMethod ::BW::MainFrame instproc getindicator {0 -1} {}
+registerMethod ::BW::MainFrame instproc getmenu {0 -1} {}
+registerMethod ::BW::MainFrame instproc getmenustate {0 -1} {}
+registerMethod ::BW::MainFrame instproc gettoolbar {0 -1} {}
+registerMethod ::BW::MainFrame instproc menuonly {0 -1} {}
+registerMethod ::BW::MainFrame instproc setmenustate {0 -1} {}
+registerMethod ::BW::MainFrame instproc showstatusbar {0 -1} {}
+registerMethod ::BW::MainFrame instproc showtoolbar {0 -1} {}
+registerMethod ::BW::MainFrame instproc use {0 -1} {}
+registerMethod ::BW::MessageDlg instproc cget {{unknown {{enum -anchor -buttonwidth -geometry -place -message -cancel -class -font -transient -background -icon -state -bg -parent -foreground -default -fg -padx -justify -pady -buttons -aspect -width -type -title}}}} {}
+registerMethod ::BW::MessageDlg instproc configure {list {void {{option -anchor {enum n ne e se s sw w nw center} -buttonwidth unknown -geometry unknown -place unknown -message unknown -cancel unknown -class unknown -font string -transient unknown -background color -icon unknown -state unknown -bg color -parent unknown -foreground color -default unknown -fg color -padx pixel -justify {enum left center right} -pady pixel -buttons unknown -aspect unknown -width unknown -type unknown -title unknown}}} {list {{enum -anchor -buttonwidth -geometry -place -message -cancel -class -font -transient -background -icon -state -bg -parent -foreground -default -fg -padx -justify -pady -buttons -aspect -width -type -title}}}} {}
+registerMethod ::BW::MessageDlg instproc create {0 -1} {}
+registerMethod ::BW::MessageDlg instproc use {0 -1} {}
+registerMethod ::BW::NoteBook instproc bindtabs {0 -1} {}
+registerMethod ::BW::NoteBook instproc cget {{unknown {{enum -activebackground -activeforeground -arcradius -background -bd -bg -borderwidth -disabledforeground -fg -font -foreground -height -homogeneous -ibd -internalborderwidth -repeatdelay -repeatinterval -side -tabbevelsize -tabpady -width}}}} {}
+registerMethod ::BW::NoteBook instproc compute_size {0 -1} {}
+registerMethod ::BW::NoteBook instproc configure {list {void {{option -activebackground color -activeforeground unknown -arcradius unknown -background color -bd pixel -bg color -borderwidth pixel -disabledforeground color -fg color -font string -foreground color -height unknown -homogeneous unknown -ibd unknown -internalborderwidth unknown -repeatdelay int -repeatinterval int -side unknown -tabbevelsize unknown -tabpady unknown -width unknown}}} {list {{enum -activebackground -activeforeground -arcradius -background -bd -bg -borderwidth -disabledforeground -fg -font -foreground -height -homogeneous -ibd -internalborderwidth -repeatdelay -repeatinterval -side -tabbevelsize -tabpady -width}}}} {}
+registerMethod ::BW::NoteBook instproc create {0 -1} {}
+registerMethod ::BW::NoteBook instproc delete {0 -1} {}
+registerMethod ::BW::NoteBook instproc getframe {0 -1} {}
+registerMethod ::BW::NoteBook instproc index {0 -1} {}
+registerMethod ::BW::NoteBook instproc insert {0 -1} {}
+registerMethod ::BW::NoteBook instproc itemcget {0 -1} {}
+registerMethod ::BW::NoteBook instproc itemconfigure {0 -1} {}
+registerMethod ::BW::NoteBook instproc move {0 -1} {}
+registerMethod ::BW::NoteBook instproc page {0 -1} {}
+registerMethod ::BW::NoteBook instproc pages {0 -1} {}
+registerMethod ::BW::NoteBook instproc raise {0 -1} {}
+registerMethod ::BW::NoteBook instproc see {0 -1} {}
+registerMethod ::BW::NoteBook instproc use {0 -1} {}
+registerMethod ::BW::PagesManager instproc add {0 -1} {}
+registerMethod ::BW::PagesManager instproc cget {{unknown {{enum -background -cursor -height -width}}}} {}
+registerMethod ::BW::PagesManager instproc compute_size {0 -1} {}
+registerMethod ::BW::PagesManager instproc configure {list {void {{option -background color -cursor unknown -height unknown -width unknown}}} {list {{enum -background -cursor -height -width}}}} {}
+registerMethod ::BW::PagesManager instproc create {0 -1} {}
+registerMethod ::BW::PagesManager instproc delete {0 -1} {}
+registerMethod ::BW::PagesManager instproc getframe {0 -1} {}
+registerMethod ::BW::PagesManager instproc page {0 -1} {}
+registerMethod ::BW::PagesManager instproc pages {0 -1} {}
+registerMethod ::BW::PagesManager instproc raise {0 -1} {}
+registerMethod ::BW::PagesManager instproc use {0 -1} {}
+registerMethod ::BW::PanedWindow instproc add {0 -1} {}
+registerMethod ::BW::PanedWindow instproc cget {{unknown {{enum -activator -background -bg -pad -side -weights -width}}}} {}
+registerMethod ::BW::PanedWindow instproc configure {list {void {{option -activator unknown -background color -bg color -pad unknown -side unknown -weights unknown -width unknown}}} {list {{enum -activator -background -bg -pad -side -weights -width}}}} {}
+registerMethod ::BW::PanedWindow instproc create {0 -1} {}
+registerMethod ::BW::PanedWindow instproc getframe {0 -1} {}
+registerMethod ::BW::PanedWindow instproc use {0 -1} {}
+registerMethod ::BW::PanelFrame instproc add {0 -1} {}
+registerMethod ::BW::PanelFrame instproc cget {{unknown {{enum -background -bd -bg -borderwidth -font -height -ipad -panelbackground -panelforeground -relief -text -textvariable -width}}}} {}
+registerMethod ::BW::PanelFrame instproc configure {list {void {{option -background color -bd pixel -bg color -borderwidth pixel -font string -height unknown -ipad unknown -panelbackground unknown -panelforeground unknown -relief {enum raised sunken flat ridge solid groove} -text string -textvariable {gref string} -width unknown}}} {list {{enum -background -bd -bg -borderwidth -font -height -ipad -panelbackground -panelforeground -relief -text -textvariable -width}}}} {}
+registerMethod ::BW::PanelFrame instproc create {0 -1} {}
+registerMethod ::BW::PanelFrame instproc delete {0 -1} {}
+registerMethod ::BW::PanelFrame instproc getframe {0 -1} {}
+registerMethod ::BW::PanelFrame instproc items {0 -1} {}
+registerMethod ::BW::PanelFrame instproc remove {0 -1} {}
+registerMethod ::BW::PanelFrame instproc use {0 -1} {}
+registerMethod ::BW::PasswdDlg instproc cget {{unknown {{enum -logineditable -anchor -disabledforeground -place -bitmap -helpcmd -highlightcolor -state -validate -foreground -wraplength -insertbackground -insertwidth -title -passwdeditable -geometry -highlightthickness -modal -borderwidth -bd -readonlybackground -passwdtext -entryfg -labelwidth -highlightbackground -bg -image -helptype -selectforeground -loginunderline -loginhelptext -labelfont -activeforeground -relief -disabledbackground -insertontime -vcmd -loginhelpvar -insertborderwidth -passwdtextvariable -spacing -logintext -selectborderwidth -labeljustify -command -background -labelheight -passwdstate -labelanchor -passwdhelpvar -padx -cursor -invalidcommand -pady -passwdhelptext -exportselection -invcmd -validatecommand -entrybg -logintextvariable -class -insertofftime -font -passwdunderline -selectbackground -transient -homogeneous -passwdlabel -parent -labeltextvariable -activebackground -fg -compound -loginlabel -type}}}} {}
+registerMethod ::BW::PasswdDlg instproc configure {list {void {{option -logineditable unknown -anchor {enum n ne e se s sw w nw center} -disabledforeground color -place unknown -bitmap unknown -helpcmd unknown -highlightcolor color -state unknown -validate unknown -foreground color -wraplength int -insertbackground color -insertwidth pixel -title unknown -passwdeditable unknown -geometry unknown -highlightthickness pixel -modal unknown -borderwidth pixel -bd pixel -readonlybackground unknown -passwdtext unknown -entryfg unknown -labelwidth unknown -highlightbackground color -bg color -image unknown -helptype unknown -selectforeground color -loginunderline unknown -loginhelptext unknown -labelfont unknown -activeforeground unknown -relief {enum raised sunken flat ridge solid groove} -disabledbackground unknown -insertontime int -vcmd unknown -loginhelpvar unknown -insertborderwidth pixel -passwdtextvariable unknown -spacing unknown -logintext unknown -selectborderwidth pixel -labeljustify unknown -command script -background color -labelheight unknown -passwdstate unknown -labelanchor unknown -passwdhelpvar unknown -padx pixel -cursor unknown -invalidcommand unknown -pady pixel -passwdhelptext unknown -exportselection boolean -invcmd unknown -validatecommand unknown -entrybg unknown -logintextvariable unknown -class unknown -insertofftime int -font string -passwdunderline unknown -selectbackground color -transient unknown -homogeneous unknown -passwdlabel unknown -parent unknown -labeltextvariable unknown -activebackground color -fg color -compound {enum none bottom top left right center} -loginlabel unknown -type unknown}}} {list {{enum -logineditable -anchor -disabledforeground -place -bitmap -helpcmd -highlightcolor -state -validate -foreground -wraplength -insertbackground -insertwidth -title -passwdeditable -geometry -highlightthickness -modal -borderwidth -bd -readonlybackground -passwdtext -entryfg -labelwidth -highlightbackground -bg -image -helptype -selectforeground -loginunderline -loginhelptext -labelfont -activeforeground -relief -disabledbackground -insertontime -vcmd -loginhelpvar -insertborderwidth -passwdtextvariable -spacing -logintext -selectborderwidth -labeljustify -command -background -labelheight -passwdstate -labelanchor -passwdhelpvar -padx -cursor -invalidcommand -pady -passwdhelptext -exportselection -invcmd -validatecommand -entrybg -logintextvariable -class -insertofftime -font -passwdunderline -selectbackground -transient -homogeneous -passwdlabel -parent -labeltextvariable -activebackground -fg -compound -loginlabel -type}}}} {}
+registerMethod ::BW::PasswdDlg instproc create {0 -1} {}
+registerMethod ::BW::PasswdDlg instproc use {0 -1} {}
+registerMethod ::BW::ProgressBar instproc cget {{unknown {{enum -background -bd -bg -borderwidth -fg -foreground -height -idle -maximum -orient -relief -troughcolor -type -variable -width}}}} {}
+registerMethod ::BW::ProgressBar instproc configure {list {void {{option -background color -bd pixel -bg color -borderwidth pixel -fg color -foreground color -height unknown -idle unknown -maximum unknown -orient {enum horizontal vertical} -relief {enum raised sunken flat ridge solid groove} -troughcolor color -type unknown -variable unknown -width unknown}}} {list {{enum -background -bd -bg -borderwidth -fg -foreground -height -idle -maximum -orient -relief -troughcolor -type -variable -width}}}} {}
+registerMethod ::BW::ProgressBar instproc create {0 -1} {}
+registerMethod ::BW::ProgressBar instproc use {0 -1} {}
+registerMethod ::BW::ProgressDlg instproc cget {{unknown {{enum -textvariable -geometry -place -stop -idle -class -bd -borderwidth -command -font -troughcolor -transient -background -separator -bg -state -parent -foreground -fg -variable -maximum -relief -width -height -type -title}}}} {}
+registerMethod ::BW::ProgressDlg instproc configure {list {void {{option -textvariable {gref string} -geometry unknown -place unknown -stop unknown -idle unknown -class unknown -bd pixel -borderwidth pixel -command script -font string -troughcolor color -transient unknown -background color -separator unknown -bg color -state unknown -parent unknown -foreground color -fg color -variable unknown -maximum unknown -relief {enum raised sunken flat ridge solid groove} -width unknown -height unknown -type unknown -title unknown}}} {list {{enum -textvariable -geometry -place -stop -idle -class -bd -borderwidth -command -font -troughcolor -transient -background -separator -bg -state -parent -foreground -fg -variable -maximum -relief -width -height -type -title}}}} {}
+registerMethod ::BW::ProgressDlg instproc create {0 -1} {}
+registerMethod ::BW::ProgressDlg instproc use {0 -1} {}
+registerMethod ::BW::ScrollView instproc cget {{unknown {{enum -background -bd -bg -borderwidth -cursor -fg -fill -foreground -height -relief -width -window}}}} {}
+registerMethod ::BW::ScrollView instproc configure {list {void {{option -background color -bd pixel -bg color -borderwidth pixel -cursor unknown -fg color -fill unknown -foreground color -height unknown -relief {enum raised sunken flat ridge solid groove} -width unknown -window unknown}}} {list {{enum -background -bd -bg -borderwidth -cursor -fg -fill -foreground -height -relief -width -window}}}} {}
+registerMethod ::BW::ScrollView instproc create {0 -1} {}
+registerMethod ::BW::ScrollView instproc use {0 -1} {}
+registerMethod ::BW::ScrollableFrame instproc cget {{unknown {{enum -areaheight -areawidth -background -bg -constrainedheight -constrainedwidth -height -width -xscrollcommand -xscrollincrement -yscrollcommand -yscrollincrement}}}} {}
+registerMethod ::BW::ScrollableFrame instproc configure {list {void {{option -areaheight unknown -areawidth unknown -background color -bg color -constrainedheight unknown -constrainedwidth unknown -height unknown -width unknown -xscrollcommand script -xscrollincrement unknown -yscrollcommand script -yscrollincrement unknown}}} {list {{enum -areaheight -areawidth -background -bg -constrainedheight -constrainedwidth -height -width -xscrollcommand -xscrollincrement -yscrollcommand -yscrollincrement}}}} {}
+registerMethod ::BW::ScrollableFrame instproc create {0 -1} {}
+registerMethod ::BW::ScrollableFrame instproc getframe {0 -1} {}
+registerMethod ::BW::ScrollableFrame instproc see {0 -1} {}
+registerMethod ::BW::ScrollableFrame instproc use {0 -1} {}
+registerMethod ::BW::ScrollableFrame instproc xview {0 -1} {}
+registerMethod ::BW::ScrollableFrame instproc yview {0 -1} {}
+registerMethod ::BW::ScrolledWindow instproc cget {{unknown {{enum -auto -background -bd -bg -borderwidth -ipad -managed -relief -scrollbar -sides -size}}}} {}
+registerMethod ::BW::ScrolledWindow instproc configure {list {void {{option -auto unknown -background color -bd pixel -bg color -borderwidth pixel -ipad unknown -managed unknown -relief {enum raised sunken flat ridge solid groove} -scrollbar unknown -sides unknown -size unknown}}} {list {{enum -auto -background -bd -bg -borderwidth -ipad -managed -relief -scrollbar -sides -size}}}} {}
+registerMethod ::BW::ScrolledWindow instproc create {0 -1} {}
+registerMethod ::BW::ScrolledWindow instproc getframe {0 -1} {}
+registerMethod ::BW::ScrolledWindow instproc setwidget {0 -1} {}
+registerMethod ::BW::ScrolledWindow instproc use {0 -1} {}
+registerMethod ::BW::SelectColor instproc cget {{unknown {{enum -color -placement -type -parent -title}}}} {}
+registerMethod ::BW::SelectColor instproc configure {list {void {{option -color unknown -placement unknown -type unknown -parent unknown -title unknown}}} {list {{enum -color -placement -type -parent -title}}}} {}
+registerMethod ::BW::SelectColor instproc create {0 -1} {}
+registerMethod ::BW::SelectColor instproc dialog {0 -1} {}
+registerMethod ::BW::SelectColor instproc hsvToRgb {0 -1} {}
+registerMethod ::BW::SelectColor instproc menu {0 -1} {}
+registerMethod ::BW::SelectColor instproc rgbToHsv {0 -1} {}
+registerMethod ::BW::SelectColor instproc setcolor {0 -1} {}
+registerMethod ::BW::SelectColor instproc use {0 -1} {}
+registerMethod ::BW::SelectFont instproc cget {{unknown {{enum -querysystem -font -command -sampletext -background -bg -parent -families -nosizes -styles -initialcolor -title -type}}}} {}
+registerMethod ::BW::SelectFont instproc configure {list {void {{option -querysystem unknown -font string -command script -sampletext unknown -background color -bg color -parent unknown -families unknown -nosizes unknown -styles unknown -initialcolor unknown -title unknown -type unknown}}} {list {{enum -querysystem -font -command -sampletext -background -bg -parent -families -nosizes -styles -initialcolor -title -type}}}} {}
+registerMethod ::BW::SelectFont instproc create {0 -1} {}
+registerMethod ::BW::SelectFont instproc loadfont {0 -1} {}
+registerMethod ::BW::SelectFont instproc use {0 -1} {}
+registerMethod ::BW::Separator instproc cget {{unknown {{enum -background -bg -cursor -orient -relief}}}} {}
+registerMethod ::BW::Separator instproc configure {list {void {{option -background color -bg color -cursor unknown -orient {enum horizontal vertical} -relief {enum raised sunken flat ridge solid groove}}}} {list {{enum -background -bg -cursor -orient -relief}}}} {}
+registerMethod ::BW::Separator instproc create {0 -1} {}
+registerMethod ::BW::Separator instproc use {0 -1} {}
+registerMethod ::BW::SpinBox instproc bind {0 -1} {}
+registerMethod ::BW::SpinBox instproc cget {{unknown {{enum -background -bd -bg -borderwidth -command -cursor -disabledbackground -disabledforeground -dragenabled -dragendcmd -dragevent -draginitcmd -dragtype -dropcmd -dropenabled -dropovercmd -droptypes -editable -entrybg -entryfg -exportselection -font -foreground -helpcmd -helptext -helptype -helpvar -highlightbackground -highlightcolor -highlightthickness -insertbackground -insertborderwidth -insertofftime -insertontime -insertwidth -invalidcommand -invcmd -justify -modifycmd -range -readonlybackground -relief -repeatdelay -repeatinterval -selectbackground -selectborderwidth -selectforeground -show -state -takefocus -text -textvariable -validate -validatecommand -values -vcmd -width -xscrollcommand}}}} {}
+registerMethod ::BW::SpinBox instproc configure {list {void {{option -background color -bd pixel -bg color -borderwidth pixel -command script -cursor unknown -disabledbackground unknown -disabledforeground color -dragenabled unknown -dragendcmd unknown -dragevent unknown -draginitcmd unknown -dragtype unknown -dropcmd unknown -dropenabled unknown -dropovercmd unknown -droptypes unknown -editable unknown -entrybg unknown -entryfg unknown -exportselection boolean -font string -foreground color -helpcmd unknown -helptext unknown -helptype unknown -helpvar unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -insertbackground color -insertborderwidth pixel -insertofftime int -insertontime int -insertwidth pixel -invalidcommand unknown -invcmd unknown -justify {enum left center right} -modifycmd unknown -range unknown -readonlybackground unknown -relief {enum raised sunken flat ridge solid groove} -repeatdelay int -repeatinterval int -selectbackground color -selectborderwidth pixel -selectforeground color -show unknown -state unknown -takefocus boolean -text string -textvariable {gref string} -validate unknown -validatecommand unknown -values unknown -vcmd unknown -width unknown -xscrollcommand script}}} {list {{enum -background -bd -bg -borderwidth -command -cursor -disabledbackground -disabledforeground -dragenabled -dragendcmd -dragevent -draginitcmd -dragtype -dropcmd -dropenabled -dropovercmd -droptypes -editable -entrybg -entryfg -exportselection -font -foreground -helpcmd -helptext -helptype -helpvar -highlightbackground -highlightcolor -highlightthickness -insertbackground -insertborderwidth -insertofftime -insertontime -insertwidth -invalidcommand -invcmd -justify -modifycmd -range -readonlybackground -relief -repeatdelay -repeatinterval -selectbackground -selectborderwidth -selectforeground -show -state -takefocus -text -textvariable -validate -validatecommand -values -vcmd -width -xscrollcommand}}}} {}
+registerMethod ::BW::SpinBox instproc create {0 -1} {}
+registerMethod ::BW::SpinBox instproc getvalue {0 -1} {}
+registerMethod ::BW::SpinBox instproc setvalue {0 -1} {}
+registerMethod ::BW::SpinBox instproc use {0 -1} {}
+registerMethod ::BW::StatusBar instproc add {0 -1} {}
+registerMethod ::BW::StatusBar instproc begin_resize {0 -1} {}
+registerMethod ::BW::StatusBar instproc cget {{unknown {{enum -background -bd -bg -borderwidth -height -ipad -pad -relief -showresize -showresizesep -showseparator -width}}}} {}
+registerMethod ::BW::StatusBar instproc configure {list {void {{option -background color -bd pixel -bg color -borderwidth pixel -height unknown -ipad unknown -pad unknown -relief {enum raised sunken flat ridge solid groove} -showresize unknown -showresizesep unknown -showseparator unknown -width unknown}}} {list {{enum -background -bd -bg -borderwidth -height -ipad -pad -relief -showresize -showresizesep -showseparator -width}}}} {}
+registerMethod ::BW::StatusBar instproc continue_resize {0 -1} {}
+registerMethod ::BW::StatusBar instproc create {0 -1} {}
+registerMethod ::BW::StatusBar instproc delete {0 -1} {}
+registerMethod ::BW::StatusBar instproc end_resize {0 -1} {}
+registerMethod ::BW::StatusBar instproc getframe {0 -1} {}
+registerMethod ::BW::StatusBar instproc items {0 -1} {}
+registerMethod ::BW::StatusBar instproc remove {0 -1} {}
+registerMethod ::BW::StatusBar instproc use {0 -1} {}
+registerMethod ::BW::TitleFrame instproc cget {{unknown {{enum -background -baseline -bd -bg -borderwidth -fg -font -foreground -ipad -relief -side -state -text}}}} {}
+registerMethod ::BW::TitleFrame instproc configure {list {void {{option -background color -baseline unknown -bd pixel -bg color -borderwidth pixel -fg color -font string -foreground color -ipad unknown -relief {enum raised sunken flat ridge solid groove} -side unknown -state unknown -text string}}} {list {{enum -background -baseline -bd -bg -borderwidth -fg -font -foreground -ipad -relief -side -state -text}}}} {}
+registerMethod ::BW::TitleFrame instproc create {0 -1} {}
+registerMethod ::BW::TitleFrame instproc getframe {0 -1} {}
+registerMethod ::BW::TitleFrame instproc use {0 -1} {}
+registerMethod ::BW::Tree instproc MergeFlag {0 -1} {}
+registerMethod ::BW::Tree instproc bindArea {0 -1} {}
+registerMethod ::BW::Tree instproc bindImage {0 -1} {}
+registerMethod ::BW::Tree instproc bindText {0 -1} {}
+registerMethod ::BW::Tree instproc cget {{unknown {{enum -background -bd -bg -borderwidth -closecmd -crossclosebitmap -crosscloseimage -crossfill -crossopenbitmap -crossopenimage -cursor -deltax -deltay -dragenabled -dragendcmd -dragevent -draginitcmd -dragtype -dropcmd -dropenabled -dropovercmd -dropovermode -droptypes -height -highlightbackground -highlightcolor -highlightthickness -linesfill -linestipple -offset -opencmd -padx -redraw -relief -selectbackground -selectcommand -selectfill -selectforeground -showlines -state -takefocus -width -xscrollcommand -yscrollcommand}}}} {}
+registerMethod ::BW::Tree instproc closetree {0 -1} {}
+registerMethod ::BW::Tree instproc configure {list {void {{option -background color -bd pixel -bg color -borderwidth pixel -closecmd unknown -crossclosebitmap unknown -crosscloseimage unknown -crossfill unknown -crossopenbitmap unknown -crossopenimage unknown -cursor unknown -deltax unknown -deltay unknown -dragenabled unknown -dragendcmd unknown -dragevent unknown -draginitcmd unknown -dragtype unknown -dropcmd unknown -dropenabled unknown -dropovercmd unknown -dropovermode unknown -droptypes unknown -height unknown -highlightbackground color -highlightcolor color -highlightthickness pixel -linesfill unknown -linestipple unknown -offset unknown -opencmd unknown -padx pixel -redraw unknown -relief {enum raised sunken flat ridge solid groove} -selectbackground color -selectcommand unknown -selectfill unknown -selectforeground color -showlines unknown -state unknown -takefocus boolean -width unknown -xscrollcommand script -yscrollcommand script}}} {list {{enum -background -bd -bg -borderwidth -closecmd -crossclosebitmap -crosscloseimage -crossfill -crossopenbitmap -crossopenimage -cursor -deltax -deltay -dragenabled -dragendcmd -dragevent -draginitcmd -dragtype -dropcmd -dropenabled -dropovercmd -dropovermode -droptypes -height -highlightbackground -highlightcolor -highlightthickness -linesfill -linestipple -offset -opencmd -padx -redraw -relief -selectbackground -selectcommand -selectfill -selectforeground -showlines -state -takefocus -width -xscrollcommand -yscrollcommand}}}} {}
+registerMethod ::BW::Tree instproc create {0 -1} {}
+registerMethod ::BW::Tree instproc delete {0 -1} {}
+registerMethod ::BW::Tree instproc edit {0 -1} {}
+registerMethod ::BW::Tree instproc exists {0 -1} {}
+registerMethod ::BW::Tree instproc find {0 -1} {}
+registerMethod ::BW::Tree instproc getcanvas {0 -1} {}
+registerMethod ::BW::Tree instproc index {0 -1} {}
+registerMethod ::BW::Tree instproc insert {0 -1} {}
+registerMethod ::BW::Tree instproc itemcget {0 -1} {}
+registerMethod ::BW::Tree instproc itemconfigure {0 -1} {}
+registerMethod ::BW::Tree instproc line {0 -1} {}
+registerMethod ::BW::Tree instproc move {0 -1} {}
+registerMethod ::BW::Tree instproc nodes {0 -1} {}
+registerMethod ::BW::Tree instproc opentree {0 -1} {}
+registerMethod ::BW::Tree instproc parent {0 -1} {}
+registerMethod ::BW::Tree instproc reorder {0 -1} {}
+registerMethod ::BW::Tree instproc see {0 -1} {}
+registerMethod ::BW::Tree instproc selection {0 -1} {}
+registerMethod ::BW::Tree instproc toggle {0 -1} {}
+registerMethod ::BW::Tree instproc use {0 -1} {}
+registerMethod ::BW::Tree instproc visible {0 -1} {}
+registerMethod ::BW::Tree instproc visiblenodes {0 -1} {}
+registerMethod ::BW::Tree instproc xview {0 -1} {}
+registerMethod ::BW::Tree instproc yview {0 -1} {}
+registerObject ::BW::ArrowButton Class ::widget {}
+registerObject ::BW::Button Class ::widget {}
+registerObject ::BW::ButtonBox Class ::widget {}
+registerObject ::BW::ComboBox Class ::widget {}
+registerObject ::BW::Dialog Class ::widget {}
+registerObject ::BW::Entry Class ::widget {}
+registerObject ::BW::Label Class ::widget {}
+registerObject ::BW::LabelEntry Class ::widget {}
+registerObject ::BW::LabelFrame Class ::widget {}
+registerObject ::BW::ListBox Class ::widget {}
+registerObject ::BW::MainFrame Class ::widget {}
+registerObject ::BW::MessageDlg Class ::widget {}
+registerObject ::BW::NoteBook Class ::widget {}
+registerObject ::BW::PagesManager Class ::widget {}
+registerObject ::BW::PanedWindow Class ::widget {}
+registerObject ::BW::PanelFrame Class ::widget {}
+registerObject ::BW::PasswdDlg Class ::widget {}
+registerObject ::BW::ProgressBar Class ::widget {}
+registerObject ::BW::ProgressDlg Class ::widget {}
+registerObject ::BW::ScrollView Class ::widget {}
+registerObject ::BW::ScrollableFrame Class ::widget {}
+registerObject ::BW::ScrolledWindow Class ::widget {}
+registerObject ::BW::SelectColor Class ::widget {}
+registerObject ::BW::SelectFont Class ::widget {}
+registerObject ::BW::Separator Class ::widget {}
+registerObject ::BW::SpinBox Class ::widget {}
+registerObject ::BW::StatusBar Class ::widget {}
+registerObject ::BW::TitleFrame Class ::widget {}
+registerObject ::BW::Tree Class ::widget {}
+registerProc ::DynamicHelp::add {{void {tk widget} {? {option -command unknown -index index -item unknown -type {enum ballon variable menu} -text string -variable unknown} ?options}}}
+registerProc ::DynamicHelp::configure {{void {? {option -borderwidth unknown -delay int -state {enum normal disabled} -topbackground unknown} ?options}}}
+registerProc ::DynamicHelp::delete {{void {tk widget}}}
+registerProc ::DynamicHelp::include {{void {unknown class} {unknown type}}}
+registerProc ::DynamicHelp::register {{void {tk path} {unknown type} {? unknown ?arg...?}}}
+registerProc ::DynamicHelp::sethelp {{void {tk path} {unknown subpath} {? unknown ?force?}}}
+registerProc ::DragSite::include {{void {unknown class} {unknown type} {unknown event}}}
+registerProc ::DragSite::register {{void {tk path} {? {option -dragendcmd unknown -dragevent {enum 1 2 3} -draginitcmd unknown} ?options}}}
+registerProc ::DragSite::setdrag {{void {tk path} {unknown subpath} {unknown initcmd} {unknown endcmd} {? unknown ?force?}}}
+registerProc ::DropSite::include {{void {unknown class} {unknown types}}}
+registerProc ::DropSite::register {{void {tk path} {? {option -dropcmd unknown -dropovercmd unknown -droptypes unknown} ?options}}}
+registerProc ::DropSite::setcursor {{void {unknown cursor}}}
+registerProc ::DropSite::setdrop {{void {tk path} {unknown subpath} {unknown dropover} {unknown drop} {? unknown ?force?}}}
+registerProc ::DropSite::setoperation {{void {unknown op}}}
+registerProc ::BWidget::XLFDfont {{void {unknown cmd} {? unknown ?arg...?}}}
+registerProc ::BWidget::assert {{void {unknown exp} {? unknown ?msg?}}}
+registerProc ::BWidget::badOptionString {{string {unknown type} {unknown value} {unknown list}}}
+registerProc ::BWidget::bindMouseWheel {{void {tk widget}}}
+registerProc ::BWidget::classes {{list {unknown class}}}
+registerProc ::BWidget::clonename {{void {unknown menu}}}
+registerProc ::BWidget::focus {{void {unknown option} {tk path}}}
+registerProc ::BWidget::get3dcolor {{unknown {tk path} {unknown bgcolor}}}
+registerProc ::BWidget::getname {{string {string name}}}
+registerProc ::BWidget::grab {{void {unknown option} {tk path}}}
+registerProc ::BWidget::inuse {{boolean {unknown class}}}
+registerProc ::BWidget::library {{void {unknown class} {? unknown ?class} {unknown ...?}}}
+registerProc ::BWidget::lreorder {{void {unknown list} {unknown neworder}}}
+registerProc ::BWidget::parsetext {{void {string text}}}
+registerProc ::BWidget::place {{void {tk path} {unknown w} {unknown h} {? unknown ?arg...?}}}
+registerProc ::BWidget::write {{void {string filename} {? unknown ?mode?}}}
+registerProc ::BWidget::wrongNumArgsString {{unknown {string string}}}
+registerProc ::Widget::addmap {{void {unknown class} {unknown subclass} {unknown subpath} {unknown options}}}
+registerProc ::Widget::bwinclude {{void {unknown class} {unknown subclass} {unknown subpath} {? unknown ?arg...?}}}
+registerProc ::Widget::cget {{unknown {tk path} {unknown option}}}
+registerProc ::Widget::configure {{unknown {tk path} {unknown options}}}
+registerProc ::Widget::create {{tk {unknown class} {tk path} {? unknown ?rename?}}}
+registerProc ::Widget::declare {{void {unknown class} {unknown optlist}}}
+registerProc ::Widget::define {{void {unknown class} {string filename} {? unknown ?class} {unknown ...?}}}
+registerProc ::Widget::destroy {{void {tk path}}}
+registerProc ::Widget::focusNext {{void {unknown w}}}
+registerProc ::Widget::focusOK {{void {unknown w}}}
+registerProc ::Widget::focusPrev {{void {unknown w}}}
+registerProc ::Widget::generate-doc {{void {unknown dir} {unknown widgetlist}}}
+registerProc ::Widget::generate-widget-doc {{void {unknown class} {unknown iscmd} {unknown file}}}
+registerProc ::Widget::getoption {{unknown {tk path} {unknown option}}}
+registerProc ::Widget::getVariable {{unknown {tk path} {ref varName} {? unknown ?myVarName?}}}
+registerProc ::Widget::hasChanged {{void {tk path} {unknown option} {unknown pvalue}}}
+registerProc ::Widget::init {{void {unknown class} {tk path} {unknown options}}}
+registerProc ::Widget::setoption {{unknown {tk path} {unknown option} {unknown value}}}
+registerProc ::Widget::subcget {{list {tk path} {unknown subwidget}}}
+registerProc ::Widget::syncoptions {{void {unknown class} {unknown subclass} {unknown subpath} {unknown options}}}
+registerProc ::Widget::tkinclude {{void {unknown class} {unknown tkwidget} {unknown subpath} {? unknown ?arg...?}}}
+

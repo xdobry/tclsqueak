@@ -1,0 +1,201 @@
+registerProc tablelist::tablelist {{{{tk ::Tablelist}} {{new tk ::Tablelist}} {? {option -borderwidth -highlightthickness -setgrid -cursor -relief -xscrollcommand -exportselection -selectbackground -yscrollcommand -highlightbackground -selectborderwidth -highlightcolor -selectforeground -acceptchildcommand unknown -activestyle {enum frame none underline} -arrowcolor unknown -arrowdisabledcolor unknown -arrowstyle {enum flat6x4 flat7x4 flat7x5 flat7x7 flat8x5 flat9x5 flat9x6 flat9x7 flat10x6 photo7x7 sunken8x7 sunken10x9 sunken12x11} -autoscan boolean -collapsecommand unknown -columns unknown -columntitles unknown -editendcommand unknown -editselectedonly boolean -editstartcommand unknown -expandcommand unknown -forceeditendcommand boolean -fullseparators boolean -height int -incrarrowtype {enum up down} -labelactivebackground unknown -labelactiveforeground unknown -labelbackground unknown -labelbg unknown -labelborderwidth unknown -labelbd unknown -labelcommand unknown -labelcommand2 unknown -labeldisabledforeground unknown -labelfont unknown -labelforeground unknown -labelfg unknown -labelheight unknown -labelpady unknown -labelrelief {enum raised sunken flat ridge solid groove} -listvariable unknown -movablecolumns boolean -movablerows boolean -movecolumncursor unknown -movecursor unknown -populatecommand unknown -protecttitlecolumns boolean -resizablecolumns boolean -resizecursor unknown -selectmode {enum single browse multiple extended} -selecttype {enum row cell} -setfocus boolean -showarrow boolean -showlabels boolean -showseparators boolean -snipstring string -sortcommand unknown -spacing unknown -state {enum normal disabled} -stretch unknown -stripebackground unknown -stripebg unknown -stripeforeground unknown -stripefg unknown -stripeheight unknown -takefocus unknown -targetcolor unknown -titlecolumns int -tooltipaddcommand unknown -tooltipdelcommand unknown -treecolumn unknown -treestyle {enum adwaita ambiance aqua baghira dust dustSand gtk klearlooks mint newWave oxygen1 oxygen2 phase plastik plastique radiance ubuntu vistaAero vistaClassic win7Aero win7Classic winnative winxpBlue winxpOlive winxpSilver} -width int -background unknown -bg unknown -editable boolean -editwindow string -font unknown -foreground unknown -fg unknown -image unknown -selectbackground unknown -selectforeground unknown -stretchwindow boolean -text string -window unknown -windowdestroy unknown -windowupdate unknown -fully -partly -fully -partly -requested -stretched -total -fully -partly -fully -partly -all -backwards -check unknown -descend -exact -formatted -glob -nocase -not -numeric -parent unknown -regexp -start index -increasing -decreasing -increasing -decreasing}}}}
+registerObject ::Tablelist Class ::widget {}
+registerMethod ::Tablelist instproc activate {{void {unknown tindex}}}
+registerMethod ::Tablelist instproc activatecell {{void {unknown cellIndex}}}
+registerMethod ::Tablelist instproc applysorting {{list {unknown list}}}
+registerMethod ::Tablelist instproc attrib {{unknown {? string ?name?} {? unknown ?value} {string name} {unknown value} {* unknown ...?}}}
+registerMethod ::Tablelist instproc bbox {{list {unknown tindex}}}
+registerMethod ::Tablelist instproc bodypath {{{tk ::Text}}}
+registerMethod ::Tablelist instproc bodytag string
+registerMethod ::Tablelist instproc cancelediting void
+registerMethod ::Tablelist instproc cellattrib {{unknown {unknown cellIndex} {? string ?name?} {? unknown ?value} {string name} {unknown value} {* unknown ...?}}}
+registerMethod ::Tablelist instproc cellbbox {{list {unknown cellIndex}}}
+registerMethod ::Tablelist instproc cellcget {{unknown {unknown cellIndex} {unknown option}}}
+registerMethod ::Tablelist instproc cellconfigure {
+  {list {{const cellIndex}}}
+  {unknown {{const cellIndex}} {? unknown ?option}}
+}
+registerMethod ::Tablelist instproc cellindex {{sting {unknown cellIndex}}}
+registerMethod ::Tablelist instproc cellselection {
+  {void {{const anchor}} {unknown cellIndex}}
+  {void {{const clear}} {unknown firstCell} {unknown lastCell}}
+  {void {{const clear}} {unknown list}}
+  {boolean {{const includes}} {unknown cellIndex}}
+  {void {{const set}} {unknown firstCell} {unknown lastCell}}
+  {void {{const set}} {unknown list}}
+}
+registerMethod ::Tablelist instproc childcount {{int {unknown nodeIndex}}}
+registerMethod ::Tablelist instproc childindex {{string {index index}}}
+registerMethod ::Tablelist instproc childkeys {{string {unknown nodeIndex}}}
+registerMethod ::Tablelist instproc collapse {{void {index index} {? unknown ?option}}}
+registerMethod ::Tablelist instproc collapseall {{void {? unknown ?option}}}
+registerMethod ::Tablelist instproc columnattrib {
+  {unknown {{const columnIndex}}}
+  {unknown {{const columnIndex}} {string name} {* unknown value...}}
+}
+registerMethod ::Tablelist instproc columncget {{unknown {unknown columnIndex} {unknown coption}}}
+registerMethod ::Tablelist instproc columnconfigure {{unknown {unknown columnIndex} {? unknown ?option?} {? unknown ?value} {unknown option} {unknown value} {* unknown ...?}}}
+registerMethod ::Tablelist instproc columncount unknown
+registerMethod ::Tablelist instproc columnindex {{unknown {unknown columnIndex}}}
+registerMethod ::Tablelist instproc columnwidth {{unknown {unknown columnIndex} {? unknown ?option}}}
+registerMethod ::Tablelist instproc configcelllist {{unknown {unknown list}}}
+registerMethod ::Tablelist instproc configcells {{unknown {? unknown ?cellIndex} {unknown option} {unknown value} {unknown cellIndex} {unknown option} {unknown value} {* unknown ...?}}}
+registerMethod ::Tablelist instproc configcolumnlist {{unknown {unknown list}}}
+registerMethod ::Tablelist instproc configcolumns {{unknown {? unknown ?columnIndex} {unknown option} {unknown value} {unknown columnIndex} {unknown option} {unknown value} {* unknown ...?}}}
+registerMethod ::Tablelist instproc configrowlist {{unknown {unknown list}}}
+registerMethod ::Tablelist instproc configrows {{unknown {? index ?index} {unknown option} {unknown value} {index index} {unknown option} {unknown value} {* unknown ...?}}}
+registerMethod ::Tablelist instproc containing {{unknown {unknown y}}}
+registerMethod ::Tablelist instproc containingcell {{unknown {unknown x} {unknown y}}}
+registerMethod ::Tablelist instproc containingcolumn {{unknown {unknown x}}}
+registerMethod ::Tablelist instproc cornerlabelpath tk
+registerMethod ::Tablelist instproc cornerpath tk
+registerMethod ::Tablelist instproc curcellselection list
+registerMethod ::Tablelist instproc curselection list
+registerMethod ::Tablelist instproc delete {
+  {void {{const first}} {unknown last}}
+  {void {{const indexList}}}
+}
+registerMethod ::Tablelist instproc deletecolumns {
+  {void {{const firstColumn}} {unknown lastColumn}}
+  {void {{const columnIndexList}}}
+}
+registerMethod ::Tablelist instproc depth {{int {unknown nodeIndex}}}
+registerMethod ::Tablelist instproc descendantcount {{int {unknown nodeIndex}}}
+registerMethod ::Tablelist instproc editcell {{void {unknown cellIndex}}}
+registerMethod ::Tablelist instproc editinfo list
+registerMethod ::Tablelist instproc editwinpath tk
+registerMethod ::Tablelist instproc editwintag string
+registerMethod ::Tablelist instproc entrypath tk
+registerMethod ::Tablelist instproc expand {{void {index index} {? unknown ?option}}}
+registerMethod ::Tablelist instproc expandall {{void {? unknown ?option}}}
+registerMethod ::Tablelist instproc expandedkeys void
+registerMethod ::Tablelist instproc fillcolumn {{void {unknown columnIndex} {string text}}}
+registerMethod ::Tablelist instproc finishediting void
+registerMethod ::Tablelist instproc formatinfo lis
+registerMethod ::Tablelist instproc get {
+  {list {{const first}} {unknown last}}
+  {list {{const indexList}}}
+}
+registerMethod ::Tablelist instproc getcells {
+  {list {{const firstCell}} {unknown lastCell}}
+  {list {{const cellIndexList}}}
+}
+registerMethod ::Tablelist instproc getcolumns {
+  {list {{const firstColumn}} {unknown lastColumn}}
+  {list {{const columnIndexList}}}
+}
+registerMethod ::Tablelist instproc getformatted {
+  {list {{const first}} {unknown last}}
+  {list {{const indexList}}}
+}
+registerMethod ::Tablelist instproc getformattedcells {
+  {list {{const firstCell}} {unknown lastCell}}
+  {list {{const cellIndexList}}}
+}
+registerMethod ::Tablelist instproc getformattedcolumns {
+  {list {{const firstColumn}} {unknown lastColumn}}
+  {list {{const columnIndexList}}}
+}
+registerMethod ::Tablelist instproc getfullkeys {
+  {list {{const first}} {unknown last}}
+  {list {{const indexList}}}
+}
+registerMethod ::Tablelist instproc getkeys {
+  {list {{const first}} {unknown last}}
+  {list {{const indexList}}}
+}
+registerMethod ::Tablelist instproc hasattrib {{boolean {string name}}}
+registerMethod ::Tablelist instproc hascellattrib {{boolean {unknown cellIndex} {string name}}}
+registerMethod ::Tablelist instproc hascolumnattrib {{boolean {unknown columnIndex} {string name}}}
+registerMethod ::Tablelist instproc hasrowattrib {{boolean {index index} {string name}}}
+registerMethod ::Tablelist instproc imagelabelpath {{tk {unknown cellIndex}}}
+registerMethod ::Tablelist instproc index {{string {index index}}}
+registerMethod ::Tablelist instproc insert {{void {index index} {* unknown ?item...}}}
+registerMethod ::Tablelist instproc insertchildlist {{void {unknown parentNodeIndex} {unknown childIndex} {unknown itemList}}}
+registerMethod ::Tablelist instproc insertchildren {{void {unknown parentNodeIndex} {unknown childIndex} {* unknown ?item...}}}
+registerMethod ::Tablelist instproc insertchild {{void {unknown parentNodeIndex} {unknown childIndex} {* unknown ?item...}}}
+registerMethod ::Tablelist instproc insertcolumnlist {{void {unknown columnIndex} {unknown list}}}
+registerMethod ::Tablelist instproc insertcolumns {{void {unknown columnIndex} {? unknown ?width} {unknown title} {* unknown ?left|right|center...}}}
+registerMethod ::Tablelist instproc insertlist {{void {index index} {unknown itemList}}}
+registerMethod ::Tablelist instproc iselemsnipped {{boolean {unknown cellIndex} {unknown fullTextName}}}
+registerMethod ::Tablelist instproc isexpanded {{boolean {index index}}}
+registerMethod ::Tablelist instproc istitlesnipped {{boolen {unknown columnIndex} {unknown fullTextName}}}
+registerMethod ::Tablelist instproc itemlistvar unknown
+registerMethod ::Tablelist instproc labelpath {{tk {unknown columnIndex}}}
+registerMethod ::Tablelist instproc labels list
+registerMethod ::Tablelist instproc labeltag string
+registerMethod ::Tablelist instproc move {
+  {void {{const sourceIndex}} {unknown targetIndex}}
+  {void {{const sourceIndex}} {unknown targetParentNodeIndex} {unknown targetChildIndex}}
+}
+registerMethod ::Tablelist instproc movecolumn {{void {unknown sourceColumn} {unknown targetColumn}}}
+registerMethod ::Tablelist instproc nearest {{unknown {unknown y}}}
+registerMethod ::Tablelist instproc nearestcell {{unknown {unknown x} {unknown y}}}
+registerMethod ::Tablelist instproc nearestcolumn {{unknown {unknown x}}}
+registerMethod ::Tablelist instproc noderow {{unknown {unknown parentNodeIndex} {unknown childIndex}}}
+registerMethod ::Tablelist instproc parentkey {{unknown {unknown nodeIndex}}}
+registerMethod ::Tablelist instproc refreshsorting {{unknown {? unknown ?parentNodeIndex?}}}
+registerMethod ::Tablelist instproc rejectinput void
+registerMethod ::Tablelist instproc resetsortinfo void
+registerMethod ::Tablelist instproc rowattrib {{unknown {index index} {? string ?name?} {? unknown ?value} {string name} {unknown value} {* unknown ...?}}}
+registerMethod ::Tablelist instproc rowcget {{unknown {index index} {unknown option}}}
+registerMethod ::Tablelist instproc rowconfigure {{unknown {index index} {? unknown ?option?} {? unknown ?value} {unknown option} {unknown value} {* unknown ...?}}}
+registerMethod ::Tablelist instproc scan {
+  {void {{const mark}} {unknown x} {unknown y}}
+  {void {{const dragto}} {unknown x} {unknown y}}
+}
+registerMethod ::Tablelist instproc searchcolumn {{void {unknown columnIndex} {string pattern} {? unknown ?options}}}
+registerMethod ::Tablelist instproc see {{void {index index}}}
+registerMethod ::Tablelist instproc seecell {{void {unknown cellIndex}}}
+registerMethod ::Tablelist instproc seecolumn {{void {unknown columnIndex}}}
+registerMethod ::Tablelist instproc selection {
+  {unknown {{const anchor}} {index index}}
+  {unknown {{const clear}} {unknown first} {unknown last}}
+  {unknown {{const clear}} {unknown indexList}}
+  {unknown {{const includes}} {index index}}
+  {unknown {{const set}} {unknown first} {unknown last}}
+  {unknown {{const set}} {unknown indexList}}
+}
+registerMethod ::Tablelist instproc separatorpath {{unknown {? unknown ?columnIndex?}}}
+registerMethod ::Tablelist instproc separators unknown
+registerMethod ::Tablelist instproc size int
+registerMethod ::Tablelist instproc sort {{unknown {? unknown ?option}}}
+registerMethod ::Tablelist instproc sortbycolumn {{unknown {unknown columnIndex} {? unknown ?option}}}
+registerMethod ::Tablelist instproc sortbycolumnlist {{unknown {unknown columnIndexList} {? unknown ?sortOrderList?}}}
+registerMethod ::Tablelist instproc sortcolumn unknown
+registerMethod ::Tablelist instproc sortcolumnlist unknown
+registerMethod ::Tablelist instproc sortorder unknown
+registerMethod ::Tablelist instproc sortorderlist unknown
+registerMethod ::Tablelist instproc togglecolumnhide {
+  {unknown {{const firstColumn}} {unknown lastColumn}}
+  {unknown {{const columnIndexList}}}
+}
+registerMethod ::Tablelist instproc togglerowhide {
+  {unknown {{const first}} {unknown last}}
+  {unknown {{const indexList}}}
+}
+registerMethod ::Tablelist instproc toplevelkey {{unknown {index index}}}
+registerMethod ::Tablelist instproc unsetattrib {{unknown {string name}}}
+registerMethod ::Tablelist instproc unsetcellattrib {{unknown {unknown cellIndex} {string name}}}
+registerMethod ::Tablelist instproc unsetcolumnattrib {{unknown {unknown columnIndex} {string name}}}
+registerMethod ::Tablelist instproc unsetrowattrib {{unknown {index index} {string name}}}
+registerMethod ::Tablelist instproc windowpath {{tk {unknown cellIndex}}}
+registerMethod ::Tablelist instproc xview {
+  {unknown {{const {}}}}
+  {unknown {{const units}}}
+  {unknown {{const moveto}} {unknown fraction}}
+  {unknown {{const scroll}} {int number} {unknown units|pages}}
+}
+registerMethod ::Tablelist instproc yview {
+  {unknown {{const {}}}}
+  {unknown {{const units}}}
+  {unknown {{const moveto}} {unknown fraction}}
+  {unknown {{const scroll}} {int number} {unknown units|pages}}
+}
+registerMethod ::Tablelist instproc cget {{unknown {{enum -borderwidth -highlightthickness -setgrid -cursor -relief -xscrollcommand -exportselection -selectbackground -yscrollcommand -highlightbackground -selectborderwidth -highlightcolor -selectforeground -acceptchildcommand -activestyle -arrowcolor -arrowdisabledcolor -arrowstyle -autoscan -collapsecommand -columns -columntitles -editendcommand -editselectedonly -editstartcommand -expandcommand -forceeditendcommand -fullseparators -height -incrarrowtype -labelactivebackground -labelactiveforeground -labelbackground -labelbg -labelborderwidth -labelbd -labelcommand -labelcommand2 -labeldisabledforeground -labelfont -labelforeground -labelfg -labelheight -labelpady -labelrelief -listvariable -movablecolumns -movablerows -movecolumncursor -movecursor -populatecommand -protecttitlecolumns -resizablecolumns -resizecursor -selectmode -selecttype -setfocus -showarrow -showlabels -showseparators -snipstring -sortcommand -spacing -state -stretch -stripebackground -stripebg -stripeforeground -stripefg -stripeheight -takefocus -targetcolor -titlecolumns -tooltipaddcommand -tooltipdelcommand -treecolumn -treestyle -width -background -bg -editable -editwindow -font -foreground -fg -image -selectbackground -selectforeground -stretchwindow -text -window -windowdestroy -windowupdate -fully -partly -fully -partly -requested -stretched -total -fully -partly -fully -partly -all -backwards -check -descend -exact -formatted -glob -nocase -not -numeric -parent -regexp -start -increasing -decreasing -increasing -decreasing}}}}
+registerMethod ::Tablelist instproc confiure {
+  {list}
+  {void {{option -borderwidth -highlightthickness -setgrid -cursor -relief -xscrollcommand -exportselection -selectbackground -yscrollcommand -highlightbackground -selectborderwidth -highlightcolor -selectforeground -acceptchildcommand unknown -activestyle {enum frame none underline} -arrowcolor unknown -arrowdisabledcolor unknown -arrowstyle {enum flat6x4 flat7x4 flat7x5 flat7x7 flat8x5 flat9x5 flat9x6 flat9x7 flat10x6 photo7x7 sunken8x7 sunken10x9 sunken12x11} -autoscan boolean -collapsecommand unknown -columns unknown -columntitles unknown -editendcommand unknown -editselectedonly boolean -editstartcommand unknown -expandcommand unknown -forceeditendcommand boolean -fullseparators boolean -height int -incrarrowtype {enum up down} -labelactivebackground unknown -labelactiveforeground unknown -labelbackground unknown -labelbg unknown -labelborderwidth unknown -labelbd unknown -labelcommand unknown -labelcommand2 unknown -labeldisabledforeground unknown -labelfont unknown -labelforeground unknown -labelfg unknown -labelheight unknown -labelpady unknown -labelrelief {enum raised sunken flat ridge solid groove} -listvariable unknown -movablecolumns boolean -movablerows boolean -movecolumncursor unknown -movecursor unknown -populatecommand unknown -protecttitlecolumns boolean -resizablecolumns boolean -resizecursor unknown -selectmode {enum single browse multiple extended} -selecttype {enum row cell} -setfocus boolean -showarrow boolean -showlabels boolean -showseparators boolean -snipstring string -sortcommand unknown -spacing unknown -state {enum normal disabled} -stretch unknown -stripebackground unknown -stripebg unknown -stripeforeground unknown -stripefg unknown -stripeheight unknown -takefocus unknown -targetcolor unknown -titlecolumns int -tooltipaddcommand unknown -tooltipdelcommand unknown -treecolumn unknown -treestyle {enum adwaita ambiance aqua baghira dust dustSand gtk klearlooks mint newWave oxygen1 oxygen2 phase plastik plastique radiance ubuntu vistaAero vistaClassic win7Aero win7Classic winnative winxpBlue winxpOlive winxpSilver} -width int -background unknown -bg unknown -editable boolean -editwindow string -font unknown -foreground unknown -fg unknown -image unknown -selectbackground unknown -selectforeground unknown -stretchwindow boolean -text string -window unknown -windowdestroy unknown -windowupdate unknown -fully -partly -fully -partly -requested -stretched -total -fully -partly -fully -partly -all -backwards -check unknown -descend -exact -formatted -glob -nocase -not -numeric -parent unknown -regexp -start index -increasing -decreasing -increasing -decreasing}}}
+  {list {{enum -borderwidth -highlightthickness -setgrid -cursor -relief -xscrollcommand -exportselection -selectbackground -yscrollcommand -highlightbackground -selectborderwidth -highlightcolor -selectforeground -acceptchildcommand -activestyle -arrowcolor -arrowdisabledcolor -arrowstyle -autoscan -collapsecommand -columns -columntitles -editendcommand -editselectedonly -editstartcommand -expandcommand -forceeditendcommand -fullseparators -height -incrarrowtype -labelactivebackground -labelactiveforeground -labelbackground -labelbg -labelborderwidth -labelbd -labelcommand -labelcommand2 -labeldisabledforeground -labelfont -labelforeground -labelfg -labelheight -labelpady -labelrelief -listvariable -movablecolumns -movablerows -movecolumncursor -movecursor -populatecommand -protecttitlecolumns -resizablecolumns -resizecursor -selectmode -selecttype -setfocus -showarrow -showlabels -showseparators -snipstring -sortcommand -spacing -state -stretch -stripebackground -stripebg -stripeforeground -stripefg -stripeheight -takefocus -targetcolor -titlecolumns -tooltipaddcommand -tooltipdelcommand -treecolumn -treestyle -width -background -bg -editable -editwindow -font -foreground -fg -image -selectbackground -selectforeground -stretchwindow -text -window -windowdestroy -windowupdate -fully -partly -fully -partly -requested -stretched -total -fully -partly -fully -partly -all -backwards -check -descend -exact -formatted -glob -nocase -not -numeric -parent -regexp -start -increasing -decreasing -increasing -decreasing}}}
+}
+

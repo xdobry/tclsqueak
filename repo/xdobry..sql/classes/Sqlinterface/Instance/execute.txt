@@ -1,0 +1,3 @@
+execute sql command
+if returnAffectedRows anser 1 (yes) the the result
+is the number of rows that are affected by the command

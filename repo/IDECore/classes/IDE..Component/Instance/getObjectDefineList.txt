@@ -1,0 +1,3 @@
+Return the oderded list of classes and objects that respect
+the definition order. It means the base (parent classes) are before
+child classes.

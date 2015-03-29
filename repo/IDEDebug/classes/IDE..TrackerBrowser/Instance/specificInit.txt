@@ -1,0 +1,3 @@
+Tracker browser use filter mechanismus of XOTcl
+to protocol all call to specified object or class.
+The user can choose what will be tracked and which information should be displayed

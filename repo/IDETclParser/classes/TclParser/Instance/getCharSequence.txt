@@ -1,0 +1,6 @@
+This procedure parse string that not begin with special tcl
+control characters.
+
+It can return an PrsLitaral when it is normal string with no special
+characters or PrsQuoted if they consists tcl substitutions elements as
+$variable or [command]

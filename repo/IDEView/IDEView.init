@@ -1,0 +1,2 @@
+catch {IDE::GUIConfigurationMix initializeAfterLoad}
+catch {IDE::System initializeAfterLoad}

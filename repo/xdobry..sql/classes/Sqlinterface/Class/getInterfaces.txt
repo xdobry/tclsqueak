@@ -1,0 +1,7 @@
+Return list of list of all supported interfaces
+the sublists have elements:
+
+tcl-interface name
+xosql name
+xosql interface class
+base interface package

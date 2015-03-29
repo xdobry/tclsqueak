@@ -1,0 +1,22 @@
+# The plug in configuration are set of lines and every line
+# ist Tcl list with structure
+# Name Label Component Startscript DepPlugInsList
+ScriptEditor {Script Editor} IDEScriptEditor {IDE::ScriptEditor newBrowser}
+TestFramework {Unit Test Framework} IDETestFramework {IDE::TestBrowser startBrowserIfNone}
+TestFrameworkSample {XOTclIDE Unit Tests} IDETests {IDE::TestBrowser refreshBrowser} TestFramework
+FunnyExample {Funny Graphic Example} SampleComponent {[Railroad new] inspect}
+HtmlGenerator {Html Doc Generator} IDEDocumentation {IDE::HtmlGeneratorBrowser newBrowser}
+CommentScaner {# Comment Scaner} IDEDocumentation {IDE::CommentScanerBrowser newBrowser}
+WikiReaper {Tcl Wiki Reaper} IDEWikiReaper {IDE::WikiScriptsBrowser newBrowser}
+TclKitDeployer {TclKit Deployer Tool} IDEKitDeployer {IDE::TclKitDeployer newBrowser}
+TkInspector {Tk Window Inspector} IDETkWinInspector {IDE::TkWinInspectorBrowser newBrowser}
+SQLBrowser {SQL Browser} IDESQLBrowser {IDE::SqlBrowser newBrowser}
+FileBrowser {File Browser} IDEFileBrowser {IDE::FileBrowser newBrowser}
+VisaulRegexp {Visual Regexpr} IDERegexpBrowser {IDE::RegexpBrowser newBrowser}
+MessageCatalogHelper {I18N Helper} IDEInternationalizationHelper {POTHelper newBrowser}
+XOTclUpdater {XOTcl update helper} IDEUpdater {IDE::UpdateView newBrowser}
+
+
+
+
+

@@ -1,0 +1,4 @@
+This method reload current edition from database.
+It will be needed by multipleuser envirorment.
+Then many users works on same edition. Reloading will
+update another users changes to local

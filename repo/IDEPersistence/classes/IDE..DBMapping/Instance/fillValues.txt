@@ -1,0 +1,2 @@
+It is important that when the object are loaded first time
+the primary key variable is not defeined

@@ -1,0 +1,7 @@
+IDE::ChangesBrowser
+IDE::ComponentEdition
+IDE::EditionBrowser
+IDE::ObjectEdition
+IDE::TextDiffScaner
+IDE::VersionTreeView
+IDE::VersionControlQueries

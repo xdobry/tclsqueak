@@ -1,0 +1,2 @@
+please use this method from a obsolet method
+for log the obsolete call for this method

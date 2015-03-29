@@ -1,0 +1,2 @@
+This method sould be used to check if
+the object is saved (persistent) in database.

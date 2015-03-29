@@ -1,0 +1,2 @@
+IDE::EditionsMultiChooser instproc closeWindow {} {
+}

@@ -1,0 +1,1 @@
+namespace eval ::make-regexp {}

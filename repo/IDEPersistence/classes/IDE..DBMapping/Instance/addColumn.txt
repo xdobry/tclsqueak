@@ -1,0 +1,7 @@
+Column specifikation is a list 
+{variable name} {database type} {get_Method} {set_Method}
+
+if get or set_Method are empty {} the hander fill directly the varible
+if get or set_Method are _ : the value are ignored be reading or writting
+data. It make sense be timestamp values which are produced from db
+or be set_Method be values that can be ignored

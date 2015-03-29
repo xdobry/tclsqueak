@@ -1,0 +1,2 @@
+IDE::Text instproc initBindings {} {
+}

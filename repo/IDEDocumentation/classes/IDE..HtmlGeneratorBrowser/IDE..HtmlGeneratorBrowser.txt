@@ -1,0 +1,3 @@
+This component contains 2 tools
+1. CommentScanner - for extract all # comments from old tcl/xotcl code that are not maintained by XOTclIDE
+2. Htmml Documentation Generator - Generate html documentation for selecting components using xotclide stucture and appending additional comments

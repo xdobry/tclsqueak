@@ -1,0 +1,2 @@
+IDE::TclScripEditor instproc syntaxHighlightIfWanted {} {
+}

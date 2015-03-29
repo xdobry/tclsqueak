@@ -1,0 +1,3 @@
+disconnect the database connection
+
+The destroing interface object also desconnct from database

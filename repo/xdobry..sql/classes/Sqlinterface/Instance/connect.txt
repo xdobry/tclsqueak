@@ -1,0 +1,3 @@
+Await a list of connection parameter for example
+{user root db xotcllib}
+Use array get to generate such list from array

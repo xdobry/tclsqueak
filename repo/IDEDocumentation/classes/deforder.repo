@@ -1,0 +1,5 @@
+IDE::CommentScanerBrowser
+IDE::DocGenerator
+IDE::DocGeneratorComponent
+IDE::DocGeneratorMain
+IDE::HtmlGeneratorBrowser

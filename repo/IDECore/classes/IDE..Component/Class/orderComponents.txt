@@ -1,0 +1,2 @@
+This procedure orders the component list that the required components
+are before the dependent components

@@ -1,0 +1,2 @@
+IDE::DBVCUtils instproc testFComponentRequirements {} {
+}

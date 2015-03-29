@@ -1,0 +1,2 @@
+catch {IDE::ConfigurationMap initializeAfterLoad}
+catch {IDE::ConfigmapControler initializeAfterLoad}

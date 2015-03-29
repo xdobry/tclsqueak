@@ -1,0 +1,4 @@
+This method create new edition of config map.
+It have another mining than createNewEdition that
+rather morph one instance to new edition. This method
+create new instance this new edition based on [self] object

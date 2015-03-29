@@ -1,0 +1,2 @@
+Start if you use sql browser as stand-alone application in . toplevel window.
+Exit the window will exit the application

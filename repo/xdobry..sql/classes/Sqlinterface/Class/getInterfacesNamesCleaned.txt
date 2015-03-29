@@ -1,0 +1,2 @@
+Same as getInterfacesNames method but
+not return interfaces that are not installed on the system

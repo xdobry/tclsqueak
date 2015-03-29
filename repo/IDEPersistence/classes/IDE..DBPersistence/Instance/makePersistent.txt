@@ -1,0 +1,3 @@
+This method write object to database
+It do not check if the object is already in database.
+It genarate also always new primary key and one table row.

@@ -1,0 +1,1 @@
+Full name is name used in repository for proc or oo methods with namespace

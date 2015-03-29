@@ -1,0 +1,4 @@
+Insert row and try to compute the autoid for primary key.
+The implementation is dependend from undelying base interface
+mysql supports autoid, postgres has sequencer
+by odbc und sqlite special sequencer database are used

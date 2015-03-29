@@ -1,0 +1,17 @@
+registerProc ::supertext::fromtexttovar {{unknown {unknown w}}}
+registerProc ::supertext::fromvartotext {{unknown {tk w}}}
+registerProc ::supertext::overrideTextCommand unknown
+registerProc ::supertext::text {{{{tk ::Text}} {{new tk ::Text} w} {* unknown args}}}
+registerProc ::supertext::text_index {{unknown {unknown w} {string i}}}
+registerProc ::supertext::widgetproc {{unknown {unknown this} {unknown w} {string command} {* unknown args}}}
+registerVariable {} global ::errorInfo {} string
+registerVariable {} global ::supertext::IsEditable {} {array unknown}
+registerVariable {} global ::supertext::postProc {} {array unknown}
+registerVariable {} global ::supertext::preProc {} {array unknown}
+registerVariable {} global ::supertext::synctextwidget {} {array unknown}
+registerVariable {} global ::supertext::syncvariable {} {array unknown}
+registerVariable {} global ::supertext::text {} string
+registerVariable {} global ::supertext::undo {} {array unknown}
+registerVariable {} global ::supertext::undoIndex {} {array unknown}
+registerVariable {} global ::supertext::undocallback {} {array unknown}
+addNamespaceExport ::supertext text

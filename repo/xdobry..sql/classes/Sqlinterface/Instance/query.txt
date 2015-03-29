@@ -1,0 +1,8 @@
+return query object see API to
+MySql::SqlQuery to get all documentation
+<p>
+empty string is return if error occurs. The error message can be
+retrieve by interface parameter ($interface errorMessage)
+<p>
+Warning!
+All queries must be destroyed to free query resource

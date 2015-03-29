@@ -1,0 +1,2 @@
+This can parse following expresions
+$a $a(2) ${a} ${a(3)} $a([set b])

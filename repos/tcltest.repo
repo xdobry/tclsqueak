@@ -1,0 +1,46 @@
+registerProc ::tcltest::bytestring {{string string}}
+registerProc ::tcltest::cleanupTests ?runningMultipleTests?
+registerProc ::tcltest::configure {
+    {list}
+    {unknown {{enum -singleproc -debug -verbose -preservecore -limitconstraints -constraints -tmpdir -testdir -file -notfile -relateddir -asidefromdir -match list -skip -load -loadfile -outfile -errfile}}}
+    {void {{option -singleproc boolean -debug int -verbose unknown -preservecore int -limitconstraints boolean -constraints list
+-tmpdir string -testdir string  -file list -notfile list -relateddir list -asidefromdir list -match list
+-skip list -load string -loadfile string -outfile string -errfile string}}}
+}
+registerProc ::tcltest::customMatch {{void {string mode} {body command}}}
+registerProc ::tcltest::debug {{int {int level}}}
+registerProc ::tcltest::errorChannel {{channelid {? channelid}}}
+registerProc ::tcltest::errorFile {{string {? string filename}}}
+registerProc ::tcltest::interpreter {{interp {? interp}}}
+registerProc ::tcltest::limitConstraints {{boolean {? boolean}}}
+registerProc ::tcltest::loadFile {{string {? string filename}}}
+registerProc ::tcltest::loadScript {{string {? string script}}}
+registerProc ::tcltest::loadTestedCommands {{void}}
+registerProc ::tcltest::makeDirectory {{void {string name} {? string directory}}}
+registerProc ::tcltest::makeFile {{void {string contents} {string name} {? string directory}}}
+registerProc ::tcltest::match {{list {? list patternList}}}
+registerProc ::tcltest::matchDirectories {{list {? list patternList}}}
+registerProc ::tcltest::matchFiles {{list {? list patternList}}}
+registerProc ::tcltest::normalizeMsg {{string {string msg}}}
+registerProc ::tcltest::normalizePath {{string {string pathVar}}}
+registerProc ::tcltest::outputChannel {{channelid {? channelid}}}
+registerProc ::tcltest::outputFile {{string {? string filename}}}
+registerProc ::tcltest::preserveCore {{int {int level}}}
+registerProc ::tcltest::removeDirectory {{void {string name} {? string directory}}}
+registerProc ::tcltest::removeFile {{void {string name} {? string directory}}}
+registerProc ::tcltest::runAllTests {{void}}
+registerProc ::tcltest::singleProcess {{boolean {? boolean}}}
+registerProc ::tcltest::skip {{list {? list patternList}}}
+registerProc ::tcltest::skipDirectories {{list {? list patternList}}}
+registerProc ::tcltest::skipFiles {{list {? list patternList}}}
+registerProc ::tcltest::temporaryDirectory {{string {? string directory}}}
+registerProc ::tcltest::test {
+    {void {string name} {string description} {{option -constraints string -setup script -body script -cleanup script -match {enum regexp glob exact} -result unknown -output string -errorOutput string -returnCodes list}}}
+    {void {string name} {string description} {? string constraints} {script body} {unknown result}}
+}
+registerProc ::tcltest::testConstraint {{string {string constraint} {? unknown value}}}
+registerProc ::tcltest::testsDirectory {{string {? string directory}}}
+registerProc ::tcltest::verbose {{int {int level}}}
+registerProc ::tcltest::viewFile {{void {string name} {? string directory}}}
+registerProc ::tcltest::workingDirectory {{string {? string directory}}}
+addNamespaceExport ::tcltest {cleanupTests loadTestedCommands makeDirectory makeFile removeDirectory removeFile runAllTests test configure customMatch errorChannel interpreter outputChannel testConstraint bytestring debug errorFile limitConstraints loadFile loadScript match matchFiles matchDirectories normalizeMsg normalizePath outputFile preserveCore singleProcess skip skipFiles skipDirectories temporaryDirectory testsDirectory verbose viewFile workingDirectory getMatchingFiles mainThread restoreState saveState threadReap}
