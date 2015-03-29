@@ -17,13 +17,13 @@ The new name also point more to origin of project and the main idea for it.
 *Program Smalltalk way in Tcl.*
 
 I have started XOTclIDE 2001 and uses it for many years also to implement my another software. I was quite impressed
-by Tcl8.6 release which finally it includes good object oriented extension and also sqlite and data base bindings.
+by Tcl8.6 release, which finally includes good object oriented extension and also sqlite and data base bindings.
 So It was enough for me to refresh the project and add support for TclOO.
 I also wanted to make the project easier to install and begin with coding.
 
 ##How to start
 
-There is read to install zip file with included TCL interpreter.
+Install Tcl and run start.tcl
 
 But you may also check out the sources and lunch the start.bat, start.tcl or start.sh.
 The prerequist are Tcl interpreter http://tcl.tk and installed XOTcl extension http://www.xotcl.org (or http://www.next-scripting.org)
@@ -31,13 +31,13 @@ The binary XOTcl extension for windows can be taken from zip.
 
 ##Documentation
 
-There is old XOTcl Documentation http://www.xdobry.de/xotclIDE/docs/index.html
+There is old XOTclIDE Documentation http://www.xdobry.de/xotclIDE/docs/index.html
 
-##Want makes TclSquak different
+##What makes TclSquak different?
 
 * Interactive smalltalk way of programming
 * code repository (every code change is persistent)
-* advanced static code analyze and edit support tgat
+* advanced static code analyze and edit support for code (code completion, ...)
 
 ###Smalltalk way
 
