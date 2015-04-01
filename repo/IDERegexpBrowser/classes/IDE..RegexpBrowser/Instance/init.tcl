@@ -11,7 +11,7 @@ IDE::RegexpBrowser instproc init topwindow {
     my set last ""
     my set counter 0
     my set inReplay 0
-   
+
     my history:init
 
     set win $topwindow
@@ -35,9 +35,9 @@ IDE::RegexpBrowser instproc init topwindow {
     # text for regexp entry
     set data(w:regexp) [text $w.regexp -wrap char -bg white -font $font_regexp  -selectbackground lightblue -selectborderwidth 0  -width 1 -height 3 -bd 1]
     set winRegexp $data(w:regexp)
-    
+
     my makeHelpWindow $w
-    
+
     # buttons & selection of match
     set fb [frame $w.b]
     button $fb.go -text "Go" -underline 0 -command [list [self] go] -bd 1 -width 5
@@ -109,7 +109,7 @@ IDE::RegexpBrowser instproc init topwindow {
     pack $top.regexp -side top -anchor w -padx 5 -pady 5 -fill x
     pack $top.sample -side top -anchor w -padx 5 -pady 5 -expand true -fill both
     #wm geometry $rootwindow $geometry
-    wm title $rootwindow "Visual REGEXP $version - XOTclIDE Plugin"
+    wm title $rootwindow "Visual REGEXP $version - TclSqueak Plugin"
     focus $data(w:regexp)
     # main menu
     my makeMenus

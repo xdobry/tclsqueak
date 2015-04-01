@@ -4,7 +4,7 @@ IDE::ImportMethodView instproc specificInit {} {
     my requireNamespace
     set hideTclTk 1
 
-    message $win.info -text "With with tool you can import tcl procedures known by interpreter but not registered in XOTclIDE. It can be used by starting XOTclIDE form foreign applicaiton or executing tcl scripts that create procs" -width 450
+    message $win.info -text "With with tool you can import tcl procedures known by interpreter but not registered in TclSqueak. It can be used by starting TclSqueak form foreign applicaiton or executing tcl scripts that create procs" -width 450
 
     IDE::ListView create [self]::methodlist $win.mlist -multiselect 1
     entry $win.efilter

@@ -13,13 +13,20 @@ IDE::WikiScriptsBrowser instproc runCommand {} {
                 interp alias wiki tk_messageBox {} tk_messageBox
                 interp eval wiki {proc wm args { # ignore wm  }}
             }
+            my setStatus "safe interpreter created"
         } else {
             interp create wiki
             if {$useTk} {
                 # for wikit the "package require Tk" takes a lot of time
                 interp eval wiki "load {} Tk"
             }
+            my setStatus "interpreter created"
         }
+        $win.nav.browse configure -state active
+        $win.nav.delete configure -state active
     }
-    interp eval wiki $t
+    if {[catch {interp eval wiki $t} res opts]} {
+        my setStatus $res
+        [interp bgerror wiki] $res $opts
+    }
 }

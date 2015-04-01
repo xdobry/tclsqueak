@@ -9,4 +9,5 @@ IDE::ClassDescription instproc importAllMethods {} {
             $mobj setComment $comment
         }
     }
+    my registerDefMethod
 }

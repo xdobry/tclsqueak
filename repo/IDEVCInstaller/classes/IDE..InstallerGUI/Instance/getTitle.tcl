@@ -1,3 +1,3 @@
 IDE::InstallerGUI instproc getTitle {} {
-    return {Version Control Installer for XOTclIDE}
+    return {Version Control Installer for TclSqueak}
 }

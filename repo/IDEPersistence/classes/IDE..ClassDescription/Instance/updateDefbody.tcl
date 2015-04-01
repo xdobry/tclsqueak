@@ -1,4 +1,9 @@
-IDE::ClassDescription instproc updateDefbody {} {
+IDE::ClassDescription instproc updateDefbody {{checkRequirements 1} {registerDefMethod 1}} {
     my updateAttributes defbody
-    [my getComponent] checkRequirementsForClass [my getObject]
+    if {$checkRequirements} {
+       [my getComponent] checkRequirementsForClass [my getObject]
+    }
+    if {$registerDefMethod} {
+        my registerDefMethod
+    }
 }

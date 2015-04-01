@@ -1,6 +1,6 @@
 IDE::TclKitDeployer proc newBrowser {} {
     if {[catch {package require vfs::mk4}]} {
-        IDE::Dialog error "can not load package vfs::mk4 please adapt your Tcl system for starkit or run XOTclIDE from starkit"
+        IDE::Dialog error "can not load package vfs::mk4 please adapt your Tcl system for starkit or run TclSqueak from starkit"
     } else {
         my instvar browser
         if {![info exists browser] || ![Object isobject $browser]} {

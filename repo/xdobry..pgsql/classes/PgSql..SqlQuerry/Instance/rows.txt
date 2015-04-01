@@ -1,0 +1,4 @@
+PgSql::SqlQuerry instproc getinsertid {} {
+[self] instvar qhandle
+return [pg_result $qhandle -oid]
+}

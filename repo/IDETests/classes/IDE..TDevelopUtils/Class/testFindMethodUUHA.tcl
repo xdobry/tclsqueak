@@ -1,3 +1,3 @@
 IDE::TDevelopUtils proc testFindMethodUUHA {} {
-  # only for checking if XOTclIDE can find that method RybnikNowiny
+  # only for checking if TclSqueak can find that method RybnikNowiny
 }

@@ -30,9 +30,9 @@ IDE::System proc getMenuStruct {} {
     $ms addCascadeMenu ${ms}::help
     ${ms}::help addCommand {Tcl/Tk Homepage} [list IDE::System openHTMLBrowser {http://www.tcl.tk}]
     ${ms}::help addCommand {XOTcl Manual} [list IDE::System openHTMLBrowser {http://www.xotcl.org/xotclide/}]
-    ${ms}::help addCommand {XOTclIDE Manual} [list IDE::System openHTMLBrowser {http://www.xdobry.de/xotclIDE/docs}]
+    ${ms}::help addCommand {TclSqueak Manual} [list IDE::System openHTMLBrowser {http://www.xdobry.de/xotclIDE/docs}]
     ${ms}::help addCommand {Tcl/Tk Wiki} [list IDE::System openHTMLBrowser {http://mini.net/tcl}]
-    ${ms}::help addCommand {XOTclIDE on Wiki} [list IDE::System openHTMLBrowser {http://mini.net/tcl/2131}]
+    ${ms}::help addCommand {TclSqueak on Wiki} [list IDE::System openHTMLBrowser {http://mini.net/tcl/2131}]
 
     $ms addSeparator
 

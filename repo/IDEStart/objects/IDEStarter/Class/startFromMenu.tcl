@@ -28,7 +28,7 @@ IDEStarter proc startFromMenu {{tclkitMessage 0}} {
     if {![my set ignoreprefs]} {
         IDEPreferences loadPreferences
         if {[IDEPreferences isFirstStart]} {
-            set answer [tk_messageBox -title "Setup" -message {Welcom! You are runing XOTclIDE for first time. Do you wish default setup?} -icon question -type yesno]
+            set answer [tk_messageBox -title "Setup" -message {Welcom! You are runing TclSqueak for first time. Do you wish default setup?} -icon question -type yesno]
             if {$answer eq "yes"} {
                 if {[my startStandardSetup]} {
                     return

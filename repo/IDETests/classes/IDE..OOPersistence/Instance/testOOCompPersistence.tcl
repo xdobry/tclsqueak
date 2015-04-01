@@ -32,6 +32,7 @@ IDE::OOPersistence instproc testOOCompPersistence {} {
     IDE::ComponentPersistence importComponent $compName
     $comp unload
     my assert {![info object isa object $tclass]}
+    my assert {![info object isa object $tobject]}
 
     set versions [IDE::ComponentPersistence getVersionsForName $compName]
     my assert {[llength $versions]==1}

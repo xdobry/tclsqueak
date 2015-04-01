@@ -1,7 +1,7 @@
 IDE::RegexpBrowser instproc help {} {
     global tcl_platform
     set hwin .help
-    if {[winfo exist $hwin]} return        
+    if {[winfo exist $hwin]} return
     toplevel $hwin
     wm title $hwin "Help"
     # logo
@@ -16,7 +16,7 @@ IDE::RegexpBrowser instproc help {} {
     pack $hwin.t -side top -padx 20
     $hwin.t tag configure bold -font "[$hwin.t cget -font] bold"
     $hwin.t insert 1.0 "Version:" bold " [IDE::RegexpBrowser set version]
-    Redesigned to XOTclIDE Plug-In by Artur Trzewik
+    Redesigned to TclSqueak Plug-In by Artur Trzewik
 " normal "Usage:" bold " tkregexp <sampleFile>
 
 " normal "Key bindings:" bold " Alt-q               exit

@@ -5,7 +5,7 @@ IDEPreferences proc savePreferencesAsFile file {
         tk_messageBox -title Error -message "Can not open preference file $openError"  -icon error -type ok
         return
     }
-    puts $preffile "# preferences for program XOTclIDE"
+    puts $preffile "# preferences for program TclSqueak"
     set indicator [array startsearch preferences]
     while {[array anymore preferences $indicator]} {
         set elem [array nextelement preferences $indicator]

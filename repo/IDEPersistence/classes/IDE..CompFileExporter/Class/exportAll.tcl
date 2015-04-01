@@ -5,10 +5,9 @@ IDE::CompFileExporter proc exportAll {} {
     set time [clock seconds]
     foreach c [IDE::Component getAllComponents] {
         if {[$c isPersistent]} {
-            $exp exportCompObj $c $dir
+            $exp exportCompObj $c $dir 1
         }
     }
-    $exp cleanUpRepo $dir $time
     $exp destroy
     set bobj [IDE::Component getCompObjectForName IDERepoBootstrap]
     set out [open [file join [file dirname $dir] start.tcl] w]

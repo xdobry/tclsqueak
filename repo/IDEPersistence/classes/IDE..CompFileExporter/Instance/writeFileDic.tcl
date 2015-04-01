@@ -3,6 +3,7 @@ IDE::CompFileExporter instproc writeFileDic {dir fileName dic} {
         return
     }
     set out [open [file join $dir [my getFileName $fileName]] w]
+    fconfigure $out -translation lf
     dict for {key value} $dic {
         puts $out [list $key $value]
     }

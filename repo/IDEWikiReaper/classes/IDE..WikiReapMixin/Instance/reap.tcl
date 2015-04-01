@@ -7,7 +7,12 @@ IDE::WikiReapMixin instproc reap page {
 
      # can't imagine why these characters would be in here, but just to be safe
      set html [string map [list \x00 "" \x0d ""] $html]
-     set html [string map [list {<pre class=''>} \x00 </pre> \x0d] $html]
+     if {[string first "<pre class='sh_tcl'>" $html]>0} {
+         set html [string map [list {<pre class='sh_tcl'>} \x00 </pre> \x0d] $html]
+     } else {
+         my halt
+         set html [string map [list {<pre class=''>} \x00 </pre> \x0d] $html]
+     }
 
      if {![regexp -nocase {<title>([^<]*)</title>} $html => title]} {
          set title "(no title!?)"

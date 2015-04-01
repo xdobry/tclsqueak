@@ -1,4 +1,4 @@
-proc repobs::getopts {arguments optiondesc} {
+proc repobs::getopts {arguments optiondesc {requireRepo 1}} {
     lappend optiondesc {-repodir string}
     set options [dict create]
     for {set oplen 0} {$oplen<[llength $arguments]} {incr oplen} {
@@ -29,7 +29,7 @@ proc repobs::getopts {arguments optiondesc} {
         dict set options -repodir repo
     }
     set repodir [dict get $options -repodir]
-    if {![file isdirectory $repodir]} {
+    if {$requireRepo && ![file isdirectory $repodir]} {
         error "can not find repo directory as $repodir. You may also use option -repodir dir"
     }
     list $options [lrange $arguments $oplen end]

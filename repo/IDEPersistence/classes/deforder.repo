@@ -10,6 +10,7 @@ IDE::CompFileExporter
 IDE::ComponentPersistence
 IDE::DBMapping
 IDE::DBRelMappingNM
+IDE::DefVersionDescription
 IDE::InstanceMethodDescription
 IDE::PersistenceManager
 IDE::MetakitPersistenceManager

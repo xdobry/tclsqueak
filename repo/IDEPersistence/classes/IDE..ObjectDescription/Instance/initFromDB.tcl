@@ -1,16 +1,10 @@
 IDE::ObjectDescription instproc initFromDB {columns values methodid} {
     if {[self calledclass] eq ""} { next } else {
-        set id [lsearch $columns body]
-        if {$id<0} { error "wrong table descriptor" }
-        set body [lindex $values $id]
-        set id [lsearch $columns type]
-        if {$id<0} { error "wrong table descriptor" }
-        set type [lindex $values $id]
-        if {![info complete $body] || [llength $body]<4} { error {Method body is not complete. DB corrupt or inconsistent}}
-        set object [lindex $body 0]
-        set createproc [lindex $body 1]
-        set name [lindex $body 2]
-        if {![Object isobject ${object}::description]} {
+        set body [IDE::DBPersistence getColumnValue $columns $values body]
+        set type [IDE::DBPersistence getColumnValue $columns $values type]
+        if {![info complete $body] || ([llength $body]<4 && $type ne "Def")} { error {Method body is not complete. DB corrupt or inconsistent}}
+        lassign $body object createproc name
+        if {$type ne "Def" && ![Object isobject ${object}::description]} {
             error "Object '${object}::description' for this method do not exist. DB corrupt or inconsistent"
         }
         if {[my isTrackingOn]} {
@@ -18,8 +12,7 @@ IDE::ObjectDescription instproc initFromDB {columns values methodid} {
         } else {
             set instance [my get${type}Method $name]
         }
-        # pass the method to object
-        $object $createproc $name [lindex $body 3] [lindex $body 4]
+        $instance evalBody $body
         return $instance
     }
 }

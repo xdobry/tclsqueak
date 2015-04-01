@@ -13,6 +13,7 @@ IDE::TOOIntroProxy
 IDE::TObjectBrowser
 IDE::TParser
 IDE::TPersistence
+IDE::TPersistenceNew
 IDE::TScriptParsing
 IDE::TSignatureRepo
 IDE::TSourceManaging

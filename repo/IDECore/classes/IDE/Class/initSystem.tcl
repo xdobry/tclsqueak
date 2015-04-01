@@ -8,7 +8,7 @@ IDE proc initSystem {} {
     }
     if {[Object isobject ErrorReporter]} {
         ErrorReporter set version [IDE::System getVersion]
-        ErrorReporter set appName XOTclIDE
+        ErrorReporter set appName TclSqueak
     }
     IDE::PlugInsManager readPlugInsList
     font create textfont {*}[IDEPreferences getParameter textfont]

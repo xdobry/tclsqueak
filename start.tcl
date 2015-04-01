@@ -1,4 +1,4 @@
-# automatically generated from XOTclIDE
+# automatically generated from TclSqueak
 package provide IDERepoBootstrap 0.1
 namespace eval ::repobs {}
 proc repobs::asFileName objName {
@@ -176,7 +176,7 @@ proc repobs::getSourceFromDir {dir {withComments 0}} {
     }
     return $source
 }
-proc repobs::getopts {arguments optiondesc} {
+proc repobs::getopts {arguments optiondesc {requireRepo 1}} {
     lappend optiondesc {-repodir string}
     set options [dict create]
     for {set oplen 0} {$oplen<[llength $arguments]} {incr oplen} {
@@ -207,7 +207,7 @@ proc repobs::getopts {arguments optiondesc} {
         dict set options -repodir repo
     }
     set repodir [dict get $options -repodir]
-    if {![file isdirectory $repodir]} {
+    if {$requireRepo && ![file isdirectory $repodir]} {
         error "can not find repo directory as $repodir. You may also use option -repodir dir"
     }
     list $options [lrange $arguments $oplen end]
@@ -327,27 +327,38 @@ proc repobs::main_start args {
 }
 proc repobs::main_startide args {
     variable useCompMeta
-    lassign [getopts $args {{-xotclidedir string} {-script string}}] options comps
+    lassign [getopts $args {{-xotclidedir string} {-script string}} 0] options comps
     set repodir [dict get $options -repodir]
     global xotclidedir
     if {![info exists xotclidedir]} {
         if {[dict exists $options -xotclidedir]} {
-            set xotclidedir [dict get $options -xoclidedir]   
+            set xotclidedir [dict get $options -xotclidedir]   
         } else {
             set xotclidedir [file dirname [info script]]
         }
     }
-    namespace eval :: {source [file join $xotclidedir ideCore.tcl]}
     set useCompMeta 1
-    set repofile [file join $xotclidedir repository.sql]
+    if {$xotclidedir eq "."} {
+        set repofile repository.sql
+    } else {
+        set repofile [file join $xotclidedir repository.sql]
+    }
+    set libdir [file join $xotclidedir libs]
+    if {[file isdirectory $libdir]} {
+        lappend ::auto_path $libdir
+    }	
     package require XOTcl
     package require Tk
+    namespace eval :: {source [file join $xotclidedir ideCore.tcl]}
     initPackageLoader $repodir
     package require xdobry::sql
     package require xdobry::sqlite
     package require IDEStart
     Sqlinterface loadInterface sqlite
     if {![file exists $repofile]} {
+        if {![file isdirectory $repodir]} {
+            error "Can not find repo directory and sqlite repository.sql. $repofile is not directory"
+        }
         set creator [IDEFileRepoToSqliteRepo new]
         $creator createRepo $repodir $repofile
         set connection [$creator exportConnection]
@@ -355,7 +366,7 @@ proc repobs::main_startide args {
     } else {
         set connection [Sqlite new]
         if {[$connection connect [list sqlfile $repofile]]} {
-            error "can not open sqlite $repofile"
+            error "can not open sqlite $repofile $::errorInfo"
         }
     }
     IDEStarter startIDEFromConnection $connection

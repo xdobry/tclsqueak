@@ -4,7 +4,7 @@ IDE::Component instproc asScript {{nometa 0} {norequire 0}} {
     set initscript {}
     set defList [my getObjectDefineList]
     append script [my getLicense]
-    append script "# automatically generated from XOTclIDE\n"
+    append script "# automatically generated from TclSqueak\n"
     if {$requiredComp ne ""} {
         append script "# script require component [list $requiredComp]\n"
     }

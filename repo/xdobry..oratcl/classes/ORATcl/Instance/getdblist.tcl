@@ -1,0 +1,2 @@
+ORATcl instproc getdblist {} {
+}

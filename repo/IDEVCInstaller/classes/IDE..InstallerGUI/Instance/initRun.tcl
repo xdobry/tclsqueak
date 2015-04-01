@@ -2,7 +2,7 @@ IDE::InstallerGUI instproc initRun {} {
     # list of inputParameters test_proc install_proc description
     [self] set runTransitions {
 {welcomeGUI checkDummy setDummy
-            {Welcome to Installation tool for XOTclIDE Version Control.
+            {Welcome to Installation tool for TclSqueak Version Control.
 
 This tool can configure your sql server connection, install the database, table schema and import all components.
 

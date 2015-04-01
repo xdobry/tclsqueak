@@ -1,0 +1,5 @@
+This ms-sql (Microsoft SQL Server) adapter is based on odbc (tclodbc)
+and offer some special MSSql adaptation
+1. auto values
+2. NOW() is by MSSql GETDATE()
+3. MSSql specific connection parameter. Do not need odbc source

@@ -1,0 +1,9 @@
+This component serve a small protokol view of
+sended sql commands to xdobry::sql interfaces
+It use xotcl class mixin technique
+
+As view will be IDE::ProtView class used.
+
+To invoke debugger use command
+
+SqlDebugger debug

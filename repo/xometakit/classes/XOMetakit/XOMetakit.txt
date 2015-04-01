@@ -1,0 +1,10 @@
+This is pseudo SQL wrapper for Metakit
+It does not offer full sql support
+But is can be used from xdobry::sql framework to set and
+manage the connection
+
+Also some base functionality are supperted
+1) query tables (views)
+2) insert row
+
+It is used by XOTclIDE for using Metakit as version control database

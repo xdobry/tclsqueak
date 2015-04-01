@@ -8,6 +8,6 @@ IDEStarter proc startStandardSetup {} {
         return 0
     }
 
-    IDE::Dialog message "The XOTclIDE was setup. Please restart"
+    IDE::Dialog message "The TclSqueak was setup. Please restart"
     exit 0
 }

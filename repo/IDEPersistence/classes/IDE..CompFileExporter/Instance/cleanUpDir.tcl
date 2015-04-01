@@ -10,9 +10,14 @@ IDE::CompFileExporter instproc cleanUpDir {directory time} {
                 set dirisused 1
             }
         } else {
-            if {[file mtime $f]<$time} {
-                # file delete $f
-                puts "delete file $f"
+            set ext [file extension $f]
+            if {$ext in {".tcl" ".meta" ".txt" ".list" ".info"}} {
+                if {[file mtime $f]<$time} {
+                    # file delete $f
+                    puts "delete file $f"
+                } else {
+                    set dirisused 1
+                }
             } else {
                 set dirisused 1
             }
