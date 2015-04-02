@@ -1,9 +1,10 @@
 IDE::ClassDescription instproc instproc {procname arguments body args} {
-    if {[self callingproc] ne "initFromDB"} {
+    if {[self callingproc] ni {initFromDB evalBody}} {
         if {![[my getDescription] questForChange]} return
     }
     next
-    if {[self callingproc] eq "initFromDB"} return
+    # this is call from loading from db it do not need to be tracked
+    if {[self callingproc] in {initFromDB evalBody}} return
     set parameters [list]
     set object [[my getDescription] getObject]
     foreach par [$object info parameter] {

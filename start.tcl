@@ -2,10 +2,10 @@
 package provide IDERepoBootstrap 0.1
 namespace eval ::repobs {}
 proc repobs::asFileName objName {
-    string map {:: ..} $objName
+    string map {:: .. ! %21 # %23 {$} %24 % %25 & %26 ' %27 ( %28 ) %29 * %2A + %2B , %2C / %2F : %3A {;} %3B = %3D ? %3F @ %40 {[} %5B \] %5D .. %2E%2E} $objName
 }
 proc repobs::fileToCompName fileName {
-    string map {.. ::} $fileName
+    string map {.. :: %21 ! %23 # %24 {$} %25 % %26 & %27 ' %28 ( %29 ) %2A * %2B + %2C , %2F / %3A : %3B {;} %3D = %3F ? %40 @ %5B {[} %5D \] %2E .} $fileName
 }
 proc repobs::getAvaialbeComps repodir {
     set comps [list]
@@ -65,7 +65,7 @@ proc repobs::getElemsForType {repo path type pattern} {
     foreach elem [glob -nocomplain -directory $dir -type $type $pattern] {
         if {[file tail $elem] ni $readdirs} {
             if {$pattern ne "*"} {
-                set name [file rootname [file tail $elem]]
+                set name [fileToCompName [file rootname [file tail $elem]]]
             } else {
                 set name [fileToCompName [file tail $elem]]
             }
@@ -97,6 +97,8 @@ proc repobs::getMeta {repo path} {
     set f [file join $dir $fname.tcl]
     if {[file isfile $f]} {
         dict set meta body [readFile $f]
+    } else {
+        #puts "can not find body for $path - $f"
     }
     set f [file join $dir $fname.txt]
     if {[file isfile $f]} {

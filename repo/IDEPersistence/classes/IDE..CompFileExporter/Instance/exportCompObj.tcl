@@ -8,10 +8,11 @@ IDE::CompFileExporter instproc exportCompObj {cobj directory {withCleanUp 0}} {
     if {$withCleanUp} {
         set time [clock seconds]
     }
-    set compDir [file join $directory [my getFileName [$cobj getName]]]
+    set fileName [my getFileName [$cobj getName]]
+    set compDir [file join $directory $fileName]
     file mkdir $compDir
-    my writeFileDataIfContent $compDir [$cobj getName].tcl [$cobj getPreScript]
-    my writeFileDataIfContent $compDir [$cobj getName].txt [$cobj getComment]
+    my writeFileDataIfContent $compDir $fileName.tcl [$cobj getPreScript]
+    my writeFileDataIfContent $compDir $fileName.txt [$cobj getComment]
     set classes [$cobj getClasses]
     my exportObjList $classes classes $cobj $compDir
     set deflist [$cobj getObjectDefineList]
@@ -25,7 +26,7 @@ IDE::CompFileExporter instproc exportCompObj {cobj directory {withCleanUp 0}} {
     if {[llength $reqlist]>0} {
         my writeFileData $compDir require.list [join $reqlist \n]
     }
-    my writeFileDataIfContent $compDir [$cobj getName].init [$cobj getInitScript]
+    my writeFileDataIfContent $compDir $fileName.init [$cobj getInitScript]
     if {$withCleanUp} {
         incr time -30
         my cleanUpDir $compDir $time

@@ -1,7 +1,7 @@
 proc make-regexp::suffix list {
 	# end of recursion if empty list
 	if {[llength $list] == 0} {
-		return
+		return ""
 	}
 	set newlist {}
 	foreach {prefix recurse} $list {

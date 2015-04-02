@@ -11,6 +11,8 @@ proc repobs::getMeta {repo path} {
     set f [file join $dir $fname.tcl]
     if {[file isfile $f]} {
         dict set meta body [readFile $f]
+    } else {
+        #puts "can not find body for $path - $f"
     }
     set f [file join $dir $fname.txt]
     if {[file isfile $f]} {

@@ -17,7 +17,7 @@ IDE::ProgEdit instproc codeCompletion {{isTab 0}} {
            my getOption $cmdline $uoption
        } elseif  {[regexp {([\w:\]]*)(?:\s+|^)([:\w]+)$} $res _ basecommand fchars]} {
            # commands has two tails. Try to complete second tails
-           puts "res '$res' #bas1 '$basecommand' #fc '$fchars'"
+           # puts "res '$res' #bas1 '$basecommand' #fc '$fchars'"
            if {$basecommand eq "my" || $basecommand eq "self\]"} {
                # invoke own local method per my or [self]
                my getInstanceCommand ${fchars}*

@@ -25,7 +25,7 @@ proc repobs::getElemsForType {repo path type pattern} {
     foreach elem [glob -nocomplain -directory $dir -type $type $pattern] {
         if {[file tail $elem] ni $readdirs} {
             if {$pattern ne "*"} {
-                set name [file rootname [file tail $elem]]
+                set name [fileToCompName [file rootname [file tail $elem]]]
             } else {
                 set name [fileToCompName [file tail $elem]]
             }
