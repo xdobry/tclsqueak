@@ -1,7 +1,7 @@
 IDE::XOIntroProxy instproc parseClassDefinition body {
     set superclasses [list]
     set parameters [list]
-    foreach {par value} [lrange $body 2 end] {
+    foreach {par value} [lrange $body 3 end] {
         switch -- $par {
             -superclass {
                 set superclasses $value

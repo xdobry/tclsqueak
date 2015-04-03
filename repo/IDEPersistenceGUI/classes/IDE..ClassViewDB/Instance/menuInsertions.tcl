@@ -8,6 +8,7 @@ IDE::ClassViewDB instproc menuInsertions aMenuStruct {
 
     $m addCommand Available [list [self] loadFromDB]
     $m addMenuItem [IDE::MenuCommand new -childof $m -name Editions -command [list [self] dispatchWithSelectedCheck loadEdition] -enableList [list isValidSelection isSelectionPersistent]]
+    $m addMenuItem [IDE::MenuCommand new -childof $m -name "Class Def Editions" -command [list [self] dispatchWithSelectedClassCheck loadClassDefEdition] -enableList [list isValidSelection isSelectionPersistentClass]]
     $m addMenuItem [IDE::MenuCommand new -childof $m -name Changes -command [list [self] dispatchWithSelectedCheck browseChanges] -enableList [list isValidSelection isSelectionPersistent]]
     $m addMenuItem [IDE::MenuCommand new -childof $m -name Version -command [list [self] dispatchWithSelectedCheck versionEdition] -enableList [list isValidSelection isSelectionPersistent isSelectionEdition]]
     $m addMenuItem [IDE::MenuCommand new -childof $m -name {New Edition} -command [list [self] dispatchWithSelectedCheck createNewEdition] -enableList [list isValidSelection isSelectionPersistent isSelectionVersion]]
