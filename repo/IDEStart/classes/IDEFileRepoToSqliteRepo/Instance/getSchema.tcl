@@ -45,7 +45,7 @@ CREATE TABLE Component (
   defcounter int DEFAULT '0',
   basedon int DEFAULT NULL,
   infoid int,
-  namespace varchar(255),
+  namespace varchar(255)
 );
 CREATE TABLE ComponentObject (
   componentid int NOT NULL,

@@ -371,6 +371,7 @@ proc repobs::main_startide args {
             error "can not open sqlite $repofile $::errorInfo"
         }
     }
+    $connection execute "PRAGMA journal_mode = OFF"
     IDEStarter startIDEFromConnection $connection
 }
 proc repobs::packageUnknownHandler {original name args} {
