@@ -15,7 +15,9 @@ IDE::Component instproc asScript {{nometa 0} {norequire 0}} {
         }
         set systemRequirements [my getSystemRequirements]
         foreach reqComp $systemRequirements {
-            append script "package require $reqComp\n"
+            if {$reqComp ni $requiredComp} {
+                append script "package require $reqComp\n"
+            }
         }
         if {[my getOOType] eq "XOTcl" && "XOTcl" in $systemRequirements} {
             append script "catch {namespace import xotcl::*}\n"

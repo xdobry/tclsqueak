@@ -1,18 +1,9 @@
 IDE::TOOIntroProxy instproc testAOOComponent {} {
-    set tclass TclOOTest
-    if {![info object isa object $tclass]} {
-        oo::class create $tclass {
-            method foo {a b} {
-                return 1
-            }
-            self method bar {a} {
-                return bar
-            }
-        }
-    }
-    set comp [IDE::Component getCompObjectForName testoocomp TclOO]
+    my instvar tclass tobject tcompname
+    my createSampleClass
+    set comp [IDE::Component getCompObjectForName $tcompname TclOO]
     set ip [$comp getIntroProxy]
-    $ip moveToComponent $tclass testoocomp
+    $ip moveToComponent $tclass $tcompname
     my assert {[$ip hasclass IDE::TclOOIntroProxy]}
     $comp asScript
     $comp getClassesHierarchy

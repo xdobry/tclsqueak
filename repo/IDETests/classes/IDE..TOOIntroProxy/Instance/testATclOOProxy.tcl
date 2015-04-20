@@ -1,23 +1,7 @@
 IDE::TOOIntroProxy instproc testATclOOProxy {} {
-    set p [IDE::TclOOIntroProxy getOOIntroProxy]
-    set tclass TclOOTest
-    if {![info object isa object $tclass]} {
-        oo::class create $tclass {
-            method foo {a b} {
-                return 1
-            }
-            self method bar {a} {
-                return bar
-            }
-            constructor {a} {
-                my instvar pa
-                set pa $a
-            }
-            destructor {
-                puts dest
-            }
-        }
-    }
+    my instvar tclass tobject
+    my createSampleClass
+    set p [IDE::TclOOIntroProxy getIntroProxy]
     $p getBaseObjDef $tclass
     $p getBodyInstanceMethod $tclass foo
     $p getBodyClassMethod $tclass bar

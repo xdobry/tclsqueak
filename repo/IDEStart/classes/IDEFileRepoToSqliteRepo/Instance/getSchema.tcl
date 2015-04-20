@@ -12,7 +12,8 @@ CREATE TABLE Object (
   userid int DEFAULT NULL,
   basedon int DEFAULT NULL,
   type varchar(20),
-  infoid int
+  infoid int,
+  visibility varchar(20)
 );
 CREATE TABLE Method (
   methodid integer PRIMARY KEY,
@@ -25,7 +26,8 @@ CREATE TABLE Method (
   userid int DEFAULT NULL,
   body text,
   type varchar(20),
-  infoid int
+  infoid int,
+  visibility varchar(20)
 );
 CREATE TABLE ObjectMethod (
   objectid int NOT NULL,
@@ -42,7 +44,8 @@ CREATE TABLE Component (
   userid int DEFAULT NULL,
   defcounter int DEFAULT '0',
   basedon int DEFAULT NULL,
-  infoid int
+  infoid int,
+  namespace varchar(255),
 );
 CREATE TABLE ComponentObject (
   componentid int NOT NULL,

@@ -1,22 +1,7 @@
 IDE::TOOIntroProxy instproc testCOOComponentWithObject {} {
-    set tclass ::TclOOTest
-    set tobject ::TclOOObject
-    if {![info object isa object $tclass]} {
-        oo::class create $tclass {
-            method foo {a b} {
-                return 1
-            }
-            self method bar {a} {
-                return bar
-            }
-        }
-    }
-    if {![info object isa object $tobject]} {
-        oo::object create $tobject
-        oo::objdefine $tobject method foo {a} {
-            return 1
-        }
-    }
+    my instvar tclass tobject
+    my createSampleClass
+    my createSampleObject
 
     set comp [IDE::Component getCompObjectForName testoocomp TclOO]
     set ip [$comp getIntroProxy]

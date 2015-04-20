@@ -1,10 +1,11 @@
 IDE::CreateComponentDialog instproc init args {
-    my instvar win name ootype userMsg namespace
+    my instvar win name ootype userMsg namespace installInRepo
     next
     set ootype XOTcl
     set userMsg ""
     set name ""
     set namespace ""
+    set installInRepo 1
     my requireNamespace
 
     frame $win.fname
@@ -31,7 +32,13 @@ IDE::CreateComponentDialog instproc init args {
 
     pack $win.fname -anchor w
     pack $win.footype -anchor w
-    #pack $win.fnamespace
+    pack $win.fnamespace
+    if {[IDE::System isDatabase]} {
+        checkbutton $win.installInRepo -text "Install in repository" -variable [self]::installInRepo
+        pack $win.installInRepo -anchor w
+    } else {
+        set installInRepo 0
+    }
     pack $win.userMsg -anchor w
 
 

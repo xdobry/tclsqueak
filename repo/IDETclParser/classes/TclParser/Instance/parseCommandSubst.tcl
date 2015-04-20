@@ -2,6 +2,7 @@ TclParser instproc parseCommandSubst {} {
     my instvar stream
     set open 0
     set parseQuote 1
+    set startPos [$stream pos]
     # search closing parenthesis until and of stream
     while {![$stream atEnd]} {
         set c [my getCharWithMasking]
@@ -27,5 +28,5 @@ TclParser instproc parseCommandSubst {} {
         set parseQuote [string is space $c]
         $stream addPos [string length $c]
     }
-    my parseError "Parse Error: can not find closing \]"
+    my parseError "Parse Error: can not find closing \]" $startPos
 }

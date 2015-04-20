@@ -1,6 +1,10 @@
-TclParser instproc parseError text {
+TclParser instproc parseError {text {startpos {}}} {
     my instvar stream parseErrors
-    lappend parseErrors [list [$stream pos] [$stream pos] $text]
+    if {$startpos ne ""} {
+        lappend parseErrors [list $startpos $startpos $text]
+    } else {
+        lappend parseErrors [list [$stream pos] [$stream pos] $text]
+    }
     if {[[self class] isDevelMode]} {
         error $text
     } else {

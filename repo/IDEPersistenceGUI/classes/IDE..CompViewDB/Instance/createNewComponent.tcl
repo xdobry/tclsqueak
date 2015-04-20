@@ -1,6 +1,6 @@
-IDE::CompViewDB instproc createNewComponent {component ootype namespace} {
+IDE::CompViewDB instproc createNewComponent {component ootype namespace installInRepo} {
     next
-    if {[IDE::Dialog yesNo "Should the component $component be installed in database for versioning system"] eq "yes"} {
+    if {$installInRepo} {
         IDE::ComponentPersistence importComponent $component
     }
     IDE::System refreshComponentView $component

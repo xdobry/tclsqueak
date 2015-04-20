@@ -14,7 +14,7 @@ PrsContext instproc parseCommand {} {
         return $ret
     } else {
         if {[$parser exists parseErrors]} {
-            lappend errors [list 0 1 [$parser set parseErrors]]
+            lappend errors [lindex [$parser set parseErrors] end]
         }
         return 0
     }

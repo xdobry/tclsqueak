@@ -3,8 +3,9 @@ PrsContext instproc parse script {
     my instvar errors parser rootCommand
 
     my initParser $script
-    if {![info complete $script]} {
-        lappend errors [list 0 0 "Method body is not proper tcl list"]
+    set braceshints [my checkBraces $script]
+    if {[llength $braceshints]>0} {
+        lappend errors $braceshints
         return 0
     }
     set rootCommand [$parser getCommand $parser]

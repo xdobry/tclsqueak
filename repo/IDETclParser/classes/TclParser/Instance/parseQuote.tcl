@@ -1,5 +1,9 @@
 TclParser instproc parseQuote {} {
     my instvar stream
+    set startPos [$stream pos]
+    if {$startPos>0} {
+        incr startPos -1
+    }
     while {![$stream atEnd]} {
         set c [my getCharWithMasking]
         switch -- $c {
@@ -12,5 +16,5 @@ TclParser instproc parseQuote {} {
         }
         $stream addPos [string length $c]
     }
-    my parseError "Parse Error: can not find closing \""
+    my parseError "Parse Error: can not find closing \"" $startPos
 }

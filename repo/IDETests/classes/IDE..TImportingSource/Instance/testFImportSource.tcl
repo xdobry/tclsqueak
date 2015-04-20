@@ -6,12 +6,12 @@ IDE::TImportingSource instproc testFImportSource {} {
     my checkSampleObjects $cobj
 
     set classes [$cobj getClasses]
-    my assert {[ide::lcontain $classes MetaTestClass]}
-    my assert {[ide::lcontain $classes MTest]}
+    my assert {"MetaTestClass" in $classes}
+    my assert {"MTest" in $classes}
 
     set group [$cobj getProcsGroupWithName default]
     my assert {$group ne ""}
     my assert {![$group withNamespace]}
-    my assert {[lsearch [$group getProcsNames] "testProc"]>=0}
+    my assert {"testProc" in [$group getProcsNames]}
     my assert {[info proc ::testProc] ne ""}
 }
