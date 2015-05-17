@@ -1,2 +1,4 @@
 IDE::TclModeEdit
+IDE::EditorTranscript
+IDE::TclModeEditTab
 SyntaxHighlightVisitor

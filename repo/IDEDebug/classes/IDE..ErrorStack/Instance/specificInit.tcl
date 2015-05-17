@@ -19,5 +19,6 @@ IDE::ErrorStack instproc specificInit {} {
     bind $win <Alt-n> [list [self]::methodlist next]
     bind $win <Alt-p> [list [self]::methodlist prev]
 
+    my initStatusBar -1
     next
 }

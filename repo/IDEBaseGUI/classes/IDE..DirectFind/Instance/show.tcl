@@ -1,5 +1,8 @@
-IDE::DirectFind instproc show {} {
-    my instvar win parentWin curMarkSelection curMarkSelectionNext
+IDE::DirectFind instproc show {{ptextWin {}}} {
+    my instvar win parentWin curMarkSelection curMarkSelectionNext textWin
+    if {$ptextWin ne ""} {
+        set textWin $ptextWin
+    }
     if {$win ni [pack slaves $parentWin]} {
         pack $win -in $parentWin -side left
         set curMarkSelection 1.0

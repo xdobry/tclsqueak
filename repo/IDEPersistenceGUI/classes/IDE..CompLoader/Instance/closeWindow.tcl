@@ -1,0 +1,3 @@
+IDE::CompLoader instproc closeWindow {} {
+    #
+}

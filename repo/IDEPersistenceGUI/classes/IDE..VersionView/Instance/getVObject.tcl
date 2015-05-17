@@ -1,3 +1,3 @@
 IDE::VersionView instproc getVObject {} {
-    return [[my info parent] set vobject]
+    [my info parent] set vobject
 }

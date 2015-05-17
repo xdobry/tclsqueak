@@ -1,6 +1,7 @@
 IDE::ObjectBrowser instproc browseClass args {
-    my instvar vobject
-    if {[$vobject info class] ne "::xotcl::Object"} {
-        IDE::HeritageBrowser newBrowser [$vobject info class]
+    my instvar vobject introProxy
+    set oclass [$introProxy getClassForObject $vobject]
+    if {$oclass ne "" && ![$introProxy isRootClass $oclass]} {
+        IDE::HeritageBrowser newBrowser $oclass $introProxy
     }
 }

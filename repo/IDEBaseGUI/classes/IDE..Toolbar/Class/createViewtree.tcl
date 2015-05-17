@@ -1,0 +1,5 @@
+IDE::Toolbar proc createViewtree {} {
+    image create photo viewtree -data {
+        R0lGODlhEAAQAIIAAAQCBPwCBDQyNPz+/PzerAAAAAAAAAAAACH5BAEAAAEALAAAAAAQABAAAAMuCLHcri4yGISlj4kxcANgNRBQCIbL6U1Su7bB62rXvGydG25kqpwfIGxILBr9CQAh/mhDcmVhdGVkIGJ5IEJNUFRvR0lGIFBybyB2ZXJzaW9uIDIuNQ0KqSBEZXZlbENvciAxOTk3LDE5OTguIEFsbCByaWdodHMgcmVzZXJ2ZWQuDQpodHRwOi8vd3d3LmRldmVsY29yLmNvbQA7
+    }
+}

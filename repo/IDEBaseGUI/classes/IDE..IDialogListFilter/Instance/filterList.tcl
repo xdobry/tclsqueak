@@ -19,6 +19,7 @@ IDE::IDialogListFilter instproc filterList {} {
             lappend l $c
         }
     }
+    #my halt
     $lw delete 0 end
     $lw insert 0 {*}$l
     $lw selection set 0

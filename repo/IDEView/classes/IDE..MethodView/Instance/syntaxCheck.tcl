@@ -1,4 +1,4 @@
-IDE::MethodView instproc syntaxCheck {text editor} {
+IDE::MethodView instproc syntaxCheck {text editor {contentDescr {}}} {
     set context [PrsContext new -volatile]
     $context parseAndCheck $text
 

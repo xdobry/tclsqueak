@@ -1,1 +1,1 @@
-Class create IDE::Transcript -superclass ::IDE::Browser
+Class create IDE::Transcript -superclass {::IDE::Browser ::IDE::PersistentUIStateSupport}

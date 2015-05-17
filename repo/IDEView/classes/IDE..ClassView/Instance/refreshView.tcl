@@ -1,8 +1,17 @@
 IDE::ClassView instproc refreshView {} {
-    my instvar vclass vtype cobj
+    my instvar vclass vtype cobj vcomponent
+    set introProxy [$cobj getIntroProxy]
+    set codeController [my info parent]::@codecontroller
+    if {[Object isobject $codeController]} {
+        if {[my isProcView]} {
+            $codeController setBodyText $vclass ProcsGroup $vcomponent
+        } else {
+            $codeController setBodyText $vclass [$introProxy getMethodTypePrefix]Def $vcomponent
+        }
+        return
+    }
     set v [my info parent]::methodedit
     set editVType [[my info parent]::stateButton state]
-    set introProxy [$cobj getIntroProxy]
     if {$editVType eq "Source" || $editVType eq "Splited"} {
         if {[my isProcView]} {
             set text [$vclass getDefBody]

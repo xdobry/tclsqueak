@@ -1,3 +1,3 @@
-IDE::Debugger instproc editSave value {
+IDE::Debugger instproc editSave {skript {contentDescr {}}} {
     return
 }

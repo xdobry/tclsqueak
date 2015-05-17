@@ -1,5 +1,8 @@
 IDE::Browser instproc createSystemMenu {} {
     my instvar win
+    if {![Object isobject IDE::System]} {
+        return
+    }
     set ms [IDE::System getMenuStruct]
     if {[winfo toplevel $win] eq "."} {
         set twin {}

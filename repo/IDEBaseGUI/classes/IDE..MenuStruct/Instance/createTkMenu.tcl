@@ -7,6 +7,5 @@ IDE::MenuStruct instproc createTkMenu {twin {tl_win {}}} {
     foreach m [my set menuItems] {
         $m createItemTkMenu $win $tl_win
     }
-    #my migrateTkMenu
     return $win
 }

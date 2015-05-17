@@ -1,7 +1,16 @@
 IDE::CompFileExporter proc exportAll {} {
     global xotclidedir
     set exp [IDE::CompFileExporter new]
-    set dir [file join .. tclsqueak repo]
+    set isatk 0
+    if {[file isdirectory repo]} {
+        set dir repo
+    } else {
+        set isatk 1
+        set dir [file join .. tclsqueak repo]
+        if {![file isdirectory $dir]} {
+            error "can not find repo dir"
+        }
+    }
     set time [clock seconds]
     foreach c [IDE::Component getAllComponents] {
         if {[$c isPersistent]} {
@@ -9,10 +18,14 @@ IDE::CompFileExporter proc exportAll {} {
         }
     }
     $exp destroy
-    set bobj [IDE::Component getCompObjectForName IDERepoBootstrap]
-    set out [open [file join [file dirname $dir] start.tcl] w]
-    puts $out [$bobj asScript 1]
-    puts $out repobs::main
-    close $out
-    file copy -force [file join $xotclidedir ideCore.tcl] [file dirname $dir]
+    if {$isatk} {
+        set bobj [IDE::Component getCompObjectForNameIfExist IDERepoBootstrap]
+        if {$bobj ne ""} {
+            set out [open [file join [file dirname $dir] start.tcl] w]
+            puts $out [$bobj asScript 1]
+            puts $out repobs::main
+            close $out
+        }
+        file copy -force [file join $xotclidedir ideCore.tcl] [file dirname $dir]
+    }
 }

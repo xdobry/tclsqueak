@@ -1,15 +1,17 @@
-IDE::CodeController instproc editSave skript {
+IDE::CodeController instproc editSave {skript {contentDesc {}}} {
     if {![info complete $skript]} {
         IDE::Dialog message {This is not complete Tcl-Script. Check the paratness}
         return
     }
-    regsub -all -line { +$} $skript {} skript
+    lassign $contentDesc vclass vtype vmethod
+    if {[string range $vtype end-2 end] eq "Def"} {
+        my handleDefScript $skript $contentDesc
+        return
+    }
+    # regsub -all -line { +$} $skript {} skript
     if {[lindex $skript 0] eq "proc"} {
-        my handleProc $skript
+        my handleProc $skript $contentDesc
     } else {
-        my instvar actItem
-        lassign $actItem class type method
-        set introProxy [IDE::XOIntroProxy getIntroProxyForMethodType $type]
-        $introProxy handleScript $skript
+        my handleMethod $skript $contentDesc
     }
 }

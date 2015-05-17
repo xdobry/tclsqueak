@@ -1,4 +1,4 @@
-IDE::CodeController instproc handleProc script {
+IDE::CodeController instproc handleProc {script contentDesc} {
     if {[llength $script]!=4 || [lindex $script 0] ne "proc"} {
         IDE::Dialog error "To define new tcl proc give 4 elements list\n proc ?nameSpace::?procName arguments procBody"
         return

@@ -1,10 +1,10 @@
 IDE::Component instproc asScript {{nometa 0} {norequire 0}} {
-    my instvar requiredComp version
+    my instvar requiredComp version namespace
     set script {}
     set initscript {}
     set defList [my getObjectDefineList]
     append script [my getLicense]
-    append script "# automatically generated from TclSqueak\n"
+    append script "# created with TclSqueak\n"
     if {$requiredComp ne ""} {
         append script "# script require component [list $requiredComp]\n"
     }
@@ -30,6 +30,9 @@ IDE::Component instproc asScript {{nometa 0} {norequire 0}} {
     }
     if {!$nometa} {
         append script [my getCommentBody]
+    }
+    if {[info exists namespace] && $namespace ne ""} {
+        append script "namespace eval [list $namespace] {}\n"
     }
     foreach pg [lsort [my getProcsGroups]] {
         set pgobj [my getProcsGroupWithName $pg]

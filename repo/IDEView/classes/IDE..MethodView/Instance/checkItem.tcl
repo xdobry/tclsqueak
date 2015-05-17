@@ -1,16 +1,20 @@
 IDE::MethodView instproc checkItem hitem {
-    foreach {vclass vtype method} $hitem {}
-    if {![Object isobject $vclass]} {return 1}
-    switch $vtype {
+    lassign $hitem vclass vtype method
+    set introProxy [IDE::XOIntroProxy getIntroProxyForMethodType $vtype]
+    switch [IDE::XOIntroProxy getAbstractMethodType $vtype] {
         Class {
-            if {[$vclass info procs $method] eq ""} {return 0}
+            if {$method in [$introProxy getClassMethods $vclass]} {
+                return 1
+            }
         }
         Instance  {
-            if {[$vclass info instprocs $method] eq ""} {return 0}
+            if {$method in [$introProxy getInstanceMethods $vclass]} {
+                return 1
+            }
         }
         Procs {
-            if {[info procs ::$method] eq ""} {return 0}
+            if {[info procs ::$method] ne ""} {return 1}
         }
     }
-    return 1
+    return 0
 }

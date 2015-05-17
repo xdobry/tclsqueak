@@ -1,6 +1,6 @@
 IDE::ClassDefinition instproc setClassesList {} {
-    my instvar compVisibility classView mode className win introProxy
-    set cobj [$classView getActualComponentObject]
+    my instvar compVisibility classView mode className win introProxy compObj
+    set cobj $compObj
     set introProxy [$cobj getIntroProxy]
     if {!$compVisibility} {
         set clist [$introProxy getClasses]

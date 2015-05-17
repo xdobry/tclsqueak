@@ -1,1 +1,2 @@
 catch {IDE::Editor initializeAfterLoad}
+catch {IDE::FindReplace initializeAfterLoad}

@@ -33,7 +33,7 @@ PrsArgumentMatcher instproc checkTypeBase {elem typeIndex} {
     }
     if {$type0 in {wref setref ref gref setgref}} {
         # not real checking because. It will be done first by PrsElement->checkAsType
-        # my halt
+        #my halt
         if {[$elem hasclass PrsLiteral] || [$elem hasclass PrsQuoted] || [$elem hasclass PrsVariableRef]} {
             return [list $typeIndex]
         }

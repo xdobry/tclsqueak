@@ -6,9 +6,22 @@ PrsQuoted instproc canAssignTypeBase type {
             return 1
         }
     } elseif {$type eq "index"} {
-        # TODO not exactrly var need to be int
-        if {[regexp {^end-} [my prsString]]} {
-            return 1
+        # resolve situation as $a+$b or [...]+$a end+$a ....
+        set pattern [my prsString]
+        set mask [string repeat x [string length $pattern]]
+        my instvar list begin end
+        if {[info exists list]} {
+            foreach l $list {
+                set lbegin [expr {[$l set begin]-$begin}]
+                set lend [expr {[$l set end]-$begin}]
+                set pattern [string replace $pattern $lbegin $lend [string range $mask 0 $lend-$lbegin]]
+            }
+            if {[regexp {(^end[+-](x+|\d+)$)|(^(x+|\d+)[+-](x+|\d+)$)} $pattern]} {
+                foreach l $list {
+
+                }
+                return 1
+            }
         }
     }
     return 0

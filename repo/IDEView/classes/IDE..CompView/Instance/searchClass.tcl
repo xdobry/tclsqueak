@@ -1,12 +1,12 @@
 IDE::CompView instproc searchClass {{class {}}} {
     if {$class eq ""} {
-        set class [IDE::ClassSelector getClass]
+        set class [IDE::ClassSelector getClass {Open Type}]
     }
     if {$class eq ""} return
     set introProx [IDE::XOIntroProxy getIntroProxyForObject $class]
     if {$introProx eq ""} return
     my setSelectedItem [$introProx getComponentNameForObject $class]
-    if {[$class isclass]} {
+    if {[$introProx isObjectClass $class]} {
         set shouldView Classes
     } else {
         set shouldView Objects

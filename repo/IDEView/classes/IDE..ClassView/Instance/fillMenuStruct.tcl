@@ -6,7 +6,6 @@ IDE::ClassView instproc fillMenuStruct ms {
     $ms addCheckButton {Heritage View} [self]::treeView [list [self] changeHeritageView]
     $ms addMenuItem [IDE::MenuCommand new -childof $ms -name {Move To Comp.} -command [list [self] dispatchWithSelected moveToComp] -enableList [list isValidSelection] -popdownMenu 1]
     $ms addMenuItem [IDE::MenuCommand new -childof $ms -name {Copy Class/Object} -command [list [self] dispatchWithSelected copyClass] -enableList [list isValidSelection isSelectionNoGroup] -popdownMenu 1]
-    $ms addCommand {New Class Template} [list [self] classTemplate]
 
     $ms addSeparator
     $ms addMenuItem [IDE::MenuCommand new -childof $ms -name {New Class Wizard} -command [list [self] classWizard new] -popdownMenu 1]

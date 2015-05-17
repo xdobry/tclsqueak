@@ -1,13 +1,17 @@
-IDE::ClassView instproc copyClass actual {
+IDE::ClassView instproc copyClass current {
     my instvar vcomponent
     set cobj [IDE::Component getCompObjectForNameIfExist $vcomponent]
     set newname [IDE::IDialogEntry getValue "Give Object/Class Copy Target Name"]
     if {$newname eq ""}  return
-    if {[Object isobject $newname]} {
+    if {[IDE::XOIntroProxy getIntroProxyForObject $newname] ne ""} {
         IDE::Dialog message "Object $newname already exists!"
         return
     }
-    set targetComp [IDE::IDialogList getListItem "Select target Component" [lsort [IDE::Component getComponentNames]]]
-    if {$targetComp eq ""} return
-    $cobj copyClassOrObject $actual $newname $targetComp
+    set targetComp [IDE::ComponentChooser chooseComponent "Select target Component" [$cobj getOOType] {}]
+    if {$targetComp ne ""} {
+        $cobj copyClassOrObject $current $newname $targetComp
+        if {$targetComp eq $vcomponent} {
+            my refreshList
+        }
+    }
 }

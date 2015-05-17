@@ -1,8 +1,8 @@
 IDE::CompViewDB instproc menuInsertions aMenuStruct {
     $aMenuStruct addSeparator
-    
+
     set m ${aMenuStruct}::vcontrol
-    IDE::MenuStruct $m {Version Control} -popdownMenu 1
+    IDE::MenuStruct create $m {Version Control} -popdownMenu 1
     $aMenuStruct addCascadeMenu $m
 
     $m addCommand2 Available [list [self] loadFromDB]

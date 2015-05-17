@@ -1,3 +1,3 @@
-IDE::MethodListView instproc editSave skript {
+IDE::MethodListView instproc editSave {skript {contentDescr {}}} {
     namespace  eval :: $skript
 }

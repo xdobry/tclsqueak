@@ -10,7 +10,7 @@ IDE::Editor instproc fillMenuStruct ms {
     $ms addMenuItem [IDE::MenuCommand new -childof $ms -accelerator Control-r -name {Browse it} -command [list [self] browseSelection] -popdownMenu 1 -enableList isValidTextSelection]
     $ms addMenuItem [::IDE::MenuCommand new -childof $ms -name Find/Replace... -command [list IDE::FindReplace bindToView [self]] -popdownMenu 1 -accelerator Control-r]
     if {[my exists directFind]} {
-        $ms addMenuItem [::IDE::MenuCommand new -childof $ms -name Find -command [list [my set directFind] show] -popdownMenu 1 -accelerator Control-f]
+        $ms addMenuItem [::IDE::MenuCommand new -childof $ms -name Find -command [list [my set directFind] show [my getTextWindow]] -popdownMenu 1 -accelerator Control-f]
     }
     $ms addCommand "Go to line" [list [self] goToLine]
     $ms addCommand "mask non ASCII characters" [list [self] maskUTF8]
@@ -18,8 +18,6 @@ IDE::Editor instproc fillMenuStruct ms {
     $ms addCommand {File Out} [list [self] fileOut]
     $ms addCommand {File In} [list [self] fileIn]
     $ms addCommand {File Append} [list [self] fileAppend]
-    # Zoom method does not work properly
-    # $ms addCommand {Zoom} [list [my info parent] changeZoom] {} {F2}
     my menuInsertions $ms
     next
 }

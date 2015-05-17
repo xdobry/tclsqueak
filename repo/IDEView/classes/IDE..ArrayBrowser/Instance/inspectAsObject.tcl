@@ -1,6 +1,5 @@
 IDE::ArrayBrowser instproc inspectAsObject key {
-    my instvar varray
-    set obj [my varAction set ${varray}($key)]
+    set obj [my getKey $key]
     if {[Object isobject $obj]} {
         $obj inspect
     } else {

@@ -31,14 +31,14 @@ IDE::Component instproc rekBuildDefList {object objectList} {
     set cl [concat $objectList $reqObject]
     # search if based on own metaclass
     if {[$introProxy isObjectClass $object] && [$introProxy isObjectMetaClass [$introProxy getClassForObject $object]]} {
-        lappend $reqObject {*}[my rekBuildDefList [string trimleft [$introProxy getClassForObject $object]] $objectList]
+        lappend reqObject {*}[my rekBuildDefList [string trimleft [$introProxy getClassForObject $object]] $objectList]
     }
     # search for superclasses
     if {[$introProxy isObjectClass $object]} {
         foreach sclass [lsort [$introProxy getSuperclassForClass $object]] {
             if {$sclass eq "::Object"} continue
             set sclass [string trimleft $sclass :]
-            lappend reqObject {*}[my rekBuildDefList $sclass $cl]
+            lappend reqObject {*}[my rekBuildDefList $sclass [concat $reqObject $cl]]
         }
     }
     return [concat $reqObject $object]

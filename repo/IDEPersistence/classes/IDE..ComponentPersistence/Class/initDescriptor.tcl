@@ -8,6 +8,7 @@ IDE::ComponentPersistence proc initDescriptor {} {
     $des addColumn {userid int getUserId}
     $des addColumn {isclosed bool}
     $des addColumn {ootype varchar(20) getOOType _}
+    $des addColumn {namespace varchar(255) getNamespace setNamespace}
     IDE::DBInfo addInfoToDescriptor $des
 
     $des set weakRelationship [IDE::DBRelMappingNM new -childof $des -name ComponentObject -targetClass IDE::ObjectDescription -relationTable ComponentObject -sourceName componentid -targetName objectid -orderIndexName deforder]

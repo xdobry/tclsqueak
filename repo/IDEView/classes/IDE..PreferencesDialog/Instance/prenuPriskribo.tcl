@@ -2,7 +2,7 @@ IDE::PreferencesDialog instproc prenuPriskribo {} {
     set p {
         Core {
             startDefault {Start XOTcl with defauft parameters} bool
-            ignoreIDEComponents {Ignore own IDE Components} bool
+            ignoreIDEComponents {Ignore IDE Components} bool
         }
         Appearance {
             textfont_pref {Editor font} font

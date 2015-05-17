@@ -8,39 +8,44 @@ IDE::CreateComponentDialog instproc init args {
     set installInRepo 1
     my requireNamespace
 
-    frame $win.fname
-    label $win.fname.lname -text "Component Name:"
-    entry $win.fname.name -textvariable [self]::name
+    ttk::frame $win.g
 
-    pack $win.fname.lname $win.fname.name -side left
+    ttk::label $win.lname -text "Component Name:"
+    ttk::entry $win.name -textvariable [self]::name
 
-    frame $win.footype
-    label $win.footype.lname -text "Type of Object Oriented System"
-    pack $win.footype.lname -side left
+    ttk::frame $win.footype
+    ttk::label $win.looname -text "Type of Object Oriented System"
     foreach oosystem {XOTcl TclOO} {
         set rwin $win.footype.[string tolower $oosystem]
-        radiobutton $rwin -text $oosystem -variable [self]::ootype -value $oosystem
+        ttk::radiobutton $rwin -text $oosystem -variable [self]::ootype -value $oosystem
         pack $rwin
     }
 
-    frame $win.fnamespace
-    label $win.fnamespace.lname -text "namespace (optional):"
-    entry $win.fnamespace.name -textvariable [self]::namespace
-    pack $win.fnamespace.lname $win.fnamespace.name -side left
+    ttk::label $win.lnsname -text "namespace (optional):"
+    ttk::entry $win.nsname -textvariable [self]::namespace
 
-    label $win.userMsg -textvariable [self]::userMsg
+    ttk::label $win.userMsg -textvariable [self]::userMsg
 
-    pack $win.fname -anchor w
-    pack $win.footype -anchor w
-    pack $win.fnamespace
+    grid $win.lname -column 0 -row 0 -in $win.g
+    grid $win.name -column 1  -row 0 -sticky w  -in $win.g
+
+    grid $win.looname -column 0 -row 1 -in $win.g
+    grid $win.footype -column 1 -row 1 -sticky w -in $win.g
+
+    grid $win.lnsname -column 0 -row 2 -in $win.g
+    grid $win.nsname -column 1 -row 2 -sticky w -in $win.g
+
+    grid $win.userMsg -column 0 -row 3 -columnspan 2 -sticky ew -in $win.g
+    grid columnconfigure $win.g 1 -weight 1
+
     if {[IDE::System isDatabase]} {
-        checkbutton $win.installInRepo -text "Install in repository" -variable [self]::installInRepo
-        pack $win.installInRepo -anchor w
+        ttk::checkbutton $win.installInRepo -text "Install in repository" -variable [self]::installInRepo
+        grid $win.installInRepo -column 1 -row 3 -in $win.g -sticky w
     } else {
         set installInRepo 0
     }
-    pack $win.userMsg -anchor w
 
+    pack $win.g -fill both -expand yes
 
     wm deiconify $win
 }

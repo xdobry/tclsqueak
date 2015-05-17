@@ -6,6 +6,9 @@ IDE::ObjectBrowser instproc specificInit {} {
     panedwindow $win.panedwindow -orient vertical
     panedwindow $win.upperarea -orient horizontal
 
+    IDE::Toolbar create [self]::@toolbar $win.toolbar
+    my @toolbar addCommand "Refresh" [list [self] reload] refresh 1.0
+
     IDE::TclModeEdit create [self]::methodedit $win.methodedit -height 16 -width 65
     if {$type ne "single"} {
         IDE::ObjectsView create [self]::objectsview $win.upperarea.objectsview
@@ -26,6 +29,7 @@ IDE::ObjectBrowser instproc specificInit {} {
     $win.panedwindow add $win.upperarea -sticky news -height  120
     $win.panedwindow add $win.methodedit -sticky news -height 300
 
+    pack $win.toolbar -fill x
     pack $win.panedwindow -expand yes -fill both
 
     if {$::xotcl::version>=1.3} {

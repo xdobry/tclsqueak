@@ -8,7 +8,9 @@ PrsContext instproc parse script {
         lappend errors $braceshints
         return 0
     }
+    $parser skipComment
     set rootCommand [$parser getCommand $parser]
 
-    my parseCommand
+    set ret [my parseCommand]
+    return $ret
 }

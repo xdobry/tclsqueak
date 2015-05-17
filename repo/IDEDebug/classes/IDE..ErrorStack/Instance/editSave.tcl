@@ -1,3 +1,3 @@
-IDE::ErrorStack instproc editSave value {
+IDE::ErrorStack instproc editSave {skript {contentDescr {}}} {
     return
 }

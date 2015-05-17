@@ -1,3 +1,3 @@
-IDE::ClassDefinition proc newClass view {
-    return [my new [Object autoname .cdbrowser] -classView $view]
+IDE::ClassDefinition proc newClass {view compObj} {
+    return [my new [Object autoname .cdbrowser] -classView $view -compObj $compObj]
 }

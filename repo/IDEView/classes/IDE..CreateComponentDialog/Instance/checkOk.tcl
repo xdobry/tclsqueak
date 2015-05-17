@@ -12,6 +12,5 @@ IDE::CreateComponentDialog instproc checkOk {} {
         set userMsg "wrong namesapce. Use only characters and ::"
         return 0
     }
-    # TODO check also namespace
     return 1
 }

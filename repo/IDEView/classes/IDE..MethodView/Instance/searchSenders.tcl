@@ -2,13 +2,9 @@ IDE::MethodView instproc searchSenders range {
     my instvar vclass
     set text [my selectedItemFirst]
     if {$text ne ""} {
-        set pattern \[\[:<:\]\]${text}\[\[:>:\]\]
-        switch -- $range {
-            local {IDE::MethodBrowser searchTextClass $pattern $vclass $text [my getIntroProxy]}
-            component {
-                IDE::MethodBrowser searchTextComponent $pattern [my getComponentInContext] $text
-            }
-            all {IDE::MethodBrowser searchTextAll $pattern $text}
-        }
+        set searchDict [my getSearchScopeDict $range]
+        dict set searchDict text $text
+        dict set searchDict type word
+        my showSearchResult [IDE::CodeSearch search $searchDict]
     }
 }

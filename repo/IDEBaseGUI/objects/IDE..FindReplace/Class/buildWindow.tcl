@@ -12,22 +12,22 @@ IDE::FindReplace proc buildWindow twin {
 
     frame $win.buttons -relief sunken -borderwidth 2
 
-    frame $win.main
-    frame $win.main.options
+    ttk::frame $win.main
+    ttk::frame $win.main.options
 
-    label $win.main.tfind -text [::msgcat::mc "Find"]
-    label $win.main.tsearch -text [::msgcat::mc "Replace"]
-    entry $win.main.find -textvariable [self]::findText
-    entry $win.main.search -textvariable [self]::replaceText
-    checkbutton $win.main.regexpr -variable [self]::regularExpresion -text [::msgcat::mc "Regular Expresion"]
-    button $win.main.options.clear -text [::msgcat::mc "Clear"] -command [list [self] actionClear] -relief groove -pady 1
-    button $win.main.options.setdefaults -text [::msgcat::mc "Set Defaults"] -command [list [self] actionSetDefaults] -relief groove -pady 1
-    checkbutton $win.main.options.casesensitive -variable [self]::caseSensitive -text [::msgcat::mc "Case Insensitive"]
-    checkbutton $win.main.options.fromcursor -variable [self]::fromCursor -text [::msgcat::mc "From Cursor"]
-    checkbutton $win.main.options.backwards -variable [self]::backwards -text [::msgcat::mc "Backwards"]
-    checkbutton $win.main.options.selectedtext -variable [self]::selectedText -text [::msgcat::mc "Selected Text"]
-    checkbutton $win.main.options.replaceall -variable [self]::replaceAll -text [::msgcat::mc "Replace All"]
-    checkbutton $win.main.options.prompt -variable [self]::prompt -text [::msgcat::mc "Prompt on Replace"]
+    ttk::label $win.main.tfind -text [::msgcat::mc "Find"]
+    ttk::label $win.main.tsearch -text [::msgcat::mc "Replace"]
+    ttk::combobox $win.main.find -textvariable [self]::findText
+    ttk::combobox $win.main.search -textvariable [self]::replaceText
+    ttk::checkbutton $win.main.regexpr -variable [self]::regularExpresion -text [::msgcat::mc "Regular Expresion"]
+    ttk::button $win.main.options.clear -text [::msgcat::mc "Clear"] -command [list [self] actionClear]
+    ttk::button $win.main.options.setdefaults -text [::msgcat::mc "Set Defaults"] -command [list [self] actionSetDefaults]
+    ttk::checkbutton $win.main.options.casesensitive -variable [self]::caseSensitive -text [::msgcat::mc "Case Insensitive"]
+    ttk::checkbutton $win.main.options.fromcursor -variable [self]::fromCursor -text [::msgcat::mc "From Cursor"]
+    ttk::checkbutton $win.main.options.backwards -variable [self]::backwards -text [::msgcat::mc "Backwards"]
+    ttk::checkbutton $win.main.options.selectedtext -variable [self]::selectedText -text [::msgcat::mc "Selected Text"]
+    ttk::checkbutton $win.main.options.replaceall -variable [self]::replaceAll -text [::msgcat::mc "Replace All"]
+    ttk::checkbutton $win.main.options.prompt -variable [self]::prompt -text [::msgcat::mc "Prompt on Replace"]
 
     grid $win.main.tfind -row 0 -column 0 -sticky e
     grid $win.main.tsearch -row 2 -column 0 -sticky e
@@ -48,35 +48,20 @@ IDE::FindReplace proc buildWindow twin {
     grid columnconfigure $win.main 1 -weight 1
 
 
-    button $win.buttons.find -text [::msgcat::mc "Find"] -command [list [self] actionFind] -default active -underline 0
-    button $win.buttons.replace -text [::msgcat::mc "Replace"] -command [list [self] actionReplace] -underline 0
-    button $win.buttons.close -text [::msgcat::mc "Close"] -command [list [self] actionClose] -underline 0
+    ttk::button $win.buttons.find -text [::msgcat::mc "Find"] -command [list [self] actionFind] -default active -underline 0
+    ttk::button $win.buttons.replace -text [::msgcat::mc "Replace"] -command [list [self] actionReplace] -underline 0
+    ttk::button $win.buttons.close -text [::msgcat::mc "Close"] -command [list [self] actionClose] -underline 0
     pack $win.buttons.find $win.buttons.replace $win.buttons.close -side left  -padx 10 -pady 5
 
     pack $win.main -side top -fill both -expand yes -padx 10 -pady 5
     pack $win.buttons -side bottom -fill both
 
-    set cancelscript "
-    $win.buttons.close configure -state active
-    update idletasks
-    after 100
-    $win.buttons.close configure -state normal
-    [self] actionClose"
+    set cancelscript [list [self] actionClose]
     bind $win <Escape> $cancelscript
     bind $win <Alt-c> $cancelscript
-    set findscript "
-    $win.buttons.find configure -state active
-    update idletasks
-    after 100
-    $win.buttons.find configure -state normal
-    [self] actionFind"
+    set findscript [list [self] actionFind]
     bind $win <Return> $findscript
     bind $win <Alt-f> $findscript
-    set replacescript "
-    $win.buttons.replace configure -state active
-    update idletasks
-    after 100
-    $win.buttons.replace configure -state normal
-    [self] actionReplace"
+    set replacescript [list [self] actionReplace]
     bind $win <Alt-r> $replacescript
 }

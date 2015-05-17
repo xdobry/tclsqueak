@@ -6,5 +6,7 @@ IDE::FindReplace proc showWindow {} {
     }
     wm group $win [winfo toplevel [$view set win]]
     wm deiconify $win
+    $win.main.find configure -values [IDE::InputCache getValuesCache find]
+    $win.main.search configure -values [IDE::InputCache getValuesCache replace]
     focus $win.main.find
 }

@@ -47,6 +47,8 @@ CoreSignatureRepository instproc registerCoreProcs {} {
 ::binary {
   {string {{const format}} string {+ unknown}}
   {int {{const scan}} string string {+ {ref string}}}
+  {string {{const encode}} {enum base64 hex uuencode} {? {option -strict {} -maxlen int -wrapchar string}} {string data}}
+  {string {{const decode}} {enum base64 hex uuencode} {? {option -strict {} -maxlen int -wrapchar string}} {string data}}
 }
 ::bgerror {{void string}}
 ::break {{void}}

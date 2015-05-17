@@ -1,0 +1,1 @@
+this method has no side effect. It is used for parameter matcher to check if the type may fit

@@ -1,6 +1,5 @@
 IDE::ArrayBrowser instproc inspectAsObjectList key {
-    my instvar varray
-    set list [my varAction set ${varray}($key)]
+    set list [my getKey $key]
     set objects [list]
     foreach obj $list {
         if {[Object isobject $obj]} {

@@ -1,2 +1,3 @@
 catch {IDE::GUIConfigurationMix initializeAfterLoad}
+catch {IDE::EclipseIcons initializeAfterLoad}
 catch {IDE::System initializeAfterLoad}

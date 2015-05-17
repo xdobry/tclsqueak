@@ -1,8 +1,9 @@
 IDE::MethodView instproc init args {
-    my instvar vclass win history historyIndex vtype inheritedMethod
+    my instvar vclass win history historyIndex vtype inheritedMethod editHistory
     # saveEdit need vtype
     set vtype Instance
-    set history {}
+    set history [list]
+    set editHistory [list]
     set historyIndex -1
     set vclass {}
     set inheritedMethod 0

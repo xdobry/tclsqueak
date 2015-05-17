@@ -1,0 +1,1 @@
+this method can as side effect set the type of element

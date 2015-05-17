@@ -1,5 +1,5 @@
-IDE::MethodView instproc editSave skript {
-   my instvar vtype vclass actItem history historyIndex vcategories
+IDE::MethodView instproc editSave {skript {contentDescr {}}} {
+   my instvar vtype vclass actItem history historyIndex vcategories editHistory
    if {![info complete $skript]} {
        IDE::Dialog message {This is not complete Tcl-Script. Check the parentheses}
        return
@@ -18,7 +18,11 @@ IDE::MethodView instproc editSave skript {
        set omethod {}
        set otype $vtype
    }
-   lassign [my getItemFromSkript $skript] nclass ntype nmethod
+   set editItem [my getItemFromSkript $skript]
+   lassign $editItem nclass ntype nmethod
+   if {$editItem ne [lindex $editHistory end]} {
+       lappend editHistory $editItem
+   }
    if {$nclass eq "proc"} {
        if {$nmethod eq $omethod} {
            return

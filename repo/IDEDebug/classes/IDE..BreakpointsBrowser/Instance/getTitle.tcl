@@ -1,3 +1,3 @@
 IDE::BreakpointsBrowser instproc getTitle {} {
-  return {Breakpoints Browser}
+    return {Breakpoints Browser}
 }

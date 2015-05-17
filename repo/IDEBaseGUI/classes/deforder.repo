@@ -32,6 +32,7 @@ IDE::ProtocolText
 IDE::StateButton
 IDE::StateButtonActivity
 IDE::TabButtons
+IDE::Toolbar
 IDE::TreeView
 IBGParameterAdapter
 IDE::FindReplace

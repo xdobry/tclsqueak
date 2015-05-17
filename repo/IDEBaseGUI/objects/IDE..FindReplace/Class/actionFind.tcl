@@ -1,7 +1,8 @@
 IDE::FindReplace proc actionFind {} {
-    my instvar cur view backwards
+    my instvar cur view backwards findText
     set count [my findArea]
     set twin [$view getTextWindow]
+    IDE::InputCache addValueCache find $findText
     if {$count>0} {
         # sel tag is not visible if text havn't focus
         $twin tag remove find 1.0 end

@@ -17,25 +17,21 @@ IDE::Dialog instproc init {} {
     }
     switch $type {
         ok {
-            button $win.buttons.ok -text [::msgcat::mc "OK"] -command [list [self] actionOk] -underline 0
+            ttk::button $win.buttons.ok -text [::msgcat::mc "OK"] -command [list [self] actionOk] -underline 0
             pack $win.buttons.ok -padx 10 -pady 5
         }
         okcancel {
-            button $win.buttons.ok -text [::msgcat::mc "OK"] -command [list [self] actionOk] -default active -underline 0
-            button $win.buttons.cancel -text [::msgcat::mc "Cancel"] -command [list [self] actionCancel] -underline 0
+            ttk::button $win.buttons.ok -text [::msgcat::mc "OK"] -command [list [self] actionOk] -default active -underline 0
+            ttk::button $win.buttons.cancel -text [::msgcat::mc "Cancel"] -command [list [self] actionCancel] -underline 0
             pack $win.buttons.ok $win.buttons.cancel -side left  -padx 10 -pady 5
-            set cancelscript "
-            $win.buttons.cancel configure -state active -relief sunken
-            update idletasks
-            after 100
-            [self] actionCancel"
+            set cancelscript "$win.buttons.cancel invoke"
             bind $win <Escape> $cancelscript
             bind $win <Alt-c> $cancelscript
         }
         okcancelstop {
-            button $win.buttons.ok -text [::msgcat::mc "OK"] -command [list [self] actionOk] -default active -underline 0
-            button $win.buttons.cancel -text [::msgcat::mc "Cancel"] -command [list [self] actionCancel] -underline 0
-            button $win.buttons.stop -text [::msgcat::mc "Stop"] -command [list [self] actionStop] -underline 0
+            ttk::button $win.buttons.ok -text [::msgcat::mc "OK"] -command [list [self] actionOk] -default active -underline 0
+            ttk::button $win.buttons.cancel -text [::msgcat::mc "Cancel"] -command [list [self] actionCancel] -underline 0
+            ttk::button $win.buttons.stop -text [::msgcat::mc "Stop"] -command [list [self] actionStop] -underline 0
             pack $win.buttons.ok $win.buttons.cancel $win.buttons.stop -side left  -padx 10 -pady 5
             set cancelscript "$win.buttons.cancel invoke"
             bind $win <Escape> $cancelscript

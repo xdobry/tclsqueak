@@ -1,5 +1,5 @@
 IDE::ClassDefinition instproc actionCreate {} {
-    my instvar classView mode className introProxy
+    my instvar classView mode className introProxy compObj
     if {[my checkClassView]} {
         if {$mode eq "redefine"} {
             set parameter [my getParameter]
@@ -7,7 +7,7 @@ IDE::ClassDefinition instproc actionCreate {} {
             $introProxy redefineClass $className $superclass $parameter
         } else {
             if {[set def [my getClassDefinition]] eq ""} return
-            $classView editSave $def
+            $classView editSave $def [list $className [$introProxy getMethodTypePrefix]Def [$compObj getName]]
         }
     }
     my destroy

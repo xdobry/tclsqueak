@@ -1,5 +1,5 @@
 IDE::ArrayBrowser instproc selectKey key {
-    my instvar varray
+    my instvar actual
     my set actual $key
-    [self]::edit setTextControler [my varAction set ${varray}($key)] [self]
+    [self]::edit setTextControler [my getKey $key] [self]
 }

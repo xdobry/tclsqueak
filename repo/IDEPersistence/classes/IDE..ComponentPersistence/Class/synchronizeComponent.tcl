@@ -4,6 +4,6 @@ IDE::ComponentPersistence proc synchronizeComponent comp {
         $cobj mixin add IDE::ComponentPersistence
         $cobj synchronizeWithDB
     } else {
-        puts "component not fount $comp"
+        puts "component not found $comp"
     }
 }

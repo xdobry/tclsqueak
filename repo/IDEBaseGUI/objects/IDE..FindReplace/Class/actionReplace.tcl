@@ -1,5 +1,5 @@
 IDE::FindReplace proc actionReplace {} {
-    my instvar cur view backwards replaceText replaceAll prompt regularExpresion
+    my instvar cur view backwards replaceText replaceAll prompt regularExpresion findText
     set count [my findArea]
     set twin [$view getTextWindow]
     if {$regularExpresion} {
@@ -7,6 +7,8 @@ IDE::FindReplace proc actionReplace {} {
     } else {
         set localReplaceText $replaceText
     }
+    IDE::InputCache addValueCache find $findText
+    IDE::InputCache addValueCache replace $replaceText
     while {$count>0} {
         set ignore 0
         if {$prompt} {

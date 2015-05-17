@@ -10,7 +10,7 @@ IDE::DirectFind instproc markNextSearch {} {
             $textWin see $cur
             set curMarkSelectionNext $endIndex
         } else {
-            set curMarkSelection 1.0
+            set curMarkSelectionNext 1.0
         }
     }
 }

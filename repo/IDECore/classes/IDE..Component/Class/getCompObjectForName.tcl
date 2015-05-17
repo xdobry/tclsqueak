@@ -7,6 +7,12 @@ IDE::Component proc getCompObjectForName {component {ootype XOTcl} {namespace {}
             $appObj setOOType $ootype
         }
         if {$namespace ne ""} {
+            if {[string range $namespace 0 1] ne "::"} {
+                error "namespace for component must have :: prefix but is $namespace"
+            }
+            if {![namespace exists $namespace]} {
+                error "namespace $namespace does not exists"
+            }
             $appObj set namespace $namespace
         }
         my set components($component) $appObj

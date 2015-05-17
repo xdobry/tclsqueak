@@ -1,10 +1,13 @@
 IDE::MethodView instproc refreshView {} {
     my instvar actItem cobj introProxy
     if {$actItem eq ""} return
+    set codeController [my info parent]::@codecontroller
+    if {[Object isobject $codeController]} {
+        $codeController setBodyText {*}$actItem
+        return
+    }
+    lassign $actItem vtclass vtype method
     set editVType [[my info parent]::stateButton state]
-    set vtclass [lindex $actItem 0]
-    set vtype [lindex $actItem 1]
-    set method [lindex $actItem 2]
     set introProxy [IDE::XOIntroProxy getIntroProxyForMethodType $vtype]
     if {$editVType eq "Comment"} {
         set comment [$introProxy getMethodCommentForObject $vtclass $vtype $method]

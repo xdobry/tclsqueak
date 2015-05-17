@@ -5,7 +5,7 @@ IDE::System proc getMenuStruct {} {
     }
     set ms [IDE::MenuStruct create $mobj System 0]
     $ms addMenuItem [IDE::MenuCommand new -childof $mobj -accelerator {F5} -name {Component Browser} -command [list IDE::CompBrowser newBrowser]]
-    $ms addCommand {Workspace} [list IDE::Transcript newBrowser]
+    $ms addCommand {Script Editor} [list IDE::Transcript newBrowser]
     $ms addCommand {Namespaces Browser} [list IDE::NSBrowser newBrowser]
 
     $ms addSeparator
@@ -33,6 +33,12 @@ IDE::System proc getMenuStruct {} {
     ${ms}::help addCommand {TclSqueak Manual} [list IDE::System openHTMLBrowser {http://www.xdobry.de/xotclIDE/docs}]
     ${ms}::help addCommand {Tcl/Tk Wiki} [list IDE::System openHTMLBrowser {http://mini.net/tcl}]
     ${ms}::help addCommand {TclSqueak on Wiki} [list IDE::System openHTMLBrowser {http://mini.net/tcl/2131}]
+
+    IDE::MenuStruct create ${ms}::special {Low level Functions}
+    $ms addCascadeMenu ${ms}::special
+    ${ms}::special addCommand {Run Script} [list IDE::System loadFromSource]
+    ${ms}::special addCommand {Run pkg_mkIndex} [list IDE::System runPkgMkIndex]
+    ${ms}::special addCommand {Change Working Dir} [list IDE::System changeWorkingDir]
 
     $ms addSeparator
 

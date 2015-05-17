@@ -1,7 +1,7 @@
 IDE::Transcript instproc getTitle {} {
-    if {[self] eq "::transcript"} {
+    if {[my isTranscript]} {
         return Transcript
     } else {
-        return Workspace
+        return "Script Editor"
     }
 }

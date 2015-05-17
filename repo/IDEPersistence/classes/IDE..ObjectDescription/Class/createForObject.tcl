@@ -3,9 +3,6 @@ IDE::ObjectDescription proc createForObject object {
         return ${object}::description
     }
     set introProxy [IDE::XOIntroProxy getIntroProxyForObject $object]
-    if {$introProxy eq ""} {
-        my halt
-    }
     if {[set desc [$introProxy getDescriptionForObject $object]] ne ""} {
         return $desc
     }

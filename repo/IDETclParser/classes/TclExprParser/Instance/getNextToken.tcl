@@ -12,13 +12,12 @@ TclExprParser instproc getNextToken {} {
     #}
 
     switch -regexp -matchvar hit -- $exprRest {
-
-        {^[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?} {
-            # double
-            set tokenType value
-        }
         {^0[xbo][0-9]+} {
             # hex binar and octal
+            set tokenType value
+        }
+        {^[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?} {
+            # double
             set tokenType value
         }
         {^(round|wide|sqrt|sin|log10|double|hypot|atan|bool|rand|abs|acos|atan2|entier|srand|sinh|log|floor|tanh|tan|isqrt|int|asin|min|ceil|cos|cosh|exp|pow|max|fmod)} {

@@ -1,6 +1,9 @@
-IDE::ClassSelector proc getClass {} {
-    set introProxy [IDE::XOIntroProxy getIntroProxy]
-    # TODO only XOTcl classes
-    set clist [ide::lcollect each [$introProxy getClasses] {string trimleft $each :}]
-    IDE::IDialogListFilter selectFromList {Choose the class} $clist
+IDE::ClassSelector proc getClass {{title {Choose the class}}} {
+    set types [list]
+    foreach ip [IDE::XOIntroProxy getIntroProxies] {
+        lappend types {*}[$ip getClasses]
+        lappend types {*}[$ip getObjects]
+    }
+    set clist [ide::lcollect each $types {string trimleft $each :}]
+    IDE::IDialogListFilter selectFromList $title $clist
 }

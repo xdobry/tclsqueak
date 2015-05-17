@@ -1,3 +1,7 @@
 IDE::XOIntroProxy instproc getParentForObject object {
-    $object info parent
+    set p [$object info parent]
+    if {$p ne "" && [Object isobject $p]} {
+        return $p
+    }
+    return
 }

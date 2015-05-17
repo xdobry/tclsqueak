@@ -1,3 +1,3 @@
 IDE::ArrayBrowser instproc getMenuStruct {} {
-    IDE::MenuStruct create [self]::ms Array 0
+    IDE::MenuStruct create [self]::ms [my getTitle] 0
 }
