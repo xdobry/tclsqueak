@@ -9,4 +9,8 @@ IDE::CBCodeController instproc backNavigation {} {
         }
         set history [lreplace $history $historyIndex $historyIndex]
     }
+    if {$historyIndex==0} {
+        my setButtonState prevButton 0
+    }
+    my setButtonState nextButton 1
 }

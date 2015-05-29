@@ -5,8 +5,11 @@ IDE::System proc browseString string {
         IDE::ObjectBrowser newBrowser $string
     } else {
        if {[my tryBrowseAsObjectList $string]} return
-       if {![IDE::MethodBrowser searchImplementorsAll $string 1]} {
+       set result [IDE::CodeSearch search [dict create text $string type implementors scope all]]
+       if {[llength [dict get $result result]]==0} {
            IDE::Dialog message "$string is not a Class, Object (Objects list) or method name"
-        }
+       } else {
+           IDE::MethodBrowser showSearchResult $result
+       }
     }
 }

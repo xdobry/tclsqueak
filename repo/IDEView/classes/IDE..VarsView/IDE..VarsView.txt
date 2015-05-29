@@ -1,8 +1,4 @@
-There are the basis browser for XOTclIDE
+The parent object must understand the messages
 
-   1. Component Browser
-   1. Method Browser
-   1. Object Browser
-   1. Configuration Browser
-
-and their subelements
+[my info parent] setVarValue $value [self]
+[my info parent] setStatusBarText $message

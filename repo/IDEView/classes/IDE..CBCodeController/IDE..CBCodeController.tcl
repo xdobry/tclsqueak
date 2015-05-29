@@ -1,1 +1,1 @@
-Class create IDE::CBCodeController -superclass ::IDE::CodeController
+Class create IDE::CBCodeController -superclass ::IDE::CodeController -parameter toolbar

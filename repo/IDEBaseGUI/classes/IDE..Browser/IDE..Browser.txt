@@ -1,3 +1,5 @@
-(comment for IDEBaseGUI)
+This is the base class for all IDE Browser
 
-This component contains the base GUI Elements needed in IDEXotclIDE
+It can buid the system menu and status info bar.
+
+Please overwrite method specificInit for your own GUI.

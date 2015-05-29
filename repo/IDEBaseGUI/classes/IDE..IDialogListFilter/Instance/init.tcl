@@ -5,11 +5,12 @@ IDE::IDialogListFilter instproc init {} {
     set lpattern ""
     my requireNamespace
     set selectPattern ""
+    set pattern ""
     set patternIndex 0
-    ::label $win.info -text {Select an item to open (? any character, * any string)}
-    ::entry $win.pattern -textvariable [self]::pattern
+    ttk::label $win.info -text {Select an item to open (? any character, * any string)}
+    ttk::entry $win.pattern -textvariable [self]::pattern
     frame $win.lframe
-    ::scrollbar $win.scroll -command [list $win.listbox yview] -takefocus 0
+    ttk::scrollbar $win.scroll -command [list $win.listbox yview] -takefocus 0
     ::listbox $win.listbox -yscrollcommand [list $win.scroll set]   -exportselection no
     bind $win.listbox <Double-Button-1> [list [self] actionOk]
     bind $win.pattern <KeyRelease> [list [self] filterList]

@@ -11,11 +11,11 @@ IDE::SyntaxChecker instproc specificInit {} {
     IDE::SyntaxCheckMethodList create [self]::methods $topwin.methods -notify [self] -notifyProc selectMethod -width 45 -label "Methods Alt-2"
     IDE::NListView create [self]::messages $topwin.messages -notify [self] -notifyProc selectError -width 40 -label "Errors Alt-3 (Alt-n/p next/prev)"
 
-    button $bframe.check -text "Check Selected" -underline 0 -command [list [self] checkComponents]
-    button $bframe.all -text "Select All Components" -underline 7 -command [list [self] selectAll]
-    button $bframe.allTcl -text "Exclude IDE Components" -underline 1 -command [list [self] excludeIDE]
+    ttk::button $bframe.check -text "Check Selected" -underline 0 -command [list [self] checkComponents]
+    ttk::button $bframe.all -text "Select All Components" -underline 7 -command [list [self] selectAll]
+    ttk::button $bframe.allTcl -text "Exclude IDE Components" -underline 1 -command [list [self] excludeIDE]
 
-    IDE::TclModeEdit [self]::body $mainframe.body -mixin IDE::CodeController
+    IDE::TclModeEdit [self]::methodedit $mainframe.body -mixin IDE::CodeController
 
     pack $bframe.check $bframe.all $bframe.allTcl -side left -anchor nw
     pack $bframe -side top -anchor nw -fill x
@@ -41,6 +41,8 @@ IDE::SyntaxChecker instproc specificInit {} {
     focus [[self]::components getFocusWin]
 
     next
+    
+    IDE::CBCodeController create [self]::@codecontroller
 
     my initStatusBar -1
     my setStatusBarText "This tool check the syntax in selected components"

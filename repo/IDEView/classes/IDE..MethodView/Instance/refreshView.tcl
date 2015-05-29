@@ -1,8 +1,8 @@
 IDE::MethodView instproc refreshView {} {
     my instvar actItem cobj introProxy
     if {$actItem eq ""} return
-    set codeController [my info parent]::@codecontroller
-    if {[Object isobject $codeController]} {
+    set codeController [my getCodeControllerIfExists]
+    if {$codeController ne ""} {
         $codeController setBodyText {*}$actItem
         return
     }

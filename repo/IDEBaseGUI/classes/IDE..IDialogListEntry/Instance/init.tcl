@@ -2,7 +2,7 @@ IDE::IDialogListEntry instproc init {} {
     my instvar win list entry selectedItem
     next
     frame $win.lframe
-    ::scrollbar $win.lframe.scroll -command "$win.lframe.listbox yview"
+    ttk::scrollbar $win.lframe.scroll -command "$win.lframe.listbox yview"
     ::listbox $win.lframe.listbox -yscrollcommand "$win.lframe.scroll set"   -exportselection no
     bind $win.lframe.listbox <Double-Button-1> [list [self] actionOk]
 

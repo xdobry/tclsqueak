@@ -1,1 +1,4 @@
-Base Tests for XOTclIDE System
+Warnig!
+
+This Test require XotclIDE installed in Version Control System
+The tests try to load and view IDECore Component

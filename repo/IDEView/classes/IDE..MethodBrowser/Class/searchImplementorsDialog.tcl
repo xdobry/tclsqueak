@@ -1,5 +1,5 @@
-IDE::MethodBrowser proc searchImplementorsDialog {} {
-    set ret [IDE::MethodSelector getMethod]
-    if {$ret eq ""} return
-    my searchImplementorsAll $ret
+IDE::MethodBrowser proc searchImplementorsDialog {{master IDE::MethodBrowser}} {
+    set implementor [IDE::MethodSelector getMethod]
+    if {$implementor eq ""} return
+    $master showSearchResult [IDE::CodeSearch search [dict create text $implementor type implementors scope all]]
 }

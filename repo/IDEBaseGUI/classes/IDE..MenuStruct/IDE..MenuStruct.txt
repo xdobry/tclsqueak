@@ -1,3 +1,10 @@
-(comment for IDEBaseGUI)
+This Class represent normall und popdown menus.
+It is used from IDE::GUICommand classes.
 
-This component contains the base GUI Elements needed in IDEXotclIDE
+The enablement is computed dynamical on evry maping of menu.
+In the enableList stuct can be commands specified that are invoked
+for checking enablement. These method are invoked on object specified
+in enblementHandler parameter.
+Only the all of specified method return true the menu item is enabled
+
+See also IDE::MenuItem

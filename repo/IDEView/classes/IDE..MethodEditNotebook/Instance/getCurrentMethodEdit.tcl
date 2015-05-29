@@ -4,5 +4,6 @@ IDE::MethodEditNotebook instproc getCurrentMethodEdit {} {
     if {$tabid eq ""} {
         return
     }
+    #ttc rettype xotcl IDE::MethodEdit
     return $methodEditObjects($tabid)
 }

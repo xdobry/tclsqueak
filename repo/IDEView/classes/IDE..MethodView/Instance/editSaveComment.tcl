@@ -1,4 +1,4 @@
-IDE::MethodView instproc editSaveComment comment {
+IDE::MethodView instproc editSaveComment {comment {contentDesc {}}} {
    my instvar actItem
    set vclass [lindex $actItem 0]
    set vtype [lindex $actItem 1]

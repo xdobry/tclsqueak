@@ -9,6 +9,7 @@ IDE::XOIntroProxy proc getIntroProxyForMethodType vtype {
         }
         OODef -
         OOProcsGroup -
+        OOProcs -
         OOClass -
         OOObject -
         OOInstance {

@@ -1,6 +1,12 @@
 IDE::EditorTranscript instproc syntaxCheck {} {
+    my instvar scriptIndepend
+    
     set context [PrsContext new]
-    set repository [SignatureRepository createSignatureRepositoryFile]
+    if {$scriptIndepend} {
+        set repository [SignatureRepository createSignatureRepositoryFile]
+    } else {
+        set repository [SignatureRepository getSignatureRepository]
+    }
     $context set repository $repository
     set text [my getText]
     $context parseGlobal $text
@@ -14,6 +20,8 @@ IDE::EditorTranscript instproc syntaxCheck {} {
     if {[$context hasErrors]} {
         my highligthErrors [$context set errors]
     }
-    $repository destroy
+    if {$scriptIndepend} {
+        $repository destroy
+    }
     $context destroy
 }

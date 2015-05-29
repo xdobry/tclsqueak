@@ -1,3 +1,12 @@
-(comment for IDEBaseGUI)
+This class privede simple event handler.
+There are two methodes.
+1) Register event
+senderObject addEventInteres reciverObject method eventName ?addParamConst?
+2) Invoke Event in Sender Object
+senderObject signalEvent eventName addParam
 
-This component contains the base GUI Elements needed in IDEXotclIDE
+The invoked methode will be call with 0 1 or 2 arguments
+dependent of addParam.
+reciver method ?addParamConst? ?addParam?
+
+Warning: if addParam of addParamConst are empty they are ignored.

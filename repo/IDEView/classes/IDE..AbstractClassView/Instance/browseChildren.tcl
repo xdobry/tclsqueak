@@ -1,8 +1,8 @@
-IDE::AbstractClassView instproc browseChildren actual {
+IDE::AbstractClassView instproc browseChildren current {
     set introProxy [my getIntroProxy]
-    if {[$introProxy isObjectClass $actual]} {
-        IDE::HeritageBrowser newBrowserChild $actual $introProxy
+    if {[$introProxy isObjectClass $current]} {
+        [my getViewMaster] showHierarchy $current $introProxy children
     } else {
-        my upsMessage "$actual is not a class"
+        my upsMessage "$current is not a class"
     }
 }

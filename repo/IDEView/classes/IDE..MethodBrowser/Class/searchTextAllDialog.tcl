@@ -1,4 +1,4 @@
-IDE::MethodBrowser proc searchTextAllDialog {} {
+IDE::MethodBrowser proc searchTextAllDialog {{master IDE::MethodBrowser}} {
     set sel ""
     set w [focus]
     if {$w ne "" && [winfo class $w] eq "Text"} {
@@ -10,6 +10,6 @@ IDE::MethodBrowser proc searchTextAllDialog {} {
     
     set text [IDE::IDialogEntry getValue {give search text (regular expresion)} $sel search]
     if {$text ne ""} {
-        IDE::MethodBrowser searchTextAll $text
+        $master showSearchResult [IDE::CodeSearch searchTextAll $text]
     }
 }

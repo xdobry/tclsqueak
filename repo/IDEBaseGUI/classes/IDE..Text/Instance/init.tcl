@@ -2,7 +2,7 @@ IDE::Text instproc init window {
     my instvar win state height width
     set win $window
     ::frame $win
-    ::scrollbar $win.scroll -command "$win.text yview" -takefocus 0
+    ttk::scrollbar $win.scroll -command "$win.text yview" -takefocus 0
     set bgcolor [my getParameter textcolor]
     if  {$bgcolor ne ""} {
         ::text $win.text -yscrollcommand "$win.scroll set" -width $width -height $height -font textfont -background $bgcolor

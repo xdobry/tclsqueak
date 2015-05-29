@@ -24,6 +24,10 @@ IDE::XOIntroProxy instproc getItemFromScript script {
        } else {
            set ntype Class
        }
+    } elseif {$nclass eq "proc"} {
+        set nmethod $ntype
+        set ntype Procs
+        set nclass {}
     }
     list $nclass $ntype $nmethod
 }

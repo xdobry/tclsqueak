@@ -1,11 +1,14 @@
-This application is able to load all XotclIDE from DB
-therefore is is not depend on another XotclIDE components.
+This object handle starting xotclide from differents context
+It read also the line arguments that can influence starting process or
+cause specified actions.
+The IDEStater can by used to load another application from Version System.
+It has the rolle of starting module for thin client systems.
 
-You can load IDE form Database only with this applikation
+Followin Starting options are possibly.
+1. Starting from source without Version System
+2. Starting from source with Version System
+3. Starting from Version System with Version System
+4. Starting from foreign Application (IDE as debbuging tool)
+5. Loading and Starting foreign application from version system (data base)
 
-Here are also some redundant code the same as in IDEBaseGUI
-
-Using:
-
- package require IDEStart
- IDEStarter startIDEFromDB
+Test von Umlauten äöüß

@@ -42,7 +42,8 @@ CREATE TABLE Component (
   userid int DEFAULT NULL,
   defcounter int DEFAULT '0',
   basedon int DEFAULT NULL,
-  infoid int
+  infoid int,
+  namespace varchar(255)
 );
 CREATE TABLE ComponentObject (
   componentid int NOT NULL,

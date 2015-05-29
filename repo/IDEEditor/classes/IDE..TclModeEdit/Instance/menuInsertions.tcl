@@ -3,7 +3,7 @@ IDE::TclModeEdit instproc menuInsertions ms {
     $ms addCascadeMenu $m
     $m addCommand {Add Indent} [list [self] addIndent]
     $m addCommand {Minus Indent} [list [self] minusIndent]
-    $m addCommand {Auto Indent} [list [self] autoIndent] {} {Control-F}
+    $m addCommand {Format} [list [self] autoIndent] {} {Control-F}
     $m addCommand {Comment} [list [self] commentRegion]
     $m addCommand {Uncomment} [list [self] uncommentRegion]
     $m addCommand {make msgcat::mc getter} [list [self] makeMCGetter] {} {Alt-i}

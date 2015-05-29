@@ -1,3 +1,3 @@
-IDE::MethodBrowser proc searchBreakPoints {} {
-    my searchTextAll {([^#]\[self\]|[^#]my) halt}
+IDE::MethodBrowser proc searchBreakPoints {{master IDE::methodBrowser}} {
+    $master showSearchResult [IDE::CodeSearch searchTextAll {([^#]\[self\]|[^#]my) halt}]
 }

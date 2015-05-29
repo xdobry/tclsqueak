@@ -7,9 +7,10 @@ IDE::CompBrowser instproc newAction {} {
     if {$cobj ne ""} {
         lappend newList Class Object Procedures
     }
-    if {[$cobj getOOType] eq "XOTcl"} {
-        lappend newList {Unit Test Class} {UI Window}
-    }
+    # TODO
+    #if {[$cobj getOOType] eq "XOTcl"} {
+    #    lappend newList {Unit Test Class} {UI Window}
+    #}
     set ret [IDE::IDialogList getListItem New $newList]
     if {$ret eq ""} {
         return
@@ -19,7 +20,7 @@ IDE::CompBrowser instproc newAction {} {
             my @compview newComponent
         }
         Class {
-            my @compview classWizard new
+            my classview classWizard new
         }
         Object {
             my classview newObjectWizard

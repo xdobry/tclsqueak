@@ -5,6 +5,8 @@ IDE::XOIntroProxy instproc deleteMethodForObject {object method type {forwardToD
     } elseif {$type eq "Instance"} {
         $object instproc $method {} {}
         my uncategoryForBForObject $object $method {}
+    } elseif {$type eq "Procs"} {
+        $object deleteMethod $method
     } else {
         error "unknown type $type for method deletion"
     }

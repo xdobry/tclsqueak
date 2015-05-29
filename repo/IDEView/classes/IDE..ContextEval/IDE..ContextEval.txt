@@ -1,8 +1,7 @@
-There are the basis browser for XOTclIDE
+This class is used for mixins to overwrite the string
+evalution from selected text.
 
-   1. Component Browser
-   1. Method Browser
-   1. Object Browser
-   1. Configuration Browser
+please init the instance variable "context" with the contex object.
+All eval are do by using
 
-and their subelements
+$context eval $script

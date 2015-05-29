@@ -1,11 +1,8 @@
-This application is able to load all XotclIDE from DB
-therefore is is not depend on another XotclIDE components.
+Hanlde preferences of xotcl
 
-You can load IDE form Database only with this applikation
+on unix the preferences are saved as hile .xotclide in home dictionary
+on windows the registry are used.
 
-Here are also some redundant code the same as in IDEBaseGUI
-
-Using:
-
- package require IDEStart
- IDEStarter startIDEFromDB
+Now the preferences are only used to specify data base
+connection for version system.
+The prefereces can by set by installation tool

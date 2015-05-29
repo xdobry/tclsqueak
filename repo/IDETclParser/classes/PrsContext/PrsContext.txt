@@ -1,15 +1,7 @@
-This component provide classes for parsing und syntax check of
-xotcl/tcl source code.
+The class has very important rolle by parsing xotcl/tcl sources.
+In this methods are coded the meaning (syntax) of all build-in tcl functions
+as loops and conditional.
 
-The base Classes are PrsContext and TclParser
-For Parse a xotcl method use
- set context [PrsContext new]
- $context parseAndCheck $wholeMethodBody
- if {[$context hasErrors]} {
-    puts [$context errors]
- }
-
-The Parser (TclParer) build a parse tree form tcl base element
-PrsElement (Root)
-
-The Checking funktionality is programed in Class PrsContext
+The context handle/store such context information
+1. where the code ist (xotcl method, tcl proc)
+2. know variables

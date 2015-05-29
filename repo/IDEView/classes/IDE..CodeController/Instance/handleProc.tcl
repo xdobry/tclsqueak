@@ -10,4 +10,5 @@ IDE::CodeController instproc handleProc {script contentDesc} {
         return
     }
     [$pobj getGroupObj] handleScript $script
+    return $contentDesc
 }

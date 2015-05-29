@@ -1,1 +1,1 @@
-Class create IDE::EditorTranscript -superclass ::IDE::TclModeEdit
+Class create IDE::EditorTranscript -superclass ::IDE::TclModeEdit -parameter toolbar

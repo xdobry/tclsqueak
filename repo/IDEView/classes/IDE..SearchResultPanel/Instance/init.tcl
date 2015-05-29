@@ -1,5 +1,7 @@
 IDE::SearchResultPanel instproc init twin {
-    my instvar win
+    my instvar win methodview currentSearch searchHistory
+    set currentSearch ""
+    set searchHistory [list]
     set win $twin
     if {[IDE::System isDatabase]} {
         set postFix DB
@@ -7,11 +9,15 @@ IDE::SearchResultPanel instproc init twin {
         set postFix ""
     }
     ttk::frame $win
-    ttk::button $win.close -text x -command [list [my info parent] closeSearchResult]
-    ttk::label $win.info -anchor w
-    IDE::MethodListView${postFix} create [my info parent]::@methodlist $win.methodlist -mixin IDE::PopdownOnlyMix
+    set toolbar [IDE::Toolbar create [self]::@toolbar $win.toolbar]
 
-    pack $win.close -anchor e
+    $toolbar addCommand "Refresh" [list [self] refresh] refresh 1.0
+    $toolbar addCommand "Search History" [list [self] history] search_history 1.1
+    $toolbar addCommand "Detach Window" [list [self] detachSearch] main_tab 1.2
+    
+    ttk::label $win.info -anchor w
+    set methodview [IDE::MethodListView${postFix} create [my info parent]::@methodlist $win.methodlist -mixin IDE::PopdownOnlyMix -masterView [my info parent] -height 6]
+    pack $win.methodlist -fill both -expand yes -side bottom
+    pack $win.toolbar -side right
     pack $win.info -fill x
-    pack $win.methodlist -fill both -expand yes
 }

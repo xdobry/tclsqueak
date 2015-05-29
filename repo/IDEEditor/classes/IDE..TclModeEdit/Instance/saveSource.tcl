@@ -1,7 +1,7 @@
 IDE::TclModeEdit instproc saveSource text {
     my instvar hasErrors
     if {$hasErrors==0} {
-        if {[my lintIfWanted $text]} {
+        if {[my lintIfWanted [my getText]]} {
             next
         } else {
             [my info parent] setStatusBarText "erros recognized press save again to force"

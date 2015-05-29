@@ -4,13 +4,13 @@ IDE::VersionBrowser instproc specificInit {} {
     if {$type eq "available"} {
         ttk::panedwindow $win.rightarea -orient horizontal
         ttk::panedwindow $win.leftarea -orient vertical
-        IDE::VersionView create [self]::version $win.version -multiselect 1
-        IDE::AvailableView create [self]::available $win.available
+        IDE::VersionView create [self]::version $win.version -multiselect 1 -label "Versions"
+        IDE::AvailableView create [self]::available $win.available -label [$vobject typeName]
         [self]::available setListUnsorted [$vobject getAvailable]
         IDE::Text [self]::additional $win.additional -width 40 -height 10
     } else {
         ttk::panedwindow $win.leftarea -orient vertical
-        IDE::VersionView create [self]::version $win.version -height 6 -multiselect 1
+        IDE::VersionView create [self]::version $win.version -height 6 -multiselect 1 -label "Versions"
         IDE::Text create [self]::additional $win.additional -width 60 -height 15
         [self]::version selectFor $name
         [self]::version setSelectedIndex 0

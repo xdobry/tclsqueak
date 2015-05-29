@@ -1,7 +1,6 @@
 IDE::TDevelopUtils instproc testASearch args {
    IDE::MethodBrowser searchSendersAll testASearch
    IDE::MethodBrowser searchTextAll mySpecialText23
-   IDE::MethodBrowser searchTextComponent mySpecialText23 IDETests
    IDE::MethodBrowser searchImplementorsAll testASearch 1
    IDE::MethodBrowser searchImplementorsComponent testASearch IDETests
    set introProxy [IDE::XOIntroProxy getIntroProxy]

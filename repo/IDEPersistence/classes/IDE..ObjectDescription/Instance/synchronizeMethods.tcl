@@ -19,6 +19,8 @@ IDE::ObjectDescription instproc synchronizeMethods {} {
             } else {
                 set mobj [my getInstanceMethod $name]
             }
+        } elseif {$type eq "Def"} {
+            set mobj [my getDefMethod $name]
         }
         if {$mobj ne ""} {
             $mobj synchronizeWithId $id

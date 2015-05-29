@@ -8,6 +8,7 @@ IDE::CodeController instproc syntaxCheck {text editor {contentDescr {}}} {
     $context parseAndCheck $text
     if {[$context exists parser] && [[$context set parser] exists root]} {
         set highlighter [SyntaxHighlightVisitor new -volatile -text $editor -context $context]
+        $highlighter highlightHeaderAsComment [$context set rootCommand]
         [[$context set parser] set root] visit $highlighter
     }
     $editor deleteMarklineErrors

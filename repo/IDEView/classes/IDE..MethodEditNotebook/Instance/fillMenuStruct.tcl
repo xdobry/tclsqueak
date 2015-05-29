@@ -26,7 +26,7 @@ IDE::MethodEditNotebook instproc fillMenuStruct ms {
     $ms addCascadeMenu $m
     $m addCommand {Add Indent} [list [self] dispatchTab addIndent]
     $m addCommand {Minus Indent} [list [self] dispatchTab minusIndent]
-    $m addCommand {Auto Indent} [list [self] dispatchTab autoIndent] {} {Control-F}
+    $m addCommand {Format} [list [self] dispatchTab autoIndent] {} {Control-F}
     $m addCommand {Comment} [list [self] dispatchTab commentRegion]
     $m addCommand {Uncomment} [list [self] dispatchTab uncommentRegion]
     $m addCommand {make msgcat::mc getter} [list [self] dispatchTab makeMCGetter] {} {Alt-i}

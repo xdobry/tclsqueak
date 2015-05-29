@@ -1,1 +1,1 @@
-Class create IDE::MethodView -superclass {::IDE::ListView ::IDE::GUICommands ::IDE::FocusPerKey} -parameter {{label Methods}}
+Class create IDE::MethodView -superclass {::IDE::ListView ::IDE::GUICommands ::IDE::FocusPerKey ::IDE::MasterViewMix} -parameter {{label Methods}}

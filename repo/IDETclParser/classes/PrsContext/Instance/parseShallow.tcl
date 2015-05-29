@@ -34,9 +34,13 @@ PrsContext instproc parseShallow {} {
             return 0
         }
         set object [$repository getFullObjectName $object $namespace]
+        set pnamespace [namespace qualifiers $object]
+        if {$pnamespace ne ""} {
+            set namespace $pnamespace
+        }
         set methodtypeElem [$rootCommand getElem 1]
         if {![$methodtypeElem hasclass PrsLiteral]} {
-            my addError "Expect proc or instproc" $methodtypeElem
+            my addError "Expect literal proc or instproc" $methodtypeElem
             return 0
         }
         set methodtype [$methodtypeElem prsString]
@@ -61,10 +65,12 @@ PrsContext instproc parseShallow {} {
     } else {
         set name [$nameElem prsString]
     }
-    set pnamespace [namespace qualifiers $name]
-    if {$pnamespace ne ""} {
-        set namespace [my joinNamespace $pnamespace]
-        set name [namespace tail $name]
+    if {$isTclproc} {
+        set pnamespace [namespace qualifiers $name]
+        if {$pnamespace ne ""} {
+            set namespace [my joinNamespace $pnamespace]
+            set name [namespace tail $name]
+        }
     }
     incr shift
     my initVariablesFromArguments

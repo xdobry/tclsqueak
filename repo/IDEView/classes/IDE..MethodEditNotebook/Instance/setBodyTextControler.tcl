@@ -3,7 +3,14 @@ IDE::MethodEditNotebook instproc setBodyTextControler {tvclass tvtype tmethod co
     set key [list $tvclass $tvtype $tmethod]
     if {![catch {set viewContent($key)} view]} {
         set tabid $methodEditTabIds($view)
-        $win select $tabid
+        set currentTabid [$win select]
+        if {$currentTabid eq $tabid} {
+            $view setBodyTextControler $tvclass $tvtype $tmethod $controler
+            $win tab $tabid -text [my getTabTitle $tvclass $tvtype $tmethod]
+        } else {
+            $win select $tabid
+        }
+        return
     }
     set currentEdit [my getCurrentMethodEdit]
     if {$currentEdit ne "" && ![$currentEdit hasModifications]} {

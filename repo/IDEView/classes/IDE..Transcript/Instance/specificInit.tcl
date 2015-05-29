@@ -1,11 +1,10 @@
 IDE::Transcript instproc specificInit args {
     my instvar win
 
-    IDE::EditorTranscript create [self]::@editor $win.editor -editMode xotcl
-    IDE::Toolbar create [self]::@toolbar $win.toolbar
-    my @toolbar addCommand "Open File" [list [self]::@editor fileIn] open-task 1.0
-    my @toolbar addCommand "Save File" [list [self]::@editor fileSave] save_edit 1.1
-    my @toolbar addCommand "Find/Replace" [list IDE::FindReplace bindToView [self]::@editor] find 1.2
+    set toolbar [IDE::Toolbar create [self]::@toolbar $win.toolbar]
+
+    IDE::EditorTranscript create [self]::@editor $win.editor -editMode xotcl -toolbar $toolbar
+    
     global tcl_patchLevel
     if {[my isTranscript]} {
         wm protocol [winfo toplevel $win] WM_DELETE_WINDOW [list IDE::System exitIDEGUI]

@@ -5,11 +5,9 @@ IDE::TPersistenceNew instproc testComponentWithNamespace {} {
     set className ${testns}::$className
     set className2 ${testns}::$className2
 
-    set compObject [IDE::Component getCompObjectForName $compName XOTcl $testns]
+    set compObject [IDE::Component createCompObjectForName $compName XOTcl $testns]
     set introProxy [$compObject getIntroProxy]
-
-    my assert {[$compObject getNamespace] eq $testns}
-
+    
     Class $className
     Class $className2
     $className instproc m1 {} { puts test }
@@ -18,30 +16,9 @@ IDE::TPersistenceNew instproc testComponentWithNamespace {} {
     $introProxy moveToComponent $className2 $compName
 
     set script [$compObject asScript]
-    my assert {[string find "namespace eval" $script]>=0}
-
-    return
+    my assert {[string first "namespace eval" $script]>=0}
 
     IDE::ComponentPersistence importComponent $compName
-
-    set desc [$introProxy getDescriptionForObject $className]
-    set bodyDesc [$desc getDefMethod]
-    set m1 [$bodyDesc getIdValue]
-
-    $className parameter par1
-    set m2 [$bodyDesc getIdValue]
-    my assert {$m1 != $m2}
-
-    set oldSuperClasss [$className info superclass]
-    $className superclass $className2
-
-    set m3 [$bodyDesc getIdValue]
-    my assert {$m2 != $m3}
-
-    my assert {[llength [$desc getVersionsForName [$bodyDesc getName]]]==3}
-
-    $desc loadVersionId $m2
-    my assert {[::$className info superclass] eq $oldSuperClasss}
 
     $compObject unload
 
@@ -49,6 +26,10 @@ IDE::TPersistenceNew instproc testComponentWithNamespace {} {
     my assert {[llength $versions]==1}
     IDE::ComponentPersistence loadVersionId [lindex $versions 0 0]
 
-    my assert {[$className info superclass] eq $oldSuperClasss}
-
+    set compObject [IDE::Component getCompObjectForNameIfExist $compName]
+    my assert {$compObject ne ""}
+    my assert {[$compObject getNamespace] eq $testns}
+    
+    my endTest
+    
 }

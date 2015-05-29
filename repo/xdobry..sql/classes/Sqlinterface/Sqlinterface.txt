@@ -1,22 +1,29 @@
-XOSql base component
+Abstract interface (abstract wrapper interface)
+to sql commands handle such function as
 
-currently supported base interfaces: mysqltcl, postgres, odbctcl and dbitotcl.
+1. sql queries
+2. sql execute
+3. connecting database
+4. query metainformation as tables names
+5. inserting row (handle primary key)
 
-Base Usage Example
-1) Connecting mysql
-set obj [Sqlinterface loadInterface mysqltcl]
-$obj connect {user root dbank mydb}
-puts [$obj queryList {select * from mytab}]
+The interface use so called query objects that are normal xotcl objects.
 
-2) Connection per tk dialog
-set obj [IDEDBConnectDialog setConnectionOn]
+Following methods are public API
+-getconnectionargs
+-connect
+-diconnect
+-isConnected
+-hasfunction
+-hasDatabase
+-escape
+-errorMessage
 
-See documentation of all methods and classes to get all informations
+-execute
+-returnAffectedRows
+-insertRow
+-query
+-queryList
 
-hompage: http://www.xdobry.de/xosql
+All interface errors can be read from parameter errorMessage
 
-XOSql is GPL Software 
-and comes with ABSOLUTELY NO WARRANTY 
-See the GNU General Public License for more details.
-
-See file LICENSE for more details 

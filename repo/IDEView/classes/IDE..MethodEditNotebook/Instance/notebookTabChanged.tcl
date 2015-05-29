@@ -4,6 +4,7 @@ IDE::MethodEditNotebook instproc notebookTabChanged {} {
         set content [my getContentForView $currentView]
         if {$content ne ""} {
             [my info parent] @codecontroller showNavigation $content
+            my setButtonState saveButton [$currentView hasModifications]
         }
     }
 }

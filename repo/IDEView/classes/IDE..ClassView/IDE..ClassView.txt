@@ -1,8 +1,6 @@
-There are the basis browser for XOTclIDE
+Warning 
 
-   1. Component Browser
-   1. Method Browser
-   1. Object Browser
-   1. Configuration Browser
-
-and their subelements
+vclass varible hold an actual displayed object
+it can by an real XOTcl Class or
+IDE::ProcsGroup
+a wrapper for structure tcl procs in groups

@@ -1,15 +1,18 @@
-This component provide classes for parsing und syntax check of
-xotcl/tcl source code.
+This class can parse tcl code from stream parameter
+that consists ReadStringStream object or compatible and produce parse tree.
 
-The base Classes are PrsContext and TclParser
-For Parse a xotcl method use
- set context [PrsContext new]
- $context parseAndCheck $wholeMethodBody
- if {[$context hasErrors]} {
-    puts [$context errors]
- }
+The parsing can be startet this prs-structure category commands.
+getList try to parse string as list element.
+parseScriptTo parse stream as command contents to and build parse tree.
+substituteTo parse stream as quoted string for command and variable substitution.
 
-The Parser (TclParer) build a parse tree form tcl base element
-PrsElement (Root)
+The parser is used normaly from PrsContext.
 
-The Checking funktionality is programed in Class PrsContext
+Parser has a special handling of parser errors.
+You should use the paraser in this way
+set ret [$parser catchParseErrors {$parser parseScriptTo $parser}]
+if {$ret} {
+   puts "parsing was ok"
+} else {
+   puts "parsing has errors"
+}

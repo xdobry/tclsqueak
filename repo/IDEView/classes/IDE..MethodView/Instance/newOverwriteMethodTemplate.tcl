@@ -26,6 +26,6 @@ IDE::MethodView instproc newOverwriteMethodTemplate {} {
     }
     if {$procName eq ""} return
     set template [$introProxy getMethodTemplate $vclass $procName Instance $args]
-    [my info parent]::methodedit setTextControler $template [self]
+    [my info parent]::@codecontroller setCommentSourceFor "" $template $vclass [$introProxy getSpecialMethodType Instance] $procName
     my prepareNewMethodState
 }

@@ -1,6 +1,10 @@
 IDE::CodeSearch proc searchComponent searchDict {
     set list [list]
-    set cobj [IDE::Component getCompObjectForNameIfExist [dict get $searchDict context]]
+    set compName [dict get $searchDict context]
+    if {$compName eq "xotcl::package"} {
+        return $list
+    }
+    set cobj [IDE::Component getCompObjectForNameIfExist $compName]
     if {$cobj eq ""} {
         return $list
     }

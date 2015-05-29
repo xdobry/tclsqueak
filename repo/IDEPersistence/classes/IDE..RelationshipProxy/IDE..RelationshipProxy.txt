@@ -1,24 +1,27 @@
-Base Persistence Interface for Version Control System
+This class must be used to set and read relationship.
+In this implementation the client must use the proxy object
 
-This is two level interface.
-In this component are mixinsaddapter for class and component.
-The wrapers are called Descriptions and they hold such information as
-comments and versionsinfo.
-The XOTcl method becomes also an wrapper IDE::MethodDescription
+It is build as aggregated sub object in source object
+the name is equal to relationship name
 
- IDE::Component -> IDE::ComponentPersisence
- Class -> IDE::ClassDescription
- method -> IDE::MethodDesciption
+# n:m relationship named "sister" s1 to s2
 
-The Class description are places as subobject description in Class Object
+#setting
 
- Class A
- description is in
- A::description
+s1::sister setList s2
 
-The methods description are also subobject of class description.
-The mixins overwrite the class methods proc, insproc, parameter, class
-to delegate the stucture change to version control system.
+#updating in db
 
-The sql interface is based on xdobry::sql (currently mysql, postgres, odbc)
+s1::sister updateList
+
+#reading
+
+s1::sister getList
+
+In this implementain the related object are first build by query. (also getList) in case of loading source object from DB.
+
+intern:
+
+The objects are hold in the variable "objectsList"
+
 

@@ -1,6 +1,7 @@
 IDE::CompBrowser instproc refreshHItem {hitem {notify 1}} {
     lassign $hitem vclass vctype method
-    if {$vctype eq "Procs"} {
+    set atype [IDE::XOIntroProxy getAbstractMethodType $vctype]
+    if {$atype eq "Procs"} {
         if {[Object isobject $vclass]} {
             set cobj [$vclass getComponent]
             [self]::@compview refreshNavigation [$cobj getName]
@@ -9,7 +10,11 @@ IDE::CompBrowser instproc refreshHItem {hitem {notify 1}} {
             [self]::methodview setSelectedItem $method $notify
         }
     } elseif {$vctype eq "Component"} {
-        [self]::@compview refreshNavigation $vclass
+        if {$notify} {
+            [self]::@compview setSelectedItem $vclass $notify
+        } else {
+            [self]::@compview refreshNavigation $vclass
+        }
     } elseif {[string range $vctype end-9 end] eq "ProcsGroup"} {
         set component $method
         set cobj [IDE::Component getCompObjectForNameIfExist $component]
@@ -18,7 +23,7 @@ IDE::CompBrowser instproc refreshHItem {hitem {notify 1}} {
             [self]::classview @stateButton changeStateTo Procs
             [self]::classview refreshNavigation [$vclass getName]
         }
-    } elseif {[string range $vctype end-2 end] eq "Def"} {
+    } elseif {$atype eq "Def"} {
         set component $method
         set cobj [IDE::Component getCompObjectForNameIfExist $component]
         if {$cobj ne ""} {
@@ -29,7 +34,10 @@ IDE::CompBrowser instproc refreshHItem {hitem {notify 1}} {
             } else {
                 [self]::classview @stateButton changeStateTo Objects
             }
-            [self]::classview refreshNavigation $vclass
+            if {$notify} {
+                [self]::classview setSelectedItem $vclass $notify                           } else {
+                [self]::classview refreshNavigation $vclass
+            }
         }
     } else  {
         set introProxy [IDE::XOIntroProxy getIntroProxyForMethodType $vctype]

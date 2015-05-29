@@ -1,5 +1,5 @@
 IDE::Debugger instproc fillMenuStruct aMenuStruct {
     $aMenuStruct enablementHandler [self]
 
-    $aMenuStruct addCommand {Inspect Object At Level} [list [self] inspectCalledObject]
+    $aMenuStruct addCommand2 {Inspect Object At Level} [list [self] inspectCalledObject] isFrameOnObject
 }

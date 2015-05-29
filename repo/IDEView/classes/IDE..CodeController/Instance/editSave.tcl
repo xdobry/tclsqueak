@@ -4,9 +4,11 @@ IDE::CodeController instproc editSave {skript {contentDesc {}}} {
         return
     }
     lassign $contentDesc vclass vtype vmethod
+    if {$vtype eq "Component"} {
+        return [my handleComponent $skript $contentDesc]
+    }
     if {[string range $vtype end-2 end] eq "Def"} {
-        my handleDefScript $skript $contentDesc
-        return
+        return [my handleDefScript $skript $contentDesc]
     }
     # regsub -all -line { +$} $skript {} skript
     if {[lindex $skript 0] eq "proc"} {

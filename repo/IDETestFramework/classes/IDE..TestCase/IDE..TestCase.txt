@@ -1,13 +1,14 @@
-This the framework for XP Tests
+Derive all your test from this Class
+Base functionality
 
-One Test is one Klass derived from IDE::TestCase
+Testing Interface
+runAllTests
 
-computing test:
-1. overwrite the method "startTest" to initialize test context
-2. all test method have pattern "test*". They will be invoked in
-   alphabeticall order.
-3. One test fail are registered if an error is droped.
-   The testing will be not stoped be errors.
-   You can also use method "stopTesting" for explizit stop the testing
-4. See Component IDETest for example tests.
-5. Use IDE::TestBrowser to run and see test results.
+Creating Test
+overwrite methods:
+startTest
+endTest
+to make you test kontext
+
+All your test method must begin with test*
+and they are running in alphabetical order

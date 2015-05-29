@@ -1,1 +1,1 @@
-XOTcl API for mysqltcl based on mysqltcl (www.xdobry.de/mysqltcl)
+Interfaceclass for mysqltcl base interface

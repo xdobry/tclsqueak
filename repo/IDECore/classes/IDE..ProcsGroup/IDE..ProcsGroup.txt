@@ -1,4 +1,12 @@
-Core no GUI Elements.
+This Class wraps the interface to normal tcl procedures.
+To enable it use / reuse old tcl code in xotclIDE programming
 
-IDE::Component structure XOTcl Classes and Objects in sets.
-It is a container for XOTcl Classes and Objects
+defbody is used for namespace init method
+
+name is the name of namespace or procs group (no namespace)
+
+namespace eval myNameSpace {
+   namespace export ... ... ...
+    
+   varible myVariable 
+}

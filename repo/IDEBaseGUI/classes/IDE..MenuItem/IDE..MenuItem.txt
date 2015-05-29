@@ -1,3 +1,8 @@
-(comment for IDEBaseGUI)
+This is the abstract root class for buildung menu stucture.
 
-This component contains the base GUI Elements needed in IDEXotclIDE
+enableList is a list of method that determinate the enablement of item.
+(see checkEnable method)
+enableList in IDE::MetnuStruct has special meaning.
+It effect on all subitems.
+If the first ellement is noglobal. It means the parent menu struct
+enablement do not effect

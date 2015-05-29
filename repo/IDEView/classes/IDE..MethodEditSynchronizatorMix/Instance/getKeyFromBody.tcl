@@ -1,5 +1,12 @@
 IDE::MethodEditSynchronizatorMix instproc getKeyFromBody script {
-   my instvar vctype
+   my instvar vctype vclass
+   if {$vctype eq "Component"} {
+       return [list $vclass $vctype {}]
+   }
    set introProxy [IDE::XOIntroProxy getIntroProxyForMethodType $vctype]
-   $introProxy getItemFromScript $script
+   if {$introProxy ne ""} {
+       $introProxy getItemFromScript $script
+   } else {
+       return ""
+   }
 }

@@ -1,3 +1,1 @@
-(comment for IDEBaseGUI)
-
-This component contains the base GUI Elements needed in IDEXotclIDE
+Class methods are fasade to tk_message

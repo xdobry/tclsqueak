@@ -1,0 +1,3 @@
+IDE::EclipseIcons proc createSub_co {} {
+    image create photo sub_co -data {R0lGODlhEAAQAMQAAGt2jG92hFx6qmB5o2Z4l01aXSaASDmHUkyTY0OSW1WbalWba1aYalueb1OXZ16gcVGVWlSWW2KkY3GucHSwcWupZ2ypaHqoa6HGhv7977qXJsSlQ6+IIK6IIK+IIf///yH5BAEAAB8ALAAAAAAQABAAAAVO4CeOZEk2yWOaC4VNykoalWQZQS4j0QUhooDs4zgwRsJhKSkTkJirwVO0qZYIz5wmoykBph9Ph7MEy6DJ6gaZ033a2+6oECiYxGSSXRkCADs=}
+}

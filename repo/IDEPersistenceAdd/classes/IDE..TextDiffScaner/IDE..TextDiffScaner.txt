@@ -1,4 +1,2 @@
-GUI additionals for Version Control System as
-
-   1. ChangesBrowser
-   1. Repository Viewer (To View stuff directly from Database)
+This class can compare to text pieces and recognize changes.
+It do the same job as diff unix command

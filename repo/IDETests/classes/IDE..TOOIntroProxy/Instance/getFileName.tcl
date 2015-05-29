@@ -1,3 +1,4 @@
 IDE::TOOIntroProxy instproc getFileName {} {
-    return ootestcase.xotcl
+    my instvar tcompname
+    return $tcompname.xotcl
 }

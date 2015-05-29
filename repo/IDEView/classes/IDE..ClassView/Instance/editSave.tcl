@@ -1,4 +1,4 @@
-IDE::ClassView instproc editSave skript {
+IDE::ClassView instproc editSave {skript {contentDesc {}}} {
     my instvar vcomponent vtype vclass treeView cobj
     if {![my exists vcomponent]} {
         IDE::Dialog message {Select the component first}

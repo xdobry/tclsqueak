@@ -1,4 +1,9 @@
-Core no GUI Elements.
+Helper class for tracking new classes
+by package loading.
 
-IDE::Component structure XOTcl Classes and Objects in sets.
-It is a container for XOTcl Classes and Objects
+The tracker can recognize the new created classes and tcl-procs.
+No all informations are computed yet. The tracker do not know
+witch instproc and procs are defined in each package (this information are
+sended to componet and ignored in it).
+So all methods belong to package where the object were defined.
+

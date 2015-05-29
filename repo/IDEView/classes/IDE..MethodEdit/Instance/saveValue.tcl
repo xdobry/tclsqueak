@@ -5,7 +5,7 @@ IDE::MethodEdit instproc saveValue value {
     if {$vtype eq "Source"} {
        my saveSource $value
     } elseif {$vtype eq "Comment"} {
-       $controler editSaveComment $value
+       $controler editSaveComment $value [my getContentDescr]
        [my getTextWindow] edit modified 0
     } else {
        error {unknown view type}

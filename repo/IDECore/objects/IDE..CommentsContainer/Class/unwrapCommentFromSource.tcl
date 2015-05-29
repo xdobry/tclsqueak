@@ -10,5 +10,5 @@ IDE::CommentsContainer proc unwrapCommentFromSource source {
             append comment [string range $l $start end] \n
         }
     }
-    return $comment
+    string range $comment 0 end-1
 }

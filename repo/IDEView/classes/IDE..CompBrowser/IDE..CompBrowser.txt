@@ -1,8 +1,5 @@
-There are the basis browser for XOTclIDE
+Build the main work tool for an XOTclIDE programmer
 
-   1. Component Browser
-   1. Method Browser
-   1. Object Browser
-   1. Configuration Browser
-
-and their subelements
+If there is Version Control available it
+create its commonent from another class with
+pre IDE::DB* see specificInit method

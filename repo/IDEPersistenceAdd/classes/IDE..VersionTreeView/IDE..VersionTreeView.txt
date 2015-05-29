@@ -1,4 +1,1 @@
-GUI additionals for Version Control System as
-
-   1. ChangesBrowser
-   1. Repository Viewer (To View stuff directly from Database)
+This should show the heritage of versions and edititions.

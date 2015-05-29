@@ -1,24 +1,27 @@
-Base Persistence Interface for Version Control System
+This Object describe how the object inst variable are mapped to
+sql database
 
-This is two level interface.
-In this component are mixinsaddapter for class and component.
-The wrapers are called Descriptions and they hold such information as
-comments and versionsinfo.
-The XOTcl method becomes also an wrapper IDE::MethodDescription
+you can specify
+1. table name
+2. mapped instances
+3. standard getter and setter methods
 
- IDE::Component -> IDE::ComponentPersisence
- Class -> IDE::ClassDescription
- method -> IDE::MethodDesciption
+To construct some persistence class you must
+1. derivate it from IDE::Persistence
+2. build a descriptor methode. The methode is build a descriptor object
+   of class IDE::DBMapping that is uselly placed as class::descriptor
+3. Build a persisten creation methode nammed initFromDB $columns $values $id
+   this method shoul build a instance by reading the object from DB
 
-The Class description are places as subobject description in Class Object
+Create a Persistence Instance.
+1. Create a Instance and invoke method makePersistent
+set inst [MyPersistent new]
+$inst makePersistent
 
- Class A
- description is in
- A::description
+To Read a Persistent Instance from DB
+class::desciptor createInstanceFromDB $class $id
+MyPersistent::descriptor createInstanceFromDB MyPersistent 12
 
-The methods description are also subobject of class description.
-The mixins overwrite the class methods proc, insproc, parameter, class
-to delegate the stucture change to version control system.
-
-The sql interface is based on xdobry::sql (currently mysql, postgres, odbc)
+Or if you want to load a set of instances
+class::descriotor createInstaceFromWhere $class $where_expression
 

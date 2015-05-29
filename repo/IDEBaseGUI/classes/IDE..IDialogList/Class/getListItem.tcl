@@ -3,6 +3,6 @@ IDE::IDialogList proc getListItem {message list {default {}}} {
     if {[$listdialog prompt] ne "ok"} {
         return {}
     }
-    set result [$listdialog selectedItem]
+    set result [$listdialog set selectedItem]
     return $result
 }

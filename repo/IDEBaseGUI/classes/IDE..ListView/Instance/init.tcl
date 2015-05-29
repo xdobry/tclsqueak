@@ -8,11 +8,11 @@ IDE::ListView instproc init window {
     } else {
         set selmode browse
     }
-    if {[info exists label]} {
+    if {[info exists label] && $label ne ""} {
         label $win.label -text $label
         pack $win.label -anchor w
     }
-    scrollbar $win.scroll -command "$win.listbox yview" -takefocus 0
+    ttk::scrollbar $win.scroll -command "$win.listbox yview" -takefocus 0
     set bgcolor [IBGParameterAdapter getParameter listcolor]
     if  {$bgcolor ne ""} {
         listbox $win.listbox -yscrollcommand "$win.scroll set"  -exportselection no -selectmode $selmode -height $height -font listboxfont -background $bgcolor

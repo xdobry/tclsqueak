@@ -1,8 +1,4 @@
-There are the basis browser for XOTclIDE
+Method Prowser implements View for all tcl/XOTcl methods
+It is used as result view for several method based search function.
 
-   1. Component Browser
-   1. Method Browser
-   1. Object Browser
-   1. Configuration Browser
-
-and their subelements
+The search functions are implemented as class methods

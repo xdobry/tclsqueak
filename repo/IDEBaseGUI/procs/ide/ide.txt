@@ -1,3 +1,2 @@
-(comment for IDEBaseGUI)
-
-This component contains the base GUI Elements needed in IDEXotclIDE
+The are some extented list functions based
+on Smalltalk container protocol

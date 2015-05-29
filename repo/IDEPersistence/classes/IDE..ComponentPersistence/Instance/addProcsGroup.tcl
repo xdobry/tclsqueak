@@ -4,5 +4,6 @@ IDE::ComponentPersistence instproc addProcsGroup obj {
     if {![$obj isPersistent]} {
         IDE::ProcsGroupPer installObject $obj
     }
+    my halt
     my installObject $obj
 }

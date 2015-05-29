@@ -10,5 +10,8 @@ IDE::CBCodeController instproc handleMethod {skript {contentDesc {}}} {
     if {$class ne $eclass || $type ne $etype || $method ne $emethod} {
         my showNavigation $editItem
         [my info parent] methodedit updateTitle $contentDesc $editItem
+    } else {
+        [my info parent] methodedit notifyNotEdited $contentDesc
     }
+    return $editItem
 }

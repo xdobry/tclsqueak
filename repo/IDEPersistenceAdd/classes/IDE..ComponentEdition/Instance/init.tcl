@@ -1,7 +1,7 @@
 IDE::ComponentEdition instproc init compid {
-    my instvar componentid objectArr name
+    my instvar componentid objectArr name ootype
     set componentid $compid
-    set name [lindex [[IDE::DBPersistence getPersistenceManager] selectExact Component name componentid $compid] 0]
+    lassign [[IDE::DBPersistence getPersistenceManager] selectExact Component {name ootype} componentid $compid] name ootype
 
     set rows [[IDE::DBPersistence getPersistenceManager] selectSubobjectsBase IDE::ComponentPersistence::descriptor $componentid objectid {name type}]
     foreach row $rows {

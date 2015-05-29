@@ -1,3 +1,4 @@
+IDE::MasterViewMix
 IDE::AbstractClassView
 IDE::ArrayBrowser
 IDE::CodeController
@@ -24,6 +25,7 @@ IDE::VarsView
 IDE::GlobalVarsView
 IDE::HeritageBrowser
 IDE::HeritageClassView
+IDE::HierarchyPanel
 IDE::ImportMethodView
 IDE::InterpBrowser
 IDE::InterpView
@@ -54,6 +56,7 @@ IDE::SubObjectsView
 IDE::SyntaxCheckMethodList
 IDE::SyntaxChecker
 IDE::SyntaxErrorView
+IDE::TabPanel
 IDE::TclGroupDefinition
 IDE::Transcript
 IDE::EclipseIcons

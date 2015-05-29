@@ -1,8 +1,9 @@
 IDE::ObjectEdition instproc initMethodsArrays {} {
-    my instvar isActual cashInstance cashClass objectid cashInstanceBody cashClassBody
+    my instvar isActual cashInstance cashClass cashDef objectid cashInstanceBody cashClassBody cashDefBody
     if {[info exists isActual]} return
     set cashInstance {}
     set cashClass {}
+    set cashDef {}
     set rows [[IDE::DBPersistence getPersistenceManager] selectSubobjectsBase IDE::ObjectDescription::descriptor $objectid methodid {name type body}]
     foreach row $rows {
         set methodid [lindex $row 0]

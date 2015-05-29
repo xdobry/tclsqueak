@@ -9,7 +9,7 @@ IDE::ChangesBrowser instproc getChangesScriptForObjects {compName class obj1 obj
            set type Class
        }
    }
-   foreach vtype {Class Instance} {
+   foreach vtype {Def Class Instance} {
        $obj1 set${vtype}MethodsArray methArr1
        $obj2 set${vtype}MethodsArray methArr2
        set diffMethods [my getDiffFromArrays methArr1 methArr2]
@@ -28,17 +28,30 @@ IDE::ChangesBrowser instproc getChangesScriptForObjects {compName class obj1 obj
                    }
                }
            } else {
-               if {![info exists methArr1($method)]} {
+               if {![info exists methArr2($method)]} {
                    append ret "# add method\n"
                } else {
-                   append ret "# modify method\n"
+                   append ret "# modify method $vtype\n"
                }
                if {$type eq "ProcsGroup"} {
                    append ret "set comp \[IDE::Component getCompObjectForName $compName\]\n"
                    append ret "set pg \[\$comp getProcsGroupWithName $class\]\n"
                    append ret "\$pg handleScript [list [$obj1 get${vtype}MethodBody $method]]\n"
                } else {
-                   append ret [$obj1 get${vtype}MethodBody $method] \n
+                   if {$vtype eq "Def"} {
+                       append ret "# Class redifinition \n"
+                       if {[info exists methArr2($method)]} {
+                           append ret "# old: [$obj2 get${vtype}MethodBody $method] \n"
+                       }
+                       append ret "# new: [$obj1 get${vtype}MethodBody $method] \n"
+                       append ret "set introProxy \[\[IDE::Component getCompObjectForName $compName\] getIntroProxy]\n"
+                       append ret "set desc \[\$introProxy getDescriptionForObject $class\]\n"
+                       append ret "if \{\$desc ne \"\"\} \{\n"
+                       append ret "   \$desc setDefBody [list [$obj1 get${vtype}MethodBody $method]]\n"
+                       append ret "\} \n"
+                   } else {
+                       append ret [$obj1 get${vtype}MethodBody $method] \n
+                   }
                }
            }
        }

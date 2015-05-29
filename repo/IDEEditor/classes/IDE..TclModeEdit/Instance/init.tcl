@@ -7,6 +7,7 @@ IDE::TclModeEdit instproc init args {
     my set hasErrors 0
     my set isBraceHL 0
     my set isSelectionSilbing 0
+    my set noModifyEvents 1
 
     set twin [my getTextWindow]
     my instvar win errorLineWin

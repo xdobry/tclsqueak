@@ -1,3 +1,6 @@
-(comment for IDEBaseGUI)
+A Class that can build menues to toplevel.
+Await window in win instance
+and menu window in [$win toplevel].mb
+The menus will be specified by tcl list.
 
-This component contains the base GUI Elements needed in IDEXotclIDE
+you can specify parametr atHead to add menue at first position

@@ -13,4 +13,8 @@ IDE::TPersistenceNew instproc endTest {} {
     if {[Object isobject $className2]} {
         $className2 destroy
     }
+    if {[namespace exists ::testns]} {
+        namespace delete ::testns
+    }
+    #file delete -force [my getFileName]
 }

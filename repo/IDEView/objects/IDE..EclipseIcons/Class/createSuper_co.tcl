@@ -1,0 +1,3 @@
+IDE::EclipseIcons proc createSuper_co {} {
+    image create photo super_co -data {R0lGODlhEAAQAMQAAGt2jG92hFx6qmB5o2Z4l01aXSaASDmHUkyTY0OSW1WbalWba1aYalueb1OXZ16gcVGVWlSWW2KkY3GucHSwcWupZ2ypaHqoa6HGhv7977qXJsSlQ6+IIK6IIK+IIf///yH5BAEAAB8ALAAAAAAQABAAAAVN4CeOZGmexYkG6bi9ZSDLo5ZpMxmUXseJu1FQNfwASq8KkEQo2XC00YDnW44EKmtWN2okHtnggoKZKIgyQ0ViMWw/iMgFgnh/HAeGKAQAOw==}
+}

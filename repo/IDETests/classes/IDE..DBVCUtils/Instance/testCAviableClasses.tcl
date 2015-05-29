@@ -1,6 +1,6 @@
 IDE::DBVCUtils instproc testCAviableClasses {} {
    my instvar compBrowser
-   ${compBrowser}::appview setSelectedItem IDECore
+   $compBrowser refreshHItem {IDECore Component {}}
    my invokeMenu Class {Version Control} Available
    set browser [lindex [IDE::VersionBrowser info instances] 0]
    my assert {$browser ne ""}

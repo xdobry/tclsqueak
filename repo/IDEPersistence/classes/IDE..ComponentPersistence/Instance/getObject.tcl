@@ -1,7 +1,8 @@
 IDE::ComponentPersistence instproc getObject name {
     # !!! Check if the name is class/object in component
-    if {[Object isobject $name]} {
-        return [$name getDescription]
+    set introProxy [my getIntroProxy]
+    if {[$introProxy isObject $name]} {
+        return [$introProxy getDescriptionForObject $name]
     } else {
         return [my getProcsGroupWithName $name]
     }

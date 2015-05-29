@@ -5,7 +5,7 @@ IDE::CompFileExporter instproc exportObject {cobj directory class} {
     file mkdir $cdir
     set fileName [my getFileName [$desc getName]]
     my writeFileData $cdir $fileName.tcl [$desc getDefBody]
-    my writeFileDataIfContent $cdir $fileName.txt [$cobj getComment]
+    my writeFileDataIfContent $cdir $fileName.txt [$desc getComment]
     my writeFileDic $cdir $fileName.meta [dict create version [$cobj set versioninfo]]
     foreach method [$desc getMethodDescriptions] {
         set type [$method getType]

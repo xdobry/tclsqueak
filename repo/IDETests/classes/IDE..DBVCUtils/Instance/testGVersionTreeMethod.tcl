@@ -1,9 +1,6 @@
 IDE::DBVCUtils instproc testGVersionTreeMethod {} {
     my instvar compBrowser
-    ${compBrowser}::appview setSelectedItem IDECore
-    ${compBrowser}::classview setSelectedItem IDE::Component
-    ${compBrowser}::methodcatview setSelectedItem _all_categories
-    ${compBrowser}::methodview setSelectedItem addClass
+    $compBrowser refreshHItem {IDE::Component Instance addClass}
     my invokeMenu Component {Version Control} {Version Tree}
     my closeWindowClass IDE::VersionTreeView
 }

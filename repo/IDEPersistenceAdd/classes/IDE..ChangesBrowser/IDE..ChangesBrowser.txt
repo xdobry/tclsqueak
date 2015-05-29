@@ -1,4 +1,4 @@
-GUI additionals for Version Control System as
+This browser can show changes among components, classes and methods
+It use also IDE::TextDiffScaner to show changes of two textes.
 
-   1. ChangesBrowser
-   1. Repository Viewer (To View stuff directly from Database)
+The mode of this browser is depended of class invoke method

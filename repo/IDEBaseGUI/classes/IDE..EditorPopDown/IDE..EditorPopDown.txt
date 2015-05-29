@@ -1,3 +1,2 @@
-(comment for IDEBaseGUI)
-
-This component contains the base GUI Elements needed in IDEXotclIDE
+This class can be used with all classes derived from IDE::Editor
+it provide popdown menues that can be used for code completion future

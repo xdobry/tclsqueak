@@ -6,7 +6,7 @@ IDE::ClassView instproc refreshView {} {
         if {[my isProcView]} {
             $codeController setBodyText $vclass ProcsGroup $vcomponent
         } else {
-            $codeController setBodyText $vclass [$introProxy getMethodTypePrefix]Def $vcomponent
+            $codeController setBodyText $vclass [$introProxy getSpecialMethodType Def] $vcomponent
         }
         return
     }

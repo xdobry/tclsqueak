@@ -1,8 +1,11 @@
-XOTcl Text Editing
+Tcl Mode
 
-Find and Replace Object
-
-In the future place for such things as
-    1. syntax hightlighting
-    1. indenting
-    1. delegation to syntax checker in IDETclParser component
+supports function
+1. code completion
+ - self XOTcl call
+ - tcl procedures/commands
+ - tcl subcommands
+ - variables
+2. Selecting parenthesis areas by double-click
+3. interface to syntax hightlighting
+4. Statix Syntax Checking

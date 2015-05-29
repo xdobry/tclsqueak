@@ -7,13 +7,13 @@ IDE::CodeSearch proc searchObject searchDict {
     set list [list]
     set prefix [$introProxy getMethodTypePrefix]
     foreach proc [$introProxy getClassMethods $class] {
-        if {[my searchText [$introProxy getBodyClassMethod $class $proc] $searchDict]} {
+        if {[my searchText [$introProxy getBodyPartForTextSearch [$introProxy getBodyClassMethod $class $proc]] $searchDict]} {
             lappend list "$class ${prefix}class>$proc"
         }
     }
     if {[$introProxy isObjectClass $class]} {
         foreach iproc [$introProxy getInstanceMethods $class] {
-            if {[my searchText [$introProxy getBodyInstanceMethod $class $iproc] $searchDict]} {
+            if {[my searchText [$introProxy getBodyPartForTextSearch [$introProxy getBodyInstanceMethod $class $iproc]] $searchDict]} {
                 lappend list "$class ${prefix}>$iproc"
             }
         }

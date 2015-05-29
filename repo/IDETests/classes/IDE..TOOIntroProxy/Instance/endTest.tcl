@@ -4,11 +4,11 @@ IDE::TOOIntroProxy instproc endTest {} {
     if {$cobj ne ""} {
         $cobj unload
     }
-    if {[info object isa object $tclass] + 2} {
-        [ $tclass destroy
+    if {[info object isa object $tclass]} {
+        $tclass destroy
     }
     if {[info object isa object $tobject]} {
         $tobject destroy
     }
-    #file delete -force [my getFileName]
+    file delete -force [my getFileName]
 }

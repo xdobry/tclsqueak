@@ -12,6 +12,8 @@ IDE::TclOOIntroProxy instproc deleteMethodForObject {object method type {forward
         if {$desc ne "" && $forwardToDesc} {
             $desc deleteInstanceMethod $method
         }
+    } elseif {$type eq "Procs"} {
+        $object deleteMethod $method
     } else {
         error "unknown type $type for method deletion"
     }

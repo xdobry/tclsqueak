@@ -5,7 +5,6 @@ IDE::TDevelopUtils instproc testBSearchProc args {
    IDE::MethodBrowser searchImplementorsComponent testFindMethodUUHA IDETests
    IDE::MethodBrowser searchImplementorsClass testFindMethodUUHA IDE::TDevelopUtils $introProxy
    IDE::MethodBrowser searchTextAll RybnikNowiny
-   IDE::MethodBrowser searchTextComponent RybnikNowiny IDETests
    IDE::MethodBrowser searchTextClass RybnikNowiny IDE::TDevelopUtils RybnikNowiny $introProxy
 
    my assert {[IDE::MethodSelector getMethodsForPattern testBSearchProc] ne ""}

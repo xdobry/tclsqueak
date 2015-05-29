@@ -1,3 +1,4 @@
 IDE::CBCodeController instproc setBodyTextControler args {
-    [my info parent] methodedit setBodyTextControler {*}$args
+    [my getMethodedit] setBodyTextControler {*}$args
+    my setStateSaveButton 0
 }

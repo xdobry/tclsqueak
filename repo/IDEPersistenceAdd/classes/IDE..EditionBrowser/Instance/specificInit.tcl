@@ -9,13 +9,13 @@ IDE::EditionBrowser instproc specificInit {} {
     frame $win.mframe
 
     IDE::Editor create [self]::methodedit $win.methodedit
-    IDE::NListView create [self]::methods $win.methods -notify [self] -notifyProc selectMethod
-    IDE::StateButton create [self]::cbutton $win.cbutton  -states {Instance Class} -command [list [self] changeViewType]
+    IDE::NListView create [self]::methods $win.methods -notify [self] -notifyProc selectMethod -label {Methods}
+    IDE::TabButtons create [self]::cbutton $win.cbutton  -states {Instance Class} -command [list [self] changeViewType]
     pack $win.methods -in $win.mframe -expand yes -fill both
     pack $win.cbutton -in $win.mframe -anchor w
 
     if {$mode eq "component"} {
-        IDE::NListView create [self]::classes $win.classes -notify [self] -notifyProc selectClass
+        IDE::NListView create [self]::classes $win.classes -notify [self] -notifyProc selectClass -label {Classes/Objects}
         $win.upperarea add $win.classes $win.mframe
         set upperwin $win.upperarea
     } else {

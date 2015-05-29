@@ -1,4 +1,3 @@
-Core no GUI Elements.
-
-IDE::Component structure XOTcl Classes and Objects in sets.
-It is a container for XOTcl Classes and Objects
+Using for handle (structure) normal tcl procs in component context of XOTclIDE.
+This instance has similar a interface as XOTcl objects
+(comments, getting body).

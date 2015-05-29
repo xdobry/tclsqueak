@@ -13,9 +13,19 @@ IDE::EclipseIcons proc createImageMethods {} {
         backward_nav
         new_wiz
         last_edit_pos
-        builder
         refresh
         open-task
+        history_list
+        sub_co
+        super_co
+        search_history
+        syntax_check
+        delete_obj
+        next_nav
+        previous
+        main_tab
+        sourceEditor
+        environment
     }
     set dir [file join ~ eclipse-icons]
     foreach name $names {

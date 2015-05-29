@@ -1,4 +1,3 @@
-Core no GUI Elements.
-
-IDE::Component structure XOTcl Classes and Objects in sets.
-It is a container for XOTcl Classes and Objects
+Designed to use as mixin.
+It has no requirements
+It add functionality for handling comments.

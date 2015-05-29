@@ -1,1 +1,1 @@
-Class create IDE::MethodEditNotebook -superclass ::IDE::GUICommands
+Class create IDE::MethodEditNotebook -superclass ::IDE::GUICommands -parameter toolbar

@@ -5,7 +5,7 @@ IDE::IDialogList instproc init {} {
     frame $win.lframe
     set selectPattern ""
     set patternIndex 0
-    ::scrollbar $win.lframe.scroll -command "$win.lframe.listbox yview" -takefocus 0
+    ttk::scrollbar $win.lframe.scroll -command "$win.lframe.listbox yview" -takefocus 0
     ::listbox $win.lframe.listbox -yscrollcommand "$win.lframe.scroll set"   -exportselection no
     ::label $win.pattern -textvariable [self]::selectPattern
     bind $win.lframe.listbox <Double-Button-1> [list [self] actionOk]

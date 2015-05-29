@@ -1,3 +1,3 @@
 IDE::CBCodeController instproc setTextControler args {
-    [my info parent] methodedit setTextControler {*}$args
+    [my getMethodedit] setTextControler {*}$args
 }

@@ -1,3 +1,6 @@
-(comment for IDEBaseGUI)
+Handle waiting for GUI events by using vwait command
+see suspendUntilSignal method
 
-This component contains the base GUI Elements needed in IDEXotclIDE
+You must invoke actionOk or actionCancel from your gui to break the internal
+loop.
+(Or use signalFree method)

@@ -1,3 +1,6 @@
-(comment for IDEBaseGUI)
+To used only whith GUI Klasses as Subklass by Multiheritage
 
-This component contains the base GUI Elements needed in IDEXotclIDE
+use parameter focusKey to speciefi Key binding to get focus to widget
+
+The main class must understand
+getFocusKey

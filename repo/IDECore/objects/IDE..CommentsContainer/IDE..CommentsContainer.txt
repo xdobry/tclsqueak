@@ -1,4 +1,7 @@
-Core no GUI Elements.
+Hanlde objects comments and is parent object for methods comments
+(class IDE::ObjectsCommentsContainer)
 
-IDE::Component structure XOTcl Classes and Objects in sets.
-It is a container for XOTcl Classes and Objects
+all @ meta are delegating to method importMeta
+
+the method "parseAndCleanMeta" try to initilize loaded Objects with
+comment after loading

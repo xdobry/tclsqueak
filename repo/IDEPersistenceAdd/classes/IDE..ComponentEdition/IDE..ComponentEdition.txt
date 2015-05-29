@@ -1,4 +1,6 @@
-GUI additionals for Version Control System as
-
-   1. ChangesBrowser
-   1. Repository Viewer (To View stuff directly from Database)
+This is a simpe functionless wrapper for db-persistence component.
+It is used to show contents of one component.
+The objects and methods bodies are build as intern array list and not
+really objects.
+It has tha same interface that IDE::Component for viewing. That means
+the viewer can use it both (polymorphismus).

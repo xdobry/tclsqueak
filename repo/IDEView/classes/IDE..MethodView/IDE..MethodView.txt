@@ -1,8 +1,0 @@
-There are the basis browser for XOTclIDE
-
-   1. Component Browser
-   1. Method Browser
-   1. Object Browser
-   1. Configuration Browser
-
-and their subelements

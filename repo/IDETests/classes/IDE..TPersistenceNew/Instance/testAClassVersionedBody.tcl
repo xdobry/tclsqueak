@@ -39,5 +39,7 @@ IDE::TPersistenceNew instproc testAClassVersionedBody {} {
      IDE::ComponentPersistence loadVersionId [lindex $versions 0 0]
 
      my assert {[::$className info superclass] eq $oldSuperClasss}
+     
+     my endTest
 
 }

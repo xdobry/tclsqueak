@@ -1,1 +1,1 @@
-Class create IDE::AbstractClassView -superclass ::IDE::HListView
+Class create IDE::AbstractClassView -superclass {::IDE::HListView ::IDE::MasterViewMix}

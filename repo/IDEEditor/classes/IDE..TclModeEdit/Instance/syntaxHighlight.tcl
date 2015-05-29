@@ -1,7 +1,12 @@
 IDE::TclModeEdit instproc syntaxHighlight {} {
-    my syntaxHighlightRemove
+    #my syntaxHighlightRemove
     switch [my set syntaxHightlight] {
-        1 { my simpleSyntaxHighlight }
-        2 { my complexSyntaxHighlight }
+        1 { 
+           my syntaxHighlightRemove
+           my simpleSyntaxHighlight
+        }
+        2 { 
+           my complexSyntaxHighlight
+        }
     }
 }

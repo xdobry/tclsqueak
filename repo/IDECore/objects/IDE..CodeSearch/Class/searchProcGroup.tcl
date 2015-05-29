@@ -17,7 +17,7 @@ IDE::CodeSearch proc searchProcGroup {procGroup searchDict} {
     } else {
         set introProxy [$procGroup getIntroProxy]
         foreach proc [$procGroup getProcsNames] {
-            if {[my searchText [$introProxy getProcBody $proc] $searchDict]} {
+            if {[my searchText [$introProxy getBodyPartForTextSearch [$introProxy getProcBody $proc]] $searchDict]} {
                 lappend list "proc $proc"
             }
         }

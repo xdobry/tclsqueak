@@ -1,15 +1,10 @@
-Contains
+The debugger is based on my halt
+procedure by invoke this IDE::Debugger startDebugging is invoked.
+This build debugger window an let user to view state of procedure call
+based on introspection of stack levels.
 
-IDE::Debugger (Stack Level Editor)
-to invoke Debugger from your code send "halt" message to every Object.
-Do not forget to enable debuging (standard is on) in system menu
-
-IDE::ErrorStack
-It parse the tcl error message an can show it es method list
-
-IDE::TrackerBrowser
-It can track the messages call to XOTcl Objects.
-To enable tracking
-1. Choose one class and invoke menu Class>Track this Class
-2. You can also track one object (use menu in object browser)
-3. Invoke Tracker Browser from system menu
+To prohibite the next invokation of program the own event loop will
+be build. See startBrowsing method. All tk events modifity action varible.
+The loop use tkwait method to register modifikation of this variable
+by resume the debugging loop will be exited an the normall program flow
+will be continued

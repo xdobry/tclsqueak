@@ -1,13 +1,11 @@
 IDE::CompBrowser instproc showMethodList {} {
     my instvar win
 
-    set searchResultObj [self]::@searchresult
+    set toolPanel [my showToolPanel]
     #ttc vartype methodListView xotcl IDE::MethodListView
+    set searchResultObj [self]::@searchresult
     if {![Object isobject $searchResultObj]} {
-        IDE::SearchResultPanel create [self]::@searchresult $win.searchresult
+        IDE::SearchResultPanel create $searchResultObj $win.searchresult
     }
-    if {![winfo viewable $win.searchresult]} {
-        $win.lowerarea add $win.searchresult -width 250
-    }
-
+    $toolPanel addPanel $searchResultObj
 }

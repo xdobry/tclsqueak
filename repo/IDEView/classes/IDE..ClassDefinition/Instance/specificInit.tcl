@@ -1,6 +1,6 @@
 IDE::ClassDefinition instproc specificInit {} {
     my instvar win superclassList mode className parameter compVisibility
-
+    my requireNamespace
     set compVisibility 0
 
     frame $win.fname
@@ -8,10 +8,9 @@ IDE::ClassDefinition instproc specificInit {} {
     frame $win.lframe
     frame $win.fpar
 
-    ttk::entry $win.fname.name
+    ttk::entry $win.fname.name -textvariable [self]::className
 
     if {$mode eq "redefine"} {
-        $win.fname.name insert 0 $className
         $win.fname.name configure -state disabled
         set actionText Redefine
     } else {

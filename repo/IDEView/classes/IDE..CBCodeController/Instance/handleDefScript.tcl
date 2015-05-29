@@ -29,5 +29,7 @@ IDE::CBCodeController instproc handleDefScript {skript {contentDesc {}}} {
         return
     }
     $introProxy moveToComponent $newclass $vcomponent
-    my showNavigation [list $newclass $type $vcomponent]
+    set item [list $newclass $type $vcomponent]
+    my showNavigation $item
+    return $item
 }
