@@ -43,66 +43,21 @@ Object instproc halt {{symbol {}}} {
     }
 }
 
-Object instproc getComponentName {} {
-    puts "deprecated object getComponentName"
-    if {[my hasMetadataNotEmpty component]} {
-	return [my getMetadata component]
-    }  else {
-	return default
-    }
-}
-Object instproc getCompObject {} {
-    puts "deprecated object getCompObject"
-    if {[my hasMetadataNotEmpty component]} {
-	return [IDE::Component getCompObjectForName [my getMetadata component]]
-    }  else {
-	return [IDE::Component getCompObjectForName default]
-    }
-}
-Object instproc moveToComponent {app} {
-    puts "object moveToComponent deprecated"
-    ::set oldapp [my getCompObject]
-    $oldapp removeObject [self]
-    my setMetadata component $app
-    ::set newapp [IDE::Component getCompObjectForName $app]
-    $newapp addObject [self]
-}
-
 Object instproc printString {} {
     # please overweite it to specify your Object printSring
     # the return shoul short specify the object contens for
     # displaying in object inspector
     return "[self] instance of [[self] info class] [[self] info mixin]"
 }
-Object instproc getDescription {} {
-    puts "absolete getDescription call"	 
-    if {[Object isobject [self]::description]} {
-        return [self]::description
-    }
-    return
-}
 
-# Metadata wrapper from old versions
 Object instproc metadata args {
     puts "[self] metadata $args"
     if {[llength $args]==2} {
-       my setMetadata [lindex $args 0] [lindex $args 1]
+        my _idemeta([lindex $args 0]) [lindex $args 1]
     } else {
-	puts "calling metadata [self callingclass]>>[self callingproc] by [self callingobject]"
+        puts "calling metadata [self callingclass]>>[self callingproc] by [self callingobject]"
     }
     next
-}
-Object instproc hasMetadata key {
-    my exists _idemeta($key)
-}
-Object instproc hasMetadataNotEmpty key {
-    expr {[my hasMetadata $key] && [my set _idemeta($key)] ne ""}
-}
-Object instproc getMetadata key {
-    my set _idemeta($key)
-}
-Object instproc setMetadata {key value} {
-    my set _idemeta($key) $value
 }
 
 
@@ -110,7 +65,7 @@ Class IDEMetadataAnalyzer
 IDEMetadataAnalyzer instproc unknown {args} {
     if {[llength $args]==4 && [lindex $args 1] eq "idemeta" && [Object isobject [lindex $args 0]]} {
         #  $object setMetadata $type $value
-	[lindex $args 0] setMetadata [lindex $args 2] [lindex $args 3]
+	[lindex $args 0] set _idemeta([lindex $args 2]) [lindex $args 3]
     } else {
 	my lappend metaList $args
     }
