@@ -22,7 +22,7 @@ IDE::FindReplace proc buildWindow twin {
     ttk::checkbutton $win.main.regexpr -variable [self]::regularExpresion -text [::msgcat::mc "Regular Expresion"]
     ttk::button $win.main.options.clear -text [::msgcat::mc "Clear"] -command [list [self] actionClear]
     ttk::button $win.main.options.setdefaults -text [::msgcat::mc "Set Defaults"] -command [list [self] actionSetDefaults]
-    ttk::checkbutton $win.main.options.casesensitive -variable [self]::caseSensitive -text [::msgcat::mc "Case Insensitive"]
+    ttk::checkbutton $win.main.options.casesensitive -variable [self]::caseSensitive -text [::msgcat::mc "Case sensitive"]
     ttk::checkbutton $win.main.options.fromcursor -variable [self]::fromCursor -text [::msgcat::mc "From Cursor"]
     ttk::checkbutton $win.main.options.backwards -variable [self]::backwards -text [::msgcat::mc "Backwards"]
     ttk::checkbutton $win.main.options.selectedtext -variable [self]::selectedText -text [::msgcat::mc "Selected Text"]

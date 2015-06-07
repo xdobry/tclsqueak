@@ -5,8 +5,10 @@ IDE::ObjectBrowser proc browseAllObjects {} {
     foreach class [lsort [::Class info instances]] {
         if {[info exists ignoreClasses($class)]} continue
         foreach instance [$class info instances] {
-            if {![Object isobject [$instance info parent]] || [Object isclass [$instance info parent]]} {
-                lappend instances $instance
+            catch {
+                if {![Object isobject [$instance info parent]] || [Object isclass [$instance info parent]]} {
+                    lappend instances $instance
+                }
             }
         }
     }

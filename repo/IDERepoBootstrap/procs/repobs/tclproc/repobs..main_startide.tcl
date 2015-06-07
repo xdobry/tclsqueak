@@ -1,5 +1,6 @@
 proc repobs::main_startide args {
     variable useCompMeta
+    variable repodir
     lassign [getopts $args {{-xotclidedir string} {-script string}} 0] options comps
     set repodir [dict get $options -repodir]
     global xotclidedir

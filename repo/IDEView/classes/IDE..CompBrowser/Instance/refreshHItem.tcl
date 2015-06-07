@@ -27,7 +27,6 @@ IDE::CompBrowser instproc refreshHItem {hitem {notify 1}} {
         set component $method
         set cobj [IDE::Component getCompObjectForNameIfExist $component]
         if {$cobj ne ""} {
-            [self]::@compview refreshNavigation $component
             set introProxy [$cobj getIntroProxy]
             if {[$introProxy isObjectClass $vclass]} {
                 [self]::classview @stateButton changeStateTo Classes
@@ -35,7 +34,10 @@ IDE::CompBrowser instproc refreshHItem {hitem {notify 1}} {
                 [self]::classview @stateButton changeStateTo Objects
             }
             if {$notify} {
-                [self]::classview setSelectedItem $vclass $notify                           } else {
+                [self]::@compview setSelectedItem $component $notify
+                [self]::classview setSelectedItem $vclass $notify
+            } else {
+                [self]::@compview refreshNavigation $component
                 [self]::classview refreshNavigation $vclass
             }
         }

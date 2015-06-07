@@ -1,6 +1,6 @@
 IDE::TclModeEdit instproc syntaxHighlight {} {
     #my syntaxHighlightRemove
-    switch [my set syntaxHightlight] {
+    switch [IDEPreferences getParameter syntaxHightlight] {
         1 { 
            my syntaxHighlightRemove
            my simpleSyntaxHighlight

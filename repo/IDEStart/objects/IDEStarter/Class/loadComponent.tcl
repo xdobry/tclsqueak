@@ -43,7 +43,8 @@ IDEStarter proc loadComponent {name {componentid newest}} {
             puts "Error by calling $imethod initializeAfterLoad $errorInfo"
         }
     }
+    set introProxy [IDE::XOIntroProxy getIntroProxy]
     foreach object $objectForMetaData {
-        $object setMetadata component $name
+        $introProxy setMetadataForObject $object component $name
     }
 }

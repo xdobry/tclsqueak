@@ -14,8 +14,7 @@ IDE::MethodEditNotebook instproc fillMenuStruct ms {
     $ms addMenuItem [IDE::MenuCommand new -childof $ms -accelerator Control-r -name {Browse it} -command [list [self] dispatchTab browseSelection] -popdownMenu 0 -enableList isValidTextSelection]
     $ms addMenuItem [::IDE::MenuCommand new -childof $ms -name Find/Replace... -command [list [self] findReplace] -popdownMenu 0 -accelerator Control-r]
     $ms addMenuItem [::IDE::MenuCommand new -childof $ms -name Find -command [list [self] directFind] -popdownMenu 0 -accelerator Control-f]
-    $ms addCommand "Go to line" [list [self] dispatchTab goToLine]
-    $ms addCommand "mask non ASCII characters" [list [self] dispatchTab maskUTF8]
+    $ms addCommand "Go to line..." [list [self] dispatchTab goToLine]
     $ms addMenuItem [IDE::MenuCheckbox new -childof $ms -name {Wrap Mode} -command [list [self] dispatchTab switchWrap] -varname [self]::wrapMode -accelerator Alt-w]
     $ms addCommand {File Out} [list [self] dispatchTab fileOut]
     $ms addCommand {File In} [list [self] dispatchTab fileIn]
@@ -29,20 +28,15 @@ IDE::MethodEditNotebook instproc fillMenuStruct ms {
     $m addCommand {Format} [list [self] dispatchTab autoIndent] {} {Control-F}
     $m addCommand {Comment} [list [self] dispatchTab commentRegion]
     $m addCommand {Uncomment} [list [self] dispatchTab uncommentRegion]
+    $m addCommand "mask non ASCII characters" [list [self] dispatchTab maskUTF8]
     $m addCommand {make msgcat::mc getter} [list [self] dispatchTab makeMCGetter] {} {Alt-i}
 
     set m [IDE::MenuStruct create ${ms}::vcontrol {Syntax Hightlight}]
     $ms addCascadeMenu $m
-    $m addRadioButton {No Syntax Highlight} IDEPreferences::syntaxHightlight {} 0
-    $m addRadioButton {Simple Syntax Highlight} IDEPreferences::syntaxHightlight {} 1
-    $m addRadioButton {Complext Syntax Highlight} IDEPreferences::syntaxHightlight {} 2
-    $m addSeparator
     $m addCommand {Force Syntax Check} [list [self] dispatchTab syntaxCheck]
     $m addCommand {Drop Syntax Highlight} [list [self] dispatchTab syntaxHighlightRemove]
 
-    $ms addCheckButton {Syntaxcheck on Save} IDEPreferences::syntaxCheck
     $ms addCommand {Show definition} [list [self] showRef] {} F3
-
     $ms addCommand {Set Breakpoint} [list [self] dispatchTab setBreakpoint] {} {} 0 {canSetBreakpoint haveNoChanges}
 
     $ms addSeparator

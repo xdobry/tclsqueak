@@ -30,5 +30,6 @@ IDE::TOOIntroProxy instproc testImportOOComponent {} {
     my assert {[info object isa object $tobject]}
     my assert {$tclass in [$cobj getClasses]}
     my assert {$tobject in [$cobj getObjects]}
+    my assert {[$cobj getOOType] eq "TclOO"}
     $cobj unload
 }

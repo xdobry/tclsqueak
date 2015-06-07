@@ -3,12 +3,12 @@ IDE::CompBrowser instproc browseString string {
     if {$introProxy ne ""} {
         if {[$introProxy isObjectClass $string]} {
             set component [$introProxy getComponentNameForObject $string]
-            [self]::@codecontroller setBodyText $string [$introProxy getMethodTypePrefix]Def $component
+            [self]::@codecontroller viewContent [list $string [$introProxy getSpecialMethodType Def] $component] browse
         } else {
             if {[$introProxy isRootClass [$introProxy getClassForObject $string]]} {
                 set component [$introProxy getComponentNameForObject $string]
                 if {$component ne "default"} {
-                    [self]::@codecontroller setBodyText $string [$introProxy getMethodTypePrefix]Def $component
+                    [self]::@codecontroller viewContent [list $string [$introProxy getSpecialMethodType Def] $component] browse
                 } else {
                     IDE::ObjectBrowser newBrowser $string $introProxy
                 }

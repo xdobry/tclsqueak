@@ -1,3 +1,3 @@
-IDE::ComponentSaveWizard proc newBrowser {} {
-    return [my new [Object autoname .cswbrowser]]
+IDE::ComponentSaveWizard proc newBrowser {{type package}} {
+    return [my new [Object autoname .cswbrowser] -type $type]
 }

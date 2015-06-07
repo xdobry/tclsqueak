@@ -1,7 +1,7 @@
 IDE::CodeSearch proc searchText {text searchDict} {
     set stext [dict get $searchDict text]
     set type [dict get $searchDict type]
-    if {[dict exists $searchDict regexpr] && [dict get $searchDict regexpr] eq "0"} {
+    if {[dict exists $searchDict regexp] && [dict get $searchDict regexp] eq "0"} {
         set regexpr 0
     } else {
         set regexpr 1

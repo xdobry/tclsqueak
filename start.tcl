@@ -1,4 +1,4 @@
-# automatically generated from TclSqueak
+# created with TclSqueak
 package provide IDERepoBootstrap 0.1
 namespace eval ::repobs {}
 proc repobs::asFileName objName {
@@ -329,6 +329,7 @@ proc repobs::main_start args {
 }
 proc repobs::main_startide args {
     variable useCompMeta
+    variable repodir
     lassign [getopts $args {{-xotclidedir string} {-script string}} 0] options comps
     set repodir [dict get $options -repodir]
     global xotclidedir

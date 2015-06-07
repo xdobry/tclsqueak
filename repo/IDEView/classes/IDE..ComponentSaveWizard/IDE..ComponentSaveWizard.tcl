@@ -1,1 +1,1 @@
-Class create IDE::ComponentSaveWizard -superclass ::IDE::Browser
+Class create IDE::ComponentSaveWizard -superclass ::IDE::Browser -parameter {{type package}}

@@ -1,5 +1,9 @@
 IDE::DirectFind instproc keyChanged {} {
     my instvar win textWin lastSearchText curMarkSelection curMarkSelectionNext
+    if {![winfo exists $textWin]} {
+        my endFind
+        return
+    }
     set searchText [$win.entry get]
     if {$lastSearchText eq $searchText} return
     set lastSearchText $searchText

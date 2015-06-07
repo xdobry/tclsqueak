@@ -10,14 +10,9 @@ IDE::TclModeEdit instproc menuInsertions ms {
 
     set m [IDE::MenuStruct create ${ms}::vcontrol {Syntax Hightlight}]
     $ms addCascadeMenu $m
-    $m addRadioButton {No Syntax Highlight} IDEPreferences::syntaxHightlight {} 0
-    $m addRadioButton {Simple Syntax Highlight} IDEPreferences::syntaxHightlight {} 1
-    $m addRadioButton {Complext Syntax Highlight} IDEPreferences::syntaxHightlight {} 2
-    $m addSeparator
     $m addCommand {Force Syntax Check} [list [self] syntaxCheck]
     $m addCommand {Drop Syntax Highlight} [list [self] syntaxHighlightRemove]
 
-    $ms addCheckButton {Syntaxcheck on Save} IDEPreferences::syntaxCheck
     set twin [my getTextWindow]
     $ms addCommand {Show definition} "[self] showRef \[$twin tag names current\]" {} F3
 

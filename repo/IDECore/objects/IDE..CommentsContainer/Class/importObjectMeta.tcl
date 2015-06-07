@@ -7,7 +7,12 @@ IDE::CommentsContainer proc importObjectMeta meta {
             $introProxy setMetadataForObject $object $key $value
             if {$key eq "component"} {
                 $introProxy moveToComponent $object $value
+                set cobj [IDE::Component getCompObjectForNameIfExist $value]
+                if {$cobj ne ""} {
+                    $cobj setOOType [$introProxy getOOSystemName]
+                }
             }
+            # set the right ootype if not set for component
         }
         return
     }

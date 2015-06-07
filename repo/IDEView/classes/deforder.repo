@@ -6,6 +6,7 @@ IDE::CBCodeController
 IDE::ClassDefinition
 IDE::ClassSelector
 IDE::ClassView
+IDE::CodeSearchDialog
 IDE::ProgEdit
 IDE::MethodEdit
 IDE::CommentEdit

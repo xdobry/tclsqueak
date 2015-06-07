@@ -1,5 +1,9 @@
 IDE::DirectFind instproc markPrevSearch {} {
     my instvar win textWin curMarkSelectionNext
+    if {![winfo exists $textWin]} {
+        my endFind
+        return
+    }
     set searchText [$win.entry get]
     $textWin tag remove silbingSelect 1.0 end
     if {$searchText ne ""} {

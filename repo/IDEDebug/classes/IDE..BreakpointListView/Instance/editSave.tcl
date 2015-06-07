@@ -1,3 +1,3 @@
-IDE::BreakpointListView instproc editSave skript {
+IDE::BreakpointListView instproc editSave {skript {desc {}}} {
    
 }

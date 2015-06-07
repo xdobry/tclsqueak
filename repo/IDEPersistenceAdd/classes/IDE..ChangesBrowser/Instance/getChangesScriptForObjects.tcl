@@ -48,7 +48,7 @@ IDE::ChangesBrowser instproc getChangesScriptForObjects {compName class obj1 obj
                        append ret "set desc \[\$introProxy getDescriptionForObject $class\]\n"
                        append ret "if \{\$desc ne \"\"\} \{\n"
                        append ret "   \$desc setDefBody [list [$obj1 get${vtype}MethodBody $method]]\n"
-                       append ret "\} \n"
+                       append ret "   \$desc updateDefbody 0 1\n"
                    } else {
                        append ret [$obj1 get${vtype}MethodBody $method] \n
                    }

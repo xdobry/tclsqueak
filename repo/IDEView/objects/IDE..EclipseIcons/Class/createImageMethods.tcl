@@ -26,6 +26,7 @@ IDE::EclipseIcons proc createImageMethods {} {
         main_tab
         sourceEditor
         environment
+        prev_nav
     }
     set dir [file join ~ eclipse-icons]
     foreach name $names {

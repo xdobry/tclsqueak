@@ -2,7 +2,7 @@ IDE::HeritageClassView instproc refreshView {} {
     my instvar actItem introProxy
     set codeController [my info parent]::@codecontroller
     if {[Object isobject $codeController]} {
-        $codeController setBodyText $actItem [$introProxy getSpecialMethodType Def] [$introProxy getComponentNameForObject $actItem]
+        $codeController viewContent [list $actItem [$introProxy getSpecialMethodType Def] [$introProxy getComponentNameForObject $actItem]] hierarchy
         return
     }
     set v [my info parent]::methodedit

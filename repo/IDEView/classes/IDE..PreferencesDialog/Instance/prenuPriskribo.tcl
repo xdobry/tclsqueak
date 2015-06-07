@@ -14,6 +14,11 @@ IDE::PreferencesDialog instproc prenuPriskribo {} {
             httpProxy {http Proxy} string
             httpProxyPort {http Proxy Port} string
         }
+        {Source Editor} {
+            syntaxCheck {Syntax check on save} bool
+            syntaxHightlight {{Type of syntax highlighting} {none} 0 {simple} 1 {syntax checker based} 2} options
+            
+        }
     }
     return $p
 }

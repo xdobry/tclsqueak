@@ -27,11 +27,10 @@ IDE::FindReplace proc findArea {{complainNoFound 1}} {
     } else {
 	set match -exact
     }
-    if {$caseSensitive} {
+    if {!$caseSensitive} {
         set icase -nocase
     } else {
-        # dummy argument
-        set icase $match
+        set icase {}
     }
     if {$backwards} {
 	set direction -backward
@@ -43,7 +42,7 @@ IDE::FindReplace proc findArea {{complainNoFound 1}} {
     } else {
 	set direction -forward
     }
-    set cur [$twin search -count search_count $direction $match $icase -- $findText $cur $stopIndex]
+    set cur [$twin search -count search_count $direction $match {*}$icase -- $findText $cur $stopIndex]
     set firstRun 0
     if {$cur eq ""} {
         if {$complainNoFound} {

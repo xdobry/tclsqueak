@@ -1,26 +1,8 @@
-This component is designed as XOTclIDE Plugin.
-It can be used only with DB Version System.
+This List view is prepared to work with xotck objects as lists elements.
+It has also an actions interface and send events.
+You can specify test method that cause that items are displayed hightlighted.
+The interface is specified per parameters
 
-You can load it per menu
-System->Version Control->Configuration Browser
-
-It provides versioned configuration maps.
-A configuration map is a ordered collection of components and
-another configurations maps.
-
-A configuration map have edtions and can be compared in changes
-browser. The versioning of configuration map work equal to versioning
-of components or classes.
-
-You can import/export the version system configuration maps to
-file based configurations maps.
-
-Configuration Browser was programmed by using
-some extended techniques
-1. modell view controler gui pattern
-2. events messaging.
-3. controler is object IDE::ConfigmapControler (singleton) used.
-4. Also here was using new persistence interface with
-n:m mapping and object identity caching.
-
-
+isMarkedMethod - specify test method that 
+nameMethod - method that will be call to object to get name for displaying. If none printString method will be used
+actionHandler - if definied will be called to item to determine menus for popdown menu.

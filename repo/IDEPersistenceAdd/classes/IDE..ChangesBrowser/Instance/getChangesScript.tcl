@@ -15,7 +15,7 @@ IDE::ChangesBrowser instproc getChangesScript {comp1 comp2} {
             append ret "# Class $class was created or moved\n"
             append ret "if {\[Object isobject $class\]} { IDE::Dialog message \"check class $class. probably moved to [$comp1 getName]\"} else \{\n"
             append ret "[$obj1 getDefBody]\n"
-            append ret "[$obj1 getName] moveToComponent [$comp1 getName]\n"
+            append ret "\[IDE::XOIntroProxy getIntroProxyForObject [$obj1 getName]\] moveToComponent [$obj1 getName] [$comp1 getName]\n"
             foreach vtype {Class Instance} {
                 catch {unset methArr1}
                 $obj1 set${vtype}MethodsArray methArr1

@@ -13,7 +13,7 @@ IDE::EditorTranscript instproc fillMenuStruct ms {
     $ms addMenuItem [IDE::MenuCommand new -childof $ms -accelerator Control-r -name {Browse it} -command [list [self] browseSelection] -popdownMenu 1 -enableList isValidTextSelection]
     $ms addSeparator
     $ms addMenuItem [IDE::MenuCheckbox new -childof $ms -name {Wrap Mode} -command [list [self] switchWrap] -varname [self]::wrapMode -accelerator Alt-w]
-    $ms addCommand "Go to line" [list [self] goToLine]
+    $ms addCommand "Go to line..." [list [self] goToLine]
     $ms addCommand "Format" [list [self] autoIndent]
     $ms addCommand "Syntax Check" [list [self] syntaxCheck]
 

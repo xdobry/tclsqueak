@@ -8,7 +8,7 @@ SyntaxHighlightVisitor instproc visit element {
     } elseif {[$element hasclass PrsVariable] || [$element hasclass PrsVariableRef]} {
         set varType [$context getVariableType [$element getVariableName]]
         if {[lindex $varType 0] in {unknown def}} {
-            my hightlightElement $element variable -1
+            my hightlightElement $element variable
         } else {
             [my text] addVariable [$element begin] [$element end] [$element getVariableName]
         }

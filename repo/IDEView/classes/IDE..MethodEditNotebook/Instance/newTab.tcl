@@ -3,7 +3,7 @@ IDE::MethodEditNotebook instproc newTab {{title {}}} {
     set index $freeid
     incr freeid
     set meditWin $win.methodedit$index
-    set currentEdit [IDE::TclModeEditTab new -childof [my info parent] -directFind [[my info parent]::@find] $meditWin -notifyEdited 1]
+    set currentEdit [IDE::TclModeEditTab new -childof [my info parent] -directFind [[my info parent]::@find] $meditWin -notifyEdited 1 -masterView [my info parent]]
     if {$title eq ""} {
         set title new
     }

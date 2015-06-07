@@ -5,6 +5,7 @@ IDE::NSElements instproc selectFor namespace {
         my resetList
         return
     }
+    
     my selectItem {}
     set inpectObject [my getIntroProxy]
     $inpectObject setCurrentNS $vnamespace
@@ -16,12 +17,7 @@ IDE::NSElements instproc selectFor namespace {
             set l [$inpectObject getNSVars]
         }
         Classes {
-            set xns ::xotcl::classes${vnamespace}
-            if {[$inpectObject inspectEval [list namespace exists $xns]]} {
-                set l [$inpectObject inspectEval [list namespace children ::xotcl::classes${vnamespace}]]
-            } else {
-                set l [list]
-            }
+            set l [my getClassesForNamespace $inpectObject $vnamespace]
         }
         Imports {
             set l [$inpectObject inspectEvalNs $vnamespace [list namespace import]]

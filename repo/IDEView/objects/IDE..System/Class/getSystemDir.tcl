@@ -1,4 +1,4 @@
 IDE::System proc getSystemDir {} {
-      global xotclidedir
-      return $xotclidedir
+    global xotclidedir
+    return $xotclidedir
 }

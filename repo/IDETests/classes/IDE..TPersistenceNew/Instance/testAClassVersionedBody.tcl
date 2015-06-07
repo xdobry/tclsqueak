@@ -1,11 +1,12 @@
 IDE::TPersistenceNew instproc testAClassVersionedBody {} {
      my instvar compName className className2
+     my initNames
 
      set compObject [IDE::Component getCompObjectForName $compName]
      set introProxy [$compObject getIntroProxy]
 
-     Class ::$className
-     Class ::$className2
+     Class create ::$className
+     Class create ::$className2
      ::$className instproc m1 {} { puts test }
 
      $introProxy moveToComponent $className $compName

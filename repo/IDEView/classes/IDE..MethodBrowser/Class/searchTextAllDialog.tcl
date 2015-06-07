@@ -8,8 +8,8 @@ IDE::MethodBrowser proc searchTextAllDialog {{master IDE::MethodBrowser}} {
         }
     }
     
-    set text [IDE::IDialogEntry getValue {give search text (regular expresion)} $sel search]
-    if {$text ne ""} {
-        $master showSearchResult [IDE::CodeSearch searchTextAll $text]
+    set search [IDE::CodeSearchDialog getSearch $master $sel [$master getContext]]
+    if {$search ne ""} {
+        $master showSearchResult [IDE::CodeSearch search $search]
     }
 }

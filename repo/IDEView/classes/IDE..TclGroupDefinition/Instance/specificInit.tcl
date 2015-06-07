@@ -1,5 +1,7 @@
 IDE::TclGroupDefinition instproc specificInit {} {
-    my instvar win
+    my instvar win isnamespace
+    
+    set isnamespace 0
 
     ttk::frame $win.buttons -relief raised -borderwidth 3
     ttk::frame $win.fname

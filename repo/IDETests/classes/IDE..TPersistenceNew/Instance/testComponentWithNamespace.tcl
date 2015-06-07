@@ -1,19 +1,20 @@
 IDE::TPersistenceNew instproc testComponentWithNamespace {} {
     my instvar compName className className2
+    my initNames
 
     set testns ::testns
-    set className ${testns}::$className
-    set className2 ${testns}::$className2
+    set nclassName ${testns}::$className
+    set nclassName2 ${testns}::$className2
 
     set compObject [IDE::Component createCompObjectForName $compName XOTcl $testns]
     set introProxy [$compObject getIntroProxy]
     
-    Class $className
-    Class $className2
-    $className instproc m1 {} { puts test }
+    Class create $nclassName
+    Class create $nclassName2
+    $nclassName instproc m1 {} { puts test }
 
-    $introProxy moveToComponent $className $compName
-    $introProxy moveToComponent $className2 $compName
+    $introProxy moveToComponent $nclassName $compName
+    $introProxy moveToComponent $nclassName2 $compName
 
     set script [$compObject asScript]
     my assert {[string first "namespace eval" $script]>=0}

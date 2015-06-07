@@ -1,1 +1,1 @@
-Class create IDE::TclModeEdit -superclass ::IDE::MethodEdit -parameter notifyEdited
+Class create IDE::TclModeEdit -superclass {::IDE::MethodEdit ::IDE::MasterViewMix} -parameter notifyEdited

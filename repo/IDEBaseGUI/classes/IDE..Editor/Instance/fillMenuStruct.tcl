@@ -12,7 +12,7 @@ IDE::Editor instproc fillMenuStruct ms {
     if {[my exists directFind]} {
         $ms addMenuItem [::IDE::MenuCommand new -childof $ms -name Find -command [list [my set directFind] show [my getTextWindow]] -popdownMenu 1 -accelerator Control-f]
     }
-    $ms addCommand "Go to line" [list [self] goToLine]
+    $ms addCommand "Go to line..." [list [self] goToLine]
     $ms addCommand "mask non ASCII characters" [list [self] maskUTF8]
     $ms addMenuItem [IDE::MenuCheckbox new -childof $ms -name {Wrap Mode} -command [list [self] switchWrap] -varname [self]::wrapMode -accelerator Alt-w]
     $ms addCommand {File Out} [list [self] fileOut]

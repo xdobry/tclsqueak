@@ -4,7 +4,7 @@ IDE::TclOOIntroProxy instproc redefineClass {className superclass variables} {
         oo::define $className variable -set {*}$variables
         set haschange 1
     }
-    if {$superclass ne [info class superclasses $className] &&
+    if {$superclass ne [IDE::XOIntroProxy [info class superclasses $className]] &&
         !($superclass eq "" && [info class superclasses $className] eq "::oo::object")} {
         if {$superclass eq ""} {set superclass ::oo::object}
         oo::define $className superclass -set {*}$superclass
