@@ -1,3 +1,0 @@
-Sqlite - Adapter see http://www.sqlite.org
-
-Primary Author : Oleg Oleinick

@@ -33,6 +33,7 @@ proc repobs::main_startide args {
         if {![file isdirectory $repodir]} {
             error "Can not find repo directory and sqlite repository.sql. $repofile is not directory"
         }
+        puts "creating code repository. This can take a while. Please wait........"
         set creator [IDEFileRepoToSqliteRepo new]
         $creator createRepo $repodir $repofile
         set connection [$creator exportConnection]

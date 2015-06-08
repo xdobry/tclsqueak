@@ -1,6 +1,6 @@
 proc repobs::getAvaialbeComps repodir {
     set comps [list]
-    puts "scaning in $repodir"
+    puts "file repo is: $repodir"
     foreach d [glob -type d -directory $repodir *] {
         lappend comps [fileToCompName [file tail $d]]
     }

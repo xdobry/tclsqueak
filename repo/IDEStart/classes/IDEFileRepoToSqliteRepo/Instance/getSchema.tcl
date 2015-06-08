@@ -2,7 +2,7 @@ IDEFileRepoToSqliteRepo instproc getSchema {} {
     return {
 CREATE TABLE Object (
   objectid integer PRIMARY KEY,
-  timest TIMESTAMP(14) DEFAULT NULL,
+  timest DATETIME DEFAULT NULL,
   versioninfo varchar(30),
   isclosed bool DEFAULT 0,
   isextension bool DEFAULT 0,
@@ -12,11 +12,12 @@ CREATE TABLE Object (
   userid int DEFAULT NULL,
   basedon int DEFAULT NULL,
   type varchar(20),
+  visibility varchar(20),
   infoid int
 );
 CREATE TABLE Method (
   methodid integer PRIMARY KEY,
-  timest TIMESTAMP(14) DEFAULT NULL,
+  timest DATETIME DEFAULT NULL,
   versioninfo varchar(30),
   name varchar(50),
   category varchar(50),
@@ -25,6 +26,7 @@ CREATE TABLE Method (
   userid int DEFAULT NULL,
   body text,
   type varchar(20),
+  visibility varchar(20),
   infoid int
 );
 CREATE TABLE ObjectMethod (
@@ -35,7 +37,7 @@ CREATE TABLE ObjectMethod (
 CREATE TABLE Component (
   componentid integer PRIMARY KEY,
   ootype varchar(20),
-  timest TIMESTAMP(14) DEFAULT NULL,
+  timest DATETIME DEFAULT NULL,
   versioninfo varchar(30),
   isclosed bool DEFAULT 0,
   name varchar(50),
@@ -67,7 +69,7 @@ CREATE TABLE Info (
 CREATE TABLE Configmap (
   configmapid integer PRIMARY KEY,
   name varchar(50),
-  timest TIMESTAMP(14) DEFAULT NULL,
+  timest DATETIME DEFAULT NULL,
   versioninfo varchar(30),
   isclosed bool DEFAULT 0,
   userid int DEFAULT NULL,
