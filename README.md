@@ -34,7 +34,10 @@ The binary XOTcl extension for windows can be taken from zip.
 
 There is old XOTclIDE Documentation http://www.xdobry.de/xotclIDE/docs/index.html
 
-##What makes TclSquak different?
+There are also screen casts tutorials on youtube
+* part 1 - http://youtu.be/6g7XcKqgObM - basics create code, evaluating tcl scripts in transcript window
+
+##What makes TclSquaek different?
 
 * Interactive smalltalk way of programming
 * code repository (every code change is persistent)
