@@ -1,3 +1,9 @@
-VCInstaller is the GUI-tool for installation and
-configuration of IDE with Version Controll based on
-MySql relational database.
+This class implement the installer GUI and install actions
+The actions are specified im method initRun
+
+The transitions list are speciefie by list of 4 elements lists
+Elements:
+1. Set GUI method
+2. check GUI Parameters method (Return 0 or 1)
+3. set preferences or variables
+4. comment

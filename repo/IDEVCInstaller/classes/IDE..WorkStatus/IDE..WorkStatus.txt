@@ -1,3 +1,0 @@
-VCInstaller is the GUI-tool for installation and
-configuration of IDE with Version Controll based on
-MySql relational database.

@@ -1,6 +1,0 @@
-This Deployer can generate Tcl Kit packages
-see http://www.equi4.com/tclkit
-
-The parts of this components was taken from sdx tclkit 
-
-# set f [open H:/Trzewi/xotclIDE50.exe/main.tcl r]; set r [read $f]; close $f; set r

@@ -7,13 +7,12 @@ IDE::TclScripEditor instproc syntaxCheck {} {
     $context set errors [list]
     $context parseGlobal $text
     if {[$context exists parser]} {
-        set highlighter [SyntaxHighlightVisitor new -volatile -text [self]]
+        set highlighter [SyntaxHighlightVisitor new -volatile -text [self] -context $context]
         [[$context set parser] set root] visit $highlighter
     }
     my deleteMarklineErrors
     if {[$context hasErrors]} {
         my highligthErrors [$context set errors]
-        return 0
     }
     $repository destroy
 }

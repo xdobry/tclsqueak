@@ -1,3 +1,0 @@
-eval the line below to start script browser
-
-IDE::ScriptEditor newBrowser

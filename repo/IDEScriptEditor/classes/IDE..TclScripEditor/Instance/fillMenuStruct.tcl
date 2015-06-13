@@ -14,7 +14,7 @@ IDE::TclScripEditor instproc fillMenuStruct ms {
     $ms addMenuItem [IDE::MenuCommand new -childof $ms -accelerator Control-g -name {Inspect it} -command [list [self] evalInspectSelection] -popdownMenu 1 -enableList isValidTextSelection]
     $ms addMenuItem [IDE::MenuCommand new -childof $ms -accelerator Control-r -name {Browse it} -command [list [self] browseSelection] -popdownMenu 1 -enableList isValidTextSelection]
     $ms addSeparator
-    $ms addMenuItem [IDE::MenuCheckbox new -childof $ms -name {Wrap Mode} -command [list [self] switchWrap] -variable [self]::wrapMode -accelerator Alt-w]
+    $ms addMenuItem [IDE::MenuCheckbox new -childof $ms -name {Wrap Mode} -command [list [self] switchWrap] -varname [self]::wrapMode -accelerator Alt-w]
     $ms addCommand "Go to line" [list [self] goToLine]
     $ms addMenuItem [::IDE::MenuCommand new -childof $ms -name Find/Replace -command [list IDE::FindReplace bindToView [self]] -popdownMenu 1 -accelerator Alt-f]
 }

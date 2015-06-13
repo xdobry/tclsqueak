@@ -1,7 +1,0 @@
-Test for IDEPersistence Component
-You need version-system, connected database
-
-- the database user need create privileges
-
-The main target are tests of m:n mapping using
-in IDEConfiguration

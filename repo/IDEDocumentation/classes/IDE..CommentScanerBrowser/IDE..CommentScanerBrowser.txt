@@ -1,3 +1,5 @@
-This component contains 2 tools
-1. CommentScanner - for extract all # comments from old tcl/xotcl code that are not maintained by XOTclIDE
-2. Htmml Documentation Generator - Generate html documentation for selecting components using xotclide stucture and appending additional comments
+The comment scanner can be used by importing old tcl/xotcl source to XOTclIDE.
+The problem is that # comments that are written before method are class
+headers are lost be loading (source) scripts.
+XOTclIDE use @ (metacommand) for specifing comments (see xotcl documentation).
+This tool read scripts and extraxt # comments to internal XOTclIDE comments.
