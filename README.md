@@ -24,11 +24,16 @@ I also wanted to make the project easier to install and begin with coding.
 
 ##How to start
 
-Install Tcl and run start.tcl
+The easiest way is to get binary distribution from release page
+https://github.com/xdobry/tclsqueak/releases
+use tclsqueak-portable-winlinux.zip file
+It contains Tcl interpreter for windows and linux (based on tclkit)
+and all needed libraries (XOTcl).
+After unzipping start by using start.bat or start.sh
 
-But you may also check out the sources and lunch the start.bat, start.tcl or start.sh.
-The prerequist are Tcl interpreter http://tcl.tk and installed XOTcl extension http://www.xotcl.org (or http://www.next-scripting.org)
-The binary XOTcl extension for windows can be taken from zip.
+But you may also check out the sources and lunch the start.tcl
+The prerequist are Tcl interpreter (Version 8.6) http://tcl.tk and installed XOTcl extension http://www.xotcl.org (or http://www.next-scripting.org)
+The binary XOTcl extension for windows can be taken from release zip.
 
 ##Documentation
 
@@ -36,6 +41,10 @@ There is old XOTclIDE Documentation http://www.xdobry.de/xotclIDE/docs/index.htm
 
 There are also screen casts tutorials on youtube
 * part 1 - http://youtu.be/6g7XcKqgObM - basics create code, evaluating tcl scripts in transcript window
+* part 2 - https://youtu.be/zmi6rt4K2sI - object inspector and debugger
+* part 3 - https://youtu.be/_XohZFiJ3sk - version control
+* part 4 - https://youtu.be/C8_3QhBV9Hk - searching and navigating in code, code completion 
+* part 5 - http://youtu.be/VGE9pmso7Us - syntax checker
 
 ##What makes TclSquaek different?
 
