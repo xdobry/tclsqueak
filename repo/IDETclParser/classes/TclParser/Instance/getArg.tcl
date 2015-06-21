@@ -10,7 +10,7 @@ TclParser instproc getArg parent {
             if {[$parent hasclass PrsCommand] && [regexp {^{\*}\S$} [$stream getFromCurrent 4]]} {
                 set argumentExpansion [PrsArgumentExpansion new -childof $parent -begin [$stream pos]]
                 $stream addPos 3
-                set elem [my getList $argumentExpansion]
+                set elem [my getArg $argumentExpansion]
                 $argumentExpansion end [$elem end]
                 $argumentExpansion addElem $elem
                 return $argumentExpansion

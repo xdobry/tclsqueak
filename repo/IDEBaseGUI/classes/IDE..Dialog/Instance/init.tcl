@@ -10,7 +10,7 @@ IDE::Dialog instproc init {} {
         wm title $win $title
     }
     wm protocol $win WM_DELETE_WINDOW { }
-    frame $win.buttons -relief raised
+    ttk::frame $win.buttons -relief raised
 
     if {[info exists message]} {
         ::message $win.msg  -width 350 -text $message -padx 10 -pady 10
@@ -60,8 +60,8 @@ IDE::Dialog instproc init {} {
     # display and de-iconify it.
 
     update idletasks
-    set x [expr [winfo screenwidth $win]/2 - [winfo reqwidth $win]/2  - [winfo vrootx [winfo parent $win]]]
-    set y [expr [winfo screenheight $win]/2 - [winfo reqheight $win]/2  - [winfo vrooty [winfo parent $win]]]
+    set x [expr {[winfo screenwidth $win]/2 - [winfo reqwidth $win]/2  - [winfo vrootx [winfo parent $win]]}]
+    set y [expr {[winfo screenheight $win]/2 - [winfo reqheight $win]/2  - [winfo vrooty [winfo parent $win]]}]
     wm geom $win +$x+$y
 
     if {[my info class]==[self class]} {

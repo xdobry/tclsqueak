@@ -1,3 +1,8 @@
 IDE::ClassDefinition instproc getTitle {} {
-    return {Class Definition}
+    my instvar mode
+    if {$mode eq "redefine"} {
+        return {Redefine Class}   
+    } else {
+        return {Create new Class}
+    }
 }

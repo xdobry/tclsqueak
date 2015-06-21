@@ -3,11 +3,12 @@ IDE::ClassDefinition instproc specificInit {} {
     my requireNamespace
     set compVisibility 0
 
-    frame $win.fname
-    frame $win.buttons -relief raised -borderwidth 3
-    frame $win.lframe
-    frame $win.fpar
+    ttk::frame $win.fname
+    ttk::frame $win.buttons -relief raised -borderwidth 3
+    ttk::labelframe $win.lframe -text "Superclasses:"
+    ttk::frame $win.fpar
 
+    ttk::label $win.fname.lname -text {Class Name:}
     ttk::entry $win.fname.name -textvariable [self]::className
 
     if {$mode eq "redefine"} {
@@ -24,12 +25,11 @@ IDE::ClassDefinition instproc specificInit {} {
     IDE::NListView create [self]::classlist $win.lframe.classlist -notify [self] -doubleNotifyProc addItemToList
     IDE::NListView create [self]::@superclass $win.lframe.superclass -notify [self] -doubleNotifyProc removeItemFromList
 
-    ttk::label $win.fname.lname -text Name
 
     pack $win.fname.lname $win.fname.name -side left
-
+    
     #label $win.lsuperclasses -text Superclasses
-    ttk::checkbutton $win.lframe.visibility -text "classes visible in component only" -variable [self]::compVisibility -command [list [self] setClassesList]
+    ttk::checkbutton $win.lframe.visibility -text "show classes visible in component only" -variable [self]::compVisibility -command [list [self] setClassesList]
 
 
     ttk::button $win.lframe.addtolist -text << -command [list [self] addToList]

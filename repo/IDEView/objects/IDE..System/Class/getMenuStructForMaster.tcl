@@ -57,6 +57,6 @@ IDE::System proc getMenuStructForMaster master {
     }
     $ms addSeparator
     $ms addCommand {Preferences} [list IDE::PreferencesDialog newBrowser]
-    $ms addCommand "Quit XOTclIDE" [list IDE::System exitIDEGUI]
+    $ms addCommand "Quit TclSqueak" [list IDE::System exitIDEGUI]
     return $ms
 }

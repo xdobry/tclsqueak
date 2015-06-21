@@ -1,7 +1,7 @@
 SignatureRepository instproc getVariableType {class stype name {namespace {}}} {
     my instvar variableArr
     # XOTcl Object or Class or empty if tcl var
-    # stype - instproc or proc (Class or Instance)
+    # stype - global, instproc, proc or subobject (Class or Instance)
     # name - name of variable
     # type - tcl type
     if {$stype eq "global"} {

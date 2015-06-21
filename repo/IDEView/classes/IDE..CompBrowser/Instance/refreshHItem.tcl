@@ -33,11 +33,10 @@ IDE::CompBrowser instproc refreshHItem {hitem {notify 1}} {
             } else {
                 [self]::classview @stateButton changeStateTo Objects
             }
+            [self]::@compview refreshNavigation $component
             if {$notify} {
-                [self]::@compview setSelectedItem $component $notify
                 [self]::classview setSelectedItem $vclass $notify
             } else {
-                [self]::@compview refreshNavigation $component
                 [self]::classview refreshNavigation $vclass
             }
         }

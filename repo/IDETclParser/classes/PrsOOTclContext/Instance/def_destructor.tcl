@@ -7,7 +7,6 @@ PrsOOTclContext instproc def_destructor {command startArg notifier} {
     if {[$command argsCount]-$startArg+1==1} {
         set bodyElem [$command getElem $startArg]
         my evalContents $bodyElem
-        my registerMethod destroy $bodyElem
         $command set def [list method [list $object instproc destructor]]
         my cleanupLocalVars
     }

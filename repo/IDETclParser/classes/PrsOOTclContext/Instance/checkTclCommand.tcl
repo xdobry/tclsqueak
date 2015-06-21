@@ -4,8 +4,12 @@ PrsOOTclContext instproc checkTclCommand {cmdName command notifier} {
         # we are in scope of method defintion (see method def_method for switch)
         set desc [$repository getMethodDescriptionForClasses [list $name] $cmdName $namespace]
         if {$desc eq ""} {
-            # search for proc methods (class methods)
-            set desc [$repository getMethodDescriptionForObject $name $cmdName $namespace]
+            # search for subobject
+            set sobjType [$repository getVariableType $name subobject $cmdName $namespace]
+            if {$sobjType ne ""} {
+                my checkObjectClassCall [list $sobjType] $command $notifier
+                return
+            }
         }
         if {$desc ne ""} {
             [$command getElem 0] set ref [list method [lindex $desc 0]]

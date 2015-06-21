@@ -8,6 +8,9 @@ oo::class create fruit {
     method foo {} {
         puts $v1
     }
+    method bar {} {
+        puts $v1
+    }
 }
 
 

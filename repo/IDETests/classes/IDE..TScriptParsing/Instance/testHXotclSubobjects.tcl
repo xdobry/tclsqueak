@@ -21,5 +21,7 @@ C instproc foo {} {
    [$a @b] b
 }
     }
+    set repository [[$context set repository] getWriteRepository]
+    my assert {[$repository getVariableType ::A subobject @b] eq "::B"}
     my assert {[llength [$context set errors]]==0} [$context set errors]
 }

@@ -9,7 +9,7 @@ IDE::VersionInfoView proc showVersionInfo object {
     }
 
     if {[$object exists isclosed] && [$object set isclosed]==1} {
-        append message "\n versioned"
+        append message "\n labeled/closed"
     }
     if {[$object exists versioninfo]} {
         set versioninfo [$object set versioninfo]
