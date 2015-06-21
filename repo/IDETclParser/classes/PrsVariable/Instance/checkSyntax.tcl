@@ -1,9 +1,6 @@
 PrsVariable instproc checkSyntax {context notifier} {
     set name [my getVariableName]
     if {![$context checkVariable $name]} {
-        if {$name eq "v11"} {
-            my halt
-        }
         $notifier addError "unknown variable $name" [self]
     } else {
         set isArray [my isArray]
