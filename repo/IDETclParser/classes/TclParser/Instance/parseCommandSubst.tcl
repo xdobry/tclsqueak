@@ -21,6 +21,7 @@ TclParser instproc parseCommandSubst {} {
             }
             \" {
                 if {$parseQuote} {
+                    $stream addPos 1
                     my parseQuote
                 }
             }

@@ -3,7 +3,8 @@ PrsElement instproc getAsList {} {
         return [my set list]
     } else {
         set content [my prsContentString]
-        if {$content ne ""} {
+        # warning { } is still empty list
+        if {[string trim $content] ne ""} {
             return [list [self]]
         } else {
             return [list]

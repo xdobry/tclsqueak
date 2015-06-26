@@ -1,0 +1,572 @@
+registerProc ::add_bp {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown file_name} {unknown line_number}}}}}
+registerProc ::add_cells_to_pblock {{void {{mixedoptargs {-top {} -add_primitives {} -clear_locs {} -quiet {} -verbose {}} {unknown pblock} {* unknown cells}}}}}
+registerProc ::add_condition {{unknown {{mixedoptargs {-name {unknown arg} -radix {unknown arg} -quiet {} -verbose {}} {unknown condition_expression} {unknown commands}}}}}
+registerProc ::add_drc_checks {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -ruledeck {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::add_files {{list {? {mixedoptargs {-fileset {unknown arg} -norecurse {} -copy_to {unknown arg} -force {} -scan_for_includes {} -quiet {} -verbose {}} {* unknown files}}}}}
+registerProc ::add_force {{unknown {{mixedoptargs {-radix {unknown arg} -repeat_every {unknown arg} -cancel_after {unknown arg} -quiet {} -verbose {}} {unknown hdl_object} {+ unknown values}}}}}
+registerProc ::add_peripheral_interface {{void {{mixedoptargs {-interface_mode {unknown arg} -axi_type {unknown arg} -quiet {} -verbose {}} {unknown name} {unknown peripheral}}}}}
+registerProc ::add_wave {{unknown {{mixedoptargs {-into {list args} -at_wave {list args} -after_wave {list args} -before_wave {list args} -reverse {} -radix {unknown arg} -color {unknown arg} -name {unknown arg} -recursive {} -r {} -regexp {} -nocase {} -quiet {} -verbose {}} {+ unknown items}}}}}
+registerProc ::add_wave_divider {{unknown {? {mixedoptargs {-into {list args} -at_wave {list args} -after_wave {list args} -before_wave {list args} -color {unknown arg} -quiet {} -verbose {}} {? unknown name}}}}}
+registerProc ::add_wave_group {{unknown {? {mixedoptargs {-into {list args} -at_wave {list args} -after_wave {list args} -before_wave {list args} -quiet {} -verbose {}} {? unknown name}}}}}
+registerProc ::add_wave_marker {{unknown {? {mixedoptargs {-into {unknown arg} -name {unknown arg} -quiet {} -verbose {}} {? unknown time} {? unknown unit}}}}}
+registerProc ::add_wave_virtual_bus {{unknown {? {mixedoptargs {-into {list args} -at_wave {list args} -after_wave {list args} -before_wave {list args} -reverse {} -radix {unknown arg} -color {unknown arg} -quiet {} -verbose {}} {? unknown name}}}}}
+registerProc ::all_clocks {{list {? {option -quiet {} -verbose {}}}}}
+registerProc ::all_cpus {{list {? {option -quiet {} -verbose {}}}}}
+registerProc ::all_dsps {{list {? {option -quiet {} -verbose {}}}}}
+registerProc ::all_fanin {{list {{mixedoptargs {-startpoints_only {} -flat {} -only_cells {} -levels {unknown arg} -pin_levels {unknown arg} -trace_arcs {unknown arg} -quiet {} -verbose {}} {unknown to}}}}}
+registerProc ::all_fanout {{list {{mixedoptargs {-endpoints_only {} -flat {} -only_cells {} -levels {unknown arg} -pin_levels {unknown arg} -trace_arcs {unknown arg} -quiet {} -verbose {}} {unknown from}}}}}
+registerProc ::all_ffs {{list {? {option -quiet {} -verbose {}}}}}
+registerProc ::all_hsios {{list {? {option -quiet {} -verbose {}}}}}
+registerProc ::all_inputs {{list {? {option -quiet {} -verbose {}}}}}
+registerProc ::all_latches {{list {? {option -quiet {} -verbose {}}}}}
+registerProc ::all_outputs {{list {? {option -quiet {} -verbose {}}}}}
+registerProc ::all_rams {{list {? {option -quiet {} -verbose {}}}}}
+registerProc ::all_registers {{list {? {option -clock {list args} -rise_clock {list args} -fall_clock {list args} -cells {} -data_pins {} -clock_pins {} -async_pins {} -output_pins {} -level_sensitive {} -edge_triggered {} -no_hierarchy {} -quiet {} -verbose {}}}}}
+registerProc ::apply_bd_automation {{unknown {{mixedoptargs {-config {list args} -rule {unknown arg} -quiet {} -verbose {}} {+ unknown objects}}}}}
+registerProc ::apply_board_connection {{unknown {? {option -board_interface {unknown arg} -ip_intf {unknown arg} -diagram {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::apply_hw_ila_trigger {{void {? {mixedoptargs {-ila_cell {unknown arg} -quiet {} -verbose {}} {? unknown file}}}}}
+registerProc ::archive_project {{unknown {? {mixedoptargs {-force {} -exclude_run_results {} -include_config_settings {} -include_runs_in_progress {} -quiet {} -verbose {}} {? unknown file}}}}}
+registerProc ::assign_bd_address {{unknown {? {mixedoptargs {-target_address_space {unknown arg} -boundary {} -quiet {} -verbose {}} {* unknown objects}}}}}
+registerProc ::boot_hw_device {{void {{mixedoptargs {-disable_done_check {} -quiet {} -verbose {}} {unknown hw_device}}}}}
+registerProc ::calc_config_time {{unknown {? {option -verbose {} -max {} -min {} -typ {} -por_used {} -por_ramp {unknown arg} -clk_freq {unknown arg} -bitstream_size {unknown arg} -quiet {}}}}}
+registerProc ::check_ip_cache {{void {? {mixedoptargs {-use_cache_location {unknown arg} -use_project_cache {} -disable_cache {} -clear_output_repo {} -disk_usage_output_repo {} -list {} -filter {unknown arg} -regexp {} -nocase {} -get_id {} -quiet {} -verbose {}} {? unknown ip}}}}}
+registerProc ::check_timing {{void {? {option -file {unknown arg} -no_header {} -loop_limit {unknown arg} -append {} -name {unknown arg} -override_defaults {list args} -include {list args} -exclude {list args} -rpx {unknown arg} -verbose {} -quiet {}}}}}
+registerProc ::checkpoint_vcd {{void {? {option -quiet {} -verbose {}}}}}
+registerProc ::close_bd_design {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::close_design {{void {? {option -quiet {} -verbose {}}}}}
+registerProc ::close_hw {{void {? {option -quiet {} -verbose {}}}}}
+registerProc ::close_hw_target {{void {? {mixedoptargs {-quiet {} -verbose {}} {? unknown hw_target}}}}}
+registerProc ::close_project {{void {? {option -delete {} -quiet {} -verbose {}}}}}
+registerProc ::close_saif {{void {? {option -quiet {} -verbose {}}}}}
+registerProc ::close_sim {{void {? {option -force {} -quiet {} -verbose {}}}}}
+registerProc ::close_vcd {{void {? {option -quiet {} -verbose {}}}}}
+registerProc ::close_wave_config {{void {? {mixedoptargs {-force {} -quiet {} -verbose {}} {? unknown wcfgobj}}}}}
+registerProc ::commit_hw_mig {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown hw_objects}}}}}
+registerProc ::commit_hw_sio {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown hw_objects}}}}}
+registerProc ::commit_hw_sysmon {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown hw_objects}}}}}
+registerProc ::commit_hw_vio {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown hw_objects}}}}}
+registerProc ::compile_c {{void {{mixedoptargs {-force {} -quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::compile_simlib {{void {? {option -directory {unknown arg} -family {unknown arg} -force {} -language {unknown arg} -library {unknown arg} -print_library_info {unknown arg} -simulator {unknown arg} -simulator_exec_path {unknown arg} -source_library_path {unknown arg} -32bit {} -quiet {} -verbose {}}}}}
+registerProc ::config_compile_simlib {{void {? {option -cfgopt {unknown arg} -simulator {unknown arg} -reset {} -quiet {} -verbose {}}}}}
+registerProc ::config_timing_analysis {{void {? {option -enable_input_delay_default_clock {unknown arg} -enable_preset_clear_arcs {unknown arg} -disable_flight_delays {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::config_timing_corners {{void {? {option -corner {unknown arg} -delay_type {unknown arg} -setup {} -hold {} -quiet {} -verbose {}}}}}
+registerProc ::config_webtalk {{void {? {option -info {} -user {unknown arg} -install {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::connect_bd_intf_net {{unknown {{mixedoptargs {-intf_net {unknown arg} -boundary_type {unknown arg} -quiet {} -verbose {}} {unknown object1} {unknown object2}}}}}
+registerProc ::connect_bd_net {{unknown {{mixedoptargs {-net {unknown arg} -boundary_type {unknown arg} -quiet {} -verbose {}} {+ unknown objects}}}}}
+registerProc ::connect_debug_port {{void {{mixedoptargs {-channel_start_index {unknown arg} -quiet {} -verbose {}} {unknown port} {+ unknown nets}}}}}
+registerProc ::connect_hw_server {{unknown {? {option -url {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::connect_net {{void {? {option -hierarchical {} -basename {unknown arg} -net {unknown arg} -objects {list args} -quiet {} -verbose {}}}}}
+registerProc ::convert_ngc {{unknown {{mixedoptargs {-output_dir {unknown arg} -format {unknown arg} -add_to_project {} -force {} -quiet {} -verbose {}} {unknown files}}}}}
+registerProc ::copy_bd_objs {{unknown {{mixedoptargs {-prefix {unknown arg} -from_design {unknown arg} -quiet {} -verbose {}} {unknown parent_cell} {+ unknown objects}}}}}
+registerProc ::copy_ip {{unknown {{mixedoptargs {-name {unknown arg} -dir {unknown arg} -quiet {} -verbose {}} {+ unknown objects}}}}}
+registerProc ::create_bd_addr_seg {{unknown {{mixedoptargs {-range {unknown arg} -offset {unknown arg} -quiet {} -verbose {}} {? unknown parent_addr_space} {? unknown slave_segment} {unknown name}}}}}
+registerProc ::create_bd_cell {{unknown {{mixedoptargs {-vlnv {unknown arg} -type {unknown arg} -quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::create_bd_design {{unknown {{mixedoptargs {-dir {unknown arg} -quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::create_bd_intf_net {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::create_bd_intf_pin {{unknown {{mixedoptargs {-vlnv {unknown arg} -mode {unknown arg} -quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::create_bd_intf_port {{unknown {{mixedoptargs {-vlnv {unknown arg} -mode {unknown arg} -quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::create_bd_net {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::create_bd_pin {{unknown {{mixedoptargs {-from {unknown arg} -to {unknown arg} -dir {unknown arg} -type {unknown arg} -quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::create_bd_port {{unknown {{mixedoptargs {-from {unknown arg} -to {unknown arg} -dir {unknown arg} -type {unknown arg} -quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::create_cell {{void {{mixedoptargs {-reference {unknown arg} -black_box {} -quiet {} -verbose {}} {+ unknown cells}}}}}
+registerProc ::create_clock {{unknown {? {mixedoptargs {-period {unknown arg} -name {unknown arg} -waveform {list args} -add {} -quiet {} -verbose {}} {? unknown objects}}}}}
+registerProc ::create_debug_core {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown name} {unknown type}}}}}
+registerProc ::create_debug_port {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown name} {unknown type}}}}}
+registerProc ::create_drc_check {{void {? {option -hiername {unknown arg} -name {unknown arg} -desc {unknown arg} -msg {unknown arg} -rule_body {unknown arg} -severity {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::create_drc_ruledeck {{unknown {{mixedoptargs {-quiet {} -verbose {}} {+ unknown ruledecks}}}}}
+registerProc ::create_drc_violation {{void {? {mixedoptargs {-name {unknown arg} -severity {unknown arg} -msg {unknown arg} -quiet {} -verbose {}} {* unknown objects}}}}}
+registerProc ::create_fileset {{unknown {{mixedoptargs {-constrset {} -simset {} -blockset {} -clone_properties {unknown arg} -define_from {unknown arg} -quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::create_generated_clock {{unknown {{mixedoptargs {-name {unknown arg} -source {list args} -edges {list args} -divide_by {unknown arg} -multiply_by {unknown arg} -combinational {} -duty_cycle {unknown arg} -invert {} -edge_shift {list args} -add {} -master_clock {unknown arg} -quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::create_hw_axi_txn {{unknown {{mixedoptargs {-address {unknown arg} -data {unknown arg} -size {unknown arg} -type {unknown arg} -len {unknown arg} -burst {unknown arg} -cache {unknown arg} -id {unknown arg} -quiet {} -verbose {}} {unknown name} {unknown hw_axi}}}}}
+registerProc ::create_hw_bitstream {{void {? {mixedoptargs {-hw_device {unknown arg} -mask {unknown arg} -nky {unknown arg} -detect_partial {} -quiet {} -verbose {}} {? unknown file}}}}}
+registerProc ::create_hw_cfgmem {{void {{mixedoptargs {-hw_device {unknown arg} -quiet {} -verbose {}} {unknown mem_device}}}}}
+registerProc ::create_hw_sio_link {{unknown {? {mixedoptargs {-description {unknown arg} -quiet {} -verbose {}} {? unknown hw_sio_rx} {? unknown hw_sio_tx}}}}}
+registerProc ::create_hw_sio_linkgroup {{unknown {{mixedoptargs {-description {unknown arg} -quiet {} -verbose {}} {unknown hw_sio_links}}}}}
+registerProc ::create_hw_sio_scan {{unknown {{mixedoptargs {-description {unknown arg} -link_settings {unknown arg} -quiet {} -verbose {}} {unknown scan_type} {? unknown hw_sio_object}}}}}
+registerProc ::create_hw_sio_sweep {{unknown {{mixedoptargs {-description {unknown arg} -iteration_settings {unknown arg} -quiet {} -verbose {}} {unknown scan_type} {? unknown hw_sio_link}}}}}
+registerProc ::create_interface {{unknown {{mixedoptargs {-parent {unknown arg} -quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::create_ip {{list {? {option -vlnv {unknown arg} -module_name {unknown arg} -dir {unknown arg} -force {} -vendor {unknown arg} -library {unknown arg} -name {unknown arg} -version {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::create_ip_run {{void {{mixedoptargs {-force {} -quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::create_macro {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::create_net {{void {{mixedoptargs {-from {unknown arg} -to {unknown arg} -quiet {} -verbose {}} {+ unknown nets}}}}}
+registerProc ::create_pblock {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::create_peripheral {{void {{mixedoptargs {-dir {unknown arg} -quiet {} -verbose {}} {unknown vendor} {unknown library} {unknown name} {unknown version}}}}}
+registerProc ::create_pin {{void {{mixedoptargs {-from {unknown arg} -to {unknown arg} -direction {unknown arg} -quiet {} -verbose {}} {+ unknown pins}}}}}
+registerProc ::create_port {{list {{mixedoptargs {-direction {unknown arg} -from {unknown arg} -to {unknown arg} -diff_pair {} -interface {unknown arg} -quiet {} -verbose {}} {unknown name} {? unknown negative_name}}}}}
+registerProc ::create_project {{unknown {? {mixedoptargs {-part {unknown arg} -force {} -in_memory {} -ip {} -quiet {} -verbose {}} {? unknown name} {? unknown dir}}}}}
+registerProc ::create_property {{unknown {{mixedoptargs {-description {unknown arg} -type {unknown arg} -enum_values {list args} -default_value {unknown arg} -file_types {list args} -display_text {unknown arg} -quiet {} -verbose {}} {unknown name} {unknown class}}}}}
+registerProc ::create_run {{unknown {{mixedoptargs {-constrset {unknown arg} -parent_run {unknown arg} -part {unknown arg} -flow {unknown arg} -strategy {unknown arg} -quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::create_slack_histogram {{void {? {option -to {list args} -delay_type {unknown arg} -num_bins {unknown arg} -slack_less_than {unknown arg} -slack_greater_than {unknown arg} -group {list args} -report_unconstrained {} -significant_digits {unknown arg} -scale {unknown arg} -name {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::create_sysgen {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::create_wave_config {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown name}}}}}
+registerProc ::create_xps {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::current_bd_design {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown design}}}}}
+registerProc ::current_bd_instance {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown instance}}}}}
+registerProc ::current_board {{unknown {? {option -quiet {} -verbose {}}}}}
+registerProc ::current_board_part {{unknown {? {option -quiet {} -verbose {}}}}}
+registerProc ::current_design {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown design}}}}}
+registerProc ::current_fileset {{unknown {? {mixedoptargs {-constrset {} -simset {} -quiet {} -verbose {}} {* unknown fileset}}}}}
+registerProc ::current_hw_cfgmem {{unknown {? {mixedoptargs {-hw_device {list args} -quiet {} -verbose {}} {? unknown hw_cfgmem}}}}}
+registerProc ::current_hw_device {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown hw_device}}}}}
+registerProc ::current_hw_ila {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown hw_ila}}}}}
+registerProc ::current_hw_ila_data {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown hw_ila_data}}}}}
+registerProc ::current_hw_server {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown hw_server}}}}}
+registerProc ::current_hw_target {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown hw_target}}}}}
+registerProc ::current_instance {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown instance}}}}}
+registerProc ::current_project {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown project}}}}}
+registerProc ::current_run {{unknown {? {mixedoptargs {-synthesis {} -implementation {} -quiet {} -verbose {}} {? unknown run}}}}}
+registerProc ::current_scope {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown hdl_scope}}}}}
+registerProc ::current_sim {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown simulationObject}}}}}
+registerProc ::current_time {{unknown {? {option -quiet {} -verbose {}}}}}
+registerProc ::current_vcd {{void {? {mixedoptargs {-quiet {} -verbose {}} {? unknown VCDObject}}}}}
+registerProc ::current_wave_config {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown wcfgObj}}}}}
+registerProc ::delete_bd_objs {{unknown {{mixedoptargs {-quiet {} -verbose {}} {+ unknown objects}}}}}
+registerProc ::delete_clock_networks_results {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::delete_debug_core {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown cores}}}}}
+registerProc ::delete_debug_port {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown ports}}}}}
+registerProc ::delete_drc_check {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown name}}}}}
+registerProc ::delete_drc_ruledeck {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::delete_fileset {{void {{mixedoptargs {-merge {unknown arg} -quiet {} -verbose {}} {unknown fileset}}}}}
+registerProc ::delete_hw_axi_txn {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown hw_axi_txns}}}}}
+registerProc ::delete_hw_bitstream {{unknown {? {option -of_objects {list args} -quiet {} -verbose {}}}}}
+registerProc ::delete_hw_cfgmem {{void {? {mixedoptargs {-quiet {} -verbose {}} {? unknown cfgmem}}}}}
+registerProc ::delete_interface {{void {{mixedoptargs {-all {} -quiet {} -verbose {}} {+ unknown interfaces}}}}}
+registerProc ::delete_ip_run {{void {{mixedoptargs {-force {} -quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::delete_macros {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown macros}}}}}
+registerProc ::delete_pblocks {{void {{mixedoptargs {-hier {} -quiet {} -verbose {}} {+ unknown pblocks}}}}}
+registerProc ::delete_power_results {{void {? {option -name {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::delete_rpm {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown rpm}}}}}
+registerProc ::delete_runs {{void {{mixedoptargs {-noclean_dir {} -quiet {} -verbose {}} {unknown runs}}}}}
+registerProc ::delete_timing_results {{void {{mixedoptargs {-type {unknown arg} -quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::delete_utilization_results {{void {? {option -name {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::describe {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown hdl_object}}}}}
+registerProc ::detect_hw_sio_links {{unknown {? {option -force {} -quiet {} -verbose {}}}}}
+registerProc ::disconnect_bd_intf_net {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown intf_net} {+ unknown objects}}}}}
+registerProc ::disconnect_bd_net {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown net} {+ unknown objects}}}}}
+registerProc ::disconnect_debug_port {{void {{mixedoptargs {-channel_index {unknown arg} -quiet {} -verbose {}} {unknown port}}}}}
+registerProc ::disconnect_hw_server {{void {? {mixedoptargs {-quiet {} -verbose {}} {? unknown hw_server}}}}}
+registerProc ::disconnect_net {{void {? {option -prune {} -net {unknown arg} -objects {list args} -quiet {} -verbose {}}}}}
+registerProc ::display_hw_ila_data {{void {? {mixedoptargs {-wcfg {unknown arg} -reset {} -quiet {} -verbose {}} {* unknown hw_ila_data}}}}}
+registerProc ::display_hw_sio_scan {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown hw_sio_scans}}}}}
+registerProc ::encrypt {{void {{mixedoptargs {-key {unknown arg} -lang {unknown arg} -quiet {} -verbose {}} {+ unknown files}}}}}
+registerProc ::endgroup {{void {? {option -quiet {} -verbose {}}}}}
+registerProc ::exclude_bd_addr_seg {{unknown {? {mixedoptargs {-target_address_space {unknown arg} -quiet {} -verbose {}} {? unknown segment_to_exclude}}}}}
+registerProc ::export_bd_synth {{unknown {{mixedoptargs {-force {} -keep {} -verbose {} -quiet {}} {unknown file}}}}}
+registerProc ::export_simulation {{unknown {? {option -simulator {unknown arg} -language {unknown arg} -of_objects {unknown arg} -lib_map_path {unknown arg} -script_name {unknown arg} -absolute_path {} -single_step {} -ip_netlist {} -directory {unknown arg} -export_source_files {} -reset_config_options {} -32bit {} -force {} -quiet {} -verbose {}}}}}
+registerProc ::filter {{unknown {? {mixedoptargs {-regexp {} -nocase {} -quiet {} -verbose {}} {? unknown objects} {? unknown filter}}}}}
+registerProc ::find_bd_objs {{list {{mixedoptargs {-relation {unknown arg} -boundary_type {unknown arg} -thru_hier {} -end_type {unknown arg} -quiet {} -verbose {}} {+ unknown objects}}}}}
+registerProc ::find_routing_path {{void {? {option -allow_overlap {} -max_nodes {unknown arg} -min_nodes {unknown arg} -from {list args} -to {list args} -quiet {} -verbose {}}}}}
+registerProc ::find_top {{void {? {option -fileset {unknown arg} -files {list args} -return_file_paths {} -quiet {} -verbose {}}}}}
+registerProc ::flush_vcd {{void {? {option -quiet {} -verbose {}}}}}
+registerProc ::generate_mem_files {{unknown {{mixedoptargs {-force {} -quiet {} -verbose {}} {unknown directory}}}}}
+registerProc ::generate_peripheral {{void {{mixedoptargs {-driver {} -example_design {} -bfm_example_design {} -debug_hw_example_design {} -enable_interrupt {} -force {} -quiet {} -verbose {}} {unknown peripheral}}}}}
+registerProc ::generate_target {{void {{mixedoptargs {-force {} -quiet {} -verbose {}} {unknown name} {unknown objects}}}}}
+registerProc ::get_bd_addr_segs {{list {? {mixedoptargs {-regexp {} -hierarchical {} -filter {unknown arg} -of_objects {list args} -excluded {} -addressing {} -addressed {} -addressables {} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_bd_addr_spaces {{list {? {mixedoptargs {-regexp {} -hierarchical {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_bd_cells {{list {? {mixedoptargs {-regexp {} -hierarchical {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_bd_designs {{list {? {mixedoptargs {-regexp {} -filter {unknown arg} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_bd_intf_nets {{list {? {mixedoptargs {-regexp {} -hierarchical {} -filter {unknown arg} -boundary_type {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_bd_intf_pins {{list {? {mixedoptargs {-regexp {} -hierarchical {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_bd_intf_ports {{list {? {mixedoptargs {-regexp {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_bd_nets {{list {? {mixedoptargs {-regexp {} -hierarchical {} -filter {unknown arg} -boundary_type {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_bd_pins {{list {? {mixedoptargs {-regexp {} -hierarchical {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_bd_ports {{list {? {mixedoptargs {-regexp {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_bel_pins {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_bels {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_board_bus_nets {{list {? {mixedoptargs {-regexp {} -nocase {} -all {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_board_buses {{list {? {mixedoptargs {-regexp {} -nocase {} -all {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_board_component_interfaces {{list {? {mixedoptargs {-regexp {} -nocase {} -all {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_board_component_modes {{list {? {mixedoptargs {-regexp {} -nocase {} -all {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_board_component_pins {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_board_components {{list {? {mixedoptargs {-regexp {} -nocase {} -all {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_board_interface_ports {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_board_ip_preferences {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_board_jumpers {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_board_parameters {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_board_part_interfaces {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_board_part_pins {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_board_parts {{list {? {mixedoptargs {-regexp {} -nocase {} -latest_file_version {} -latest_hw_revision {} -filter {unknown arg} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_boards {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_cells {{list {? {mixedoptargs {-hsc {unknown arg} -hierarchical {} -regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -match_style {unknown arg} -include_replicated_objects {} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_cfgmem_parts {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_clock_regions {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_clocks {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -match_style {unknown arg} -include_generated_clocks {} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_debug_cores {{list {? {mixedoptargs {-filter {unknown arg} -of_objects {list args} -regexp {} -nocase {} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_debug_ports {{list {? {mixedoptargs {-filter {unknown arg} -of_objects {list args} -regexp {} -nocase {} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_designs {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_drc_checks {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -abbrev {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_drc_ruledecks {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_drc_violations {{list {? {mixedoptargs {-name {unknown arg} -regexp {} -filter {unknown arg} -nocase {} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_example_designs {{list {? {option -quiet {} -verbose {}}}}}
+registerProc ::get_files {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -compile_order {unknown arg} -used_in {unknown arg} -all {} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_filesets {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_generated_clocks {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -match_style {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hierarchy_separator {{void {? {option -quiet {} -verbose {}}}}}
+registerProc ::get_highlighted_objects {{list {? {option -color_index {unknown arg} -rgb {list args} -color {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::get_hw_axi_txns {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_axis {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_cfgmems {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_devices {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_ila_datas {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_ilas {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_migs {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_probes {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_servers {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_sio_commons {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_sio_gtgroups {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_sio_gts {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_sio_iberts {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_sio_linkgroups {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_sio_links {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_sio_plls {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_sio_rxs {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_sio_scans {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_sio_sweeps {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_sio_txs {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_sysmon_reg {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown hw_sysmon} {unknown hexaddress}}}}}
+registerProc ::get_hw_sysmons {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_targets {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_hw_vios {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_interfaces {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_io_standards {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_iobanks {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_ip_upgrade_results {{list {? {mixedoptargs {-srcset {unknown arg} -quiet {} -verbose {}} {* unknown objects}}}}}
+registerProc ::get_ipdefs {{list {? {mixedoptargs {-name {} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_ips {{list {? {mixedoptargs {-regexp {} -nocase {} -all {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_lib_cells {{list {{mixedoptargs {-regexp {} -filter {unknown arg} -nocase {} -include_unsupported {} -of_objects {list args} -quiet {} -verbose {}} {unknown patterns}}}}}
+registerProc ::get_lib_pins {{list {{mixedoptargs {-regexp {} -filter {unknown arg} -nocase {} -of_objects {list args} -quiet {} -verbose {}} {unknown patterns}}}}}
+registerProc ::get_libs {{list {? {mixedoptargs {-regexp {} -filter {unknown arg} -nocase {} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_macros {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_marked_objects {{list {? {option -rgb {list args} -color {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::get_msg_config {{void {? {option -id {unknown arg} -severity {unknown arg} -rules {} -limit {} -count {} -quiet {} -verbose {}}}}}
+registerProc ::get_net_delays {{unknown {? {option -of_objects {list args} -regexp {} -nocase {} -patterns {unknown arg} -filter {unknown arg} -to {list args} -interconnect_only {} -quiet {} -verbose {}}}}}
+registerProc ::get_nets {{list {? {mixedoptargs {-hsc {unknown arg} -hierarchical {} -regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -match_style {unknown arg} -top_net_of_hierarchical_group {} -segments {} -boundary_type {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_nodes {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -uphill {} -downhill {} -flyover {} -from {list args} -to {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_objects {{unknown {? {mixedoptargs {-filter {unknown arg} -r {} -regexp {} -nocase {} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_package_pins {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_param {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::get_parts {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_path_groups {{list {? {mixedoptargs {-regexp {} -nocase {} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_pblocks {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_pins {{list {? {mixedoptargs {-hsc {unknown arg} -hierarchical {} -regexp {} -nocase {} -leaf {} -filter {unknown arg} -of_objects {list args} -match_style {unknown arg} -include_replicated_objects {} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_pips {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -uphill {} -downhill {} -from {list args} -to {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_pkgpin_bytegroups {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_pkgpin_nibbles {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_ports {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -match_style {unknown arg} -scoped_to_current_instance {} -prop_thru_buffers {} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_projects {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_property {{unknown {{mixedoptargs {-min {} -max {} -quiet {} -verbose {}} {unknown name} {list objects}}}}}
+registerProc ::get_runs {{list {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_scopes {{unknown {? {mixedoptargs {-filter {unknown arg} -regexp {} -nocase {} -r {} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_selected_objects {{list {? {option -primary {} -quiet {} -verbose {}}}}}
+registerProc ::get_simulators {{void {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_site_pins {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_site_pips {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_sites {{list {? {mixedoptargs {-regexp {} -filter {unknown arg} -nocase {} -range {list args} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_slrs {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_speed_models {{unknown {? {option -of_objects {list args} -regexp {} -nocase {} -patterns {unknown arg} -filter {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::get_template_bd_designs {{list {? {option -quiet {} -verbose {}}}}}
+registerProc ::get_tiles {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::get_timing_arcs {{list {? {option -from {list args} -to {list args} -filter {unknown arg} -of_objects {list args} -quiet {} -verbose {}}}}}
+registerProc ::get_timing_paths {{list {? {option -from {list args} -rise_from {list args} -fall_from {list args} -to {list args} -rise_to {list args} -fall_to {list args} -through {list args} -rise_through {list args} -fall_through {list args} -delay_type {unknown arg} -setup {} -hold {} -max_paths {unknown arg} -nworst {unknown arg} -unique_pins {} -slack_lesser_than {unknown arg} -slack_greater_than {unknown arg} -group {list args} -no_report_unconstrained {} -user_ignored {} -sort_by {unknown arg} -filter {unknown arg} -regexp {} -nocase {} -quiet {} -verbose {}}}}}
+registerProc ::get_value {{unknown {{mixedoptargs {-radix {unknown arg} -quiet {} -verbose {}} {unknown hdl_object}}}}}
+registerProc ::get_wave_configs {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -quiet {} -verbose {}} {* unknown patterns}}}}}
+registerProc ::get_wires {{unknown {? {mixedoptargs {-regexp {} -nocase {} -filter {unknown arg} -of_objects {list args} -uphill {} -downhill {} -from {list args} -to {list args} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::group_bd_cells {{unknown {? {mixedoptargs {-prefix {unknown arg} -quiet {} -verbose {}} {? unknown target_cell_name} {* unknown cells}}}}}
+registerProc ::group_path {{void {? {option -name {unknown arg} -from {list args} -to {list args} -through {list args} -quiet {} -verbose {}}}}}
+registerProc ::help {{void {? {mixedoptargs {-category {unknown arg} -args {} -syntax {} -long {} -prop {unknown arg} -class {unknown arg} -message {unknown arg} -quiet {} -verbose {}} {? unknown pattern_or_object}}}}}
+registerProc ::highlight_objects {{void {{mixedoptargs {-color_index {unknown arg} -rgb {list args} -color {unknown arg} -quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::implement_debug_core {{void {? {mixedoptargs {-quiet {} -verbose {}} {* unknown cores}}}}}
+registerProc ::implement_mig_cores {{void {? {option -outputdir {unknown arg} -rtlonly {} -quiet {} -verbose {}}}}}
+registerProc ::import_files {{unknown {? {mixedoptargs {-fileset {unknown arg} -force {} -norecurse {} -flat {} -relative_to {unknown arg} -quiet {} -verbose {}} {* unknown files}}}}}
+registerProc ::import_ip {{list {? {mixedoptargs {-srcset {unknown arg} -name {unknown arg} -quiet {} -verbose {}} {? unknown files}}}}}
+registerProc ::import_synplify {{list {{mixedoptargs {-copy_sources {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::import_xise {{unknown {{mixedoptargs {-copy_sources {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::import_xst {{list {{mixedoptargs {-copy_sources {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::include_bd_addr_seg {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown segment_to_include}}}}}
+registerProc ::infer_diff_pairs {{void {? {mixedoptargs {-file_type {unknown arg} -quiet {} -verbose {}} {* unknown file}}}}}
+registerProc ::instantiate_example_design {{list {{mixedoptargs {-design {unknown arg} -quiet {} -verbose {}} {unknown template}}}}}
+registerProc ::instantiate_template_bd_design {{unknown {{mixedoptargs {-design {unknown arg} -quiet {} -verbose {}} {unknown template}}}}}
+registerProc ::launch_chipscope_analyzer {{void {? {option -run {unknown arg} -csproject {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::launch_impact {{void {? {option -run {unknown arg} -ipf {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::launch_runs {{void {{mixedoptargs {-jobs {unknown arg} -scripts_only {} -lsf {unknown arg} -sge {unknown arg} -dir {unknown arg} -to_step {unknown arg} -next_step {} -host {list args} -remote_cmd {unknown arg} -email_to {list args} -email_all {} -pre_launch_script {unknown arg} -post_launch_script {unknown arg} -force {} -quiet {} -verbose {}} {+ unknown runs}}}}}
+registerProc ::launch_sdk {{void {? {option -bit {unknown arg} -bmm {unknown arg} -workspace {unknown arg} -lp {unknown arg} -hwspec {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::launch_simulation {{void {? {option -step {unknown arg} -simset {unknown arg} -mode {unknown arg} -type {unknown arg} -scripts_only {} -of_objects {list args} -absolute_path {} -install_path {unknown arg} -noclean_dir {} -quiet {} -verbose {}}}}}
+registerProc ::limit_vcd {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown filesize}}}}}
+registerProc ::link_design {{unknown {? {option -name {unknown arg} -part {unknown arg} -constrset {unknown arg} -top {unknown arg} -mode {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::list_features {{void {? {option -quiet {} -verbose {}}}}}
+registerProc ::list_param {{unknown {? {option -quiet {} -verbose {}}}}}
+registerProc ::list_property {{list {? {mixedoptargs {-class {unknown arg} -regexp {} -quiet {} -verbose {}} {? list objects} {? unknown pattern}}}}}
+registerProc ::list_property_value {{list {{mixedoptargs {-default {} -class {unknown arg} -quiet {} -verbose {}} {unknown name} {? list objects}}}}}
+registerProc ::list_targets {{list {{mixedoptargs {-quiet {} -verbose {}} {unknown files}}}}}
+registerProc ::load_features {{void {? {mixedoptargs {-quiet {} -verbose {}} {* unknown features}}}}}
+registerProc ::lock_design {{void {? {mixedoptargs {-level {unknown arg} -unlock {} -export {} -quiet {} -verbose {}} {? unknown cell}}}}}
+registerProc ::log_saif {{unknown {{mixedoptargs {-quiet {} -verbose {}} {+ unknown hdl_objects}}}}}
+registerProc ::log_vcd {{unknown {? {mixedoptargs {-level {unknown arg} -quiet {} -verbose {}} {* unknown hdl_objects}}}}}
+registerProc ::log_wave {{void {{mixedoptargs {-recursive {} -r {} -quiet {} -verbose {}} {+ unknown hdl_objects}}}}}
+registerProc ::ltrace {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown value}}}}}
+registerProc ::make_diff_pair_ports {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown ports}}}}}
+registerProc ::make_wrapper {{void {{mixedoptargs {-top {} -testbench {} -inst_template {} -fileset {unknown arg} -import {} -force {} -quiet {} -verbose {}} {unknown files}}}}}
+registerProc ::mark_objects {{void {{mixedoptargs {-rgb {list args} -color {unknown arg} -quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::move_bd_cells {{unknown {? {mixedoptargs {-prefix {unknown arg} -quiet {} -verbose {}} {? unknown parent_cell} {* unknown cells}}}}}
+registerProc ::move_files {{list {? {mixedoptargs {-fileset {unknown arg} -quiet {} -verbose {}} {* unknown files}}}}}
+registerProc ::open_bd_design {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::open_checkpoint {{void {{mixedoptargs {-part {unknown arg} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::open_example_project {{unknown {{mixedoptargs {-dir {unknown arg} -force {} -in_process {} -quiet {} -verbose {}} {+ unknown objects}}}}}
+registerProc ::open_hw {{void {? {option -quiet {} -verbose {}}}}}
+registerProc ::open_hw_target {{void {? {mixedoptargs {-jtag_mode {unknown arg} -xvc_url {unknown arg} -quiet {} -verbose {}} {? unknown hw_target}}}}}
+registerProc ::open_io_design {{unknown {? {option -name {unknown arg} -part {unknown arg} -constrset {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::open_project {{unknown {{mixedoptargs {-part {unknown arg} -read_only {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::open_report {{void {{mixedoptargs {-file {unknown arg} -append {} -console {} -name {unknown arg} -return_string {} -quiet {} -verbose {}} {unknown rpx}}}}}
+registerProc ::open_run {{unknown {{mixedoptargs {-name {unknown arg} -quiet {} -verbose {}} {unknown run}}}}}
+registerProc ::open_saif {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown file_name}}}}}
+registerProc ::open_vcd {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown file_name}}}}}
+registerProc ::open_wave_config {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown filename}}}}}
+registerProc ::open_wave_database {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown wdb}}}}}
+registerProc ::opt_design {{void {? {option -retarget {} -propconst {} -sweep {} -bram_power_opt {} -remap {} -resynth_area {} -resynth_seq_area {} -directive {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::phys_opt_design {{void {? {option -fanout_opt {} -placement_opt {} -routing_opt {} -rewire {} -critical_cell_opt {} -dsp_register_opt {} -bram_register_opt {} -bram_enable_opt {} -shift_register_opt {} -hold_fix {} -retime {} -force_replication_on_nets {list args} -directive {unknown arg} -critical_pin_opt {} -clock_opt {} -quiet {} -verbose {}}}}}
+registerProc ::place_cell {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown cell_site_list}}}}}
+registerProc ::place_design {{void {? {option -directive {unknown arg} -no_timing_driven {} -timing_summary {} -unplace {} -post_place_opt {} -quiet {} -verbose {}}}}}
+registerProc ::place_pblocks {{void {{mixedoptargs {-effort {unknown arg} -utilization {unknown arg} -quiet {} -verbose {}} {+ unknown pblocks}}}}}
+registerProc ::place_ports {{void {? {mixedoptargs {-skip_unconnected_ports {} -check_only {} -iobank {list args} -quiet {} -verbose {}} {* unknown ports}}}}}
+registerProc ::power_opt_design {{void {? {option -quiet {} -verbose {}}}}}
+registerProc ::pr_verify {{void {? {mixedoptargs {-full_check {} -file {unknown arg} -initial {unknown arg} -additional {unknown arg} -quiet {} -verbose {}} {? unknown file1} {? unknown file2}}}}}
+registerProc ::program_hw_cfgmem {{void {? {mixedoptargs {-quiet {} -verbose {}} {* unknown hw_cfgmem}}}}}
+registerProc ::program_hw_devices {{unknown {? {mixedoptargs {-key {unknown arg} -clear {} -user_efuse {unknown arg} -control_efuse {unknown arg} -security_efuse {unknown arg} -quiet {} -verbose {}} {* unknown hw_device}}}}}
+registerProc ::ptrace {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown value}}}}}
+registerProc ::read_bd {{list {{mixedoptargs {-quiet {} -verbose {}} {+ unknown files}}}}}
+registerProc ::read_checkpoint {{void {{mixedoptargs {-cell {unknown arg} -incremental {} -dont_reuse {list args} -only_reuse {list args} -fix_reuse {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::read_csv {{void {{mixedoptargs {-quiet_diff_pairs {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::read_edif {{list {{mixedoptargs {-quiet {} -verbose {}} {unknown files}}}}}
+registerProc ::read_hw_ila_data {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::read_hw_sio_scan {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown file} {? unknown hw_sio_scan}}}}}
+registerProc ::read_hw_sio_sweep {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown directory} {? unknown hw_sio_sweep}}}}}
+registerProc ::read_ip {{list {{mixedoptargs {-quiet {} -verbose {}} {unknown files}}}}}
+registerProc ::read_mem {{list {{mixedoptargs {-quiet {} -verbose {}} {+ unknown files}}}}}
+registerProc ::read_saif {{void {{mixedoptargs {-strip_path {unknown arg} -no_strip {} -out_file {unknown arg} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::read_schematic {{unknown {{mixedoptargs {-name {unknown arg} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::read_twx {{void {{mixedoptargs {-cell {unknown arg} -pblock {unknown arg} -quiet {} -verbose {}} {unknown name} {unknown file}}}}}
+registerProc ::read_verilog {{list {{mixedoptargs {-library {unknown arg} -sv {} -quiet {} -verbose {}} {+ unknown files}}}}}
+registerProc ::read_vhdl {{list {{mixedoptargs {-library {unknown arg} -quiet {} -verbose {}} {unknown files}}}}}
+registerProc ::read_xdc {{list {{mixedoptargs {-cells {list args} -ref {unknown arg} -quiet_diff_pairs {} -no_add {} -quiet {} -verbose {}} {unknown files}}}}}
+registerProc ::readback_hw_cfgmem {{void {? {mixedoptargs {-all {} -verify {} -offset {unknown arg} -file {unknown arg} -format {unknown arg} -datacount {unknown arg} -quiet {} -verbose {}} {* unknown hw_cfgmem}}}}}
+registerProc ::readback_hw_device {{unknown {? {mixedoptargs {-force {} -readback_file {unknown arg} -bin_file {unknown arg} -quiet {} -verbose {}} {* unknown hw_device}}}}}
+registerProc ::redo {{unknown {? {option -list {} -quiet {} -verbose {}}}}}
+registerProc ::refresh_design {{void {? {option -part {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::refresh_hw_axi {{void {? {mixedoptargs {-quiet {} -verbose {}} {* unknown hw_axis}}}}}
+registerProc ::refresh_hw_device {{void {? {mixedoptargs {-update_hw_probes {unknown arg} -disable_done_check {} -quiet {} -verbose {}} {? unknown hw_device}}}}}
+registerProc ::refresh_hw_mig {{void {{mixedoptargs {-regexp {} -properties {list args} -quiet {} -verbose {}} {unknown hw_objects}}}}}
+registerProc ::refresh_hw_server {{void {? {mixedoptargs {-quiet {} -verbose {}} {? unknown hw_server}}}}}
+registerProc ::refresh_hw_sio {{void {{mixedoptargs {-regexp {} -properties {list args} -quiet {} -verbose {}} {unknown hw_objects}}}}}
+registerProc ::refresh_hw_sysmon {{void {{mixedoptargs {-regexp {} -properties {list args} -quiet {} -verbose {}} {unknown hw_objects}}}}}
+registerProc ::refresh_hw_target {{void {? {mixedoptargs {-quiet {} -verbose {}} {? unknown hw_target}}}}}
+registerProc ::refresh_hw_vio {{void {{mixedoptargs {-update_output_values {} -quiet {} -verbose {}} {+ unknown hw_vios}}}}}
+registerProc ::regenerate_bd_layout {{void {? {option -hierarchy {unknown arg} -routing {} -quiet {} -verbose {}}}}}
+registerProc ::register_proc {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown proc} {? unknown tasknm}}}}}
+registerProc ::reimport_files {{list {? {mixedoptargs {-force {} -quiet {} -verbose {}} {* unknown files}}}}}
+registerProc ::remove_bps {{void {? {mixedoptargs {-all {} -file {unknown arg} -line {unknown arg} -quiet {} -verbose {}} {* unknown BreakPointObjsOrIds}}}}}
+registerProc ::remove_cell {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown cells}}}}}
+registerProc ::remove_cells_from_pblock {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown pblock} {+ unknown cells}}}}}
+registerProc ::remove_conditions {{void {? {mixedoptargs {-all {} -quiet {} -verbose {}} {? unknown ConditionObjs}}}}}
+registerProc ::remove_drc_checks {{unknown {? {mixedoptargs {-of_objects {list args} -regexp {} -nocase {} -filter {unknown arg} -ruledeck {unknown arg} -quiet {} -verbose {}} {? unknown patterns}}}}}
+registerProc ::remove_files {{list {{mixedoptargs {-fileset {unknown arg} -quiet {} -verbose {}} {+ unknown files}}}}}
+registerProc ::remove_forces {{void {? {mixedoptargs {-all {} -quiet {} -verbose {}} {* unknown ForceObj}}}}}
+registerProc ::remove_hw_sio_link {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown hw_sio_links}}}}}
+registerProc ::remove_hw_sio_linkgroup {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown hw_sio_linkgroups}}}}}
+registerProc ::remove_hw_sio_scan {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown hw_sio_scans}}}}}
+registerProc ::remove_hw_sio_sweep {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown hw_sio_sweeps}}}}}
+registerProc ::remove_net {{void {{mixedoptargs {-prune {} -quiet {} -verbose {}} {+ unknown nets}}}}}
+registerProc ::remove_pin {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown pins}}}}}
+registerProc ::remove_port {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown ports}}}}}
+registerProc ::rename_cell {{void {{mixedoptargs {-to {unknown arg} -quiet {} -verbose {}} {+ unknown cell}}}}}
+registerProc ::rename_net {{void {{mixedoptargs {-to {unknown arg} -quiet {} -verbose {}} {+ unknown net}}}}}
+registerProc ::rename_pin {{void {{mixedoptargs {-to {unknown arg} -quiet {} -verbose {}} {+ unknown pin}}}}}
+registerProc ::rename_port {{void {{mixedoptargs {-to {unknown arg} -quiet {} -verbose {}} {+ unknown port}}}}}
+registerProc ::rename_ref {{void {? {option -ref {unknown arg} -to {unknown arg} -prefix_all {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::reorder_files {{void {{mixedoptargs {-fileset {unknown arg} -before {unknown arg} -after {unknown arg} -front {} -back {} -auto {} -disable_unused {} -quiet {} -verbose {}} {+ unknown files}}}}}
+registerProc ::replace_bd_cell {{unknown {? {mixedoptargs {-preserve_name {} -preserve_configuration {} -quiet {} -verbose {}} {? unknown cell1} {* unknown cell2}}}}}
+registerProc ::report_bps {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {* unknown BreakPointObjs}}}}}
+registerProc ::report_carry_chains {{unknown {? {option -file {unknown arg} -append {} -return_string {} -max_chains {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::report_cdc {{void {? {option -from {list args} -to {list args} -details {} -summary {} -no_header {} -file {unknown arg} -append {} -return_string {} -name {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::report_clock_interaction {{void {? {option -delay_type {unknown arg} -setup {} -hold {} -significant_digits {unknown arg} -no_header {} -file {unknown arg} -append {} -name {unknown arg} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_clock_networks {{void {? {option -file {unknown arg} -append {} -name {unknown arg} -return_string {} -endpoints_only {} -levels {unknown arg} -expand_buckets {} -suppress_endpoints {unknown arg} -clocks {list args} -unconstrained_roots {list args} -quiet {} -verbose {}}}}}
+registerProc ::report_clock_utilization {{unknown {? {option -file {unknown arg} -append {} -write_xdc {unknown arg} -clock_roots_only {} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_clocks {{void {? {mixedoptargs {-file {unknown arg} -append {} -return_string {} -quiet {} -verbose {}} {? unknown clocks}}}}}
+registerProc ::report_compile_order {{void {? {option -fileset {unknown arg} -missing_instances {} -constraints {} -sources {} -used_in {unknown arg} -file {unknown arg} -append {} -of_objects {list args} -quiet {} -verbose {}}}}}
+registerProc ::report_conditions {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {* unknown ConditionObjs}}}}}
+registerProc ::report_config_timing {{void {? {option -file {unknown arg} -append {} -name {unknown arg} -return_string {} -all {} -no_header {} -rpx {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::report_control_sets {{unknown {? {option -file {unknown arg} -append {} -sort_by {list args} -cells {list args} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_datasheet {{void {? {option -significant_digits {unknown arg} -file {unknown arg} -append {} -return_string {} -sort_by {unknown arg} -name {unknown arg} -show_all_corners {} -group {list args} -rpx {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::report_debug_core {{void {? {option -file {unknown arg} -append {} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_design_analysis {{void {? {option -file {unknown arg} -append {} -return_string {} -complexity {} -cells {list args} -hierarchical {} -hierarchical_depth {unknown arg} -congestion {} -timing {} -setup {} -hold {} -of_timing_paths {list args} -max_paths {unknown arg} -extend {} -quiet {} -verbose {}}}}}
+registerProc ::report_disable_timing {{void {? {option -file {unknown arg} -append {} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_drc {{void {? {option -name {unknown arg} -checks {list args} -ruledecks {list args} -file {unknown arg} -append {} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_drivers {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown hdl_object}}}}}
+registerProc ::report_environment {{void {? {option -file {unknown arg} -format {unknown arg} -append {} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_exceptions {{void {? {option -from {list args} -rise_from {list args} -fall_from {list args} -to {list args} -rise_to {list args} -fall_to {list args} -through {list args} -rise_through {list args} -fall_through {list args} -ignored {} -summary {} -coverage {} -no_header {} -file {unknown arg} -append {} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_high_fanout_nets {{unknown {? {option -file {unknown arg} -format {unknown arg} -append {} -ascending {} -timing {} -histogram {} -load_types {} -clock_regions {} -slr {} -max_nets {unknown arg} -min_fanout {unknown arg} -max_fanout {unknown arg} -fanout_greater_than {unknown arg} -fanout_lesser_than {unknown arg} -name {unknown arg} -cells {list args} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_hw_axi_txn {{void {{mixedoptargs {-w {unknown arg} -t {unknown arg} -quiet {} -verbose {}} {+ unknown hw_axi_txns}}}}}
+registerProc ::report_hw_mig {{void {{mixedoptargs {-file {unknown arg} -append {} -quiet {} -verbose {}} {unknown hw_objects}}}}}
+registerProc ::report_incremental_reuse {{void {? {option -file {unknown arg} -append {} -cells {list args} -hierarchical {} -hierarchical_depth {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::report_io {{unknown {? {option -file {unknown arg} -name {unknown arg} -append {} -format {unknown arg} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_ip_status {{unknown {? {option -name {unknown arg} -file {unknown arg} -append {} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_objects {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {* unknown hdl_objects}}}}}
+registerProc ::report_operating_conditions {{void {? {option -voltage {list args} -grade {} -process {} -junction_temp {} -ambient_temp {} -thetaja {} -thetasa {} -airflow {} -heatsink {} -thetajb {} -board {} -board_temp {} -board_layers {} -all {} -file {unknown arg} -return_string {} -append {} -quiet {} -verbose {}}}}}
+registerProc ::report_param {{unknown {? {mixedoptargs {-file {unknown arg} -append {} -non_default {} -return_string {} -quiet {} -verbose {}} {? unknown pattern}}}}}
+registerProc ::report_phys_opt {{void {? {option -file {unknown arg} -append {} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_power {{void {? {option -no_propagation {} -hier {unknown arg} -vid {} -file {unknown arg} -name {unknown arg} -format {unknown arg} -xpe {unknown arg} -l {unknown arg} -return_string {} -append {} -quiet {} -verbose {}}}}}
+registerProc ::report_power_opt {{void {? {option -cell {list args} -file {unknown arg} -format {unknown arg} -name {unknown arg} -append {} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_property {{unknown {? {mixedoptargs {-all {} -class {unknown arg} -return_string {} -file {unknown arg} -append {} -regexp {} -quiet {} -verbose {}} {? list objects} {? unknown pattern}}}}}
+registerProc ::report_pulse_width {{void {? {mixedoptargs {-file {unknown arg} -append {} -name {unknown arg} -return_string {} -warn_on_violation {} -all_violators {} -significant_digits {unknown arg} -limit {unknown arg} -min_period {} -max_period {} -low_pulse {} -high_pulse {} -max_skew {} -clocks {list args} -no_header {} -rpx {unknown arg} -quiet {} -verbose {}} {? unknown objects}}}}}
+registerProc ::report_ram_utilization {{unknown {? {option -append {} -file {unknown arg} -return_string {} -cells {list args} -detail {} -quiet {} -verbose {}}}}}
+registerProc ::report_route_status {{void {? {option -return_string {} -file {unknown arg} -append {} -of_objects {list args} -route_type {unknown arg} -list_all_nets {} -show_all {} -dump_routes {} -has_routing {} -ignore_cache {} -quiet {} -verbose {}}}}}
+registerProc ::report_scopes {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {* unknown hdl_scopes}}}}}
+registerProc ::report_seu {{unknown {? {option -file {unknown arg} -append {} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_simlib_info {{void {{mixedoptargs {-file {unknown arg} -append {} -quiet {} -verbose {}} {unknown path}}}}}
+registerProc ::report_ssn {{unknown {? {option -name {unknown arg} -return_string {} -format {unknown arg} -file {unknown arg} -append {} -phase {} -quiet {} -verbose {}}}}}
+registerProc ::report_switching_activity {{void {? {mixedoptargs {-static_probability {} -signal_rate {} -toggle_rate {} -default_static_probability {} -default_toggle_rate {} -file {unknown arg} -return_string {} -append {} -hier {} -all {} -type {list args} -quiet {} -verbose {}} {* unknown objects}}}}}
+registerProc ::report_synchronizer_mtbf {{unknown {? {option -file {unknown arg} -append {} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_timing {{void {? {option -from {list args} -rise_from {list args} -fall_from {list args} -to {list args} -rise_to {list args} -fall_to {list args} -through {list args} -rise_through {list args} -fall_through {list args} -delay_type {unknown arg} -setup {} -hold {} -max_paths {unknown arg} -nworst {unknown arg} -unique_pins {} -path_type {unknown arg} -input_pins {} -no_header {} -label_reused {} -slack_lesser_than {unknown arg} -slack_greater_than {unknown arg} -group {list args} -sort_by {unknown arg} -no_report_unconstrained {} -user_ignored {} -of_objects {list args} -significant_digits {unknown arg} -file {unknown arg} -append {} -name {unknown arg} -return_string {} -warn_on_violation {} -cell {list args} -rpx {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::report_timing_summary {{void {? {option -check_timing_verbose {} -delay_type {unknown arg} -no_detailed_paths {} -setup {} -hold {} -max_paths {unknown arg} -nworst {unknown arg} -unique_pins {} -path_type {unknown arg} -label_reused {} -input_pins {} -slack_lesser_than {unknown arg} -report_unconstrained {} -significant_digits {unknown arg} -no_header {} -file {unknown arg} -append {} -name {unknown arg} -return_string {} -warn_on_violation {} -datasheet {} -cell {list args} -rpx {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::report_transformed_primitives {{void {? {option -file {unknown arg} -append {} -return_string {} -quiet {} -verbose {}}}}}
+registerProc ::report_utilization {{unknown {? {option -file {unknown arg} -append {} -pblocks {list args} -cells {list args} -return_string {} -slr {} -packthru {} -name {unknown arg} -no_primitives {} -omit_locs {} -hierarchical {} -hierarchical_depth {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::report_values {{unknown {? {mixedoptargs {-radix {unknown arg} -quiet {} -verbose {}} {* unknown hdl_objects}}}}}
+registerProc ::reset_drc {{void {? {option -name {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::reset_drc_check {{void {? {mixedoptargs {-quiet {} -verbose {}} {* unknown checks}}}}}
+registerProc ::reset_hw_axi {{void {? {mixedoptargs {-quiet {} -verbose {}} {* unknown hw_axis}}}}}
+registerProc ::reset_hw_ila {{void {? {mixedoptargs {-reset_compare_values {unknown arg} -quiet {} -verbose {}} {* unknown hw_ilas}}}}}
+registerProc ::reset_hw_vio_activity {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown hw_vios}}}}}
+registerProc ::reset_hw_vio_outputs {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown hw_vios}}}}}
+registerProc ::reset_msg_config {{void {? {option -string {list args} -id {unknown arg} -severity {unknown arg} -limit {} -suppress {} -count {} -default_severity {} -regexp {} -quiet {} -verbose {}}}}}
+registerProc ::reset_msg_count {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown id}}}}}
+registerProc ::reset_operating_conditions {{void {? {option -voltage {list args} -grade {} -process {} -junction_temp {} -ambient_temp {} -thetaja {} -thetasa {} -airflow {} -heatsink {} -thetajb {} -board {} -board_temp {} -board_layers {} -quiet {} -verbose {}}}}}
+registerProc ::reset_param {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::reset_project {{void {? {option -exclude_runs {} -exclude_ips {} -exclude_sim_runs {} -quiet {} -verbose {}}}}}
+registerProc ::reset_property {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown property_name} {+ unknown objects}}}}}
+registerProc ::reset_run {{void {{mixedoptargs {-prev_step {} -from_step {unknown arg} -noclean_dir {} -quiet {} -verbose {}} {unknown run}}}}}
+registerProc ::reset_simulation {{void {? {mixedoptargs {-mode {unknown arg} -type {unknown arg} -quiet {} -verbose {}} {? unknown simset}}}}}
+registerProc ::reset_ssn {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::reset_switching_activity {{void {? {mixedoptargs {-default {} -type {list args} -hier {} -all {} -quiet {} -verbose {}} {* unknown objects}}}}}
+registerProc ::reset_target {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown name} {unknown objects}}}}}
+registerProc ::reset_timing {{void {? {option -invalid {} -quiet {} -verbose {}}}}}
+registerProc ::resize_net_bus {{void {{mixedoptargs {-from {unknown arg} -to {unknown arg} -quiet {} -verbose {}} {+ unknown net_bus_name}}}}}
+registerProc ::resize_pblock {{void {{mixedoptargs {-add {list args} -remove {list args} -from {list args} -to {list args} -replace {} -locs {unknown arg} -quiet {} -verbose {}} {unknown pblock}}}}}
+registerProc ::resize_pin_bus {{void {{mixedoptargs {-from {unknown arg} -to {unknown arg} -quiet {} -verbose {}} {+ unknown pin_bus_name}}}}}
+registerProc ::resize_port_bus {{void {{mixedoptargs {-from {unknown arg} -to {unknown arg} -quiet {} -verbose {}} {+ unknown port_bus_name}}}}}
+registerProc ::restart {{unknown {? {option -quiet {} -verbose {}}}}}
+registerProc ::route_design {{void {? {option -unroute {} -release_memory {} -nets {list args} -physical_nets {} -pin {unknown arg} -directive {unknown arg} -tns_cleanup {} -no_timing_driven {} -preserve {} -delay {} -auto_delay {} -max_delay {unknown arg} -min_delay {unknown arg} -timing_summary {} -finalize {} -quiet {} -verbose {}}}}}
+registerProc ::run {{void {? {mixedoptargs {-all {} -quiet {} -verbose {}} {? unknown time} {? unknown unit}}}}}
+registerProc ::run_hw_axi {{void {{mixedoptargs {-queue {} -quiet {} -verbose {}} {+ unknown hw_axi_txns}}}}}
+registerProc ::run_hw_ila {{void {? {mixedoptargs {-trigger_now {} -compile_only {} -file {unknown arg} -force {} -quiet {} -verbose {}} {* unknown hw_ilas}}}}}
+registerProc ::run_hw_sio_scan {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown hw_sio_scans}}}}}
+registerProc ::run_hw_sio_sweep {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown hw_sio_sweeps}}}}}
+registerProc ::run_state_hw_jtag {{unknown {{mixedoptargs {-state {list args} -quiet {} -verbose {}} {unknown stable_state}}}}}
+registerProc ::runtest_hw_jtag {{void {? {option -wait_state {unknown arg} -end_state {unknown arg} -sec {unknown arg} -max_wait {unknown arg} -tck {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::save_bd_design {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {? unknown name}}}}}
+registerProc ::save_constraints {{void {? {option -force {} -quiet {} -verbose {}}}}}
+registerProc ::save_constraints_as {{void {{mixedoptargs {-dir {unknown arg} -target_constrs_file {unknown arg} -quiet {} -verbose {}} {unknown name}}}}}
+registerProc ::save_project_as {{unknown {{mixedoptargs {-scan_for_includes {} -force {} -quiet {} -verbose {}} {unknown name} {? unknown dir}}}}}
+registerProc ::save_wave_config {{unknown {? {mixedoptargs {-object {list args} -quiet {} -verbose {}} {? unknown filename}}}}}
+registerProc ::scan_dr_hw_jtag {{unknown {{mixedoptargs {-tdi {unknown arg} -tdo {unknown arg} -mask {unknown arg} -smask {unknown arg} -quiet {} -verbose {}} {unknown length}}}}}
+registerProc ::scan_ir_hw_jtag {{unknown {{mixedoptargs {-tdi {unknown arg} -tdo {unknown arg} -mask {unknown arg} -smask {unknown arg} -quiet {} -verbose {}} {unknown length}}}}}
+registerProc ::select_objects {{void {{mixedoptargs {-add {} -quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::select_wave_objects {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown items}}}}}
+registerProc ::set_case_analysis {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown value} {unknown objects}}}}}
+registerProc ::set_clock_groups {{void {? {option -name {unknown arg} -logically_exclusive {} -physically_exclusive {} -asynchronous {} -group {list args} -quiet {} -verbose {}}}}}
+registerProc ::set_clock_latency {{void {{mixedoptargs {-clock {list args} -rise {} -fall {} -min {} -max {} -source {} -late {} -early {} -quiet {} -verbose {}} {unknown latency} {unknown objects}}}}}
+registerProc ::set_clock_sense {{void {{mixedoptargs {-positive {} -negative {} -stop_propagation {} -clocks {list args} -quiet {} -verbose {}} {unknown pins}}}}}
+registerProc ::set_clock_uncertainty {{void {{mixedoptargs {-setup {} -hold {} -from {list args} -rise_from {list args} -fall_from {list args} -to {list args} -rise_to {list args} -fall_to {list args} -quiet {} -verbose {}} {unknown uncertainty} {? unknown objects}}}}}
+registerProc ::set_data_check {{void {{mixedoptargs {-from {list args} -to {list args} -rise_from {list args} -fall_from {list args} -rise_to {list args} -fall_to {list args} -setup {} -hold {} -clock {list args} -quiet {} -verbose {}} {unknown value}}}}}
+registerProc ::set_delay_model {{void {? {option -interconnect {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::set_disable_timing {{void {{mixedoptargs {-from {unknown arg} -to {unknown arg} -quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::set_external_delay {{void {{mixedoptargs {-from {list args} -to {list args} -min {} -max {} -add {} -quiet {} -verbose {}} {unknown delay_value}}}}}
+registerProc ::set_false_path {{void {? {option -setup {} -hold {} -rise {} -fall {} -reset_path {} -from {list args} -rise_from {list args} -fall_from {list args} -to {list args} -rise_to {list args} -fall_to {list args} -through {list args} -rise_through {list args} -fall_through {list args} -quiet {} -verbose {}}}}}
+registerProc ::set_hierarchy_separator {{void {? {mixedoptargs {-quiet {} -verbose {}} {? unknown separator}}}}}
+registerProc ::set_hw_sysmon_reg {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown hw_sysmon} {unknown hexaddress} {unknown hexdata}}}}}
+registerProc ::set_input_delay {{void {{mixedoptargs {-clock {list args} -reference_pin {list args} -clock_fall {} -rise {} -fall {} -max {} -min {} -add_delay {} -network_latency_included {} -source_latency_included {} -quiet {} -verbose {}} {unknown delay} {unknown objects}}}}}
+registerProc ::set_input_jitter {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown clock} {unknown input_jitter}}}}}
+registerProc ::set_load {{void {{mixedoptargs {-rise {} -fall {} -max {} -min {} -quiet {} -verbose {}} {unknown capacitance} {unknown objects}}}}}
+registerProc ::set_logic_dc {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::set_logic_one {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::set_logic_unconnected {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::set_logic_zero {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::set_max_delay {{void {{mixedoptargs {-rise {} -fall {} -reset_path {} -from {list args} -rise_from {list args} -fall_from {list args} -to {list args} -rise_to {list args} -fall_to {list args} -through {list args} -rise_through {list args} -fall_through {list args} -datapath_only {} -quiet {} -verbose {}} {unknown delay}}}}}
+registerProc ::set_max_time_borrow {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown delay} {unknown objects}}}}}
+registerProc ::set_min_delay {{void {{mixedoptargs {-rise {} -fall {} -reset_path {} -from {list args} -rise_from {list args} -fall_from {list args} -to {list args} -rise_to {list args} -fall_to {list args} -through {list args} -rise_through {list args} -fall_through {list args} -quiet {} -verbose {}} {unknown delay}}}}}
+registerProc ::set_msg_config {{void {? {option -id {unknown arg} -string {list args} -severity {unknown arg} -limit {unknown arg} -new_severity {unknown arg} -suppress {} -regexp {} -quiet {} -verbose {}}}}}
+registerProc ::set_multicycle_path {{void {{mixedoptargs {-setup {} -hold {} -rise {} -fall {} -start {} -end {} -reset_path {} -from {list args} -rise_from {list args} -fall_from {list args} -to {list args} -rise_to {list args} -fall_to {list args} -through {list args} -rise_through {list args} -fall_through {list args} -quiet {} -verbose {}} {unknown path_multiplier}}}}}
+registerProc ::set_operating_conditions {{void {? {option -voltage {list args} -grade {unknown arg} -process {unknown arg} -junction_temp {unknown arg} -ambient_temp {unknown arg} -thetaja {unknown arg} -thetasa {unknown arg} -airflow {unknown arg} -heatsink {unknown arg} -thetajb {unknown arg} -board {unknown arg} -board_temp {unknown arg} -board_layers {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::set_output_delay {{void {{mixedoptargs {-clock {list args} -reference_pin {list args} -clock_fall {} -rise {} -fall {} -max {} -min {} -add_delay {} -network_latency_included {} -source_latency_included {} -quiet {} -verbose {}} {unknown delay} {unknown objects}}}}}
+registerProc ::set_package_pin_val {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown column} {unknown value} {+ unknown package_pins}}}}}
+registerProc ::set_param {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown name} {unknown value}}}}}
+registerProc ::set_part {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown part}}}}}
+registerProc ::set_power_opt {{void {? {option -include_cells {list args} -exclude_cells {list args} -clocks {list args} -cell_types {list args} -quiet {} -verbose {}}}}}
+registerProc ::set_propagated_clock {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::set_property {{void {{mixedoptargs {-dict {list args} -quiet {} -verbose {}} {unknown name} {unknown value} {+ unknown objects}}}}}
+registerProc ::set_speed_grade {{unknown {? {mixedoptargs {-temperature {unknown arg} -quiet {} -verbose {}} {? unknown value}}}}}
+registerProc ::set_switching_activity {{void {? {mixedoptargs {-toggle_rate {unknown arg} -default_toggle_rate {unknown arg} -type {list args} -all {} -static_probability {unknown arg} -default_static_probability {unknown arg} -signal_rate {unknown arg} -hier {} -quiet {} -verbose {}} {* unknown objects}}}}}
+registerProc ::set_system_jitter {{unknown {{mixedoptargs {-quiet {} -verbose {}} {unknown system_jitter}}}}}
+registerProc ::set_units {{void {? {option -capacitance {unknown arg} -current {unknown arg} -voltage {unknown arg} -power {unknown arg} -resistance {unknown arg} -altitude {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::set_value {{void {{mixedoptargs {-radix {unknown arg} -quiet {} -verbose {}} {unknown hdl_object} {unknown value}}}}}
+registerProc ::show_objects {{void {{mixedoptargs {-name {unknown arg} -quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::show_schematic {{void {{mixedoptargs {-add {} -remove {} -regenerate {} -pin_pairs {} -name {unknown arg} -quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::split_diff_pair_ports {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown ports}}}}}
+registerProc ::start_gui {{unknown {? {option -verbose {}}}}}
+registerProc ::startgroup {{unknown {? {option -try {} -quiet {} -verbose {}}}}}
+registerProc ::step {{void {? {option -quiet {} -verbose {}}}}}
+registerProc ::stop {{unknown {? {option -quiet {} -verbose {}}}}}
+registerProc ::stop_gui {{unknown {? {option -verbose {}}}}}
+registerProc ::stop_hw_sio_sweep {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown hw_sio_sweeps}}}}}
+registerProc ::stop_vcd {{void {? {option -quiet {} -verbose {}}}}}
+registerProc ::swap_locs {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown aloc} {unknown bloc}}}}}
+registerProc ::synth_design {{unknown {? {option -name {unknown arg} -part {unknown arg} -constrset {unknown arg} -top {unknown arg} -include_dirs {list args} -generic {list args} -verilog_define {list args} -flatten_hierarchy {unknown arg} -gated_clock_conversion {unknown arg} -directive {unknown arg} -rtl {} -bufg {unknown arg} -no_lc {} -fanout_limit {unknown arg} -shreg_min_size {unknown arg} -mode {unknown arg} -fsm_extraction {unknown arg} -rtl_skip_ip {} -rtl_skip_constraints {} -keep_equivalent_registers {} -resource_sharing {unknown arg} -cascade_dsp {unknown arg} -control_set_opt_threshold {unknown arg} -max_bram {unknown arg} -max_dsp {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::synth_ip {{void {{mixedoptargs {-force {} -quiet {} -verbose {}} {unknown objects}}}}}
+registerProc ::tie_unused_pins {{void {? {option -of_objects {list args} -quiet {} -verbose {}}}}}
+registerProc ::undo {{unknown {? {option -list {} -quiet {} -verbose {}}}}}
+registerProc ::ungroup_bd_cells {{unknown {? {mixedoptargs {-prefix {unknown arg} -quiet {} -verbose {}} {* unknown cells}}}}}
+registerProc ::unhighlight_objects {{void {? {mixedoptargs {-color_index {unknown arg} -rgb {list args} -color {unknown arg} -quiet {} -verbose {}} {? unknown objects}}}}}
+registerProc ::unmark_objects {{void {? {mixedoptargs {-rgb {list args} -color {unknown arg} -quiet {} -verbose {}} {? unknown objects}}}}}
+registerProc ::unplace_cell {{void {{mixedoptargs {-quiet {} -verbose {}} {+ unknown cell_list}}}}}
+registerProc ::unregister_proc {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown tasknm}}}}}
+registerProc ::unselect_objects {{void {? {mixedoptargs {-quiet {} -verbose {}} {? unknown objects}}}}}
+registerProc ::update_compile_order {{void {? {option -force_gui {} -fileset {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::update_design {{void {? {option -cells {list args} -strict {} -from_file {unknown arg} -from_design {unknown arg} -from_cell {unknown arg} -black_box {} -buffer_ports {} -quiet {} -verbose {}}}}}
+registerProc ::update_files {{list {? {option -from_files {list args} -norecurse {} -to_files {list args} -filesets {list args} -force {} -report_only {} -quiet {} -verbose {}}}}}
+registerProc ::update_ip_catalog {{unknown {? {option -rebuild {} -add_ip {unknown arg} -delete_ip {unknown arg} -delete_mult_ip {list args} -disable_ip {unknown arg} -enable_ip {unknown arg} -create_index {} -repo_path {unknown arg} -update_block_ip {} -quiet {} -verbose {}}}}}
+registerProc ::update_macro {{void {{mixedoptargs {-absolute_grid {} -quiet {} -verbose {}} {unknown macro} {unknown rlocs}}}}}
+registerProc ::update_timing {{void {? {option -full {} -skip_delay_calc {} -quiet {} -verbose {}}}}}
+registerProc ::upgrade_bd_cells {{list {{mixedoptargs {-latest {unknown arg} -quiet {} -verbose {}} {+ unknown objects}}}}}
+registerProc ::upgrade_ip {{unknown {? {mixedoptargs {-srcset {unknown arg} -vlnv {unknown arg} -quiet {} -verbose {}} {* unknown objects}}}}}
+registerProc ::upload_hw_ila_data {{unknown {? {mixedoptargs {-quiet {} -verbose {}} {* unknown hw_ilas}}}}}
+registerProc ::validate_bd_design {{unknown {? {option -force {} -design {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::validate_ip {{void {? {mixedoptargs {-save_ip {} -quiet {} -verbose {}} {? unknown ips}}}}}
+registerProc ::verify_hw_devices {{unknown {? {mixedoptargs {-key {unknown arg} -user_efuse {unknown arg} -control_efuse {unknown arg} -security_efuse {unknown arg} -quiet {} -verbose {}} {* unknown hw_device}}}}}
+registerProc ::version {{unknown {? {option -short {} -quiet {} -verbose {}}}}}
+registerProc ::wait_on_hw_ila {{void {? {mixedoptargs {-timeout {unknown arg} -quiet {} -verbose {}} {* unknown hw_ilas}}}}}
+registerProc ::wait_on_hw_sio_scan {{void {{mixedoptargs {-timeout {unknown arg} -quiet {} -verbose {}} {+ unknown hw_sio_scans}}}}}
+registerProc ::wait_on_hw_sio_sweep {{void {{mixedoptargs {-timeout {unknown arg} -quiet {} -verbose {}} {+ unknown hw_sio_sweeps}}}}}
+registerProc ::wait_on_run {{void {{mixedoptargs {-timeout {unknown arg} -quiet {} -verbose {}} {unknown run}}}}}
+registerProc ::write_bd_tcl {{unknown {{mixedoptargs {-force {} -bd_name {unknown arg} -no_mig_contents {} -no_ip_version {} -bd_folder {unknown arg} -quiet {} -verbose {}} {unknown tcl_filename}}}}}
+registerProc ::write_bitstream {{void {{mixedoptargs {-force {} -verbose {} -raw_bitfile {} -no_binary_bitfile {} -mask_file {} -readback_file {} -logic_location_file {} -bin_file {} -reference_bitfile {unknown arg} -cell {unknown arg} -quiet {}} {unknown file}}}}}
+registerProc ::write_bmm {{unknown {{mixedoptargs {-force {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::write_bsdl {{unknown {{mixedoptargs {-force {} -bsd {unknown arg} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::write_cfgmem {{void {{mixedoptargs {-force {} -format {unknown arg} -size {unknown arg} -interface {unknown arg} -checksum {} -disablebitswap {} -loadbit {unknown arg} -loaddata {unknown arg} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::write_checkpoint {{unknown {{mixedoptargs {-force {} -cell {unknown arg} -logic_function_stripped {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::write_csv {{unknown {{mixedoptargs {-force {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::write_debug_probes {{unknown {{mixedoptargs {-force {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::write_edif {{unknown {{mixedoptargs {-pblocks {list args} -cell {unknown arg} -force {} -security_mode {unknown arg} -logic_function_stripped {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::write_hw_ila_data {{unknown {{mixedoptargs {-force {} -csv_file {} -vcd_file {} -quiet {} -verbose {}} {unknown file} {? unknown hw_ila_data} {? unknown hw_ila_data}}}}}
+registerProc ::write_hw_sio_scan {{unknown {{mixedoptargs {-force {} -quiet {} -verbose {}} {unknown file} {unknown hw_sio_scan}}}}}
+registerProc ::write_hw_sio_sweep {{unknown {{mixedoptargs {-force {} -quiet {} -verbose {}} {unknown directory} {unknown hw_sio_sweep}}}}}
+registerProc ::write_hwdef {{unknown {? {option -force {} -file {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::write_ibis {{unknown {{mixedoptargs {-force {} -allmodels {} -nopin {} -truncate {unknown arg} -component_name {unknown arg} -ibs {unknown arg} -pkg {unknown arg} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::write_inferred_xdc {{void {? {mixedoptargs {-force {} -all {} -append {} -async_clocks {} -clock_groups {} -clocks {} -excl_clocks {} -exceptions {} -io_constraints {} -merge_existing_constraints {} -name {unknown arg} -quiet {} -verbose {}} {? unknown file}}}}}
+registerProc ::write_mem_info {{unknown {{mixedoptargs {-force {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::write_peripheral {{void {{mixedoptargs {-quiet {} -verbose {}} {unknown peripheral}}}}}
+registerProc ::write_project_tcl {{unknown {{mixedoptargs {-paths_relative_to {unknown arg} -target_proj_dir {unknown arg} -force {} -all_properties {} -no_copy_sources {} -absolute_path {} -dump_project_info {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::write_schematic {{unknown {{mixedoptargs {-force {} -format {unknown arg} -orientation {unknown arg} -scope {unknown arg} -name {unknown arg} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::write_sdf {{void {{mixedoptargs {-process_corner {unknown arg} -cell {unknown arg} -rename_top {unknown arg} -force {} -mode {unknown arg} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::write_sysdef {{unknown {? {option -force {} -hwdef {unknown arg} -bitfile {unknown arg} -ltxfile {unknown arg} -meminfo {unknown arg} -file {unknown arg} -quiet {} -verbose {}}}}}
+registerProc ::write_verilog {{unknown {{mixedoptargs {-cell {unknown arg} -mode {unknown arg} -lib {} -port_diff_buffers {} -write_all_overrides {} -keep_vcc_gnd {} -rename_top {unknown arg} -sdf_anno {unknown arg} -sdf_file {unknown arg} -force {} -include_xilinx_libs {} -logic_function_stripped {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::write_vhdl {{unknown {{mixedoptargs {-cell {unknown arg} -mode {unknown arg} -lib {} -port_diff_buffers {} -write_all_overrides {} -keep_vcc_gnd {} -rename_top {unknown arg} -arch_only {} -force {} -include_xilinx_libs {} -quiet {} -verbose {}} {unknown file}}}}}
+registerProc ::write_xdc {{void {? {mixedoptargs {-no_fixed_only {} -constraints {unknown arg} -cell {unknown arg} -sdc {} -no_tool_comments {} -force {} -exclude_timing {} -exclude_physical {} -add_netlist_placement {} -quiet {} -verbose {}} {? unknown file}}}}}
+registerProc ::xsim {{unknown {{mixedoptargs {-maxdeltaid {unknown arg} -nolog {} -maxlogsize {unknown arg} -onfinish {unknown arg} -onerror {unknown arg} -tclbatch {unknown arg} -t {unknown arg} -runall {} -R {} -testplusarg {list args} -vcdfile {unknown arg} -vcdunit {unknown arg} -view {list args} -wdb {unknown arg} -tp {} -tl {} -nosignalhandlers {} -ieeewarnings {} -stats {} -quiet {} -verbose {}} {unknown snapshot}}}}}

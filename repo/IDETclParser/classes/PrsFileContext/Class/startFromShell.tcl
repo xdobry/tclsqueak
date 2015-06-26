@@ -1,4 +1,4 @@
-PrsFileContext proc startFromShell arguments {
+PrsFileContext proc startFromShell args {
     set fileContext [PrsFileContext new]
-    $fileContext startWithArgs $arguments
+    $fileContext startWithArgs $args
 }

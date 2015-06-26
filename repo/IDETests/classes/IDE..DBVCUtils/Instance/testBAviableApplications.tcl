@@ -1,5 +1,5 @@
 IDE::DBVCUtils instproc testBAviableApplications {} {
-   my invokeMenu Component {Version Control} Available
+   my invokeMenu Component {Version Control} {Available Components}
    set browser [lindex [IDE::VersionBrowser info instances] 0]
    my assert {$browser ne ""}
    update idletasks

@@ -6,7 +6,7 @@ IDE::Component proc initFromInterpreter {} {
     foreach class [$introProxy getClasses] {
         set compobj [$introProxy getCompObjectFor $class]
         if {[$compobj getName] eq "default" && [string match ::xotcl::* $class]} {
-            $class setMetadata component core
+            $introProxy setMetadataForObject $class component core
             set compobj [$introProxy getCompObjectFor $class]
         }
         $compobj addClass $class

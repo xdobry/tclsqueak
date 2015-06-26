@@ -1,5 +1,5 @@
 IDEStarter proc loadComponentFromMetakit {name {componentid newest}} {
-    my instvar sqlhandle IDEdeveloping initializeList
+    my instvar sqlhandle initializeList
     set initializeList {}
     set db [$sqlhandle set handle]
     if {$componentid eq "newest"} {

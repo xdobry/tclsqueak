@@ -46,7 +46,7 @@ CoreSignatureRepository instproc registerCoreProcs {} {
 ::auto_reset {{void}}
 ::binary {
   {string {{const format}} string {+ unknown}}
-  {int {{const scan}} string string {+ {ref string}}}
+  {int {{const scan}} string {string format} {+ {setref string}}}
   {string {{const encode}} {enum base64 hex uuencode} {? {option -strict {} -maxlen int -wrapchar string}} {string data}}
   {string {{const decode}} {enum base64 hex uuencode} {? {option -strict {} -maxlen int -wrapchar string}} {string data}}
 }
@@ -354,7 +354,10 @@ EXCL NOCTTY NONBLOCK TRUNC}}}
 ::return {
     {void {? {option -errorcode string -errorinfo string -level string -options dict -code string}} {? unknown}}
 }
-::scan {2 -1}
+::scan {
+  {unknown string {string format}}
+  {int string {string format} {+ {setref string}}}
+}
 ::seek {{{void {}} {channelid {}} {int {}} {? {enum start current end} {origin}}}}
 ::set {{{unknown {}} {{wref unknown} {}} {? unknown}}}
 ::socket {

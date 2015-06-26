@@ -4,6 +4,7 @@ IDE::EventsGUI
 IDE::ExampleTest
 IDE::OOPersistence
 IDE::SampleElements
+IDE::TArgumentMatcher
 IDE::TComponentBrowser
 IDE::TCore
 IDE::TDevelopUtils

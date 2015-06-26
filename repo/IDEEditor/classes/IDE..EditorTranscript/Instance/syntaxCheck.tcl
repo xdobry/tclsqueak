@@ -1,10 +1,10 @@
 IDE::EditorTranscript instproc syntaxCheck {} {
     my instvar scriptIndepend
-    
-    set context [PrsContext new]
     if {$scriptIndepend} {
+        set context [PrsFileContext new]
         set repository [SignatureRepository createSignatureRepositoryFile]
     } else {
+        set context [PrsContext new]
         set repository [SignatureRepository getSignatureRepository]
     }
     $context set repository $repository
@@ -14,7 +14,7 @@ IDE::EditorTranscript instproc syntaxCheck {} {
     $context parseGlobal $text
     if {[$context exists parser]} {
         set highlighter [SyntaxHighlightVisitor new -volatile -text [self] -context $context]
-        [[$context set parser] set root] visit $highlighter
+        [$context set rootCommand] visit $highlighter
     }
     my deleteMarklineErrors
     if {[$context hasErrors]} {

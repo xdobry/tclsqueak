@@ -1,7 +1,7 @@
 IDE::DBVCUtils instproc testCAviableClasses {} {
    my instvar compBrowser
    $compBrowser refreshHItem {IDECore Component {}}
-   my invokeMenu Class {Version Control} Available
+   my invokeMenu Class {Version Control} {Available Types}
    set browser [lindex [IDE::VersionBrowser info instances] 0]
    my assert {$browser ne ""}
    update idletasks

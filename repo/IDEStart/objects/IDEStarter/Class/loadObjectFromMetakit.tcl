@@ -1,5 +1,5 @@
 IDEStarter proc loadObjectFromMetakit {objectid objName compName} {
-    my instvar sqlhandle IDEdeveloping initializeList tclmethodArr
+    my instvar sqlhandle initializeList tclmethodArr
     set db [$sqlhandle set handle]
 
     puts "load Class $objName"

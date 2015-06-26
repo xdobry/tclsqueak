@@ -1,5 +1,5 @@
 IDEStarter proc loadComponent {name {componentid newest}} {
-    my instvar sqlhandle IDEdeveloping initializeList
+    my instvar sqlhandle initializeList
     if {[$sqlhandle istype XOMetakit]} {
         my loadComponentFromMetakit $name $componentid
         return
@@ -7,9 +7,15 @@ IDEStarter proc loadComponent {name {componentid newest}} {
     set initializeList {}
     if {$componentid eq "newest"} {
         set componentid [lindex [$sqlhandle queryList "select max(componentid) from Component where name='$name'"] 0]
+        if {$componentid eq ""} {
+            return 0
+        }
         puts "newest component $name is $componentid"
     }
     set objects [$sqlhandle queryList "SELECT Object.objectid,Object.defbody,Object.metadata,Object.name FROM ComponentObject,Object where componentid=$componentid and ComponentObject.objectid=Object.objectid order by ComponentObject.deforder"]
+    if {[llength $objects]==0} {
+        return 0
+    }
     puts "loading component $componentid $name"
     set objectForMetaData [list]
     foreach row $objects {
@@ -43,8 +49,11 @@ IDEStarter proc loadComponent {name {componentid newest}} {
             puts "Error by calling $imethod initializeAfterLoad $errorInfo"
         }
     }
-    set introProxy [IDE::XOIntroProxy getIntroProxy]
-    foreach object $objectForMetaData {
-        $introProxy setMetadataForObject $object component $name
+    if {[llength $objectForMetaData]>0} {
+        set introProxy [IDE::XOIntroProxy getIntroProxy]
+        foreach object $objectForMetaData {
+            $introProxy setMetadataForObject $object component $name
+        }
     }
+    return 1
 }

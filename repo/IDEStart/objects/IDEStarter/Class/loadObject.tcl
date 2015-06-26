@@ -1,5 +1,5 @@
 IDEStarter proc loadObject {objectid objName compName} {
-    my instvar sqlhandle IDEdeveloping initializeList tclmethodArr
+    my instvar sqlhandle initializeList tclmethodArr
     puts "load Class $objName"
     set rows [$sqlhandle queryList "SELECT Method.body,Method.category,Method.type,Method.name FROM ObjectMethod,Method where ObjectMethod.objectid=$objectid and ObjectMethod.methodid=Method.methodid"]
     foreach row $rows {

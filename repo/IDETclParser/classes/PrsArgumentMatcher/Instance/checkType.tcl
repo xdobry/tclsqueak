@@ -34,6 +34,8 @@ PrsArgumentMatcher instproc checkType {parameters typeIndex} {
             }
         }
         return $types
+    } elseif {[llength $type]>1 && [lindex $type 0] eq "mixedoptargs"} {
+        my checkMixedOptArgs $parameters $typeIndex
     } else {
         my checkTypeBase [lindex $parameters 0] $typeIndex
     }

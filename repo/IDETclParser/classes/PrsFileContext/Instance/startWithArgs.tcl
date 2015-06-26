@@ -88,8 +88,7 @@ PrsFileContext instproc startWithArgs arguments {
             }
             encoding system [lindex $arguments $i]
         } elseif {$elem eq "-html"} {
-            my class Tcl2HTML
-            my initMarkup
+            my startGenerateHtml
         } elseif {$elem eq "-notypes"} {
             PrsCheckerOptions set checkTypes 0
         } elseif {$elem eq "-oldstringop"} {
