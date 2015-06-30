@@ -11,7 +11,8 @@ SignatureRepository proc getSignatureRepository {} {
             lappend repolist [OOIntroSignatureRepository new]
             $coreRepo loadRepoForPackage TclOO
         }
-        set repository [ChainSignatureRepository new $repolist $introRepo]
+        set repository [ChainSignatureRepository new]
+        $repository initRepos $repolist $introRepo
     }
     return $repository
 }

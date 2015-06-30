@@ -1,9 +1,13 @@
-IDE::Dialog proc getOpenFile {{fileTypes {{{All files} *}}}} {
+IDE::Dialog proc getOpenFile {{fileTypes {{{All files} *}}} {initialDir {}}} {
     set fwin [focus]
     set parent .
     set olddir [pwd]
     if {$fwin ne ""} { set parent [winfo toplevel $fwin] }
-    set file [tk_getOpenFile -parent $parent -filetypes $fileTypes]
+    if {$initialDir ne ""} {
+        set file [tk_getOpenFile -parent $parent -filetypes $fileTypes -initialdir $initialDir]
+    } else {
+        set file [tk_getOpenFile -parent $parent -filetypes $fileTypes]
+    }
     cd $olddir
     return $file
 }

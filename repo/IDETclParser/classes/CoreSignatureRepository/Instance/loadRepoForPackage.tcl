@@ -18,5 +18,13 @@ CoreSignatureRepository instproc loadRepoForPackage packageName {
         }
         return
     }
+    if {$packageName eq "Expect"} {
+        # the expect overwrite the tk send so remove if from core
+        if {![info exists knownPackages] || $packageName ni $knownPackages} {
+            my instvar commandsArr
+            unset -nocomplain commandsArr(::send)
+            unset -nocomplain commandsArr(::close)
+        }
+    }
     next
 }

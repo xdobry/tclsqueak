@@ -1,0 +1,75 @@
+registerProc ::disconnect void
+registerProc ::fork int
+registerProc ::exp_send {{void {? {option -break {} -null {} -i unknown -h {} -s {} -raw {}}} {? {const --}} {+ unknown}}}
+registerProc ::exp_send_tty {{void {? {option -break {} -null {} -i unknown -h {} -s {} -raw {}}} {? {const --}} {+ unknown}}}
+registerProc ::exp_send_user {{void {? {option -break {} -null {} -i unknown -h {} -s {} -raw {}}} {? {const --}} {+ unknown}}}
+registerProc ::exp_send_error {{void {? {option -break {} -null {} -i unknown -h {} -s {} -raw {}}} {? {const --}} {+ unknown}}}
+registerProc ::exp_send_log {{void {? {option -break {} -null {} -i unknown -h {} -s {} -raw {}}} {? {const --}} {+ unknown}}}
+registerProc ::send {{void {? {option -break {} -null {} -i unknown -h {} -s {} -raw {}}} {? {const --}} {+ unknown}}}
+registerProc ::send_tty {{void {? {option -break {} -null {} -i unknown -h {} -s {} -raw {}}} {? {const --}} {+ unknown}}}
+registerProc ::send_user {{void {? {option -break {} -null {} -i unknown -h {} -s {} -raw {}}} {? {const --}} {+ unknown}}}
+registerProc ::send_error {{void {? {option -break {} -null {} -i unknown -h {} -s {} -raw {}}} {? {const --}} {+ unknown}}}
+registerProc ::send_log {{void {? {option -break {} -null {} -i unknown -h {} -s {} -raw {}}} {? {const --}} {+ unknown}}}
+registerProc ::stty {{void {+ {enum -echo echo -raw raw}}}}
+registerProc ::expect {{void {* unknown}}}
+registerProc ::expect_after {{void {+ unknown}}}
+registerProc ::expect_background {{void {+ unknown}}}
+registerProc ::expect_before {{void {+ unknown}}}
+registerProc ::expect_user {{void {+ unknown}}}
+registerProc ::expect_tty {{void {+ unknown}}}
+registerProc ::interact {{void {* unknown}}}
+registerProc ::interpreter {{void {* unknown}}}
+registerProc ::log_file {
+    {unknown {{const -info}}}
+	{void {? {option -open {} -leaveopen {} -a {} -noappend}} {{unknown file}}}
+}
+registerProc ::log_user {
+	{unknown {{const -info}}}
+	{void {{enum 0 1}}}
+}
+registerProc ::match_max {
+    int
+	{void {? {option -d {} -i {unknown spawn_id}}} int}
+}
+registerProc ::overlay {
+	{void {? {option -0 {unknown spawn_id} -1 {unknown spawn_id} -2 {unknown spawn_id}} {+ unknown}}}
+}
+registerProc ::parity {
+	int
+	{void {? {option -d {} -i {unknown spawn_id}}} int}
+}
+registerProc ::remove_nulls {
+	int
+	{void {? {option -d {} -i {unknown spawn_id}}} int}
+}
+registerProc ::spawn {{void {? {option -noecho {} -console {} -open {} -pty {} -ignore {} }} {+ unknown}}}
+registerProc ::close {
+  {void {? {option -slave {} -onexec int -i spawn_id}} }
+  {void channelid}
+}
+registerProc ::debug {{void {? {option -now {} }} {? {enum 0 1}} }}
+registerProc ::exit {{void {? {option -onexit {} -noexit {}}} {? int status} }}
+registerProc ::exp_continue {{void {? {option -continue_timer {} }} }}
+registerProc ::exp_internal {{void {? {option -file file -info {} }} int}}
+registerProc ::exp_open {{unknown {? {option -leaveopen {} -i unknown}} }}
+registerProc ::exp_pid {{unknown {? {option -i unknown}} }}
+registerProc ::exp_version {{unknown {? {option -exit {}}} {? string version}}}
+registerProc ::sleep {{void {int seconds}}}
+registerProc ::system {{void {* unknown}}}
+registerProc ::strace {{void {int level}}}
+registerProc ::timestamp {
+	{string {? {option -format string -seconds int -now {} }} }
+}
+registerProc ::trap {{void {* unknown}}}
+registerProc ::wait {
+	{list {? {option -i unknown -nowait {} }} }
+}
+
+registerVariable {} global ::spawn_id {} unknown
+registerVariable {} global ::user_spawn_id {} unknown
+registerVariable {} global ::error_spawn_id {} unknown
+registerVariable {} global ::tty_spawn_id {} unknown
+registerVariable {} global ::expect_out {} array
+registerVariable {} global ::spawn_out {} array
+registerVariable {} global ::exp_library {} unknown
+registerVariable {} global ::exp_exec_library {} unknown

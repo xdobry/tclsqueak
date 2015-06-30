@@ -1,6 +1,7 @@
 SignatureRepository proc createSignatureRepositoryFile {} {
-    set introRepo [FileSignatureRepository new]
-    set coreRepo [CoreSignatureRepository new]
-    set repository [ChainSignatureRepository new [list $coreRepo $introRepo] $introRepo]
+    set repository [ChainSignatureRepository new]
+    set introRepo [FileSignatureRepository new -childof $repository]
+    set coreRepo [CoreSignatureRepository new -childof $repository]
+    $repository initRepos [list $coreRepo $introRepo] $introRepo
     return $repository
 }

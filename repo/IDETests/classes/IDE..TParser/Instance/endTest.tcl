@@ -1,3 +1,5 @@
 IDE::TParser instproc endTest {} {
-   TestA destroy
+   catch {TestA destroy}
+   catch {IDE::TestA destroy}
+   
 }

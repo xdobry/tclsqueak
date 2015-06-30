@@ -1,9 +1,9 @@
 PrsContext instproc checkVariable {variable {type unknown} {scope {}}} {
-    my instvar varArr repository namespace
+    my instvar varArr repository namespace isTclGlobalScript
     if {[info exists varArr($variable)]} {
         return 1
     } else {
-        if {[string first :: $variable]>=0 || $scope eq "global"} {
+        if {[string first :: $variable]>=0 || $scope eq "global" || $isTclGlobalScript} {
             set rtype [$repository getVariableType {} global $variable $namespace]
             if {$rtype ne ""} {
                 set varArr($variable) [list $rtype global]

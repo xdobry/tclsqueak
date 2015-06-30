@@ -1,6 +1,5 @@
 PrsArgumentMatcher instproc parseCommand {command notifier startArg descsAll} {
     my instvar parseErrors context fullName
-
     set parseErrors [list]
     set descs [lrange $descsAll 1 end]
     set fullName [lindex $descsAll 0]

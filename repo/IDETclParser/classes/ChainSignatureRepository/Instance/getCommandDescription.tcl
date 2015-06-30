@@ -9,15 +9,13 @@ ChainSignatureRepository instproc getCommandDescription {name {namespace {}}} {
         if {$desc ne ""} {
             return $desc
         }
-    }
-    # search in global namespace
-    if {$namespace ne "" && [string range $name 0 1] ne "::" } {
-        foreach r $repositoryChain {
+        if {$namespace ne "" && [string range $name 0 1] ne "::" } {
             set desc [$r getCommandDescription $name {}]
             if {$desc ne ""} {
                 return $desc
             }
         }
     }
+    # search in global namespace
     return
 }
