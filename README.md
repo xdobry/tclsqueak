@@ -46,7 +46,7 @@ There are also screen casts tutorials on youtube
 * part 4 - https://youtu.be/C8_3QhBV9Hk - searching and navigating in code, code completion 
 * part 5 - http://youtu.be/VGE9pmso7Us - syntax checker
 
-##What makes TclSquaek different?
+##What makes TclSqueak different?
 
 * Interactive smalltalk way of programming
 * code repository (every code change is persistent)
@@ -63,11 +63,11 @@ Tcl interpreter as the TclSqueak.
 Image you have tcl console with not just text entry but with several special tools, for inspecting and changing
 the system.
 
-For TclSquaek Tcl is not just script language but full-fledged programming language for applications.
+For TclSqueak Tcl is not just script language but full-fledged programming language for applications.
 
 ###Code repository
 
-TclSquaek saves all your code immediately in code repository (per default sqlite data base). You will not lose
+TclSqueak saves all your code immediately in code repository (per default sqlite data base). You will not lose
 any code (You should not). You can see every change you made and can revert it.
 
 This repository does not version files but small tcl code parts as methods and procedures.
