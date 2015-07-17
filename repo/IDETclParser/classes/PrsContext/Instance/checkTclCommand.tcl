@@ -27,7 +27,6 @@ PrsContext instproc checkTclCommand {name command notifier} {
         my check_upvar $count $command $notifier
         my check_unset $count $command $notifier
         my check_return $count $command $notifier
-        my check_scan $count $command $notifier
         my check_foreach $count $command $notifier
         my check_global $count $command $notifier
         my check_switch $count $command $notifier

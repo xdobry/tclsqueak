@@ -3,7 +3,7 @@ PrsLiteral instproc getTypeWithContext {context {suggestedType {}}} {
     if {[info exists type]} {
         return $type
     }
-    if {$suggestedType ne "" && [my canAssignTypeBase $suggestedType $context]} {
+    if {$suggestedType ne "" && [my canAssignTypeBase $suggestedType $context]==1} {
         set type $suggestedType
     } else {
         set content [my prsString]

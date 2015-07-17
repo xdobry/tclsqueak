@@ -438,7 +438,7 @@ array set methodsArr {
 {::Text instproc peer} {0 -1}
 {::Text instproc replace} {{void {string index} {string index} string {* string tag}}}
 {::Text instproc scan} {0 -1}
-{::Text instproc search} {{string {? {option -forwards {} -backwards {} -exact {} -regexp {} -nolinestop {} -nocase {} -count {setvar int} -all {} -overlap {} -elide {} -- {}}} {string pattern} {string index} {?string stopIndex}}}
+{::Text instproc search} {{string {? {option -forwards {} -backwards {} -exact {} -regexp {} -nolinestop {} -nocase {} -count {setvar int} -all {} -overlap {} -elide {} -- {}}} {string pattern} {string index} {? string stopIndex}}}
 {::Text instproc see} {{void {string index}}}
 {::Text instproc tag} {0 -1}
 {::Text instproc window} {0 -1}

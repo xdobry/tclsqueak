@@ -24,7 +24,7 @@ CoreSignatureRepository instproc registerXotclCoreMethods {} {
   {{{list xotcl} {}} {{const instances}} {? {option -closure {}}} {? string {}}}
   {{list {}} {{const instargs}} {string {}}}
   {{body {}} {{const instbody}} {string {}}}
-  {{list {}} {{const instcommands}} {string {}}}
+  {{list {}} {{const instcommands}} {? string {}}}
   {{string {}} {{const instdefault}} {string {}} {string {}} {wref {}}}
   {{{list xotcl} {}} {{const instfilter}}}
   {{xotcl {}} {{const instfilterguard}} {string {}}}
@@ -35,7 +35,7 @@ CoreSignatureRepository instproc registerXotclCoreMethods {} {
   {{list {}} {{const instnonposargs}} {string {}}}
   {{body {}} {{const instpost}} {string {}}}
   {{body {}} {{const instpre}} {string {}}}
-  {{list {}} {{const instprocs}} {string {}}}
+  {{list {}} {{const instprocs}} {? string {}}}
   {{{list xotcl} {}} {{const mixinof}} {? {option -closure {}}} {? string pattern}}
   {{list {}} {{const parameter}}}
   {{{list xotcl} {}} {{const subclass}} {? {option -closure {}}} {? string pattern}}

@@ -1,9 +1,9 @@
 IDE::SyntaxCheckMethodList instproc browseChildren actual {
-    set item [split $actual >]
-    set vclass [lindex [lindex $item 0] 0]
-    if {[Object isclass $vclass]} {
-        IDE::HeritageBrowser newBrowserChild $vclass
+    lassign [IDE::XOIntroProxy getDescFromDisplayItem $actual] class type method
+    set introProxy [IDE::XOIntroProxy getIntroProxyForObject $class]
+    if {$introProxy ne "" && [$introProxy isObjectClass $class]} {
+        IDE::System showHierarchy $class $introProxy
     } else {
-        my upsMessage "$vclass is not a class"
+        my upsMessage "$class is not a class"
     }
 }

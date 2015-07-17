@@ -1,4 +1,4 @@
 IDE::SyntaxCheckMethodList instproc searchSenders actual {
-    set method [lindex [split $actual >] 1]
+    lassign [IDE::XOIntroProxy getDescFromDisplayItem $actual] class type method
     IDE::MethodBrowser searchSendersAll $method
 }

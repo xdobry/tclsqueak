@@ -7,43 +7,20 @@ IDE::ProgEdit instproc codeCompletion {{isTab 0}} {
         }
         return 1
     }
+    my instvar codeCompletion
     set insert [$twin index insert]
     set res [$twin get "$insert linestart" $insert]
     #puts "codecomp: $res"
     if {[my editMode] eq "xotcl" && [regexp {[\w\$]+} $res]} {
-       # remove all before ; or \[
-       regexp {[^\[;]+$} $res res
-       if {[regexp {(.+)\s+(-\w*)$} $res _ cmdline uoption]} {
-           my getOption $cmdline $uoption
-       } elseif  {[regexp {([\w:\]]*)(?:\s+|^)([:\w]+)$} $res _ basecommand fchars]} {
-           # commands has two tails. Try to complete second tails
-           # puts "res '$res' #bas1 '$basecommand' #fc '$fchars'"
-           if {$basecommand eq "my" || $basecommand eq "self\]"} {
-               # invoke own local method per my or [self]
-               my getInstanceCommand ${fchars}*
-           } elseif {[Object isobject $basecommand]} {
-               # invoke Object method direkt per object name
-               my invokePopDown [$basecommand info procs ${fchars}*] ${fchars}*
-           } elseif {[lsearch {set append lappend incr unset lset} $basecommand]>=0} {
-               my getVariable $fchars
-           } elseif {$basecommand ne "" && [llength [set subcommands [my getSubcommands $basecommand]]]>=0} {
-               # complete subcommand as "array get" (get is subcommand)
-               my getProcSubcommand $basecommand ${fchars}* $subcommands
-           } elseif {![string match {$*} $fchars]} {
-               my getBaseIdentifiers ${fchars}*
-           }
-       } elseif {[regexp {([\w:\]]+)\s+$} $res _ basecommand]} {
-           if {$basecommand eq "my" || $basecommand eq "self\]"} {
-               my getInstanceCommand *
-           } elseif {[Object isobject $basecommand]} {
-               my invokePopDown [$basecommand info procs] *
-           } elseif {[llength [set subcommands [my getSubcommands $basecommand]]]>=0} {
-               my getProcSubcommand $basecommand * $subcommands
-           }
-       }
-       if {[regexp {\$([\w]*)$} $res _ basevariable]} {
-           my getVariable $basevariable
-       }
+        set body [$twin get 1.0 end]
+        set newlines [concat 0 [regexp -all -inline -indices \n $body]]
+        lassign [split $insert .] line pos
+        set cursor [expr {[lindex $newlines $line-1 0]+$pos+1}]
+        string range $body 0 $cursor
+        lassign [$codeCompletion getCompletionList $body $cursor [my getContentDescr]] entries pattern
+        if {[llength $entries]>0} {
+            my invokePopDown $entries $pattern
+        }
     } else {
        my appendToCursor {    }
     }

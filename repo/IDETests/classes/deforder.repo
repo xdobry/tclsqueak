@@ -5,6 +5,8 @@ IDE::ExampleTest
 IDE::OOPersistence
 IDE::SampleElements
 IDE::TArgumentMatcher
+IDE::TCodeCompletion
+IDE::TCodeCompletionOO
 IDE::TComponentBrowser
 IDE::TCore
 IDE::TDevelopUtils

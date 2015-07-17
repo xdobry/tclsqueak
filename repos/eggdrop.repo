@@ -1,0 +1,238 @@
+# conflict with tk bind
+registerProc ::putserv {{void {string text} {? {option -next {} -normal {}}}}}
+registerProc ::puthelp {{void {string text} {? {option -next {} -normal {}}}}}
+registerProc ::putquick {{void {string text} {? {option -next {} -normal {}}}}}
+registerProc ::putkick {{void {unknown channel} {unknown nick,nick,...} {? {unknown reason}}}}
+registerProc ::putlog {{void {string text}}}
+registerProc ::putcmdlog {{void {string text}}}
+registerProc ::putxferlog {{void {string text}}}
+registerProc ::putloglev {{void {unknown level(s)} {unknown channel} {string text}}}
+registerProc ::dumpfile {{void {unknown nick} {string filename}}}
+registerProc ::queuesize {{number {? {unknown queue}}}}
+registerProc ::clearqueue {{number {unknown queue}}}
+registerProc ::countusers unknown
+registerProc ::validuser {{boolean {unknown handle}}}
+registerProc ::finduser {{unknown {unknown nick!user@host}}}
+registerProc ::userlist {{list {? {unknown flags}}}}
+registerProc ::passwdok {{boolean {unknown handle} {unknown pass}}}
+registerProc ::getuser {{unknown {unknown handle} {unknown entry-type} {} {}}}
+registerProc ::setuser {{void {unknown handle} {unknown entry-type} {} {}}}
+registerProc ::chhandle {{boolean {unknown old-handle} {unknown new-handle}}}
+registerProc ::chattr {{unknown {unknown handle} {} {? {unknown channel}}}}
+registerProc ::botattr {{unknown {unknown handle} {} {? {unknown channel}}}}
+registerProc ::matchattr {{boolean {unknown handle} {unknown flags} {? {unknown channel}}}}
+registerProc ::adduser {{boolean {unknown handle} {? {unknown hostmask}}}}
+registerProc ::addbot {{boolean {unknown handle} {unknown address}}}
+registerProc ::deluser {{boolean {unknown handle}}}
+registerProc ::delhost {{boolean {unknown handle} {unknown hostmask}}}
+registerProc ::addchanrec {{boolean {unknown handle} {unknown channel}}}
+registerProc ::delchanrec {{boolean {unknown handle} {unknown channel}}}
+registerProc ::haschanrec {{boolean {unknown handle} {unknown channel}}}
+registerProc ::getchaninfo {{unknown {unknown handle} {unknown channel}}}
+registerProc ::setchaninfo {{void {unknown handle} {unknown channel} {unknown info}}}
+registerProc ::newchanban {{void {unknown channel} {unknown ban} {unknown creator} {unknown comment} {? {unknown lifetime}} {? {option sticky {} none {}}}}}
+registerProc ::newban {{void {unknown ban} {unknown creator} {unknown comment} {? {unknown lifetime}} {? {option sticky {} none {}}}}}
+registerProc ::newchanexempt {{void {unknown channel} {unknown exempt} {unknown creator} {unknown comment} {? {unknown lifetime}} {? {option sticky {} none {}}}}}
+registerProc ::newexempt {{void {unknown exempt} {unknown creator} {unknown comment} {? {unknown lifetime}} {? {option sticky {} none {}}}}}
+registerProc ::newchaninvite {{void {unknown channel} {unknown invite} {unknown creator} {unknown comment} {? {unknown lifetime}} {? {option sticky {} none {}}}}}
+registerProc ::newinvite {{void {unknown invite} {unknown creator} {unknown comment} {? {unknown lifetime}} {? {option sticky {} none {}}}}}
+registerProc ::stick {{boolean {unknown banmask} {? {unknown channel}}}}
+registerProc ::unstick {{boolean {unknown banmask} {? {unknown channel}}}}
+registerProc ::stickexempt {{boolean {unknown exemptmask} {? {unknown channel}}}}
+registerProc ::unstickexempt {{boolean {unknown exemptmask} {? {unknown channel}}}}
+registerProc ::stickinvite {{boolean {unknown invitemask} {? {unknown channel}}}}
+registerProc ::unstickinvite {{boolean {unknown invitemask} {? {unknown channel}}}}
+registerProc ::killchanban {{boolean {unknown channel} {unknown ban}}}
+registerProc ::killban {{boolean {unknown ban}}}
+registerProc ::killchanexempt {{boolean {unknown channel} {unknown exempt}}}
+registerProc ::killexempt {{boolean {unknown exempt}}}
+registerProc ::killchaninvite {{boolean {unknown channel} {unknown invite}}}
+registerProc ::killinvite {{boolean {unknown invite}}}
+registerProc ::ischanjuped {{boolean {unknown channel}}}
+registerProc ::isban {{boolean {unknown ban} {? {unknown channel}}}}
+registerProc ::ispermban {{boolean {unknown ban} {? {unknown channel}}}}
+registerProc ::isexempt {{boolean {unknown exempt} {? {unknown channel}}}}
+registerProc ::ispermexempt {{boolean {unknown exempt} {? {unknown channel}}}}
+registerProc ::isinvite {{boolean {unknown invite} {? {unknown channel}}}}
+registerProc ::isperminvite {{boolean {unknown invite} {? {unknown channel}}}}
+registerProc ::isbansticky {{boolean {unknown ban} {? {unknown channel}}}}
+registerProc ::isexemptsticky {{boolean {unknown exempt} {? {unknown channel}}}}
+registerProc ::isinvitesticky {{boolean {unknown invite} {? {unknown channel}}}}
+registerProc ::matchban {{boolean {unknown nick!user@host} {? {unknown channel}}}}
+registerProc ::matchexempt {{boolean {unknown nick!user@host} {? {unknown channel}}}}
+registerProc ::matchinvite {{boolean {unknown nick!user@host} {? {unknown channel}}}}
+registerProc ::banlist {{list {? {unknown channel}}}}
+registerProc ::exemptlist {{list {? {unknown channel}}}}
+registerProc ::invitelist {{list {? {unknown channel}}}}
+registerProc ::newignore {{void {unknown hostmask} {unknown creator} {unknown comment} {? {unknown lifetime}}}}
+registerProc ::killignore {{boolean {unknown hostmask}}}
+registerProc ::ignorelist list
+registerProc ::isignore {{boolean {unknown hostmask}}}
+registerProc ::save void
+registerProc ::reload void
+registerProc ::backup void
+registerProc ::getting-users boolean
+registerProc ::savechannels void
+registerProc ::loadchannels void
+registerProc ::channels list
+registerProc ::channame2dname {{unknown {unknown channel-name} {} {unknown channel-dname}}}
+registerProc ::isbotnick {{boolean {unknown nick}}}
+registerProc ::botisop {{boolean {? {unknown channel}}}}
+registerProc ::botishalfop {{boolean {? {unknown channel}}}}
+registerProc ::botisvoice {{boolean {? {unknown channel}}}}
+registerProc ::botonchan {{boolean {? {unknown channel}}}}
+registerProc ::isop {{boolean {unknown nickname} {? {unknown channel}}}}
+registerProc ::ishalfop {{boolean {unknown nickname} {? {unknown channel}}}}
+registerProc ::wasop {{boolean {unknown nickname} {unknown channel}}}
+registerProc ::washalfop {{boolean {unknown nickname} {unknown channel}}}
+registerProc ::isvoice {{boolean {unknown nickname} {? {unknown channel}}}}
+registerProc ::onchan {{boolean {unknown nickname} {? {unknown channel}}}}
+registerProc ::nick2hand {{unknown {unknown nickname} {? {unknown channel}}}}
+registerProc ::hand2nick {{unknown {unknown handle} {? {unknown channel}}}}
+registerProc ::handonchan {{boolean {unknown handle} {? {unknown channel}}}}
+registerProc ::ischanban {{boolean {unknown ban} {unknown channel}}}
+registerProc ::ischanexempt {{boolean {unknown exempt} {unknown channel}}}
+registerProc ::ischaninvite {{boolean {unknown invite} {unknown channel}}}
+registerProc ::chanbans {{list {unknown channel}}}
+registerProc ::chanexempts {{list {unknown channel}}}
+registerProc ::chaninvites {{list {unknown channel}}}
+registerProc ::resetbans {{void {unknown channel}}}
+registerProc ::resetexempts {{void {? {unknown channel}}}}
+registerProc ::resetinvites {{void {? {unknown channel}}}}
+registerProc ::resetchan {{unknown {unknown channel}}}
+registerProc ::getchanhost {{unknown {unknown nickname} {? {unknown channel}}}}
+registerProc ::getchanjoin {{unknown {unknown nickname} {unknown channel}}}
+registerProc ::onchansplit {{boolean {unknown nick} {? {unknown channel}}}}
+registerProc ::chanlist {{unknown {unknown channel} {? {unknown {flags[&amp;chanflags]}}}}}
+registerProc ::getchanidle {{unknown {unknown nickname} {unknown channel}}}
+registerProc ::getchanmode {{unknown {unknown channel}}}
+registerProc ::jump {{void {} {} {? {unknown password\]\]}}}}
+registerProc ::pushmode {{void {unknown channel} {unknown mode} {? {unknown arg}}}}
+registerProc ::flushmode {{void {unknown channel}}}
+registerProc ::topic {{unknown {unknown channel}}}
+registerProc ::validchan {{boolean {unknown channel}}}
+registerProc ::isdynamic {{boolean {unknown channel}}}
+registerProc ::setudef {{void {unknown flag/int/str} {string name}}}
+registerProc ::renudef {{void {unknown flag/int/str} {unknown oldname} {unknown newname}}}
+registerProc ::deludef {{void {unknown flag/int/str} {string name}}}
+registerProc ::putdcc {{void {unknown idx} {string text}}}
+registerProc ::dccbroadcast {{void {string message}}}
+registerProc ::dccputchan {{void {unknown channel} {string message}}}
+registerProc ::boot {{void {unknown user@bot} {? {unknown reason}}}}
+registerProc ::dccsimul {{void {unknown idx} {string text}}}
+registerProc ::hand2idx {{boolean {unknown handle}}}
+registerProc ::idx2hand {{unknown {unknown idx}}}
+registerProc ::valididx {{boolean {unknown idx}}}
+registerProc ::getchan {{boolean {unknown idx}}}
+registerProc ::setchan {{void {unknown idx} {unknown channel}}}
+registerProc ::console {{list {unknown idx} {? {unknown channel}} {? {unknown console-modes}}}}
+registerProc ::echo {{unknown {unknown idx} {? {unknown status}}}}
+registerProc ::strip {{unknown {unknown idx} {? {unknown +/-strip-flags}}}}
+registerProc ::putbot {{void {unknown bot-nick} {string message}}}
+registerProc ::putallbots {{void {string message}}}
+registerProc ::killdcc {{void {unknown idx}}}
+registerProc ::bots unknown
+registerProc ::botlist list
+registerProc ::killdcc {{void {unknown idx}}}
+registerProc ::islinked {{boolean {unknown bot}}}
+registerProc ::dccused unknown
+registerProc ::dcclist {{list {? {unknown type}}}}
+registerProc ::whom {{unknown {unknown chan}}}
+registerProc ::getdccidle {{unknown {unknown idx}}}
+registerProc ::getdccaway {{unknown {unknown idx}}}
+registerProc ::setdccaway {{void {unknown idx} {string message}}}
+registerProc ::connect {{unknown {unknown host} {unknown port}}}
+registerProc ::dccdumpfile {{void {unknown idx} {string filename}}}
+registerProc ::notes {{boolean {unknown user} {? {unknown numberlist}}}}
+registerProc ::erasenotes {{boolean {unknown user} {unknown numberlist}}}
+registerProc ::listnotes {{boolean {unknown user} {unknown numberlist}}}
+registerProc ::storenote {{unknown {unknown from} {unknown to} {unknown msg} {unknown idx}}}
+registerProc ::assoc {{unknown {unknown chan} {? {string name}}}}
+registerProc ::killassoc {{void {unknown chan}}}
+registerProc ::compressfile {{void {} {unknown level} {unknown src-file} {? {unknown target-file}} {} {unknown src-file} {? {unknown target-file}}}}
+registerProc ::iscompressed {{void {string filename}}}
+registerProc ::setpwd {{void {unknown idx} {unknown dir}}}
+registerProc ::getpwd {{unknown {unknown idx}}}
+registerProc ::getfiles {{list {unknown dir}}}
+registerProc ::getdirs {{list {unknown dir}}}
+registerProc ::dccsend {{unknown {string filename} {unknown ircnick}}}
+registerProc ::filesend {{boolean {unknown idx} {string filename} {? {unknown ircnick}}}}
+registerProc ::fileresend {{boolean {unknown idx} {string filename} {? {unknown ircnick}}}}
+registerProc ::setdesc {{void {unknown dir} {unknown file} {unknown desc}}}
+registerProc ::getdesc {{unknown {unknown dir} {unknown file}}}
+registerProc ::setowner {{void {unknown dir} {unknown file} {unknown handle}}}
+registerProc ::getowner {{unknown {unknown dir} {unknown file}}}
+registerProc ::setlink {{void {unknown dir} {unknown file} {unknown link}}}
+registerProc ::getlink {{unknown {unknown dir} {unknown file}}}
+registerProc ::getfileq {{unknown {unknown handle}}}
+registerProc ::getfilesendtime {{unknown {unknown idx}}}
+registerProc ::mkdir {{unknown {unknown directory} {unknown required-flags} {? {unknown channel\]}}}}
+registerProc ::rmdir {{boolean {unknown directory}}}
+registerProc ::mv {{unknown {unknown file} {unknown destination}}}
+registerProc ::cp {{unknown {unknown file} {unknown destination}}}
+registerProc ::getflags {{unknown {unknown dir}}}
+registerProc ::setflags {{boolean {unknown dir} {unknown flags} {? {unknown channel\]}}}}
+registerProc ::bind {{unknown {unknown type} {unknown flags} {unknown keyword/mask} {? {unknown proc-name}}}}
+registerProc ::unbind {{unknown {unknown type} {unknown flags} {unknown keyword/mask} {unknown proc-name}}}
+registerProc ::binds {{list {? {unknown type/mask}}}}
+registerProc ::logfile {{unknown {unknown modes} {unknown channel} {string filename}}}
+registerProc ::maskhost {{boolean {unknown nick!user@host}}}
+registerProc ::timer {{unknown {unknown minutes} {unknown tcl-command}}}
+registerProc ::utimer {{unknown {unknown seconds} {unknown tcl-command}}}
+registerProc ::timers list
+registerProc ::utimers list
+registerProc ::killtimer {{void {unknown timerID}}}
+registerProc ::killutimer {{void {unknown timerID}}}
+registerProc ::unixtime boolean
+registerProc ::duration {{number {unknown seconds}}}
+registerProc ::strftime {{unknown {unknown formatstring} {? {unknown time}}}}
+registerProc ::ctime {{boolean {unknown unixtime}}}
+registerProc ::myip unknown
+registerProc ::rand {{int {unknown limit}}}
+registerProc ::control {{void {unknown idx} {unknown command}}}
+registerProc ::sendnote {{unknown {unknown from} {unknown {to[@bot]}} {string message}}}
+registerProc ::link {{boolean {? {unknown via-bot}} {unknown bot}}}
+registerProc ::unlink {{boolean {unknown bot}}}
+registerProc ::encrypt {{unknown {unknown key} {string string}}}
+registerProc ::decrypt {{unknown {unknown key} {unknown encrypted-base64-string}}}
+registerProc ::encpass {{unknown {unknown password}}}
+registerProc ::die {{void {? {unknown reason}}}}
+registerProc ::unames unknown
+registerProc ::dnslookup {{void {unknown ip-address/hostname} {unknown proc} {? {unknown {[arg1}}} {? {unknown arg2}} {} {? {unknown argN\]}}}}
+registerProc ::md5 {{boolean {string string}}}
+registerProc ::callevent {{void {unknown event}}}
+registerProc ::traffic list
+registerProc ::modules list
+registerProc ::loadmodule {{unknown {unknown module}}}
+registerProc ::unloadmodule {{unknown {unknown module}}}
+registerProc ::loadhelp {{void {unknown helpfile-name}}}
+registerProc ::unloadhelp {{void {unknown helpfile-name}}}
+registerProc ::reloadhelp void
+registerProc ::restart void
+registerProc ::rehash void
+registerProc ::stripcodes {{string {unknown strip-flags} {string string}}}
+
+registerProc ::listen {
+  {int {unknown port} {{enum bots users all}} {? {unknown mask}}}
+  {int {unknown port} {{const scrip}} {unknown proc} {? {unknown flag}}}
+  {void {unknown port} {{const off}}}
+}
+registerProc ::channel {
+  {void {{const name}} {string name} {? {unknown option-list}}}
+  {void {{const set}} {string name} {unknown options}}
+  {list {{const info}} {string name}}
+  {unknown {{const get}} {string name} {unknown setting}}
+  {void {{const remove}} {string name}}
+}
+
+registerVariable {} global ::botnick  {} string
+registerVariable {} global ::botname {} string
+registerVariable {} global ::server {} string
+registerVariable {} global ::serveraddress {} string
+registerVariable {} global ::version {} string
+registerVariable {} global ::numversion {} numeric
+registerVariable {} global ::uptime {} unknown
+registerVariable {} global ::lastbind {} unknown
+registerVariable {} global ::isjumped {} boolean
+registerVariable {} global ::handlen {} numeric
+registerVariable {} global ::config {} string

@@ -1,8 +1,9 @@
-IDE::ProgEdit instproc getOption {cmdline uoption} {
+IDE::CodeCompletion instproc getOption {cmdline uoption} {
+    my instvar repo
     set basecommand [my getBaseCmdFromLine $cmdline]
-    set repo [SignatureRepository getSignatureRepository]
     set descs [$repo getCommandDescription $basecommand]
-    if {[llength [set options [ttype::commandoptions $descs]]]>0} {
+    set ret [list]
+    if {[llength [set options [ttype::commandoptionsAll $descs]]]>0} {
         # complete option
         set mlist {}
         set pattern ${uoption}*
@@ -11,6 +12,7 @@ IDE::ProgEdit instproc getOption {cmdline uoption} {
                 lappend mlist $option
             }
         }
-        my invokePopDown $mlist $pattern
+        set ret [list $mlist $pattern]
     }
+    return $ret
 }

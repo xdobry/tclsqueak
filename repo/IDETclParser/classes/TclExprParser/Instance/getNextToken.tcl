@@ -16,7 +16,7 @@ TclExprParser instproc getNextToken {} {
             # hex binar and octal
             set tokenType value
         }
-        {^[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?} {
+        {^([0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?|[0-9]+\.)} {
             # double
             set tokenType value
         }

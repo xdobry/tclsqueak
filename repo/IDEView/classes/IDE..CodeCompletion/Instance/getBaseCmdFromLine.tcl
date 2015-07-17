@@ -1,4 +1,4 @@
-IDE::ProgEdit instproc getBaseCmdFromLine cmdline {
+IDE::CodeCompletion instproc getBaseCmdFromLine cmdline {
     # search for first cmd in line
     # skip [ and ; {}
     set cmdline [string map [list {\}} _ {\{} _ {\"} _ {\]} _ {\[} _] $cmdline]

@@ -1,5 +1,5 @@
 # created with TclSqueak
-package provide IDERepoBootstrap 0.1
+package provide IDERepoBootstrap 0.2
 namespace eval ::repobs {}
 proc repobs::asFileName objName {
     string map {:: .. ! %21 # %23 {$} %24 % %25 & %26 ' %27 ( %28 ) %29 * %2A + %2B , %2C / %2F : %3A {;} %3B = %3D ? %3F @ %40 {[} %5B \] %5D .. %2E%2E} $objName
@@ -219,6 +219,25 @@ proc repobs::initPackageLoader repo {
     set repodir $repo
     package unknown [list repobs::packageUnknownHandler [package unknown]]
 }
+proc repobs::initRepoLoader repofile {
+    if {![file isfile $repofile]} {
+        puts "repofile $repofile is not a file"
+        return
+    }
+    package require XOTcl
+    package require xdobry::sql
+    package require xdobry::sqlite
+    package require IDEStart
+    Sqlinterface loadInterface sqlite
+    set connection [Sqlite new]
+    if {[$connection connect [list sqlfile $repofile]]} {
+        error "can not open sqlite $repofile $::errorInfo"
+    }
+    $connection execute "PRAGMA journal_mode = OFF"
+    IDEStarter set sqlhandle $connection
+    IDEStarter set isDevelopingMode 0
+    puts "initialized repo loader from $repofile"
+}
 proc repobs::loadComponent {compName dir} {
     puts "load component $compName"
     loadRequirements $compName $dir
@@ -226,9 +245,18 @@ proc repobs::loadComponent {compName dir} {
         # package already loaded
         return
     }
+    if {[namespace exists ::xotcl] && [Object isobject IDEStarter]} {
+        if {[IDEStarter loadComponent $compName]} {
+            puts "component $compName loaded from repo"
+            return
+        } else {
+            puts "can not load component from repo $compName"
+        }
+    }
     set source [getComponent $compName $dir]
     namespace eval :: $source
     package provide $compName 1.0
+    puts "component $compName loaded from file repo"
 }
 proc repobs::loadRequirements {compName dir} {
     set compDir [file join $dir [asFileName $compName]]
@@ -310,7 +338,8 @@ export ?-todir directory? ?-nocomments? ?comp ...? : export chosen or all compoe
 }
 }
 proc repobs::main_start args {
-    lassign [getopts $args {{-require string} {-script string}}] options comps
+    variable useCompMeta
+    lassign [getopts $args {{-require string} {-script string} {-repo string}} 0] options comps
     set repodir [dict get $options -repodir]
     if {[llength $comps]==0} {
         error "no component paramter to start found."
@@ -320,11 +349,26 @@ proc repobs::main_start args {
             package require {*}$r
         }
     }
-    foreach c $comps {
-        loadComponent $c $repodir
+    initPackageLoader $repodir
+    set libdir [file join [file dirname $repodir] libs]
+    if {[file isdirectory $libdir]} {
+        lappend ::auto_path $libdir
     }
+    set useCompMeta 1
+    if {[dict exists $options -repo]} {
+        initRepoLoader [dict get $options -repo]
+    }
+    set i 0
+    foreach c $comps {
+        if {$c eq "--"} {
+            break
+        }
+        loadComponent $c $repodir
+        incr i
+    }
+    set restArgs [lrange $comps $i+1 end]
     if {[dict exists $options -script]} {
-        namespace eval :: [dict get $options -script]
+        namespace eval :: [dict get $options -script] $restArgs
     }
 }
 proc repobs::main_startide args {

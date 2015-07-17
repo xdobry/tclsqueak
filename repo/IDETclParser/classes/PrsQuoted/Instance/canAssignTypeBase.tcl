@@ -17,9 +17,6 @@ PrsQuoted instproc canAssignTypeBase type {
                 set pattern [string replace $pattern $lbegin $lend [string range $mask 0 $lend-$lbegin]]
             }
             if {[regexp {(^end[+-](x+|\d+)$)|(^(x+|\d+)[+-](x+|\d+)$)} $pattern]} {
-                foreach l $list {
-
-                }
                 return 1
             }
         }

@@ -1,6 +1,8 @@
 PrsLiteral instproc canAssignType {context rtype} {
-    if {[my canAssignTypeBase $rtype $context]} {
-        return 1
+    set ret [my canAssignTypeBase $rtype $context]
+    if {$ret==1 || $ret==0} {
+        return $ret
+    } else {
+        next
     }
-    next
 }

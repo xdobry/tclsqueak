@@ -279,9 +279,9 @@ CoreSignatureRepository instproc registerCoreProcs {} {
 ::lrepeat {{{list {create list by repeat elements}} {int {number of repeat}} unknown}}
 ::lreplace {{list list index index {* unknown elem}}}
 ::lreverse {{{list {}} {list {}}}}
-::lsearch {{{unknown {}} {? {option -exact {} -glob {} -regexp {} -sorted {} -all {} -inline {} -not {} -start int -asc {} -dictionary {} -integer {} -nocase {} -real {} -decreasing {} -increasing {} -bisect {} -index int  -subindices {}}} {list {}} {unknown {}}}}
+::lsearch {{{unknown {}} {? {option -exact {} -glob {} -regexp {} -sorted {} -all {} -inline {} -not {} -start index -asc {} -dictionary {} -integer {} -nocase {} -real {} -decreasing {} -increasing {} -bisect {} -index index  -subindices {}}} {list {}} {unknown {}}}}
 ::lset {{{list {Change an element in a list}} {{ref list}} {+ index} {? unknown {new value}}}}
-::lsort {{{list {}} {? {option -ascii {} -dictionary {} -integer {} -real {} -command script -increasing {} -decreasing {} -indicies {} -index list -nocase {} -unique {}}} list}}
+::lsort {{{list {}} {? {option -ascii {} -dictionary {} -integer {} -real {} -command script -increasing {} -decreasing {} -indicies {} -index list -stride int -nocase {} -unique {}}} list}}
 ::memory {
   {unknown {{const info}}}
   {unknown {{const trace}} unknown {? unknown}}
@@ -326,7 +326,7 @@ EXCL NOCTTY NONBLOCK TRUNC}}}
   {list {{const names}}}
   {int {{const present}} {? {option -exact {}}} {string package} {* unknown requirement}}
   {void {{const provide}} {string package} {? string version}}
-  {void {{const require}} {? {option -exact {}}} {string package {? string version}}}
+  {void {{const require}} {? {option -exact {}}} {string package} {? string version}}
   {script {{const unknown}} {? script}}
   {int {{const vcompare}} {string verison} {string version}}
   {list {{const versions}} {string package}}
@@ -413,8 +413,7 @@ EXCL NOCTTY NONBLOCK TRUNC}}}
 ::unset {{void {? {option -nocomplain}} {? {const --}} {+ unknown}}}
 ::update {{void {? {const idletasks}}}}
 ::uplevel {
-    {unknown {? int level} {body script}}
-    {unknown {? int level} {+ unknown scriptargs}}
+    {unknown {? int} {+ unknown scriptargs}}
 }
 ::upvar {2 -1}
 ::variable {{void {* unknown}}}

@@ -12,13 +12,15 @@ IDE::SyntaxChecker instproc checkComponents {} {
         foreach component $components {
             set cobj [IDE::Component getCompObjectForNameIfExist $component]
             set introProxy [$cobj getIntroProxy]
+            set prefix [$introProxy getMethodTypePrefix]
             foreach cls [$cobj getClasses] {
                 foreach method [$introProxy getInstanceMethods $cls] {
                     set chk [PrsContext new]
                     $chk parseAndCheck [$introProxy getBodyInstanceMethod $cls $method]
                     my setStateText "$cls [incr c]"
                     if {[$chk hasErrors]} {
-                        set errorsArr($cls>$method) [$chk errors]
+                        set methoddisplay "$cls $prefix>$method"
+                        set errorsArr($methoddisplay) [$chk errors]
                     }
                     $chk destroy
                     update
@@ -28,7 +30,8 @@ IDE::SyntaxChecker instproc checkComponents {} {
                     $chk parseAndCheck [$introProxy getBodyClassMethod $cls $method]
                     my setStateText "$cls [incr c]"
                     if {[$chk hasErrors]} {
-                        set errorsArr($cls\ class>$method) [$chk errors]
+                        set methoddisplay "$cls ${prefix}class>$method"
+                        set errorsArr($methoddisplay) [$chk errors]
                     }
                     $chk destroy
                     update

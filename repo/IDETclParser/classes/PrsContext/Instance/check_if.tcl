@@ -6,7 +6,7 @@ PrsContext instproc check_if {count command notifier} {
         set elem [$command getElem $x]
         if {[$elem info class] eq "::PrsLiteral"} {
             set name [$elem prsString]
-            if {[lsearch -exact {then else elseif} $name]!=-1} {
+            if {$name in {then else elseif}} {
                 if {[$notifier hasclass ::PrsSyntaxHightlight]} {
                     $notifier hightlightElement $elem tclproc
                 }
