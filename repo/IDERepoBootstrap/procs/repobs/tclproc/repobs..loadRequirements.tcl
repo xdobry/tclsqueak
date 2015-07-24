@@ -16,6 +16,9 @@ proc repobs::loadRequirements {compName dir} {
                     package require $pkgName
                 }
             }
+            if {$pkgName eq "XOTcl"} {
+                namespace import ::xotcl::*
+           }
         }
     }
 }

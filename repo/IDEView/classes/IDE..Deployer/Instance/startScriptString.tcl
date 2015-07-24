@@ -1,18 +1,14 @@
 IDE::Deployer instproc startScriptString compToSave {
-    my instvar onefile nopackages nometa
-    if {[IDE::SystemConfigMap exists preStartScript] && [IDE::SystemConfigMap set preStartScript] ne ""} {
-        append script [IDE::SystemConfigMap set preStartScript] \n
-    } else {
-        append script [my startScriptInvocation]
-    }
+    my instvar onefile nopackages nometa desc
+    set script [my startScriptInvocation $compToSave]
     if (!$onefile) {
         if {$nopackages} {
             foreach comp $compToSave {
                 append script "source [$comp standardFileName]\n"
             }
         } else {
-            foreach comp [IDE::SystemConfigMap set componentsToLoad] {
-                append script "package require [lindex $comp 0]\n"
+            foreach comp $compToSave {
+                append script "package require [$comp getName]\n"
             }
         }
     } else {
@@ -20,8 +16,8 @@ IDE::Deployer instproc startScriptString compToSave {
             append script [$comp asScript $nometa] \n
         }
     }
-    if {[IDE::SystemConfigMap exists startScript]} {
-        append script [IDE::SystemConfigMap set startScript] \n
+    if {[dict exists $desc startScript]} {
+        append script [dict get $desc startScript] \n
     }
     return $script
 }

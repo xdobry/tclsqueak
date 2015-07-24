@@ -1,6 +1,6 @@
 IDE::Deployer instproc setFileAttributes {} {
-    my instvar configName
+    my instvar targetDir configName
     if {![IDE::System isWindowsPlatform]} {
-        file attributes $configName -permission rwxr--r--
+        file attributes [file join $targetDir $configName] -permission rwxr--r--
     }
 }

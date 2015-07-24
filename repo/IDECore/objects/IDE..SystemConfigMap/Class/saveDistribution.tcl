@@ -12,5 +12,5 @@ IDE::SystemConfigMap proc saveDistribution {{dir {}}} {
             return
         }
     }
-    IDE::Deployer newBrowser
+    IDE::DeployerUI newBrowser directory $componentsToLoad
 }

@@ -1,1 +1,1 @@
-Class create IDE::Deployer -superclass ::IDE::Browser
+Class create IDE::Deployer

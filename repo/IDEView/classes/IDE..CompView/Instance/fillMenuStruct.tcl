@@ -21,8 +21,11 @@ IDE::CompView instproc fillMenuStruct ms {
     set export [IDE::MenuStruct create ${ms}::export {Export}]
     $ms addCascadeMenu $export
     $export addMenuItem [IDE::MenuCommand new -childof [self] -name {Save Component to File...} -command [list [self] dispatchWithSelected saveAsSource] -popdownMenu 0 -enableList [list isValidSelection]]
-    $export addCommand {Component Export Wizard...} [list IDE::ComponentSaveWizard newBrowser]
-    $export addCommand {As File Tree...} [list IDE::ComponentSaveWizard newFileTreeExport]
+    $export addCommand {Component File Export...} [list IDE::ComponentSaveWizard newBrowser]
+    $export addCommand {Deploy as Executable...} [list [self] deployAs exe]
+    $export addCommand {Deploy as TclKit...} [list [self] deployAs kit]
+    $export addCommand {Deploy as Script Directory...} [list [self] deployAs directory]
+    $export addCommand {As File Tree (for GIT)...} [list IDE::ComponentSaveWizard newFileTreeExport]
     $export addCommand {Quick Save All Components} [list IDE::Component saveAllToPath]
 
     #$ms addCommand {Set auto_path} [list [self] setAutoPath]

@@ -1,6 +1,7 @@
 PrsFileContext instproc parseFile file {
     my instvar fileDesc lineStart linesLen isTclproc isTclGlobalScript errorCount lineCount fileName
     set errorFileStart $errorCount
+    set lineCount 0
     if {![file readable $file]} {
         my logMessage "can not read $file"
         return

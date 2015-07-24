@@ -9,6 +9,7 @@ IDE::TCodeCompletion
 IDE::TCodeCompletionOO
 IDE::TComponentBrowser
 IDE::TCore
+IDE::TDeploying
 IDE::TDevelopUtils
 IDE::TEventHandling
 IDE::TImportingSource

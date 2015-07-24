@@ -14,6 +14,8 @@ CodeCompletionTestClass proc staticfoo {} {
     }
     set testns ::tcodecomplation::testns
     namespace eval $testns {
+        variable mynsvar
+        set mynsvar 2
         proc nstest {} {
             return 1
         }

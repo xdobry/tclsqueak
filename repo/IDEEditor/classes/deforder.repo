@@ -1,3 +1,6 @@
+IDE::CodeCompletion
+IDE::ProgEdit
+IDE::MethodEdit
 IDE::TclModeEdit
 IDE::EditorTranscript
 IDE::TclModeEditTab

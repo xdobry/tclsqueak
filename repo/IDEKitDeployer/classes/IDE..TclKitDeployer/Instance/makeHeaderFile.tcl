@@ -1,10 +1,7 @@
 IDE::TclKitDeployer instproc makeHeaderFile {} {
-    my instvar targetDir starPackFile
-    if {$starPackFile ne ""} {
-        if {[file extension $targetDir] ne ".exe"} {
-            append targetDir .exe
-        }
-        set header [my LoadHeader $starPackFile]
+    my instvar targetDir desc
+    if {[dict get $desc type] in {win linux}} {
+        set header [my LoadHeader [dict get $desc kitexe]]
     } else {
         set header {#!/bin/sh
 # %

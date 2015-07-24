@@ -1,29 +1,26 @@
-IDE::TclKitDeployer instproc startScriptInvocation {} {
+IDE::TclKitDeployer instproc startScriptInvocation compToSave {
     my instvar isXOTclcode nopackages onefile
-    set ret {package require starkit
+    set script {package require starkit
 starkit::startup
 set progdir $::starkit::topdir
 }
 
-    if {$isXOTclcode} {
-        append ret {if {$tcl_platform(platform) eq "windows"} {
-    set ad [pwd]
-    cd $tcl_library
-    package require XOTcl
-    package require Tk
-    cd $ad
-}
-if {![info exists xotcl::version]} {
-    package require XOTcl
-}
-
-if {![xotcl::Object isobject Object]} {
-   namespace import xotcl::*
-}
-}
-   }
-   if {!$nopackages && !$onefile} {
-      append ret {lappend auto_path $::starkit::topdir} \n
-   } 
-   return $ret
+    set initialized [list]
+    foreach comp $compToSave {
+        foreach s [$comp getSystemRequirements] {
+            if {$s ni $initialized} {
+                append script "package require " $s \n
+                if {$s eq "XOTcl"} {
+                    append script "namespace import xotcl::* \n"
+                    set isXOTclcode 1
+                }
+                lappend initialized $s
+            }
+        }
+    }
+    
+    if {!$nopackages && !$onefile} {
+       append script {lappend auto_path $::starkit::topdir} \n
+    } 
+    return $script
 }

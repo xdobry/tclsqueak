@@ -29,6 +29,6 @@ proc repobs::main_start args {
     }
     set restArgs [lrange $comps $i+1 end]
     if {[dict exists $options -script]} {
-        namespace eval :: [dict get $options -script] $restArgs
+        namespace eval :: [list {*}[dict get $options -script] $restArgs]
     }
 }

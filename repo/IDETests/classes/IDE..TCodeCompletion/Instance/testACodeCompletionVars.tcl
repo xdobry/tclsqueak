@@ -7,6 +7,7 @@ IDE::TCodeCompletion instproc testACodeCompletionVars {} {
        puts $g} {g1 g2}
     my checkCompletion {puts $newvar
        puts $new} {newvar}
-    my checkCompletion {puts $::tcl_ver} {tcl_version}
+    my checkCompletion {puts $::tcl_ver} {::tcl_version}
+    my checkCompletion {puts $::tcodecomplation::testns::mynsv} {::tcodecomplation::testns::mynsvar}
     
 }
