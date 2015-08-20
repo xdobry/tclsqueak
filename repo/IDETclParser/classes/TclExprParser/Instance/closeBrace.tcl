@@ -39,7 +39,9 @@ TclExprParser instproc closeBrace {} {
                 set valueStack [lreplace $valueStack end-$commaCount end $braceToken]
             } else {
                 $top set type [lindex $functionTypes 0]
-                lappend valueStack [list $top]
+                set values [lrange $valueStack end-$commaCount end]
+                set braceToken [concat $top $values]
+                set valueStack [lreplace $valueStack end-$commaCount end $braceToken]
             }
             set opStack [lrange $opStack 0 end-1]
             return

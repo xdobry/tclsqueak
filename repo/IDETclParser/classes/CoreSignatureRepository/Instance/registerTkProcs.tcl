@@ -4,7 +4,7 @@ CoreSignatureRepository instproc registerTkProcs {} {
 
     array set commandsArr {
 ::bell {{{void {Ring a display's bell}} {? {option -displayof tk -nice {}}}}}
-::bind {{{unknown docu} {unknown tag} {? string ?sequence?} {? script script}}}
+::bind {{{unknown docu} {unknown tag} {? string ?sequence?} {? bindscript script}}}
 ::bindtags {{{unknown docu} {tk window} {? list ?tagList?}}}
 ::clipboard {
   {{void docu} {{const clear}} {? {option -displayof tk}}}
@@ -40,7 +40,7 @@ CoreSignatureRepository instproc registerTkProcs {} {
   {{void docu} {{const delete}} {+ string fontname}}
   {{list docu} {{const families}} {? {option -displayof tk}}}
   {{int docu} {{const measure}} {string font} {? {option -displayof tk}} {string text}}
-  {{unknown docu} {{const metrics}} {string font} {? {option -displayof tk}} {{enum -ascent -descent -linespace -fixed}}}
+  {{unknown docu} {{const metrics}} {string font} {? {option -displayof tk}} {? {enum -ascent -descent -linespace -fixed}}}
   {{list docu} {{const names}}}
 }
 

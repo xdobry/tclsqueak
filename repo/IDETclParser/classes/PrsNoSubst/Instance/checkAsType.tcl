@@ -1,5 +1,5 @@
 PrsNoSubst instproc checkAsType {rtype context notifier} {
-    my instvar operation
+    my instvar operation begin end
     set mtype [my getType]
     set rtype0 [lindex $rtype 0]
     set mtype0 [lindex $mtype 0]
@@ -10,6 +10,16 @@ PrsNoSubst instproc checkAsType {rtype context notifier} {
                 $context evalContents [self]
             }
         } elseif {$rtype0 eq "script"} {
+            if {![info exists operation] || $operation ne "eval"} {
+                $context subParseGlobal [self] $notifier {}
+            }
+        } elseif {$rtype0 eq "bindscript"} {
+            if {[string index [my prsContentString] 0] eq "+"} {
+                set subscript [PrsScript new -childof [self] -begin [expr {$begin+[my getContentOffset]+1}] -end [expr {$end-[my getContentOffset]}]]
+                my addElem $subscript
+                $subscript checkAsType script $context $notifier
+                return 1
+            }
             if {![info exists operation] || $operation ne "eval"} {
                 $context subParseGlobal [self] $notifier {}
             }

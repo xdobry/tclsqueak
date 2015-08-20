@@ -22,8 +22,21 @@ PrsArgumentMatcher instproc parseCommand {command notifier startArg descsAll} {
         }
     }
 
-
     my initSubcommands $descs
+    if {[ttype::hasUniqueSubcommands $descsAll]} {
+        # check only one desc is subcommand is unique
+        # this will preserve the rigth error message if only futher arguments in subcommand do not match
+        set firstArg [lindex $arguments 0]
+        if {$firstArg ne "" && [$firstArg hasclass PrsLiteral]} {
+            set subcommand [$firstArg prsString]
+            foreach d $descs {
+                if {[lindex $d 1 0 0] eq "const" && [lindex $d 1 0 1] eq $subcommand} {
+                    set descs [list $d]
+                    break                
+                }
+            }
+        }
+    }
     foreach desc $descs {
         if {![catch {my parseCommandTypes $arguments [lrange [my prepareDesc $desc] 1 end]} types options]} {
             my applyTypes $arguments $types $notifier $descsAll

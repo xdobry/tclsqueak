@@ -102,7 +102,7 @@ CoreSignatureRepository instproc registerCoreProcs {} {
   {dict {{const filter}} dict {enum key value} {string pattern}}
   {dict {{const filter}} dict {const script} list {unknown body}}
   {void {{const for}} list dict {unknown body}}
-  {unknown {{const get}} dict {+ string key}}
+  {unknown {{const get}} dict {* string key}}
   {int {{const incr}} {{ref dict}} {+ string key}}
   {list {{const info}} dict}
   {{{list string}} {{const keys}} {? string pattern}}
@@ -330,7 +330,7 @@ EXCL NOCTTY NONBLOCK TRUNC}}}
   {script {{const unknown}} {? script}}
   {int {{const vcompare}} {string verison} {string version}}
   {list {{const versions}} {string package}}
-  {int {{const vsatisifes}} {string package} string}
+  {int {{const vsatisfies}} {string package} string}
   {unknown {{const prefer}} {? unknown}}
 }
 ::parray {{{void {print array to stdout}} {{ref array} array}}}
@@ -404,7 +404,7 @@ EXCL NOCTTY NONBLOCK TRUNC}}}
   {unknown {{const variable}} unknown unknown unknown}
   {unknown {{const vdelete}} unknown unknown unknown}
   {unknown {{const vinfo}} unknown}
-  {void {{const add}} {{enum command execution variable}} {{enum array read write unset enter leave enterstep leavestep rename delete}} unknown}
+  {void {{const add}} {{enum command execution variable}} {string name} {{enum array read write unset enter leave enterstep leavestep rename delete}} unknown}
   {void {{const remove}} {{enum command execution variable}} unknown unknown}
   {list {{const info}} {{enum command execution variable}} unknown}
 }

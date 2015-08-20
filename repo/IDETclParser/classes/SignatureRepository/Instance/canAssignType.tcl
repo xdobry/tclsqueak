@@ -18,7 +18,7 @@ SignatureRepository instproc canAssignType {requiredType isType} {
     if {$requiredType eq "index" && $isType0 in {int numeric}} {
         return 1
     }
-    if {$requiredType in {body script} && $isType0 in {string list}} {
+    if {$requiredType in {body script bindscript} && $isType0 in {string list}} {
         return 1
     }
     if {$requiredType eq "int" && $isType0 in {numeric index boolean}} {

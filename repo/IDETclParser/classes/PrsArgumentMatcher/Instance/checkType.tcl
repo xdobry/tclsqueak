@@ -10,22 +10,29 @@ PrsArgumentMatcher instproc checkType {parameters typeIndex} {
         for {set shift 0} {$shift<$parLen} {incr shift} {
             set found 0
             set elem [lindex $parameters $shift]
-            foreach {optName optType} [lrange $type 1 end] {
-                if {[$elem isLiteral $optName]} {
-                    set found 1
-                    if {$optType ne ""} {
-                        incr shift
-                        if {$shift<$parLen} {
-                            lappend types _
-                            set elem [lindex $parameters $shift]
-                            # we do not check the opt types here but only in applyTypes step
-                            # lappend types [lindex [my checkTypeBase $elem $optType] 0]
-                            lappend types [list $optType $index]
+            if {[$elem hasclass PrsLiteral]} {
+                set elemLiteral [$elem prsString]
+                set options [list]
+                foreach {optName optType} [lrange $type 1 end] {
+                    lappend options $optName
+                }
+                foreach {optName optType} [lrange $type 1 end] {
+                    if {$elemLiteral eq $optName || [my isUniqueOption $elemLiteral $optName $options]} {
+                        set found 1
+                        if {$optType ne ""} {
+                            incr shift
+                            if {$shift<$parLen} {
+                                lappend types _
+                                set elem [lindex $parameters $shift]
+                                # we do not check the opt types here but only in applyTypes step
+                                # lappend types [lindex [my checkTypeBase $elem $optType] 0]
+                                lappend types [list $optType $index]
+                            } else {
+                                my parseError $elem "expect option parameter for $type: $fullName"
+                            }
                         } else {
-                            my parseError $elem "expect option parameter for $type: $fullName"
+                            lappend types _
                         }
-                    } else {
-                        lappend types _
                     }
                 }
             }

@@ -148,7 +148,7 @@ CoreSignatureRepository instproc registerXotclCoreMethods {} {
 {::xotcl::Object instproc move} {{{void {}} {string {}}}}
 {::xotcl::Object instproc noinit} {{{void {}}}}
 {::xotcl::Object instproc parametercmd} {{{void {}}}}
-{::xotcl::Object instproc proc} {{{void {}} {string {proc name}} {* unknown}}}
+{::xotcl::Object instproc proc} {{{void {}} {string {proc name}} {list args} {unknown body} {* unknown}}}
 {::xotcl::Object instproc procsearch} {{{list {}} {string {}}}}
 {::xotcl::Object instproc requireNamespace} {{{void {}}}}
 {::xotcl::Object instproc self} {0 -1}

@@ -1,7 +1,7 @@
 IDE::CodeSearchDialog instproc postOk {} {
     my instvar search caseSensitive text searchType scope context
     set search [dict create text $text scope $scope caseSensitive $caseSensitive]
-    IDE::InputCache addValueCache search text
+    IDE::InputCache addValueCache search $text
     if {$searchType eq "regexp"} {
         dict set search type text
         dict set search regexp 1

@@ -1,3 +1,3 @@
 TclParser proc getVersion {} {
-    return 0.18
+    return 0.19
 }

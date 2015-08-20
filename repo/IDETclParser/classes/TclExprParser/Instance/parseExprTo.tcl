@@ -57,8 +57,10 @@ TclExprParser instproc parseExprTo {pelem tcontext tnotifier} {
             ) {
                 if {$lastType eq "("} {
                     # this need to be function
-                    if {[my getFunctionArgCount [lindex $opStack end-1]]==-2} {
-                        my addError "empty braces wihtout function" $tokValue
+                    set fargCount [my getFunctionArgCount [my getOpValue [lindex $opStack end-1]]]
+                    if {$fargCount==-2} {
+                        my halt
+                        my addError "empty braces without function" $tokValue
                         return
                     }
                 }

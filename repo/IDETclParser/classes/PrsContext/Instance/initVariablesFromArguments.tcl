@@ -27,6 +27,9 @@ PrsContext instproc initVariablesFromArguments {} {
 
     set fullName [my getFullName]
     set argListElem [$rootCommand getElem $shift]
+    if {$argListElem eq ""} {
+        return
+    }
     $argListElem extractList
 
     # check for non positional arguments
