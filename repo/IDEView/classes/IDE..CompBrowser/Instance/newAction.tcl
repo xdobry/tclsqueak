@@ -2,6 +2,7 @@ IDE::CompBrowser instproc newAction {} {
     set cobj [my @compview getActualComponentObject]
     set newList {
         Component
+        {GUI Window Wizard}
         {Script Editor}
     }
     if {$cobj ne ""} {
@@ -30,6 +31,9 @@ IDE::CompBrowser instproc newAction {} {
         }
         {Script Editor} {
             IDE::Transcript newBrowser
+        }
+        {GUI Window Wizard} {
+            [my @compview openUIwizard]
         }
         default {
             error "not supported yet TBD"

@@ -1,7 +1,12 @@
 IDE::CompView instproc fillMenuStruct ms {
     $ms enablementHandler [self]
 
-    $ms addMenuItem [IDE::MenuCommand new -childof [self] -name {New...} -command [list [self] newComponent] -popdownMenu 1]
+    set new [IDE::MenuStruct create ${ms}::new {New}]
+    $ms addCascadeMenu $new
+    $new addMenuItem [IDE::MenuCommand new -childof [self] -name {Component...} -command [list [self] newComponent] -popdownMenu 1]
+    $new addMenuItem [IDE::MenuCommand new -childof [self] -name {GUI Window Wizard...} -command [list [self] openUIwizard] -popdownMenu 1]
+    $new addMenuItem [IDE::MenuCommand new -childof [self] -name {Script Editor} -command [list IDE::Transcript newBrowser] -popdownMenu 1]
+    
     $ms addMenuItem [IDE::MenuCommand new -childof [self] -accelerator {Control-T} -name {Open Type...} -command [list [self] searchClass] -popdownMenu 1]
     $ms addSeparator
     $ms addMenuItem [IDE::MenuCommand new -childof [self] -name {Rename...} -command [list [self] dispatchWithSelected renameComponent] -popdownMenu 1 -enableList [list isValidSelection]]

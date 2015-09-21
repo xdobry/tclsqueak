@@ -35,4 +35,12 @@ $b eat
 
     }
     my assert {[llength [$context set errors]]==0} [$context set errors]
+    set repository [$context set repository]
+    my assert {[$repository getFullObjectName fruit] eq "::fruit"}
+    my assert {[$repository getClassSuperclassesFromFullName ::banana] eq "::fruit"}
+    my assert {"::fruit" in [$repository getFullHeritage banana]}
+    my assert {"::fruit" in [$repository getFullHeritage ::banana]}
+    my assert {"::fruit" in [$repository getFullHeritage banana ::]}
+    my assert {[llength [$repository getMethodDescriptionForClasses [list ::banana] eat]]>0}
+    
 }

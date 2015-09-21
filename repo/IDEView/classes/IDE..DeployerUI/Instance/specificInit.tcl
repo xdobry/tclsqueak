@@ -37,6 +37,7 @@ IDE::DeployerUI instproc specificInit {} {
     ttk::labelframe $win.sframe -text "Start Script"
     if {[llength $startScripts]>0} {
         ttk::combobox $win.sframe.scripts -values $startScripts
+        bind $win.sframe.scripts <<ComboboxSelected>> [list [self] selectScript]
         pack $win.sframe.scripts -anchor w
     } else {
         ttk::label $win.sframe.sinfo -text "You can define class method 'main' or procedure with name 'main_*'\n which are automatically handled as possible entry points"

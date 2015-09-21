@@ -32,6 +32,10 @@ IDE::MethodEditSynchronizatorMix instproc saveValue value {
                 if {![info exists dump]} {
                     set dump [$twin dump -text -tag 1.0 end]
                 }
+                if {[$view exists noModifyEvents]} {
+                    set modifyEvents [$view set noModifyEvents]
+                    $view set noModifyEvents 1
+                }
                 set targetWin [$view getTextWindow]
                 $targetWin configure -undo 0
                 $targetWin delete 1.0 end
@@ -49,8 +53,11 @@ IDE::MethodEditSynchronizatorMix instproc saveValue value {
                         }
                     }
                 }
-                $targetWin configure -undo 1
                 $targetWin edit modified 0
+                $targetWin configure -undo 1
+                if {[$view exists noModifyEvents]} {
+                    $view set noModifyEvents $modifyEvents
+                }
             }
         }
     }

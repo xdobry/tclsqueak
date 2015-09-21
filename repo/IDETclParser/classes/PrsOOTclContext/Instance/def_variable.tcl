@@ -1,5 +1,5 @@
 PrsOOTclContext instproc def_variable {command startArg notifier} {
-    my instvar repository name namespace parameters
+    my instvar repository name namespace parameters object
     my checkArgCount $command $startArg $notifier 1 -1
     set argsCount [$command argsCount]
     set varNames [list]
@@ -8,7 +8,7 @@ PrsOOTclContext instproc def_variable {command startArg notifier} {
         if {$x==$startArg && [$varNameElem prsString] in {-append -clear -set}} {
             continue
         }
-        my addVariableFrom $varNameElem $notifier [list unknown] [list instproc $name]
+        my addVariableFrom $varNameElem $notifier [list unknown] [list instproc $object]
         if {[$varNameElem hasclass PrsVariableRef]} {
             lappend varNames [$varNameElem prsString]
         }

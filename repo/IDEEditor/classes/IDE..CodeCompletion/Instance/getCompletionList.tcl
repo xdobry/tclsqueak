@@ -9,13 +9,23 @@ IDE::CodeCompletion instproc getCompletionList {body cursor contentDesc} {
 
     set ret [list]
     
+    
     if {[regexp {([\w\$]+|::)} $line]} {
        # remove all before ; or \[
        regexp {[^\[;]+$} $line res
+       lassign $contentDesc class type method
+       set contentIntroProxy [IDE::XOIntroProxy getIntroProxyForMethodType $type]
+       set atype [IDE::XOIntroProxy getAbstractMethodType $type]
+       if {[$contentIntroProxy getOOSystemName] eq "XOTcl"} {
+           set initlocalVarMethodName instvar
+       } else {
+           set initlocalVarMethodName variable
+       }
+
        if {[regexp {(.+)\s+(-\w*)$} $res _ cmdline uoption]} {
            set ret [my getOption $cmdline $uoption]
-       } elseif ([regexp {my instvar [ \w]*$} $res cmd]) {
-           set ret [my getExpantInstvar $cmd $contentDesc]
+       } elseif {$atype in {Class Instance} && [regexp "my $initlocalVarMethodName \[ \\w\]*$" $res cmd]} {
+           set ret [my getExpantInstvar $cmd $contentDesc $initlocalVarMethodName]
        } elseif  {[regexp {([\w:\]]*)(?:\s+|^)([:\w]+)$} $res _ basecommand fchars]} {
            # commands has two tails. Try to complete second tails
            # puts "res '$res' #bas1 '$basecommand' #fc '$fchars'"

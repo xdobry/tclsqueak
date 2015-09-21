@@ -19,7 +19,10 @@ SignatureRepository instproc registerVariable {class stype name namespace type {
     }
 
     if {$stype in {proc instproc}} {
-        set class [my getFullObjectName $class $namespace]
+        set fclass [my getFullObjectName $class $namespace]
+        if {$fclass ne ""} {
+            set class $fclass
+        }
     }
     if {$stype eq "global"} {
         set name [my getFullName $namespace $name]
@@ -45,6 +48,6 @@ SignatureRepository instproc registerVariable {class stype name namespace type {
         }
     }
     set variableArr($fname) $type
-    tlog::info "registeredVariable $name t=$type o=$override"
+    tlog::info "registeredVariable $fname t=$type o=$override"
     return
 }

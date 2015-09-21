@@ -16,4 +16,6 @@ oo::class create fruit {
 
     }
     my assert {[llength [$context set errors]]>0} [$context set errors]
+    set wrepo [[$context set repository] getWriteRepository]
+    my assert {[llength [$wrepo searchVariable [list ::fruit instproc v*]]]>0}
 }

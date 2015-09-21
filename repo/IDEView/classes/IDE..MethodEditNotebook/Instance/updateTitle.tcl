@@ -4,5 +4,6 @@ IDE::MethodEditNotebook instproc updateTitle {oldDesc newDesc} {
         $win tab $methodEditTabIds($view) -text [my getTabTitle {*}${newDesc}]
         unset viewContent($oldDesc)
         set viewContent($newDesc) $view
+        $view updateContentDescr $newDesc
     }
 }

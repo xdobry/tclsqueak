@@ -16,6 +16,6 @@ IntroSignatureRepository instproc getFullObjectName {object {namespace {}}} {
             return [$object]
         }
     } else {
-        return $object
+        return ""
     }
 }

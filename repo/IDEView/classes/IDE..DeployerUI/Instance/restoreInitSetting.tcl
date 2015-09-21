@@ -2,7 +2,7 @@ IDE::DeployerUI instproc restoreInitSetting {} {
     my instvar win type output components histOutputs startScript kitexe startScripts
     
     set startScript ""
-    set histOutputs [IDE::InputCache getValueCache deployouts_$type]
+    set histOutputs [IDE::InputCache getValuesCache deployouts_$type]
     set d [IDE::InputCache getValueCache deploydesc_$type]
     if {$type eq "exe"} {
         set kitexe [IDE::InputCache getValueCache deploy_kitexe]
@@ -30,15 +30,12 @@ IDE::DeployerUI instproc restoreInitSetting {} {
                     lappend components $c
                 }
             }
-        }
-        if {[dict exists $d startScript]} {
-            set startScript [dict get $d startScript]
-        }
-        
-    }
-    if {[llength $d]>0} {
-        if {[dict exists $d output]} {
-            set output [dict get $d output]
+            if {[dict exists $d startScript]} {
+                set startScript [dict get $d startScript]
+            }
+            if {[dict exists $d output]} {
+                set output [dict get $d output]
+            }
         }
     }
     if {![info exists output]} {

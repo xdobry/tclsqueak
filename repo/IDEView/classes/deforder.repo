@@ -32,6 +32,7 @@ IDE::NSAware
 IDE::NSBrowser
 IDE::NSElements
 IDE::NSView
+IDE::OptionUIMix
 IDE::PackageLoader
 IDE::PopdownOnlyMix
 IDE::PreferencesDialog

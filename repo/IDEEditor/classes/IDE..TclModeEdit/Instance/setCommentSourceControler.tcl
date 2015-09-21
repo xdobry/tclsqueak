@@ -1,8 +1,8 @@
 IDE::TclModeEdit instproc setCommentSourceControler {comment source contr} {
-    my instvar win state controler oldtext oldcommment hasErrors noModifyEvents
+    my instvar win state controler oldtext oldcomment hasErrors noModifyEvents
     set hasErrors 0
     set oldtext $source
-    set oldcommment $comment
+    set oldcomment $comment
     set controler $contr
     set state use
     

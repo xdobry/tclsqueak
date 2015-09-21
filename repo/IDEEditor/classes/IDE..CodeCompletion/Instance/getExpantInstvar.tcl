@@ -1,4 +1,4 @@
-IDE::CodeCompletion instproc getExpantInstvar {cmd contentDesc} {
+IDE::CodeCompletion instproc getExpantInstvar {cmd contentDesc {methodName instvar}} {
     lassign $contentDesc class type method
     set introProxy [IDE::XOIntroProxy getIntroProxyForMethodType $type]
     set atype [IDE::XOIntroProxy getAbstractMethodType $type]
@@ -10,12 +10,12 @@ IDE::CodeCompletion instproc getExpantInstvar {cmd contentDesc} {
     } else {
         set type proc
     }
-    regexp {my instvar(?:\s\w+)*?\s(\w+)$} $cmd _ pattern
-    set pattern
+    set subpattern {(?:\s\w+)*?\s(\w+)$}
+    regexp "my $methodName$subpattern" $cmd _ pattern
     append pattern *
     my instvar repo
     set vlist [list]
-    foreach {k t} [[$repo getWriteRepository] searchVariable [list $class $type $pattern]] {
+    foreach {k t} [[$repo getWriteRepository] searchVariable [list ::$class $type $pattern]] {
         lappend vlist [lindex $k end]        
     }
     list $vlist $pattern
