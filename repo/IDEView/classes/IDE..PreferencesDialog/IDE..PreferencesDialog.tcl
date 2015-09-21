@@ -1,1 +1,1 @@
-Class create IDE::PreferencesDialog -superclass ::IDE::Browser
+Class create IDE::PreferencesDialog -superclass {::IDE::Browser ::IDE::OptionUIMix}
