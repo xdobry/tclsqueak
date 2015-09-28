@@ -1,6 +1,7 @@
 IDE::CompFileExporter proc exportAll {} {
     global xotclidedir
     set exp [IDE::CompFileExporter new]
+    IDE::SystemConfigMap loadComponentFromAny IDERepoBootstrap
     set isatk 0
     if {[file isdirectory repo]} {
         set dir repo
